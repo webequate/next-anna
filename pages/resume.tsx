@@ -63,6 +63,7 @@ const Resume: NextPage<ResumeProps> = ({ educationData, workData, skillSummaryDa
               <h3>{work.company}</h3>
               <p>{work.role}</p>
               <p>{work.city}</p>
+              <p>{work.startDate}</p>
               <p>{work.endDate}</p>
               <ul>
                 {work.achievements.map((achievement, index) => (
@@ -107,6 +108,7 @@ export const getStaticProps: GetStaticProps<ResumeProps> = async () => {
     const workData = await db
       .collection("Work")
       .find({})
+      .sort({ id: -1 })
       .toArray();
 
     const skillSummaryData = await db
