@@ -1,7 +1,9 @@
-// components/Layout.tsx
-
 import React from 'react';
 import Head from 'next/head';
+import Navbar from './Navbar';
+import Example from './Example';
+import AppHeader from './Header';
+import AppFooter from './Footer';
 
 interface LayoutProps {
   title?: string;
@@ -17,15 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ title = 'My Portfolio', children }) => 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="bg-blue-500 text-white p-4">
-        {/* Add your header content here */}
-        <h1>My Portfolio</h1>
-      </header>
+      <AppHeader />
       <main className="container mx-auto px-4 py-8">{children}</main>
-      <footer className="bg-blue-500 text-white p-4">
-        {/* Add your footer content here */}
-        <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
-      </footer>
+      <AppFooter />
     </>
   );
 };

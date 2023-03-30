@@ -1,6 +1,7 @@
-import clientPromise from '../lib/mongodb';
+import clientPromise from '@/lib/mongodb';
 import { GetStaticProps, NextPage } from 'next';
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
+import Image from 'next/image';
 
 interface Thumb {
   name: string;
@@ -34,22 +35,34 @@ const Projects: NextPage<ProjectsProps> = ({ projectsData }) => {
     <Layout>
       <div>
         <h1>Projects</h1>
-        <ul>
-          {projectsData.map((project) => (
-            <li key={project.id}>
-              <h2>{project.name}</h2>
-              <p>{project.thumb.name}</p>
-              <p>{project.thumb.type}</p>
-              <p>{project.thumb.company}</p>
-              <p>{project.thumb.imgurl}</p>
-              <p>{project.modal.name}</p>
-              <p>{project.modal.tags}</p>
-              <p>{project.modal.description}</p>
-              <p>{project.modal.imgurl}</p>
-              <p>{project.modal.details}</p>
-            </li>
-          ))}
-        </ul>
+        {projectsData.map((project, index) => (
+          <div key={index}>
+            <h2>{project.name}</h2>
+            <p>{project.thumb.name}</p>
+            <p>{project.thumb.type}</p>
+            <p>{project.thumb.company}</p>
+            <p>
+              <Image
+                src={`/${project.thumb.imgurl}`}
+                alt={project.thumb.name}
+                width={100}
+                height={100}
+              />
+            </p>
+            <p>{project.modal.name}</p>
+            <p>{project.modal.tags}</p>
+            <p>{project.modal.description}</p>
+            <p>
+              <Image
+                src={`/${project.modal.imgurl}`}
+                alt={project.modal.name}
+                width={200}
+                height={200}
+              />
+            </p>
+            <p>{project.modal.details}</p>
+          </div>
+        ))}
       </div>
     </Layout>
   );
@@ -63,6 +76,7 @@ export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
     const data = await db
       .collection("Projects")
       .find({})
+      .sort({ order: 1 })
       .toArray();
   
     return {

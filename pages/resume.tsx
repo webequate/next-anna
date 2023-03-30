@@ -1,6 +1,6 @@
-import clientPromise from '../lib/mongodb';
+import clientPromise from '@/lib/mongodb';
 import { GetStaticProps, NextPage } from 'next';
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
 
 interface Education {
   _id: string;
@@ -45,36 +45,41 @@ const Resume: NextPage<ResumeProps> = ({ educationData, workData, skillSummaryDa
         <h1>Resume and Skills</h1>
         {/* Education */}
         <h2>Education</h2>
-        <ul>
-          {educationData.map((education) => (
-            <li key={education._id}>
-              <h3>{education.school}</h3>
-              <p>{education.program}</p>
-              <p>{education.city}</p>
-              <p>{education.endDate}</p>
-            </li>
-          ))}
-        </ul>
+        {educationData.map((education, index) => (
+          <div key={index}>
+            <h3>{education.school}</h3>
+            <p>
+              <span>{education.program}</span>
+              <span> • </span>
+              {education.city}
+              <span> • </span>
+              {education.endDate}
+            </p>
+          </div>
+        ))}
         {/* Work */}
         <h2>Work Experience</h2>
-        <ul>
-          {workData.map((work) => (
-            <li key={work._id}>
-              <h3>{work.company}</h3>
-              <p>{work.role}</p>
-              <p>{work.city}</p>
-              <p>{work.startDate}</p>
-              <p>{work.endDate}</p>
-              <ul>
+        {workData.map((work) => (
+          <div key={work._id}>
+            <h3>{work.company}</h3>
+            <p>
+              <span>{work.role}</span>
+              <span> • </span>
+              <em>{work.city}</em>
+              <span> • </span>
+              <span>{work.startDate}</span>
+              <span> - </span>
+              <span>{work.endDate}</span>
+              <ul className="list-disc list-outside">
                 {work.achievements.map((achievement, index) => (
                   <li key={index}>
                     {achievement}
                   </li>
                 ))}
               </ul>
-            </li>
-          ))}
-        </ul>
+            </p>
+          </div>
+        ))}
         {/* Skills */}
         <h2>Skills</h2>
         <p>

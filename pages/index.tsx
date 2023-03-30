@@ -1,41 +1,72 @@
-// index.tsx
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Main from './main';
+import clientPromise from '@/lib/mongodb';
+import { GetStaticProps, NextPage } from 'next';
+import Layout from '@/components/Layout';
+import Banner from '@/components/Banner';
 
-const Index: React.FC = () => {
+interface SocialLink {
+  name: string;
+  url: string;
+  className: string;
+}
+
+interface MainData {
+  _id: string;
+  resumelink: string;
+  name: string;
+  role: string;
+  linkedinId: string;
+  twitterId: string;
+  githubId: string;
+  roleDescription: string;
+  socialLinks: SocialLink[];
+  aboutme: string;
+  address1: string;
+  phone: string;
+  website: string;
+  contactIntro: string;
+}
+  
+interface MainProps {
+  mainData: MainData[];
+}
+
+const Home: NextPage<MainProps> = ({ mainData }) => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>My Portfolio</title>
       </Head>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/resume">
-                <a>Resume</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/testimonials">
-                <a>Testimonials</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <main>
-        <Main props={} />
+        <div>
+          <h1>I&apos;m {mainData[0].name}</h1>
+          <h2>I am a {mainData[0].role}</h2>
+          <p>{mainData[0].roleDescription}</p>
+        </div>
       </main>
-    </>
+    </Layout>
   );
-};
+}
 
-export default Index;
+export const getStaticProps: GetStaticProps<MainProps> = async () => {
+  try {
+    const client = await clientPromise;
+    const db = client.db("Portfolio");
+  
+    const data = await db
+      .collection("Main")
+      .find({})
+      .limit(1)
+      .toArray();
+  
+    return {
+      props: { mainData: JSON.parse(JSON.stringify(data)) },
+    };
+  } catch (e) {
+     console.error(e);
+  }
+}
+  
+export default Home;

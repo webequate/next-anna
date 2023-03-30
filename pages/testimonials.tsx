@@ -1,6 +1,6 @@
-import clientPromise from '../lib/mongodb';
+import clientPromise from '@/lib/mongodb';
 import { GetStaticProps, NextPage } from 'next';
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
 
 interface Testimonial {
   _id: string;
