@@ -1,77 +1,48 @@
-import clientPromise from '@/lib/mongodb';
+// pages/experience.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { School, Job } from '@/types/experience';
+import { connectToDatabase } from '@/lib/mongodb';
 import Layout from '@/components/Layout';
-
-interface Education {
-  _id: string;
-  school: string;
-  program: string;
-  city: string;
-  endDate: string;
-}
-
-interface Work {
-  _id: string;
-  company: string;
-  role: string;
-  city: string;
-  startDate: string;
-  endDate: string;
-  achievements: string[];
-}
   
-interface SummarySkill {
-  _id: string;
-  description: string;
+type ExperienceProps = {
+  schools: School[];
+  jobs: Job[];
 }
 
-interface Skill {
-  _id: string;
-  skillName: string;
-  skillLevel: string;
-}
-  
-interface ResumeProps {
-  workData: Work[];
-  skillsData: Skill[];
-  skillSummaryData: SummarySkill[];
-  educationData: Education[];
-}
-
-const Resume: NextPage<ResumeProps> = ({ educationData, workData, skillSummaryData, skillsData }) => {
+const Resume: NextPage<ExperienceProps> = ({ schools, jobs }) => {
   return (
     <Layout>
       <div>
-        <h1>Resume and Skills</h1>
+        <h1>Resume</h1>
         {/* Education */}
         <h2>Education</h2>
-        {educationData.map((education, index) => (
+        {schools.map((school, index) => (
           <div key={index}>
-            <h3>{education.school}</h3>
+            <h3>{school.school}</h3>
             <p>
-              <span>{education.program}</span>
+              <span>{school.program}</span>
               <span> • </span>
-              {education.city}
+              {school.city}
               <span> • </span>
-              {education.endDate}
+              {school.endDate}
             </p>
           </div>
         ))}
         {/* Work */}
         <h2>Work Experience</h2>
-        {workData.map((work) => (
-          <div key={work._id}>
-            <h3>{work.company}</h3>
+        {jobs.map((job, index) => (
+          <div key={index}>
+            <h3>{job.company}</h3>
             <p>
-              <span>{work.role}</span>
+              <span>{job.role}</span>
               <span> • </span>
-              <em>{work.city}</em>
+              <em>{job.city}</em>
               <span> • </span>
-              <span>{work.startDate}</span>
+              <span>{job.startDate}</span>
               <span> - </span>
-              <span>{work.endDate}</span>
+              <span>{job.endDate}</span>
               <ul className="list-disc list-outside">
-                {work.achievements.map((achievement, index) => (
+                {job.achievements.map((achievement, index) => (
                   <li key={index}>
                     {achievement}
                   </li>
@@ -80,63 +51,27 @@ const Resume: NextPage<ResumeProps> = ({ educationData, workData, skillSummaryDa
             </p>
           </div>
         ))}
-        {/* Skills */}
-        <h2>Skills</h2>
-        <p>
-          {skillSummaryData.map((summarySkill, index) => (
-            <span key={index}>{summarySkill.description}, </span>
-          ))}
-        </p>
-        <ul>
-          {skillsData.map((skill) => (
-            <li key={skill._id}>
-              <p>{skill.skillName}</p>
-              <p>{skill.skillLevel}</p>
-            </li>
-          ))}
-        </ul>
       </div>
     </Layout>
   );
 }
 
-export const getStaticProps: GetStaticProps<ResumeProps> = async () => {
-  try {
-    const client = await clientPromise;
-    const db = client.db("Portfolio");
-  
-    const educationData = await db
-      .collection("Education")
-      .find({})
-      .toArray();
-  
-    const workData = await db
-      .collection("Work")
-      .find({})
-      .sort({ id: -1 })
-      .toArray();
+export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
+  const db = await connectToDatabase(process.env.MONGODB_URI!);
 
-    const skillSummaryData = await db
-      .collection("SkillSummary")
-      .find({})
-      .toArray();
+  const schoolsCollection = db.collection<School>('schools');
+  const schools: School[] = await schoolsCollection.find().sort({ order: 1 }).toArray();
 
-    const skillsData = await db
-      .collection("Skills")
-      .find({})
-      .toArray();
+  const jobsCollection = db.collection<Job>('jobs');
+  const jobs: Job[] = await jobsCollection.find().sort({ order: -1 }).toArray();
 
-    return {
-      props: {
-        educationData: JSON.parse(JSON.stringify(educationData)),
-        workData: JSON.parse(JSON.stringify(workData)),
-        skillSummaryData: JSON.parse(JSON.stringify(skillSummaryData)),
-        skillsData: JSON.parse(JSON.stringify(skillsData))
-      },
-    };
-  } catch (e) {
-     console.error(e);
-  }
-}
+  return {
+    props: {
+      schools: JSON.parse(JSON.stringify(schools)),
+      jobs: JSON.parse(JSON.stringify(jobs))
+    },
+    revalidate: 60,
+  };
+};
 
 export default Resume;

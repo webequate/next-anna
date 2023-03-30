@@ -1,41 +1,20 @@
-import clientPromise from '@/lib/mongodb';
+// pages/projects.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { Project } from '@/types/project';
+import { connectToDatabase } from '@/lib/mongodb';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 
-interface Thumb {
-  name: string;
-  type: string;
-  company: string;
-  imgurl: string;
+type ProjectsProps = {
+  projects: Project[];
 }
 
-interface Modal {
-  name: string;
-  tags: string;
-  description: string;
-  imgurl: string;
-  details: string;
-}
-
-interface Project {
-  _id: string;
-  id: string;
-  name: string;
-  thumb: Thumb;
-  modal: Modal;
-}
-  
-interface ProjectsProps {
-  projectsData: Project[];
-}
-
-const Projects: NextPage<ProjectsProps> = ({ projectsData }) => {
+const Projects: NextPage<ProjectsProps> = ({ projects }) => {
   return (
     <Layout>
       <div>
         <h1>Projects</h1>
-        {projectsData.map((project, index) => (
+        {projects.map((project, index) => (
           <div key={index}>
             <h2>{project.name}</h2>
             <p>{project.thumb.name}</p>
@@ -45,8 +24,8 @@ const Projects: NextPage<ProjectsProps> = ({ projectsData }) => {
               <Image
                 src={`/${project.thumb.imgurl}`}
                 alt={project.thumb.name}
-                width={100}
-                height={100}
+                width={200}
+                height={200}
               />
             </p>
             <p>{project.modal.name}</p>
@@ -56,8 +35,8 @@ const Projects: NextPage<ProjectsProps> = ({ projectsData }) => {
               <Image
                 src={`/${project.modal.imgurl}`}
                 alt={project.modal.name}
-                width={200}
-                height={200}
+                width={525}
+                height={350}
               />
             </p>
             <p>{project.modal.details}</p>
@@ -69,22 +48,17 @@ const Projects: NextPage<ProjectsProps> = ({ projectsData }) => {
 }
 
 export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
-  try {
-    const client = await clientPromise;
-    const db = client.db("Portfolio");
-  
-    const data = await db
-      .collection("Projects")
-      .find({})
-      .sort({ order: 1 })
-      .toArray();
-  
-    return {
-      props: { projectsData: JSON.parse(JSON.stringify(data)) },
-    };
-  } catch (e) {
-     console.error(e);
-  }
-}
-  
+  const db = await connectToDatabase(process.env.MONGODB_URI!);
+
+  const projectsCollection = db.collection<Project>('projects');
+  const projects: Project[] = await projectsCollection.find().sort({ order: 1 }).toArray();
+
+  return {
+    props: {
+      projects: JSON.parse(JSON.stringify(projects)),
+    },
+    revalidate: 60,
+  };
+};
+
 export default Projects;

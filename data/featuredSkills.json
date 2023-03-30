@@ -1,0 +1,70 @@
+[
+  {
+    "description": "JavaScript / TypeScript",
+    "order": 1
+  },
+  {
+    "description": "React / Next.js",
+    "order": 2
+  },
+  {
+    "description": "Redux / Redux Toolkit",
+    "order": 3
+  },
+  {
+    "description": "HTML",
+    "order": 4
+  },
+  {
+    "description": "CSS / Sass",
+    "order": 5
+  },
+  {
+    "description": "AngularJS",
+    "order": 6
+  },
+  {
+    "description": "Agile / Scrum",
+    "order": 7
+  },
+  {
+    "description": "Git / GitHub",
+    "order": 8
+  },
+  {
+    "description": "Node.js / npm",
+    "order": 9
+  },
+  {
+    "description": "RESTful API",
+    "order": 10
+  },
+  {
+    "description": "PHP / MySQL",
+    "order": 11
+  },
+  {
+    "description": "Responsive Design",
+    "order": 12
+  },
+  {
+    "description": "Web Analytics",
+    "order": 13
+  },
+  {
+    "description": "Performance Optimization",
+    "order": 14
+  },
+  {
+    "description": "E-Commerce",
+    "order": 15
+  },
+  {
+    "description": "Digital Marketing",
+    "order": 16
+  },
+  {
+    "description": "Adobe Photoshop",
+    "order": 17
+  }
+]

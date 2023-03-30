@@ -1,0 +1,57 @@
+[
+  {
+    "name": "JavaScript",
+    "level": 5,
+    "order": 1
+  },
+  {
+    "name": "TypeScript",
+    "level": 3,
+    "order": 2
+  },
+  {
+    "name": "React",
+    "level": 4,
+    "order": 3
+  },
+  {
+    "name": "Next.js",
+    "level": 3,
+    "order": 4
+  },
+  {
+    "name": "Redux",
+    "level": 3,
+    "order": 5
+  },
+  {
+    "name": "HTML",
+    "level": 5,
+    "order": 6
+  },
+  {
+    "name": "CSS / Sass",
+    "level": 4,
+    "order": 7
+  },
+  {
+    "name": "AngularJS",
+    "level": 2,
+    "order": 8
+  },
+  {
+    "name": "jQuery",
+    "level": 4,
+    "order": 9
+  },
+  {
+    "name": "PHP",
+    "level": 3,
+    "order": 10
+  },
+  {
+    "name": "MySQL",
+    "level": 3,
+    "order": 11
+  }
+]

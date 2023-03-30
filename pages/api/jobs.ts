@@ -1,15 +1,16 @@
+// pages/work.tsx
 import { NextApiRequest, NextApiResponse } from 'next';
-import clientPromise from '../../lib/mongodb';
+import clientPromise from '@/lib/mongodb';
 
-const fetchTestimonials = async (req: NextApiRequest, res: NextApiResponse) => {
+const fetchJobs = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const client = await clientPromise;
     const db = client.db("Portfolio");
 
     const data = await db
-        .collection("testimonials")
+        .collection("jobs")
         .find({})
-        .sort({ order: 1 })
+        .sort({ order: -1 })
         .toArray();
 
     res.json(data);
@@ -18,4 +19,4 @@ const fetchTestimonials = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default fetchTestimonials;
+export default fetchJobs;

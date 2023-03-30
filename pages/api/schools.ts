@@ -1,20 +1,21 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import clientPromise from '../../lib/mongodb';
 
-const fetchSkillsData = async (req: NextApiRequest, res: NextApiResponse) => {
+const fetchSchools = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const client = await clientPromise;
     const db = client.db("Portfolio");
 
-    const mainData = await db
-        .collection("Skills")
+    const data = await db
+        .collection("schools")
         .find({})
+        .sort({ order: 1 })
         .toArray();
 
-    res.json(mainData);
+    res.json(data);
   } catch (e) {
     console.error(e);
   }
 };
 
-export default fetchSkillsData;
+export default fetchSchools;

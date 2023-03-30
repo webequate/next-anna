@@ -1,24 +1,21 @@
-import clientPromise from '@/lib/mongodb';
+// pages/projects.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { Testimonial } from '@/types/testimonial';
+import { connectToDatabase } from '@/lib/mongodb';
 import Layout from '@/components/Layout';
-
-interface Testimonial {
-  _id: string;
-  description: string;
-  name: string;
-}
+import Image from 'next/image';
   
-interface TestimonialsProps {
-  testimonialsData: Testimonial[];
+type TestimonialsProps = {
+  testimonials: Testimonial[];
 }
 
-const Testimonials: NextPage<TestimonialsProps> = ({ testimonialsData }) => {
+const Testimonials: NextPage<TestimonialsProps> = ({ testimonials }) => {
   return (
     <Layout>
       <div>
         <h1>Testimonials</h1>
         <ul>
-          {testimonialsData.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <li key={index}>
               <p>{testimonial.description}</p>
               <p>{testimonial.name}</p>
@@ -31,21 +28,18 @@ const Testimonials: NextPage<TestimonialsProps> = ({ testimonialsData }) => {
 }
 
 export const getStaticProps: GetStaticProps<TestimonialsProps> = async () => {
-  try {
-    const client = await clientPromise;
-    const db = client.db("Portfolio");
-  
-    const data = await db
-      .collection("Testimonials")
-      .find({})
-      .toArray();
-  
-    return {
-      props: { testimonialsData: JSON.parse(JSON.stringify(data)) },
-    };
-  } catch (e) {
-     console.error(e);
-  }
-}
+  const db = await connectToDatabase(process.env.MONGODB_URI!);
+
+  const testimonialsCollection = db.collection<Testimonial>('testimonials');
+  const testimonials: Testimonial[] = await testimonialsCollection.find().sort({ order: 1 }).toArray();
+
+  return {
+    props: {
+      testimonials: JSON.parse(JSON.stringify(testimonials)),
+    },
+    revalidate: 60,
+  };
+};
+
   
 export default Testimonials;

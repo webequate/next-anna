@@ -1,0 +1,31 @@
+{
+  "resumelink": "http://www.webequate.com/resume/AllenJohnson-Resume.pdf",
+  "name": "Allen Johnson",
+  "role": "Front End Software Engineer",
+  "linkedinId": "allenhjohnson",
+  "twitterId": "WebEquate",
+  "githubId": "webequate",
+  "roleDescription": "I work primarily with HTML, CSS, and JavaScript. This site is built using React. I have a background in full stack development and Agile methodology. I enjoy travel, hiking, photography, electronic music, and foreign languages.",
+  "socialLinks": [
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/WebEquate",
+      "className": "fab fa-twitter"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/allenhjohnson/",
+      "className": "fab fa-linkedin"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/webequate",
+      "className": "fab fa-github"
+    }
+  ],
+  "aboutme": "I am a highly experienced front end software engineer with a background in full stack development and Agile methodology.",
+  "address1": "Denver, Colorado",
+  "phone": "412.708.8946",
+  "website": "http://www.webequate.com/portfolio",
+  "contactIntro": "Please send me a message using the following form if you have any questions about my skills and experience, or if you would like to inquire about possibly hiring me for your web development project or team."
+}

@@ -1,19 +1,19 @@
-// pages/contact.tsx
+// pages/about.tsx
 import { GetStaticProps, NextPage } from 'next';
 import { Basics } from '@/types/basics';
 import { connectToDatabase } from '@/lib/mongodb';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
   
-type ContactProps = {
+type AboutProps = {
   basics: Basics[];
 }
 
-const Contact: NextPage<ContactProps> = ({ basics }) => {
+const About: NextPage<AboutProps> = ({ basics }) => {
   return (
     <Layout>
       <div>
-        <h1>Contact</h1>
+        <h1>About</h1>
         <p>{basics[0].resumelink}</p>
         <p>{basics[0].name}</p>
         <p>{basics[0].role}</p>
@@ -36,7 +36,7 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
   );
 }
 
-export const getStaticProps: GetStaticProps<ContactProps> = async () => {
+export const getStaticProps: GetStaticProps<AboutProps> = async () => {
   const db = await connectToDatabase(process.env.MONGODB_URI!);
 
   const basicsCollection = db.collection<Basics>('basics');
@@ -51,4 +51,4 @@ export const getStaticProps: GetStaticProps<ContactProps> = async () => {
 };
 
   
-export default Contact;
+export default About;

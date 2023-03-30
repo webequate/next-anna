@@ -1,4 +1,17 @@
-import { MongoClient } from 'mongodb'
+// lib/mongodb.ts
+import { MongoClient, Db } from 'mongodb';
+
+let cachedDb: Db | null = null;
+
+export async function connectToDatabase(uri: string): Promise<Db> {
+  if (cachedDb) return cachedDb;
+
+  const client = await MongoClient.connect(uri);
+
+  const db = client.db('Portfolio');
+  cachedDb = db;
+  return db;
+}
 
 if (!process.env.MONGODB_URI) {
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI"')

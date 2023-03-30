@@ -1,0 +1,12 @@
+[
+  {
+    "description":"I managed Allen for over 2 years at Intela where he was an extremely valuable resource for our development team. Allen took on the additional challenge of being the ScrumMaster for our UI team as the team grew and made sure the processes allowed for the most benefit to the company. I recommend Allen not only for his technical abilities but also as a team member and someone that can improve a company.",
+    "name":"Tom Szymanski",
+    "order": 1
+  },
+  {
+    "description":"We brought Allen on to help with UI support for our web application which needed to support multiple browsers (including IE6). Our medical insurance site has more than a million registered users. Allen had a detailed knowledge of CSS and HTML. I think his programming background gave him special understanding of how CSS and HTML works and can be coded. We were disappointed to see him leave!",
+    "name":"Kevin DeWitt",
+    "order": 2
+  }
+]

@@ -82,6 +82,12 @@ function Footer() {
 					</div>
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						aria-label="Skills"
+					>
+						<Link href="/skills">Skills</Link>
+					</div>
+					<div
+						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Testimonials"
 					>
 						<Link href="/testimonials">Testimonials</Link>
