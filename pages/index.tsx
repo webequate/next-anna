@@ -1,73 +1,49 @@
 // pages/index.tsx
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import clientPromise from '@/lib/mongodb';
 import { GetStaticProps, NextPage } from 'next';
-import Layout from '@/components/Layout';
+import { connectToDatabase } from '@/lib/mongodb';
+import { Basics } from '@/types/basics';
+import Header from '@/components/Header';
 import Banner from '@/components/Banner';
+import Footer from '@/components/Footer';
 
-interface SocialLink {
-  name: string;
-  url: string;
-  className: string;
+type HomeProps = {
+  basics: Basics[];
 }
 
-interface MainData {
-  _id: string;
-  resumelink: string;
-  name: string;
-  role: string;
-  linkedinId: string;
-  twitterId: string;
-  githubId: string;
-  roleDescription: string;
-  socialLinks: SocialLink[];
-  aboutme: string;
-  address1: string;
-  phone: string;
-  website: string;
-  contactIntro: string;
-}
-  
-interface MainProps {
-  mainData: MainData[];
-}
-
-const Home: NextPage<MainProps> = ({ mainData }) => {
+const Home: NextPage<HomeProps> = ({ basics }) => {
+  const { name, role, roleDescription, aboutme, socialLinks, resumelink } = basics[0];
   return (
-    <Layout>
-      <Head>
-        <title>My Portfolio</title>
-      </Head>
-      <main>
-        <div>
-          <h1>I&apos;m {mainData[0].name}</h1>
-          <h2>I am a {mainData[0].role}</h2>
-          <p>{mainData[0].roleDescription}</p>
-        </div>
-      </main>
-    </Layout>
+    <div className="container mx-auto">
+      <Header name={ name } />
+      <Banner
+        name={ name }
+        role={ role }
+        roleDescription={ roleDescription }
+        aboutme={ aboutme }
+        socialLinks={ socialLinks }
+        resumelink={ resumelink }
+      />
+      <Footer
+        name={ name }
+        socialLinks={ socialLinks }
+      />
+    </div>
   );
 }
 
-export const getStaticProps: GetStaticProps<MainProps> = async () => {
-  try {
-    const client = await clientPromise;
-    const db = client.db("Portfolio");
-  
-    const data = await db
-      .collection("Main")
-      .find({})
-      .limit(1)
-      .toArray();
-  
-    return {
-      props: { mainData: JSON.parse(JSON.stringify(data)) },
-    };
-  } catch (e) {
-     console.error(e);
-  }
-}
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const db = await connectToDatabase(process.env.MONGODB_URI!);
+
+  const basicsCollection = db.collection<Basics>('basics');
+  const basics: Basics[] = await basicsCollection.find().toArray();
+
+  return {
+    props: {
+      basics: JSON.parse(JSON.stringify(basics)),
+    },
+    revalidate: 60,
+  };
+};
+
   
 export default Home;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useThemeSwitcher = () => {
 	const [theme, setTheme] = useState<string>(
-		typeof window !== 'undefined' ? localStorage.theme : ''
+		typeof window !== 'undefined' ? localStorage.theme.toString() : 'dark'
 	);
 	const activeTheme = theme === 'dark' ? 'light' : 'dark';
 
@@ -14,7 +14,7 @@ const useThemeSwitcher = () => {
 		localStorage.setItem('theme', theme);
 	}, [theme, activeTheme]);
 
-	return [activeTheme, setTheme];
+	return [activeTheme, setTheme] as const;
 };
 
 export default useThemeSwitcher;

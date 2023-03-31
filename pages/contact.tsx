@@ -1,38 +1,33 @@
 // pages/contact.tsx
 import { GetStaticProps, NextPage } from 'next';
-import { Basics } from '@/types/basics';
 import { connectToDatabase } from '@/lib/mongodb';
-import Layout from '@/components/Layout';
-import Image from 'next/image';
-  
+import { Basics } from '@/types/basics';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import DownloadCV from '@/components/DownloadCV';
+
 type ContactProps = {
   basics: Basics[];
 }
 
 const Contact: NextPage<ContactProps> = ({ basics }) => {
+  const { name, role, socialLinks, resumelink, address1, phone, website, contactIntro } = basics[0];
   return (
-    <Layout>
-      <div>
-        <h1>Contact</h1>
-        <p>{basics[0].resumelink}</p>
-        <p>{basics[0].name}</p>
-        <p>{basics[0].role}</p>
-        <p>{basics[0].linkedinId}</p>
-        <p>{basics[0].twitterId}</p>
-        <p>{basics[0].githubId}</p>
-        <p>{basics[0].roleDescription}</p>
-        <ul>
-          {basics[0].socialLinks.map((socialLink, index) => (
-            <li key={index}>{socialLink.name}, {socialLink.url}, {socialLink.className}</li>
-          ))}
-        </ul>
-        <p>{basics[0].aboutme}</p>
-        <p>{basics[0].address1}</p>
-        <p>{basics[0].phone}</p>
-        <p>{basics[0].website}</p>
-        <p>{basics[0].contactIntro}</p>
-      </div>
-    </Layout>
+    <div className="container mx-auto">
+      <Header name={ name } />
+      <h1 className="text-4xl font-bold">Contact</h1>
+      <p>{ name }</p>
+      <p>{ role }</p>
+      <p>{ address1 }</p>
+      <p>{ phone }</p>
+      <p>{ website }</p>
+      <p>{ contactIntro }</p>
+      <DownloadCV resumelink={ resumelink } />
+      <Footer
+        name={ name }
+        socialLinks={ socialLinks }
+      />
+    </div>
   );
 }
 
@@ -50,5 +45,4 @@ export const getStaticProps: GetStaticProps<ContactProps> = async () => {
   };
 };
 
-  
 export default Contact;
