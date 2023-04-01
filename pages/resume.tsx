@@ -5,6 +5,7 @@ import { School, Job } from '@/types/experience';
 import { Basics, SocialLink } from '@/types/basics';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTheme } from 'next-themes';
 
 type ResumeProps = {
   schools: School[];
@@ -14,49 +15,54 @@ type ResumeProps = {
 }
 
 const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, socialLinks }) => {
+  const { theme, setTheme } = useTheme();
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
 
       <Header name={ name } />
 
-      <h1 className="text-4xl font-bold">Resume</h1>
+      <div>
 
-      <h2>Education</h2>
-      { schools.map(( school, index ) => (
-        <div key={ index }>
-          <h3>{ school.school }</h3>
-          <p>
-            <span>{ school.program }</span>
-            <span> • </span>
-            { school.city }
-            <span> • </span>
-            { school.endDate }
-          </p>
-        </div>
-      ))}
+        <h1 className="text-4xl font-bold">Resume</h1>
 
-      <h2>Work Experience</h2>
-      { jobs.map(( job, index ) => (
-        <div key={ index }>
-          <h3>{ job.company }</h3>
-          <p>
-            <span>{ job.role }</span>
-            <span> • </span>
-            <em>{ job.city }</em>
-            <span> • </span>
-            <span>{ job.startDate }</span>
-            <span> - </span>
-            <span>{ job.endDate }</span>
-            <ul className="list-disc list-outside">
-              { job.achievements.map(( achievement, index ) => (
-                <li key={ index }>
-                  { achievement }
-                </li>
-              ))}
-            </ul>
-          </p>
-        </div>
-      ))}
+        <h2>Education</h2>
+        { schools.map(( school, index ) => (
+          <div key={ index }>
+            <h3>{ school.school }</h3>
+            <p>
+              <span>{ school.program }</span>
+              <span> • </span>
+              { school.city }
+              <span> • </span>
+              { school.endDate }
+            </p>
+          </div>
+        ))}
+
+        <h2>Work Experience</h2>
+        { jobs.map(( job, index ) => (
+          <div key={ index }>
+            <h3>{ job.company }</h3>
+            <p>
+              <span>{ job.role }</span>
+              <span> • </span>
+              <em>{ job.city }</em>
+              <span> • </span>
+              <span>{ job.startDate }</span>
+              <span> - </span>
+              <span>{ job.endDate }</span>
+              <ul className="list-disc list-outside">
+                { job.achievements.map(( achievement, index ) => (
+                  <li key={ index }>
+                    { achievement }
+                  </li>
+                ))}
+              </ul>
+            </p>
+          </div>
+        ))}
+
+      </div>
 
       <Footer
         name={ name }

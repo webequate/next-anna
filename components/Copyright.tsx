@@ -1,11 +1,11 @@
-import useThemeSwitcher from '../hooks/useThemeSwitcher';
+import { useTheme } from 'next-themes';
 
 interface CopyrightProps {
   name: string;
 }
 
 const Copyright: React.FC<CopyrightProps> = ({ name }) => {
-	const [activeTheme] = useThemeSwitcher();
+	const { theme, setTheme } = useTheme();
 
 	return (
 		<div className="font-general-regular flex justify-center items-center text-center">

@@ -5,6 +5,7 @@ import { Testimonial } from '@/types/testimonial';
 import { Basics, SocialLink } from '@/types/basics';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTheme } from 'next-themes';
 
 type TestimonialsProps = {
   testimonials: Testimonial[];
@@ -13,21 +14,26 @@ type TestimonialsProps = {
 }
 
 const Testimonials: NextPage<TestimonialsProps> = ({ testimonials, name, socialLinks }) => {
+  const { theme, setTheme } = useTheme();
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
 
       <Header name={ name } />
 
-      <h1 className="text-4xl font-bold">Testimonials</h1>
+      <div>
 
-      <ul>
-      {testimonials.map((testimonial, index) => (
-        <li key={index}>
-          <p>{ testimonial.description }</p>
-          <p>{ testimonial.name }</p>
-        </li>
-      ))}
-      </ul>
+        <h1 className="text-4xl font-bold">Testimonials</h1>
+
+        <ul>
+        {testimonials.map((testimonial, index) => (
+          <li key={index}>
+            <p>{ testimonial.description }</p>
+            <p>{ testimonial.name }</p>
+          </li>
+        ))}
+        </ul>
+
+      </div>
 
       <Footer
         name={ name }

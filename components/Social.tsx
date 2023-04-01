@@ -1,7 +1,7 @@
 import { SocialLink } from '@/types/basics';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import useThemeSwitcher from '../hooks/useThemeSwitcher';
+import { useTheme } from 'next-themes';
 import {
   FaFacebook,
 	FaGithub,
@@ -16,7 +16,7 @@ interface SocialProps {
 }
 
 const Social: React.FC<SocialProps> = ({ socialLinks }) => {
-	const [activeTheme] = useThemeSwitcher();
+  const { theme, setTheme } = useTheme();
 
   const iconFromName = (name: string) => {
     switch (name) {
@@ -42,7 +42,7 @@ const Social: React.FC<SocialProps> = ({ socialLinks }) => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28"
+			className="font-general-regular flex justify-left items-center mt-6 mb-6"
 		>
       <ul className="flex gap-4 sm:gap-8">
       { socialLinks.map((socialLink, index) => (

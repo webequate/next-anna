@@ -5,6 +5,7 @@ import { Basics } from '@/types/basics';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import DownloadCV from '@/components/DownloadCV';
+import { useTheme } from 'next-themes';
 
 type ContactProps = {
   basics: Basics[];
@@ -12,17 +13,20 @@ type ContactProps = {
 
 const Contact: NextPage<ContactProps> = ({ basics }) => {
   const { name, role, socialLinks, resumelink, address1, phone, website, contactIntro } = basics[0];
+  const { theme, setTheme } = useTheme();
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
       <Header name={ name } />
-      <h1 className="text-4xl font-bold">Contact</h1>
-      <p>{ name }</p>
-      <p>{ role }</p>
-      <p>{ address1 }</p>
-      <p>{ phone }</p>
-      <p>{ website }</p>
-      <p>{ contactIntro }</p>
-      <DownloadCV resumelink={ resumelink } />
+      <div>
+        <h1 className="text-4xl font-bold">Contact</h1>
+        <p>{ name }</p>
+        <p>{ role }</p>
+        <p>{ address1 }</p>
+        <p>{ phone }</p>
+        <p>{ website }</p>
+        <p>{ contactIntro }</p>
+        <DownloadCV resumelink={ resumelink } />
+      </div>
       <Footer
         name={ name }
         socialLinks={ socialLinks }
