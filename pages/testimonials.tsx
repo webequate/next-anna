@@ -22,13 +22,13 @@ const Testimonials: NextPage<TestimonialsProps> = ({ testimonials, name, socialL
 
       <div>
 
-        <h1 className="text-4xl font-bold">Testimonials</h1>
+        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Testimonials</h1>
 
         <ul>
         {testimonials.map((testimonial, index) => (
           <li key={index}>
-            <p>{ testimonial.description }</p>
-            <p>{ testimonial.name }</p>
+            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ testimonial.description }</p>
+            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ testimonial.name }</p>
           </li>
         ))}
         </ul>

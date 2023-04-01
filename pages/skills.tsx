@@ -23,10 +23,10 @@ const Skills: NextPage<SkillsProps> = ({ featuredSkills, ratedSkills, name, soci
 
       <div>
 
-        <h1 className="text-4xl font-bold">Skills</h1>
+        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Skills</h1>
 
         {/* Featured Skills */}
-        <p>
+        <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
           {featuredSkills.map((featuredSkill, index) => (
             <span key={index}>{featuredSkill.description}, </span>
           ))}
@@ -36,8 +36,8 @@ const Skills: NextPage<SkillsProps> = ({ featuredSkills, ratedSkills, name, soci
         <ul>
           {ratedSkills.map((ratedSkill, index) => (
             <li key={index}>
-              <p>{ratedSkill.name}</p>
-              <p>{ratedSkill.level}</p>
+              <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ratedSkill.name}</p>
+              <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ratedSkill.level}</p>
             </li>
           ))}
         </ul>

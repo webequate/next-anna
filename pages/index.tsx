@@ -12,18 +12,17 @@ type HomeProps = {
 }
 
 const Home: NextPage<HomeProps> = ({ basics }) => {
-  const { name, role, roleDescription, aboutme, socialLinks, resumelink } = basics[0];
+  const { name, title, abouts, resumeLink, socialLinks } = basics[0];
   const { theme, setTheme } = useTheme();
   return (
     <div className="mx-auto">
       <Header name={ name } />
       <Banner
         name={ name }
-        role={ role }
-        roleDescription={ roleDescription }
-        aboutme={ aboutme }
+        title={ title }
+        abouts={ abouts }
+        resumeLink={ resumeLink }
         socialLinks={ socialLinks }
-        resumelink={ resumelink }
       />
       <Footer
         name={ name }

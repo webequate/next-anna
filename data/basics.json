@@ -1,31 +1,28 @@
 {
-  "resumelink": "http://www.webequate.com/resume/AllenJohnson-Resume.pdf",
   "name": "Allen Johnson",
-  "role": "Front End Software Engineer",
-  "linkedinId": "allenhjohnson",
-  "twitterId": "WebEquate",
-  "githubId": "webequate",
-  "roleDescription": "I work primarily with HTML, CSS, and JavaScript. This site is built using React. I have a background in full stack development and Agile methodology. I enjoy travel, hiking, photography, electronic music, and foreign languages.",
+  "title": "Full Stack Software Engineer",
+  "about": [
+    "I am a veteran front end software engineer with considerable full stack development experience.",
+    "I built this site using Next.js, React, TypeScript, MongoDB Atlas, and TailwindCSS.",
+    "I enjoy travel, hiking, photography, electronic music, and foreign languages."
+  ],
+  "resumeLink": "http://www.webequate.com/resume/AllenJohnson-Resume.pdf",
   "socialLinks": [
     {
       "name": "twitter",
-      "url": "https://twitter.com/WebEquate",
-      "className": "fab fa-twitter"
+      "url": "https://twitter.com/WebEquate"
     },
     {
       "name": "linkedin",
-      "url": "https://www.linkedin.com/in/allenhjohnson/",
-      "className": "fab fa-linkedin"
+      "url": "https://www.linkedin.com/in/allenhjohnson/"
     },
     {
       "name": "github",
-      "url": "https://github.com/webequate",
-      "className": "fab fa-github"
+      "url": "https://github.com/webequate"
     }
   ],
-  "aboutme": "I am a highly experienced front end software engineer with a background in full stack development and Agile methodology.",
-  "address1": "Denver, Colorado",
+  "website": "http://portfolio.webequate.com",
+  "location": "Denver, Colorado",
   "phone": "412.708.8946",
-  "website": "http://www.webequate.com/portfolio",
-  "contactIntro": "Please send me a message using the following form if you have any questions about my skills and experience, or if you would like to inquire about possibly hiring me for your web development project or team."
+  "contactIntro": "Please send me a message if you have any questions about my skills and experience, or if you would like to inquire about hiring me for your project or team."
 }

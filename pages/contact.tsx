@@ -12,20 +12,23 @@ type ContactProps = {
 }
 
 const Contact: NextPage<ContactProps> = ({ basics }) => {
-  const { name, role, socialLinks, resumelink, address1, phone, website, contactIntro } = basics[0];
+  const { name, title, abouts, resumeLink, socialLinks, website, location, phone, contactIntro } = basics[0];
   const { theme, setTheme } = useTheme();
   return (
     <div className="mx-auto">
       <Header name={ name } />
       <div>
-        <h1 className="text-4xl font-bold">Contact</h1>
-        <p>{ name }</p>
-        <p>{ role }</p>
-        <p>{ address1 }</p>
-        <p>{ phone }</p>
-        <p>{ website }</p>
-        <p>{ contactIntro }</p>
-        <DownloadCV resumelink={ resumelink } />
+        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Contact</h1>
+        <p className="mt-4 mb-4">{ name }</p>
+        <p className="mt-4 mb-4">{ title }</p>
+        { abouts.map((about, index) => (
+          <p key={index} className="mt-4 mb-4">{ about }</p>
+        ))}
+        <p className="mt-4 mb-4">{ website }</p>
+        <p className="mt-4 mb-4">{ location }</p>
+        <p className="mt-4 mb-4">{ phone }</p>
+        <p className="mt-4 mb-4">{ contactIntro }</p>
+        <DownloadCV resumelink={ resumeLink } />
       </div>
       <Footer
         name={ name }

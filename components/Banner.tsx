@@ -8,33 +8,29 @@ import Image from 'next/image';
 
 interface BannerProps {
   name: string;
-  role: string;
-  roleDescription: string;
-  aboutme: string;
+  title: string;
+  abouts: string[];
+  resumeLink: string;
   socialLinks: SocialLink[];
-  resumelink: string;
 }
 
-const Banner: React.FC<BannerProps> = ({ name, role, roleDescription, aboutme, socialLinks, resumelink }) => {
+const Banner: React.FC<BannerProps> = ({ name, title, abouts, resumeLink, socialLinks }) => {
   const { theme, setTheme } = useTheme();
 	return (
 		<section className="flex flex-col items-top sm:justify-between sm:flex-row mt-5 md:mt-2">
 			<motion.div className="text-left">
-				<h1 className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left uppercase">
+				<h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mb-6 uppercase">
 					{ name }
 				</h1>
-        <h2 className="text-xl mt-4 mb-4">
-					{ role }
+        <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">
+					{ title }
         </h2>
-        <p className="mt-4 mb-4">
-          { aboutme }
-        </p>
-        <p className="mt-4 mb-4">
-          { roleDescription }
-        </p>
+        { abouts.map((about, index) => (
+          <p key={index} className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ about }</p>
+        ))}
         <Social socialLinks={socialLinks} />
 				<div className="justify-left sm:block">
-          <DownloadCV resumelink={ resumelink } />
+          <DownloadCV resumelink={ resumeLink } />
 				</div>
 			</motion.div>
 			<motion.div

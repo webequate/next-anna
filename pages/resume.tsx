@@ -23,13 +23,13 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, socialLinks }) => 
 
       <div>
 
-        <h1 className="text-4xl font-bold">Resume</h1>
+        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Resume</h1>
 
         <h2>Education</h2>
         { schools.map(( school, index ) => (
           <div key={ index }>
             <h3>{ school.school }</h3>
-            <p>
+            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
               <span>{ school.program }</span>
               <span> • </span>
               { school.city }
@@ -43,7 +43,7 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, socialLinks }) => 
         { jobs.map(( job, index ) => (
           <div key={ index }>
             <h3>{ job.company }</h3>
-            <p>
+            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
               <span>{ job.role }</span>
               <span> • </span>
               <em>{ job.city }</em>
@@ -53,7 +53,7 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, socialLinks }) => 
               <span>{ job.endDate }</span>
               <ul className="list-disc list-outside">
                 { job.achievements.map(( achievement, index ) => (
-                  <li key={ index }>
+                  <li key={ index } className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
                     { achievement }
                   </li>
                 ))}
