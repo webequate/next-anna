@@ -21,17 +21,17 @@ const Projects: NextPage<ProjectsProps> = ({ projects, name, socialLinks }) => {
 
       <Header name={ name } />
 
-      <div>
+      <div className="text-secondary-dark dark:text-secondary-light">
 
-        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Projects</h1>
+        <h1 className="text-xl font-bold tracking-tight text-primary-dark dark:text-primary-light sm:text-3xl mb-6">Projects</h1>
 
         {projects.map((project, index) => (
-          <div key={index}>
-            <h2>{project.name}</h2>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.thumb.name}</p>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.thumb.type}</p>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.thumb.company}</p>
-            <p>
+          <div key={index} className="text-base mt-12">
+            <h2 className="text-xl font-bold text-primary-dark dark:text-primary-light mb-4 ">{project.name}</h2>
+            <p className="mt-2">{project.thumb.name}</p>
+            <p className="mt-2">{project.thumb.type}</p>
+            <p className="mt-2">{project.thumb.company}</p>
+            <p className="mt-2">
               <Image
                 src={`/${project.thumb.imgurl}`}
                 alt={project.thumb.name}
@@ -39,10 +39,10 @@ const Projects: NextPage<ProjectsProps> = ({ projects, name, socialLinks }) => {
                 height={200}
               />
             </p>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.modal.name}</p>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.modal.tags}</p>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.modal.description}</p>
-            <p>
+            <p className="mt-2">{project.modal.name}</p>
+            <p className="mt-2">{project.modal.tags}</p>
+            <p className="mt-2">{project.modal.description}</p>
+            <p className="mt-2">
               <Image
                 src={`/${project.modal.imgurl}`}
                 alt={project.modal.name}
@@ -50,7 +50,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects, name, socialLinks }) => {
                 height={350}
               />
             </p>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{project.modal.details}</p>
+            <p className="mt-2">{project.modal.details}</p>
           </div>
         ))}
       </div>

@@ -10,13 +10,13 @@ module.exports = {
 		extend: {
 			colors: {
 				// Light colors
-				'primary-light': '#F7F8FC',
-				'secondary-light': '#FFFFFF',
+				'primary-light': '#f5f5f5', // 100
+				'secondary-light': '#a3a3a3', // 400
 				'ternary-light': '#f6f7f8',
 
 				// Dark colors
-				'primary-dark': '#0D2438',
-				'secondary-dark': '#102D44',
+				'primary-dark': '#262626', // 800
+				'secondary-dark': '#525252', // 600
 				'ternary-dark': '#1E3851',
 
 				// Extended v3 color

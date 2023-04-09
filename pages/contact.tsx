@@ -6,7 +6,6 @@ import Header from '@/components/Header';
 import ContactForm from '@/components/ContactForm';
 import ContactDetails from '@/components/ContactDetails';
 import Footer from '@/components/Footer';
-import DownloadCV from '@/components/DownloadCV';
 import { useTheme } from 'next-themes';
 
 type ContactProps = {
@@ -14,7 +13,7 @@ type ContactProps = {
 }
 
 const Contact: NextPage<ContactProps> = ({ basics }) => {
-  const { name, title, abouts, resumeLink, socialLinks, website, location, phone, contactIntro } = basics[0];
+  const { name, contactIntro, location, phone, website, resumeLink, socialLinks } = basics[0];
   const { theme, setTheme } = useTheme();
   return (
     <div className="mx-auto">
@@ -25,7 +24,7 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
 
         <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Contact</h1>
 
-        <div className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
+        <div className="mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
 
           <ContactForm />
 

@@ -11,65 +11,57 @@ type ResumeProps = {
   schools: School[];
   jobs: Job[];
   name: string;
+  title: string;
   socialLinks: SocialLink[];
 }
 
-const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, socialLinks }) => {
+const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks }) => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="mx-auto">
-
+    <>
       <Header name={ name } />
 
-      <div>
-
-        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Resume</h1>
-
-        <h2>Education</h2>
+        <h1 className="text-4xl font-semibold mb-2">{ name }</h1>
+        <h3 className="text-xl font-semibold text-secondary-dark dark:text-secondary-light mb-4">{ title }</h3>
+  
+        <h2 className="text-2xl font-semibold mt-12 mb-6">Education</h2>
         { schools.map(( school, index ) => (
-          <div key={ index }>
-            <h3>{ school.school }</h3>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
-              <span>{ school.program }</span>
-              <span> • </span>
-              { school.city }
-              <span> • </span>
-              { school.endDate }
+          <div key={ index } className="text-secondary-dark dark:text-secondary-light mb-4">
+            <h3 className="text-xl font-semibold text-primary-dark dark:text-primary-light mb-2">{ school.school }</h3>
+            <p className="text-base mt-4 mb-4">
+              <em>{ school.program }</em>
+              <span> • { school.city } • </span>
+              <span>{ school.endDate }</span>
             </p>
           </div>
         ))}
 
-        <h2>Work Experience</h2>
+        <h2 className="text-2xl font-semibold mt-12 mb-6">Work Experience</h2>
         { jobs.map(( job, index ) => (
-          <div key={ index }>
-            <h3>{ job.company }</h3>
-            <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
-              <span>{ job.role }</span>
-              <span> • </span>
-              <em>{ job.city }</em>
-              <span> • </span>
-              <span>{ job.startDate }</span>
-              <span> - </span>
-              <span>{ job.endDate }</span>
-              <ul className="list-disc list-outside">
-                { job.achievements.map(( achievement, index ) => (
-                  <li key={ index } className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
-                    { achievement }
-                  </li>
-                ))}
-              </ul>
+          <div key={ index } className="text-secondary-dark dark:text-secondary-light mb-12">
+            <h3 className="text-xl font-semibold text-primary-dark dark:text-primary-light mb-2">{ job.company }</h3>
+            <p className="text-base mt-4 mb-4">
+              <em>{ job.role }</em>
+              <span> • { job.city } • </span>
+              <span>{ job.startDate } - { job.endDate }</span>
             </p>
+            <ul className="list-disc list-outside">
+              { job.achievements.map(( achievement, index ) => (
+                <li key={ index } className="text-base mb-2">
+                  { achievement }
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
-
-      </div>
 
       <Footer
         name={ name }
         socialLinks={ socialLinks }
       />
 
-    </div>
+      </>
+
   );
 }
 
@@ -90,6 +82,7 @@ export const getStaticProps: GetStaticProps<ResumeProps> = async () => {
       schools: JSON.parse(JSON.stringify(schools)),
       jobs: JSON.parse(JSON.stringify(jobs)),
       name: basics[0].name,
+      title: basics[0].title,
       socialLinks: basics[0].socialLinks
     },
     revalidate: 60,

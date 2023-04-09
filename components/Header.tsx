@@ -50,8 +50,8 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
           {/* Header links large screen */}
           <div className="font-general-medium m-0 sm:ml-4 sm:flex sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-            <ul className="flex rounded-full bg-white/90 px-3 mx-6 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-              <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="About">
+            <ul className="flex rounded-full bg-white/90 px-3 mx-6 text-sm font-medium text-primary-dark dark:text-primary-light shadow-lg shadow-neutral-800/5 ring-1 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:ring-white/10">
+              <li className="text-left text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="About">
                 <Link href="/about">About</Link>
               </li>
               <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="Projects">

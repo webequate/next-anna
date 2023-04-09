@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div
-      className="ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer flex"
+      className="ml-0 bg-neutral-200 dark:bg-neutral-800 p-3 shadow-sm rounded-xl cursor-pointer flex"
       onClick={() => {
         setTheme(theme === 'light' ? 'dark' : 'light')
       }}

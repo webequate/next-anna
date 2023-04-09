@@ -19,14 +19,14 @@ const Banner: React.FC<BannerProps> = ({ name, title, abouts, resumeLink, social
 	return (
 		<section className="flex flex-col items-top sm:justify-between sm:flex-row mt-5 md:mt-2">
 			<motion.div className="text-left">
-				<h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mb-6 uppercase">
+				<h1 className="text-4xl font-bold tracking-tight text-primary-dark dark:text-primary-light sm:text-5xl mb-6 uppercase">
 					{ name }
 				</h1>
-        <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">
+        <h2 className="text-xl font-bold tracking-tight text-primary-dark dark:text-primary-light sm:text-3xl mb-6">
 					{ title }
         </h2>
         { abouts.map((about, index) => (
-          <p key={index} className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ about }</p>
+          <p key={index} className="text-base text-secondary-dark dark:text-secondary-light mt-4 mb-4">{ about }</p>
         ))}
         <Social socialLinks={socialLinks} />
 				<div className="justify-left sm:block">
@@ -37,7 +37,7 @@ const Banner: React.FC<BannerProps> = ({ name, title, abouts, resumeLink, social
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-				className="w-full ml-10"
+				className="ml-10"
 			>
         <ThemedImage />
 			</motion.div>
