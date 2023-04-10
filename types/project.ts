@@ -12,6 +12,11 @@ export type Modal = {
   description: string;
   imgurl: string;
   details: string;
+  path?: string;
+  mobile?: string;
+  tablet?: string;
+  laptop?: string;
+  desktop?: string;
 }
 
 export type Project = {

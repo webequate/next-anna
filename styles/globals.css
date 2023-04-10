@@ -154,3 +154,45 @@ a {
     color-scheme: dark;
   }
 } */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  width: 80%;
+  max-width: 800px;
+  /* background-color: white; */
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: red;
+}
