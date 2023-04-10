@@ -1,4 +1,7 @@
-import { FiSun, FiMoon } from 'react-icons/fi';
+import {
+  FaSun,
+	FaMoon
+} from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
@@ -17,15 +20,15 @@ const ThemeSwitcher = () => {
 
   return (
     <div
-      className="ml-0 bg-neutral-200 dark:bg-neutral-800 p-3 shadow-sm rounded-xl cursor-pointer flex"
+      className="ml-0 text-xl text-ternary-dark dark:text-secondary-light hover:text-primary-light dark:hover:text-primary-light bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-light p-3 shadow-sm rounded-xl cursor-pointer flex duration-300"
       onClick={() => {
         setTheme(theme === 'light' ? 'dark' : 'light')
       }}
     >
     { theme === 'light' ? (
-      <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+      <FaMoon className="text-xl" />
     ) : (
-      <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+      <FaSun className="text-xl" />
     )}
     </div>
   );

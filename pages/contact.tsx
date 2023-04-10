@@ -6,7 +6,6 @@ import Header from '@/components/Header';
 import ContactForm from '@/components/ContactForm';
 import ContactDetails from '@/components/ContactDetails';
 import Footer from '@/components/Footer';
-import { useTheme } from 'next-themes';
 
 type ContactProps = {
   basics: Basics[];
@@ -14,15 +13,14 @@ type ContactProps = {
 
 const Contact: NextPage<ContactProps> = ({ basics }) => {
   const { name, contactIntro, location, phone, website, resumeLink, socialLinks } = basics[0];
-  const { theme, setTheme } = useTheme();
   return (
     <div className="mx-auto">
 
       <Header name={ name } />
 
-      <div>
+      <div className="text-base text-secondary-dark dark:text-secondary-light">
 
-        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Contact</h1>
+        <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">Contact</h1>
 
         <div className="mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
 

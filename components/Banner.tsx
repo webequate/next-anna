@@ -19,10 +19,10 @@ const Banner: React.FC<BannerProps> = ({ name, title, abouts, resumeLink, social
 	return (
 		<section className="flex flex-col items-top sm:justify-between sm:flex-row mt-5 md:mt-2">
 			<motion.div className="text-left">
-				<h1 className="text-4xl font-bold tracking-tight text-primary-dark dark:text-primary-light sm:text-5xl mb-6 uppercase">
+				<h1 className="text-5xl font-bold text-primary-dark dark:text-primary-light sm:text-5xl mb-6 uppercase">
 					{ name }
 				</h1>
-        <h2 className="text-xl font-bold tracking-tight text-primary-dark dark:text-primary-light sm:text-3xl mb-6">
+        <h2 className="text-xl font-bold tracking-tight text-accent-light dark:text-accent-light sm:text-3xl mb-6">
 					{ title }
         </h2>
         { abouts.map((about, index) => (

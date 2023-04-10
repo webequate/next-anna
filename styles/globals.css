@@ -170,6 +170,11 @@ a {
   justify-content: center;
 }
 
+.modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal:target {
   opacity: 1;
   visibility: visible;

@@ -3,9 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiX, FiMenu } from 'react-icons/fi';
-import logoLight from '@/public/images/allen.png';
-import logoDark from '@/public/images/allen.png';
-import { useTheme } from 'next-themes';
+import logo from '@/public/images/allen.png';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 interface HeaderProps {
@@ -14,7 +12,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ name }) => {
 	const [ showMenu, setShowMenu ] = useState(false);
-  const { theme, setTheme } = useTheme();
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -39,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
           <div>
             <Link href="/">
               <Image
-                src={theme === 'dark' ? logoDark : logoLight}
+                src={logo}
                 className="w-12 cursor-pointer"
                 alt={`${ name }`}
                 width={100}
@@ -50,23 +47,23 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
           {/* Header links large screen */}
           <div className="font-general-medium m-0 sm:ml-4 sm:flex sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-            <ul className="flex rounded-full bg-white/90 px-3 mx-6 text-sm font-medium text-primary-dark dark:text-primary-light shadow-lg shadow-neutral-800/5 ring-1 ring-neutral-900/5 backdrop-blur dark:bg-neutral-800/90 dark:ring-white/10">
-              <li className="text-left text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="About">
+            <ul className="flex rounded-full font-semibold text-secondary-dark dark:text-secondary-light px-3 mx-6 text-sm text-primary-dark dark:text-primary-light shadow-lg shadow-neutral-800/5 ring-1 ring-secondary-light backdrop-blur bg-primary-light dark:bg-primary-dark ring-secondary-light dark:ring-secondary-dark">
+              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="About">
                 <Link href="/about">About</Link>
               </li>
-              <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="Projects">
+              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Projects">
                 <Link href="/projects">Projects</Link>
               </li>
-              <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="Resume">
+              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Resume">
                 <Link href="/resume">Resume</Link>
               </li>
-              <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="Skills">
+              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Skills">
                 <Link href="/skills">Skills</Link>
               </li>
-              <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="Testimonials">
+              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Testimonials">
                 <Link href="/testimonials">Testimonials</Link>
               </li>
-              <li className="text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 sm:py-2" aria-label="Contact">
+              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Contact">
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>

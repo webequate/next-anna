@@ -5,7 +5,6 @@ import { Basics } from '@/types/basics';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import Footer from '@/components/Footer';
-import { useTheme } from 'next-themes';
 
 type HomeProps = {
   basics: Basics[];
@@ -13,7 +12,6 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({ basics }) => {
   const { name, title, abouts, resumeLink, socialLinks } = basics[0];
-  const { theme, setTheme } = useTheme();
   return (
     <div className="mx-auto">
       <Header name={ name } />

@@ -5,7 +5,6 @@ import { School, Job } from '@/types/experience';
 import { Basics, SocialLink } from '@/types/basics';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useTheme } from 'next-themes';
 
 type ResumeProps = {
   schools: School[];
@@ -16,38 +15,37 @@ type ResumeProps = {
 }
 
 const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks }) => {
-  const { theme, setTheme } = useTheme();
   return (
     <>
       <Header name={ name } />
 
-        <h1 className="text-4xl font-semibold mb-2">{ name }</h1>
-        <h3 className="text-xl font-semibold text-secondary-dark dark:text-secondary-light mb-4">{ title }</h3>
+        <h1 className="text-5xl font-bold uppercase mb-2">{ name }</h1>
+        <h3 className="text-3xl font-bold text-accent-light dark:text-accent-light mb-4">{ title }</h3>
   
-        <h2 className="text-2xl font-semibold mt-12 mb-6">Education</h2>
+        <h2 className="text-4xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Education</h2>
         { schools.map(( school, index ) => (
-          <div key={ index } className="text-secondary-dark dark:text-secondary-light mb-4">
-            <h3 className="text-xl font-semibold text-primary-dark dark:text-primary-light mb-2">{ school.school }</h3>
-            <p className="text-base mt-4 mb-4">
-              <em>{ school.program }</em>
-              <span> • { school.city } • </span>
-              <span>{ school.endDate }</span>
+          <div key={ index } className="text-base text-ternary-dark dark:text-ternary-light mb-6">
+            <h3 className="text-3xl font-bold text-primary-dark dark:text-primary-light">{ school.school }</h3>
+            <p className="mt-1 mb-2">
+              <span className="text-xl font-bold text-accent-light dark:text-accent-light">{ school.program }</span>
+              <span className="font-semibold"> • { school.city } • </span>
+              <span className="font-semibold italic">{ school.endDate }</span>
             </p>
           </div>
         ))}
 
-        <h2 className="text-2xl font-semibold mt-12 mb-6">Work Experience</h2>
+        <h2 className="text-4xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Work Experience</h2>
         { jobs.map(( job, index ) => (
-          <div key={ index } className="text-secondary-dark dark:text-secondary-light mb-12">
-            <h3 className="text-xl font-semibold text-primary-dark dark:text-primary-light mb-2">{ job.company }</h3>
-            <p className="text-base mt-4 mb-4">
-              <em>{ job.role }</em>
-              <span> • { job.city } • </span>
-              <span>{ job.startDate } - { job.endDate }</span>
+          <div key={ index } className="text-base text-ternary-dark dark:text-ternary-light mb-8">
+            <h3 className="text-3xl font-bold text-primary-dark dark:text-primary-light">{ job.company }</h3>
+            <p className="mt-1 mb-2">
+              <span className="text-xl font-bold text-accent-light dark:text-accent-light">{ job.role }</span>
+              <span className="font-semibold"> • { job.city } • </span>
+              <span className="font-semibold italic">{ job.startDate } - { job.endDate }</span>
             </p>
             <ul className="list-disc list-outside">
               { job.achievements.map(( achievement, index ) => (
-                <li key={ index } className="text-base mb-2">
+                <li key={ index } className="mb-1">
                   { achievement }
                 </li>
               ))}

@@ -5,7 +5,7 @@ import { FeaturedSkill, RatedSkill } from '@/types/skills';
 import { Basics, SocialLink } from '@/types/basics';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useTheme } from 'next-themes';
+import SkillBar from '@/components/SkillBar';
 
 type SkillsProps = {
   featuredSkills: FeaturedSkill[];
@@ -15,18 +15,17 @@ type SkillsProps = {
 }
 
 const Skills: NextPage<SkillsProps> = ({ featuredSkills, ratedSkills, name, socialLinks }) => {
-  const { theme, setTheme } = useTheme();
   return (
     <div className="mx-auto">
 
       <Header name={ name } />
 
-      <div>
+      <div className="text-base text-secondary-dark dark:text-secondary-light">
 
-        <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl mb-6">Skills</h1>
+        <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">Skills</h1>
 
         {/* Featured Skills */}
-        <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">
+        <p className="mt-4 mb-8">
           {featuredSkills.map((featuredSkill, index) => (
             <span key={index}>{featuredSkill.description}, </span>
           ))}
@@ -35,10 +34,7 @@ const Skills: NextPage<SkillsProps> = ({ featuredSkills, ratedSkills, name, soci
         {/* Rated Skills */}
         <ul>
           {ratedSkills.map((ratedSkill, index) => (
-            <li key={index}>
-              <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ratedSkill.name}</p>
-              <p className="text-base text-zinc-600 dark:text-zinc-400 mt-4 mb-4">{ratedSkill.level}</p>
-            </li>
+            <SkillBar key={index} name={ratedSkill.name} level={ratedSkill.level} />
           ))}
         </ul>
 
