@@ -1,5 +1,6 @@
 // pages/about.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { motion } from 'framer-motion';
 import { connectToDatabase } from '@/lib/mongodb';
 import { Basics } from '@/types/basics';
 import Header from '@/components/Header';
@@ -15,23 +16,28 @@ const About: NextPage<AboutProps> = ({ basics }) => {
   return (
     <div className="mx-auto">
       <Header name={ name } />
-      <div className="text-base text-secondary-dark dark:text-secondary-light">
-        <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">About</h1>
-        <p className="mt-4 mb-4">{ name }</p>
-        <p className="mt-4 mb-4">{ title }</p>
-        { abouts.map((about, index) => (
-          <p key={index} className="text-base mt-4 mb-4">{ about }</p>
-        ))}
-        <DownloadCV resumelink={ resumeLink } />
-        <p className="mt-4 mb-4">{ website }</p>
-        <p className="mt-4 mb-4">{ location }</p>
-        <p className="mt-4 mb-4">{ phone }</p>
-        <p className="mt-4 mb-4">{ contactIntro }</p>
-      </div>
-      <Footer
-        name={ name }
-        socialLinks={ socialLinks }
-      />
+
+      <motion.div
+			  initial={{ opacity: 0 }}
+			  animate={{ opacity: 1 }}
+			  transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+		  >
+        <div className="text-base text-secondary-dark dark:text-secondary-light">
+          <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">About</h1>
+          <p className="mt-4 mb-4">{ name }</p>
+          <p className="mt-4 mb-4">{ title }</p>
+          { abouts.map((about, index) => (
+            <p key={index} className="text-base mt-4 mb-4">{ about }</p>
+          ))}
+          <DownloadCV resumelink={ resumeLink } />
+          <p className="mt-4 mb-4">{ website }</p>
+          <p className="mt-4 mb-4">{ location }</p>
+          <p className="mt-4 mb-4">{ phone }</p>
+          <p className="mt-4 mb-4">{ contactIntro }</p>
+        </div>
+      </motion.div>
+
+      <Footer name={ name } socialLinks={ socialLinks } />
     </div>
   );
 }

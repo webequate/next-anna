@@ -1,7 +1,6 @@
 import { SocialLink } from '@/types/basics';
 import Social from '@/components/Social';
 import Copyright from '@/components/Copyright';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
@@ -23,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ name, socialLinks }) => {
         <div>
           {/* Footer links large screen */}
           <div className="m-0 sm:ml-4 sm:flex sm:p-0 justify-center items-center">
-            <ul className="flex text-base font-semibold text-secondary-dark dark:text-secondary-light rounded-full px-3 mx-6 text-sm shadow-lg ring-1 backdrop-blur bg-primary-light dark:bg-primary-dark ring-secondary-light dark:ring-secondary-dark">
+            <ul className="flex text-base font-semibold text-secondary-dark dark:text-secondary-light rounded-full px-3 mx-6 text-sm bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light">
               <li className="hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="About">
                 <Link href="/about">About</Link>
               </li>

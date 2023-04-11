@@ -12,12 +12,12 @@ module.exports = {
 				// Light colors
 				'primary-light': '#f5f5f5', // 100
 				'secondary-light': '#a3a3a3', // 400
-				'ternary-light': '#737373', // 500
+				'tertiary-light': '#404040', // 700
 
 				// Dark colors
 				'primary-dark': '#262626', // 800
 				'secondary-dark': '#525252', // 600
-				'ternary-dark': '#737373', // 500
+				'tertiary-dark': '#d4d4d4', // 300
 
 				// Accent colors
 				'accent-light': '#5b8ee1',

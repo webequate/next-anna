@@ -1,5 +1,6 @@
 // pages/contact.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { motion } from 'framer-motion';
 import { connectToDatabase } from '@/lib/mongodb';
 import { Basics } from '@/types/basics';
 import Header from '@/components/Header';
@@ -15,10 +16,14 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
   const { name, contactIntro, location, phone, website, resumeLink, socialLinks } = basics[0];
   return (
     <div className="mx-auto">
-
       <Header name={ name } />
 
-      <div className="text-base text-secondary-dark dark:text-secondary-light">
+      <motion.div
+			  initial={{ opacity: 0 }}
+			  animate={{ opacity: 1 }}
+			  transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+        className={"text-base text-secondary-dark dark:text-secondary-light"}
+		  >
 
         <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">Contact</h1>
 
@@ -37,13 +42,9 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
 
         </div>
 
-      </div>
+      </motion.div>
 
-      <Footer
-        name={ name }
-        socialLinks={ socialLinks }
-      />
-
+      <Footer name={ name } socialLinks={ socialLinks } />
     </div>
   );
 }

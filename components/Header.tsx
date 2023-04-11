@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
           {/* Header links large screen */}
           <div className="font-general-medium m-0 sm:ml-4 sm:flex sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-            <ul className="flex rounded-full font-semibold text-secondary-dark dark:text-secondary-light px-3 mx-6 text-sm text-primary-dark dark:text-primary-light shadow-lg shadow-neutral-800/5 ring-1 ring-secondary-light backdrop-blur bg-primary-light dark:bg-primary-dark ring-secondary-light dark:ring-secondary-dark">
+            <ul className="flex rounded-full text-sm font-semibold text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light px-3 mx-6">
               <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="About">
                 <Link href="/about">About</Link>
               </li>
@@ -100,25 +100,25 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
                 : 'hidden'
             }
           >
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2">
               <Link href="/" aria-label="Home">Home</Link>
             </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2">
               <Link href="/about" aria-label="About">About</Link>
             </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
               <Link href="/projects" aria-label="Projects">Projects</Link>
             </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
               <Link href="/resume" aria-label="Resume">Resume</Link>
             </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
               <Link href="/skills" aria-label="Skills">Skills</Link>
             </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
               <Link href="/testimonials" aria-label="Testimonials">Testimonials</Link>
             </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
               <Link href="/contact" aria-label="Contact">Contact</Link>
             </div>
           </div>

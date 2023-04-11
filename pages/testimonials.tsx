@@ -1,5 +1,6 @@
 // pages/testimonials.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { motion } from 'framer-motion';
 import { connectToDatabase } from '@/lib/mongodb';
 import { Testimonial } from '@/types/testimonial';
 import { Basics, SocialLink } from '@/types/basics';
@@ -15,29 +16,29 @@ type TestimonialsProps = {
 const Testimonials: NextPage<TestimonialsProps> = ({ testimonials, name, socialLinks }) => {
   return (
     <div className="mx-auto">
-
       <Header name={ name } />
 
-      <div className="text-base text-secondary-dark dark:text-secondary-light">
+      <motion.div
+			  initial={{ opacity: 0 }}
+			  animate={{ opacity: 1 }}
+			  transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+        className={"text-base text-secondary-dark dark:text-secondary-light"}
+		  >
 
         <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">Testimonials</h1>
 
         <ul>
-        {testimonials.map((testimonial, index) => (
-          <li key={index}>
-            <p className="mt-4 mb-4">{ testimonial.description }</p>
-            <p className="mt-4 mb-4">{ testimonial.name }</p>
-          </li>
-        ))}
+          {testimonials.map((testimonial, index) => (
+            <li key={index}>
+              <p className="mt-4 mb-4">{ testimonial.description }</p>
+              <p className="mt-4 mb-4">{ testimonial.name }</p>
+            </li>
+          ))}
         </ul>
 
-      </div>
+      </motion.div>
 
-      <Footer
-        name={ name }
-        socialLinks={ socialLinks }
-      />
-      
+      <Footer name={ name } socialLinks={ socialLinks } />
     </div>
   );
 }

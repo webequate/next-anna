@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div
-      className="ml-0 text-xl text-ternary-dark dark:text-secondary-light hover:text-primary-light dark:hover:text-primary-light bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-light p-3 shadow-sm rounded-xl cursor-pointer flex duration-300"
+      className="flex text-xl text-secondary-dark dark:text-secondary-light hover:text-primary-light dark:hover:text-primary-light bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-light ring-1 ring-tertiary-dark dark:ring-tertiary-light p-3 ml-0 rounded-xl cursor-pointer duration-300"
       onClick={() => {
         setTheme(theme === 'light' ? 'dark' : 'light')
       }}

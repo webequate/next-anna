@@ -1,5 +1,6 @@
 // pages/skills.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { motion } from 'framer-motion';
 import { connectToDatabase } from '@/lib/mongodb';
 import { FeaturedSkill, RatedSkill } from '@/types/skills';
 import { Basics, SocialLink } from '@/types/basics';
@@ -17,10 +18,14 @@ type SkillsProps = {
 const Skills: NextPage<SkillsProps> = ({ featuredSkills, ratedSkills, name, socialLinks }) => {
   return (
     <div className="mx-auto">
-
       <Header name={ name } />
 
-      <div className="text-base text-secondary-dark dark:text-secondary-light">
+      <motion.div
+			  initial={{ opacity: 0 }}
+			  animate={{ opacity: 1 }}
+			  transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+        className={"text-base text-secondary-dark dark:text-secondary-light"}
+		  >
 
         <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">Skills</h1>
 
@@ -38,13 +43,9 @@ const Skills: NextPage<SkillsProps> = ({ featuredSkills, ratedSkills, name, soci
           ))}
         </ul>
 
-      </div>
+      </motion.div>
 
-      <Footer
-        name={ name }
-        socialLinks={ socialLinks }
-      />
-      
+      <Footer name={ name } socialLinks={ socialLinks } />
     </div>
   );
 }

@@ -19,7 +19,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ name, contactIntro, loc
 				<h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
 					Contact Details
 				</h2>
-        <p className="mt-4 mb-4">{ contactIntro }</p>
+        <p className="text-base mt-4 mb-4">{ contactIntro }</p>
         <ul>
           <li className="flex mb-4">
             <i className="text-2xl mr-4 mt-1">

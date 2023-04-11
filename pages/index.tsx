@@ -1,5 +1,6 @@
 // pages/index.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { motion } from 'framer-motion';
 import { connectToDatabase } from '@/lib/mongodb';
 import { Basics } from '@/types/basics';
 import Header from '@/components/Header';
@@ -15,17 +16,22 @@ const Home: NextPage<HomeProps> = ({ basics }) => {
   return (
     <div className="mx-auto">
       <Header name={ name } />
-      <Banner
-        name={ name }
-        title={ title }
-        abouts={ abouts }
-        resumeLink={ resumeLink }
-        socialLinks={ socialLinks }
-      />
-      <Footer
-        name={ name }
-        socialLinks={ socialLinks }
-      />
+
+      <motion.div
+			  initial={{ opacity: 0 }}
+			  animate={{ opacity: 1 }}
+			  transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+		  >
+        <Banner
+          name={ name }
+          title={ title }
+          abouts={ abouts }
+          resumeLink={ resumeLink }
+          socialLinks={ socialLinks }
+        />
+      </motion.div>
+
+      <Footer name={ name } socialLinks={ socialLinks } />
     </div>
   );
 }

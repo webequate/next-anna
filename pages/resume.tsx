@@ -1,5 +1,6 @@
 // pages/resume.tsx
 import { GetStaticProps, NextPage } from 'next';
+import { motion } from 'framer-motion';
 import { connectToDatabase } from '@/lib/mongodb';
 import { School, Job } from '@/types/experience';
 import { Basics, SocialLink } from '@/types/basics';
@@ -19,13 +20,19 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks
     <>
       <Header name={ name } />
 
+      <motion.div
+			  initial={{ opacity: 0 }}
+			  animate={{ opacity: 1 }}
+			  transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+		  >
+
         <h1 className="text-5xl font-bold uppercase mb-2">{ name }</h1>
         <h3 className="text-3xl font-bold text-accent-light dark:text-accent-light mb-4">{ title }</h3>
   
-        <h2 className="text-4xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Education</h2>
+        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Education</h2>
         { schools.map(( school, index ) => (
-          <div key={ index } className="text-base text-ternary-dark dark:text-ternary-light mb-6">
-            <h3 className="text-3xl font-bold text-primary-dark dark:text-primary-light">{ school.school }</h3>
+          <div key={ index } className="text-base text-secondary-dark dark:text-secondary-light mb-6">
+            <h3 className="text-2xl font-bold text-primary-dark dark:text-primary-light">{ school.school }</h3>
             <p className="mt-1 mb-2">
               <span className="text-xl font-bold text-accent-light dark:text-accent-light">{ school.program }</span>
               <span className="font-semibold"> • { school.city } • </span>
@@ -34,10 +41,10 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks
           </div>
         ))}
 
-        <h2 className="text-4xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Work Experience</h2>
+        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Work Experience</h2>
         { jobs.map(( job, index ) => (
-          <div key={ index } className="text-base text-ternary-dark dark:text-ternary-light mb-8">
-            <h3 className="text-3xl font-bold text-primary-dark dark:text-primary-light">{ job.company }</h3>
+          <div key={ index } className="text-base text-secondary-dark dark:text-secondary-light mb-8">
+            <h3 className="text-2xl font-bold text-primary-dark dark:text-primary-light">{ job.company }</h3>
             <p className="mt-1 mb-2">
               <span className="text-xl font-bold text-accent-light dark:text-accent-light">{ job.role }</span>
               <span className="font-semibold"> • { job.city } • </span>
@@ -53,13 +60,10 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks
           </div>
         ))}
 
-      <Footer
-        name={ name }
-        socialLinks={ socialLinks }
-      />
+      </motion.div>
 
-      </>
-
+      <Footer name={ name } socialLinks={ socialLinks } />
+    </>
   );
 }
 

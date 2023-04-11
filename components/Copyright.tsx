@@ -9,7 +9,7 @@ const Copyright: React.FC<CopyrightProps> = ({ name }) => {
 
 	return (
 		<div className="font-general-regular flex justify-center items-center text-center">
-			<div className="text-lg text-ternary-dark dark:text-ternary-light">
+			<div className="text-sm text-secondary-dark dark:text-secondary-light mt-4">
 				&copy; {new Date().getFullYear()} { name }. All rights reserved.
 			</div>
 		</div>
