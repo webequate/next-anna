@@ -1,7 +1,6 @@
 // components/ContactForm.tsx
-
 import { useState } from 'react';
-import { ContactForm as ContactFormData } from '../interfaces/ContactForm';
+import { ContactForm as ContactFormData } from '@/interfaces/ContactForm';
 import FormInput from '@/components/FormInput';
 
 const ContactForm: React.FC = () => {
@@ -39,7 +38,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="w-full lg:w-1/2">
       <div className="leading-loose">
-        <form onSubmit={handleSubmit} className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left">
+        <form onSubmit={handleSubmit} className="max-w-xl bg-primary-light dark:bg-primary-dark rounded-xl shadow-xl text-left m-4 p-6 sm:p-10">
           <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
 						Contact Form
 					</p>
@@ -77,15 +76,15 @@ const ContactForm: React.FC = () => {
             value={formData.subject}
 					/>
 
-					<div className="mt-6">
+					<div className="mb-4">
 						<label
-							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
+							className="block text-lg text-secondary-dark dark:text-secondary-light mb-1"
 							htmlFor="message"
 						>
 							Message
 						</label>
 						<textarea
-							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+							className="w-full px-5 py-2 border text-secondary-dark dark:text-secondary-light bg-white dark:bg-black border-secondary-dark dark:border-secondary-light rounded-md shadow-sm text-md"
 							id="message"
 							name="message"
 							cols={14}
@@ -97,11 +96,11 @@ const ContactForm: React.FC = () => {
 						></textarea>
 					</div>
 
-					<div className="mt-6">
-            <button type="submit" aria-label="Send Message">
-              <span className="font-general-medium px-7 py-4 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
-                Send Message
-              </span>
+					<div>
+            <button type="submit" aria-label="Send Message" className="text-primary-light dark:text-primary-light bg-accent-light dark:bg-accent-dark hover:bg-accent-dark dark:hover:bg-accent-light font-general-medium flex justify-center items-center w-40 sm:w-40 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300">
+              <span className="text-sm sm:text-lg">
+				        Send Message
+			        </span>
             </button>
 					</div>
 
