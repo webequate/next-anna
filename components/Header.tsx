@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FiX, FiMenu } from 'react-icons/fi';
 import logo from '@/public/images/allen.png';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
@@ -22,64 +21,65 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 	}
 
 	return (
-		<motion.nav
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      id="nav"
-      className="mx-auto">
-
-      <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center pt-6 pb-12">
-
-				<div className="flex mx-auto items-center px-4 sm:px-0">
+    <nav>
+      <div className="container mx-auto px-6 py-3 mb-6">
+        <div className="flex items-center justify-between">
 
           {/* Logo */}
-          <div>
-            <Link href="/">
-              <Image
-                src={logo}
-                className="w-12 cursor-pointer"
-                alt={`${ name }`}
-                width={100}
-                height={100}
-              />
-            </Link>
+          <Link
+            href="/"
+            className="flex flex-shrink-0 items-center"
+          >
+            <Image src={logo} alt="Logo" width={40} height={40} />
+          </Link>
+
+          <div className="flex items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0 items-center">
+            {/* Navigation links */}
+            <div className="flex items-center rounded-full text-sm lg:text-lg font-semibold text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light px-3 mx-6">
+              <Link
+                href="/about"
+                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+              >
+                About
+              </Link>
+              <Link
+                href="/projects"
+                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/resume"
+                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+              >
+                Resume
+              </Link>
+              <Link
+                href="/skills"
+                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+              >
+                Skills
+              </Link>
+              <Link
+                href="/testimonials"
+                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+              >
+                Testimonials
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+              >
+                Contact
+              </Link>
+            </div>
+
           </div>
-
-          {/* Header links large screen */}
-          <div className="font-general-medium m-0 sm:ml-4 sm:flex sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-            <ul className="flex rounded-full text-sm font-semibold text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light px-3 mx-6">
-              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="About">
-                <Link href="/about">About</Link>
-              </li>
-              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Projects">
-                <Link href="/projects">Projects</Link>
-              </li>
-              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Resume">
-                <Link href="/resume">Resume</Link>
-              </li>
-              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Skills">
-                <Link href="/skills">Skills</Link>
-              </li>
-              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Testimonials">
-                <Link href="/testimonials">Testimonials</Link>
-              </li>
-              <li className="text-left text-lg hover:text-accent-light dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300" aria-label="Contact">
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Theme switcher */}
-          <ThemeSwitcher />
-
-        </div>
-
-        <div>
 
           {/* Small screen - Hamburger menu */}
-          <div className="sm:hidden">
+          <div className="block md:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={ toggleMenu }
               type="button"
               className="focus:outline-none"
               aria-label="Hamburger Menu"
@@ -100,34 +100,56 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
                 : 'hidden'
             }
           >
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2">
-              <Link href="/" aria-label="Home">Home</Link>
-            </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2">
-              <Link href="/about" aria-label="About">About</Link>
-            </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-              <Link href="/projects" aria-label="Projects">Projects</Link>
-            </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-              <Link href="/resume" aria-label="Resume">Resume</Link>
-            </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-              <Link href="/skills" aria-label="Skills">Skills</Link>
-            </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-              <Link href="/testimonials" aria-label="Testimonials">Testimonials</Link>
-            </div>
-            <div className="block text-left text-lg text-primary-dark dark:text-tertiary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-              <Link href="/contact" aria-label="Contact">Contact</Link>
-            </div>
+            <Link
+              href="/" aria-label="Home"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 pt-3 sm:pt-2"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about" aria-label="About"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
+            >
+              About
+            </Link>
+            <Link
+              href="/projects" aria-label="Projects"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/resume" aria-label="Resume"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
+            >
+              Resume
+            </Link>
+            <Link
+              href="/skills" aria-label="Skills"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
+            >
+              Skills
+            </Link>
+            <Link
+              href="/testimonials" aria-label="Testimonials"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
+            >
+              Testimonials
+            </Link>
+            <Link
+              href="/contact" aria-label="Contact"
+              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
+            >
+              Contact
+            </Link>
           </div>
 
+          {/* Theme switcher */}
+          <ThemeSwitcher />
+            
         </div>
-
       </div>
-
-		</motion.nav>
+    </nav>
 	);
 }
 

@@ -19,7 +19,7 @@ const Banner: React.FC<BannerProps> = ({ name, title, abouts, resumeLink, social
         <h1 className="text-5xl font-bold text-primary-dark dark:text-primary-light sm:text-5xl mb-6 uppercase">
           { name }
         </h1>
-        <h2 className="text-xl font-bold tracking-tight text-accent-light dark:text-accent-light sm:text-3xl mb-6">
+        <h2 className="text-3xl font-bold tracking-tight text-accent-light dark:text-accent-light mb-6">
           { title }
         </h2>
         { abouts.map((about, index) => (

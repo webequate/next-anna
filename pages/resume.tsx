@@ -29,7 +29,7 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks
         <h1 className="text-5xl font-bold uppercase mb-2">{ name }</h1>
         <h3 className="text-3xl font-bold text-accent-light dark:text-accent-light mb-4">{ title }</h3>
   
-        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Education</h2>
+        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-primary-dark dark:decoration-primary-light mt-12 mb-12">Education</h2>
         { schools.map(( school, index ) => (
           <div key={ index } className="text-base text-secondary-dark dark:text-secondary-light mb-6">
             <h3 className="text-2xl font-bold text-primary-dark dark:text-primary-light">{ school.school }</h3>
@@ -41,7 +41,7 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks
           </div>
         ))}
 
-        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-accent-dark dark:decoration-accent-light mt-12 mb-12">Work Experience</h2>
+        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-primary-dark dark:decoration-primary-light mt-12 mb-12">Work Experience</h2>
         { jobs.map(( job, index ) => (
           <div key={ index } className="text-base text-secondary-dark dark:text-secondary-light mb-8">
             <h3 className="text-2xl font-bold text-primary-dark dark:text-primary-light">{ job.company }</h3>
