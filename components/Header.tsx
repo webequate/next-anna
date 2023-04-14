@@ -1,39 +1,35 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { FiX, FiMenu } from 'react-icons/fi';
-import logo from '@/public/images/allen.png';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { FiX, FiMenu } from "react-icons/fi";
+import logo from "@/public/images/allen.png";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 interface HeaderProps {
   name: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ name }) => {
-	const [ showMenu, setShowMenu ] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-	function toggleMenu() {
-		if (!showMenu) {
-			setShowMenu(true);
-		} else {
-			setShowMenu(false);
-		}
-	}
+  function toggleMenu() {
+    if (!showMenu) {
+      setShowMenu(true);
+    } else {
+      setShowMenu(false);
+    }
+  }
 
-	return (
+  return (
     <nav>
       <div className="container mx-auto px-6 py-3 mb-6">
         <div className="flex items-center justify-between">
-
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex flex-shrink-0 items-center"
-          >
+          <Link href="/" className="flex flex-shrink-0 items-center">
             <Image src={logo} alt="Logo" width={40} height={40} />
           </Link>
 
-          <div className="flex items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0 items-center">
+          <div className="flex items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0">
             {/* Navigation links */}
             <div className="flex items-center rounded-full text-sm lg:text-lg font-semibold text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light px-3 mx-6">
               <Link
@@ -73,13 +69,12 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
                 Contact
               </Link>
             </div>
-
           </div>
 
           {/* Small screen - Hamburger menu */}
           <div className="block md:hidden">
             <button
-              onClick={ toggleMenu }
+              onClick={toggleMenu}
               type="button"
               className="focus:outline-none"
               aria-label="Hamburger Menu"
@@ -96,48 +91,55 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
           <div
             className={
               showMenu
-                ? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
-                : 'hidden'
+                ? "block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none"
+                : "hidden"
             }
           >
             <Link
-              href="/" aria-label="Home"
+              href="/"
+              aria-label="Home"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 pt-3 sm:pt-2"
             >
               Home
             </Link>
             <Link
-              href="/about" aria-label="About"
+              href="/about"
+              aria-label="About"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
             >
               About
             </Link>
             <Link
-              href="/projects" aria-label="Projects"
+              href="/projects"
+              aria-label="Projects"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
             >
               Projects
             </Link>
             <Link
-              href="/resume" aria-label="Resume"
+              href="/resume"
+              aria-label="Resume"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
             >
               Resume
             </Link>
             <Link
-              href="/skills" aria-label="Skills"
+              href="/skills"
+              aria-label="Skills"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
             >
               Skills
             </Link>
             <Link
-              href="/testimonials" aria-label="Testimonials"
+              href="/testimonials"
+              aria-label="Testimonials"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
             >
               Testimonials
             </Link>
             <Link
-              href="/contact" aria-label="Contact"
+              href="/contact"
+              aria-label="Contact"
               className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
             >
               Contact
@@ -146,11 +148,10 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
           {/* Theme switcher */}
           <ThemeSwitcher />
-            
         </div>
       </div>
     </nav>
-	);
-}
+  );
+};
 
 export default Header;

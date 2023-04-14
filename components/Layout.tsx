@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { useEffect } from 'react';
+import React from "react";
+import Head from "next/head";
+import { useEffect } from "react";
 
 interface LayoutProps {
   title?: string;
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ title = 'Portfolio', children }) => {
-  useEffect(() => {      
+const Layout: React.FC<LayoutProps> = ({ title = "Portfolio", children }) => {
+  useEffect(() => {
     document.body.classList.add("flex");
     document.body.classList.add("flex-col");
     document.body.classList.add("bg-neutral-100");

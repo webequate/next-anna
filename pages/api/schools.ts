@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import clientPromise from '../../lib/mongodb';
+import { NextApiRequest, NextApiResponse } from "next";
+import clientPromise from "../../lib/mongodb";
 
 const fetchSchools = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -7,10 +7,10 @@ const fetchSchools = async (req: NextApiRequest, res: NextApiResponse) => {
     const db = client.db("Portfolio");
 
     const data = await db
-        .collection("schools")
-        .find({})
-        .sort({ order: 1 })
-        .toArray();
+      .collection("schools")
+      .find({})
+      .sort({ order: 1 })
+      .toArray();
 
     res.json(data);
   } catch (e) {

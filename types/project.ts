@@ -4,7 +4,7 @@ export type Thumb = {
   type: string;
   company: string;
   imgurl: string;
-}
+};
 
 export type Modal = {
   name: string;
@@ -17,7 +17,7 @@ export type Modal = {
   tablet?: string;
   laptop?: string;
   desktop?: string;
-}
+};
 
 export type Project = {
   _id: string;
@@ -25,4 +25,4 @@ export type Project = {
   name: string;
   thumb: Thumb;
   modal: Modal;
-}
+};

@@ -5,4 +5,3 @@ export interface ContactForm {
   subject: string;
   message: string;
 }
-  

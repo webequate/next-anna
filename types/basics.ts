@@ -2,7 +2,7 @@
 export type SocialLink = {
   name: string;
   url: string;
-}
+};
 
 export type Basics = {
   _id: string;
@@ -15,5 +15,4 @@ export type Basics = {
   location: string;
   phone: string;
   contactIntro: string;
-}
-  
+};
