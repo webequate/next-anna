@@ -12,7 +12,7 @@ type AboutProps = {
 }
 
 const About: NextPage<AboutProps> = ({ basics }) => {
-  const { name, title, abouts, resumeLink, socialLinks, website, location, phone, contactIntro } = basics[0];
+  const { name, titles, abouts, resumeLink, socialLinks, website, location, phone, contactIntro } = basics[0];
   return (
     <div className="mx-auto">
       <Header name={ name } />
@@ -25,7 +25,9 @@ const About: NextPage<AboutProps> = ({ basics }) => {
         <div className="text-base text-secondary-dark dark:text-secondary-light">
           <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">About</h1>
           <p className="mt-4 mb-4">{ name }</p>
-          <p className="mt-4 mb-4">{ title }</p>
+          { titles.map((title, index) => (
+            <p key={index} className="mt-4 mb-4">{ title }</p>
+          ))}
           { abouts.map((about, index) => (
             <p key={index} className="text-base mt-4 mb-4">{ about }</p>
           ))}

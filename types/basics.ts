@@ -7,7 +7,7 @@ export type SocialLink = {
 export type Basics = {
   _id: string;
   name: string;
-  title: string;
+  titles: string[];
   abouts: string[];
   resumeLink: string;
   socialLinks: SocialLink[];

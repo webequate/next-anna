@@ -11,11 +11,11 @@ type ResumeProps = {
   schools: School[];
   jobs: Job[];
   name: string;
-  title: string;
+  titles: string[];
   socialLinks: SocialLink[];
 }
 
-const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks }) => {
+const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, titles, socialLinks }) => {
   return (
     <>
       <Header name={ name } />
@@ -27,8 +27,11 @@ const Resume: NextPage<ResumeProps> = ({ schools, jobs, name, title, socialLinks
 		  >
 
         <h1 className="text-5xl font-bold uppercase mb-2">{ name }</h1>
-        <h3 className="text-3xl font-bold text-accent-light dark:text-accent-light mb-4">{ title }</h3>
-  
+        { titles.map(( title, index ) => (
+          <h3 key= { index } className="text-3xl font-bold text-accent-light dark:text-accent-light">
+            { title }
+          </h3>
+        ))}
         <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-primary-dark dark:decoration-primary-light mt-12 mb-12">Education</h2>
         { schools.map(( school, index ) => (
           <div key={ index } className="text-base text-secondary-dark dark:text-secondary-light mb-6">
@@ -84,7 +87,7 @@ export const getStaticProps: GetStaticProps<ResumeProps> = async () => {
       schools: JSON.parse(JSON.stringify(schools)),
       jobs: JSON.parse(JSON.stringify(jobs)),
       name: basics[0].name,
-      title: basics[0].title,
+      titles: basics[0].titles,
       socialLinks: basics[0].socialLinks
     },
     revalidate: 60,

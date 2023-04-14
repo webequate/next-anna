@@ -12,7 +12,7 @@ type HomeProps = {
 }
 
 const Home: NextPage<HomeProps> = ({ basics }) => {
-  const { name, title, abouts, resumeLink, socialLinks } = basics[0];
+  const { name, titles, abouts, resumeLink, socialLinks } = basics[0];
   return (
     <div className="mx-auto">
       <Header name={ name } />
@@ -24,7 +24,7 @@ const Home: NextPage<HomeProps> = ({ basics }) => {
 		  >
         <Banner
           name={ name }
-          title={ title }
+          titles={ titles }
           abouts={ abouts }
           resumeLink={ resumeLink }
           socialLinks={ socialLinks }
