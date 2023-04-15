@@ -66,11 +66,11 @@ export default function Layout({ children }: any) {
         </MjmlAttributes>
       </MjmlHead>
 
-      <MjmlBody width={640} backgroundColor={colors.backgroundColor}>
+      <MjmlBody width={640} backgroundColor={colors.black}>
         <MjmlWrapper fullWidth={true} padding="24px 16px">
           <MjmlSection
-            backgroundColor={colors.white}
-            cssClass="top-section gutter"
+            backgroundColor={colors.neutral900}
+            cssClass="top-section gutter border-bottom"
             paddingBottom={48}
           >
             <MjmlColumn>
@@ -86,7 +86,7 @@ export default function Layout({ children }: any) {
           {children}
 
           <MjmlSection
-            backgroundColor={colors.white}
+            backgroundColor={colors.neutral900}
             cssClass="bottom-section gutter border-top"
             paddingTop={20}
           >
@@ -100,7 +100,7 @@ export default function Layout({ children }: any) {
                     rel="noopener"
                     href="https://portfolio.webequate.com/contact"
                     style={{
-                      color: colors.black,
+                      color: colors.lightAccent,
                       textDecoration: "underline",
                     }}
                   >

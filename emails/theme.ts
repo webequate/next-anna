@@ -7,6 +7,23 @@ export const colors = {
   blue: "#B8CEFF",
   brandPrimary: "#F2BF45",
   backgroundColor: "#1F314A",
+
+  // Light colors
+  lightPrimary: "#f5f5f5", // 100
+  lightSecondary: "#a3a3a3", // 400
+  lightTertiary: "#404040", // 700
+
+  // Dark colors
+  darkPrimary: "#262626", // 800
+  darkSecondary: "#525252", // 600
+  darkTertiary: "#d4d4d4", // 300
+
+  // Accent colors
+  lightAccent: "#5b8ee1",
+  darkAccent: "#346ac2",
+
+  // Other colors
+  neutral900: "#171717",
 };
 
 export const fontSize = {
@@ -57,6 +74,6 @@ export const themeDefaults = {
   lineHeight: lineHeight.base,
   fontWeight: fontWeight.normal,
   fontSize: fontSize.base,
-  color: colors.black,
+  color: colors.lightPrimary,
   padding: 0,
 };

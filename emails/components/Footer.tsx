@@ -12,66 +12,6 @@ export default function Footer() {
   );
   return (
     <>
-      <MjmlSection paddingTop={48}>
-        <MjmlColumn>
-          <MjmlRaw>
-            <tr>
-              <td>
-                <table
-                  border={0}
-                  cellPadding={0}
-                  cellSpacing={0}
-                  role="presentation"
-                  width="100%"
-                >
-                  <tr>
-                    <td width="50%" align="right">
-                      <a href="https://www.facebook.com/webequate">
-                        <img
-                          src={assetUrl("/assets/facebook.png")}
-                          alt="Facebook Logo"
-                          height="40px"
-                          width="40px"
-                          style={{
-                            border: 0,
-                            display: "block",
-                            outline: "none",
-                            textDecoration: "none",
-                            fontSize: 16,
-                            height: 40,
-                            width: 40,
-                            paddingRight: 6,
-                          }}
-                        />
-                      </a>
-                    </td>
-                    <td width="50%">
-                      <a href="https://www.instagram.com/webequate/">
-                        <img
-                          src={assetUrl("/assets/instagram.png")}
-                          alt="Instagram Logo"
-                          height="40px"
-                          width="40px"
-                          style={{
-                            border: 0,
-                            display: "block",
-                            outline: "none",
-                            textDecoration: "none",
-                            fontSize: 16,
-                            height: 40,
-                            width: 40,
-                            paddingLeft: 6,
-                          }}
-                        />
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </MjmlRaw>
-        </MjmlColumn>
-      </MjmlSection>
       <MjmlSection paddingTop={32} paddingBottom={32}>
         <MjmlColumn>
           <MjmlText
@@ -84,14 +24,10 @@ export default function Footer() {
               Unsubscribe
             </Link>
             &nbsp;&nbsp; ·&nbsp;&nbsp;
-            <Link
-              color={fontColor}
-              href="https://portfolio.webequate.com/terms-conditions/"
-            >
+            <Link color={fontColor} href="https://portfolio.webequate.com">
               Terms & Conditions
             </Link>
           </MjmlText>
-
           <MjmlText fontSize={fontSize.xs} color={fontColor} align="center">
             WebEquate {new Date().getFullYear()}, All rights reserved.
           </MjmlText>

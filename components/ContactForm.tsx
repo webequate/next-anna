@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
       <div className="leading-loose">
         <form
           onSubmit={handleSubmit}
-          className="max-w-xl bg-primary-light dark:bg-primary-dark rounded-xl shadow-xl text-left m-4 p-6 sm:p-10"
+          className="max-w-xl bg-primary-light dark:bg-primary-dark rounded-xl text-left m-4 p-6 sm:p-10"
         >
           <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
             Contact Form

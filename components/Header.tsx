@@ -22,10 +22,13 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
   return (
     <nav>
-      <div className="container mx-auto px-6 py-3 mb-6">
+      <div className="container mx-auto px-6 py-3 mb-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex flex-shrink-0 items-center">
+          <Link
+            href="/"
+            className="flex flex-shrink-0 items-center text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light p-1 ml-0 rounded-xl cursor-pointer duration-300"
+          >
             <Image src={logo} alt="Logo" width={40} height={40} />
           </Link>
 

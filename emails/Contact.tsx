@@ -18,28 +18,43 @@ const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
   return (
     <Layout>
       <MjmlSection
-        backgroundColor={colors.white}
+        backgroundColor={colors.neutral900}
         cssClass="gutter"
-        paddingBottom={64}
+        paddingBottom={16}
       >
         <MjmlColumn>
           <Heading
-            fontSize={fontSize.xxl}
-            lg={{ fontSize: fontSize.xl }}
+            fontSize={fontSize.lg}
+            lg={{ fontSize: fontSize.lg }}
             align="center"
             maxWidth={450}
             paddingBottom={32}
           >
-            You received an inquiry from your portfolio contact form!
+            Your portfolio contact form was submitted!
           </Heading>
-          <Text align="left" paddingBottom={32}>
-            <strong>Name:</strong> {name}
-            <br />
-            <strong>Email:</strong> {email}
-            <br />
-            <strong>Subject:</strong> {subject}
-            <br />
-            <strong>Message:</strong> {message}
+          <Text color={colors.lightSecondary} paddingBottom={4}>
+            Name:
+          </Text>
+          <Text color={colors.lightPrimary} paddingBottom={24}>
+            {name}
+          </Text>
+          <Text color={colors.lightSecondary} paddingBottom={4}>
+            Email:
+          </Text>
+          <Text color={colors.lightPrimary} paddingBottom={24}>
+            {email}
+          </Text>
+          <Text color={colors.lightSecondary} paddingBottom={4}>
+            Subject:
+          </Text>
+          <Text color={colors.lightPrimary} paddingBottom={24}>
+            {subject}
+          </Text>
+          <Text color={colors.lightSecondary} paddingBottom={4}>
+            Message:
+          </Text>
+          <Text color={colors.lightPrimary} paddingBottom={24}>
+            {message}
           </Text>
         </MjmlColumn>
       </MjmlSection>
