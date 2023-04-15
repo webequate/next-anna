@@ -5,8 +5,7 @@
  * NOTE: This will cause the email linter to throw errors
  */
 
-// const ASSET_URL = "https://thoughtful-post-mailing.vercel.app";
-const ASSET_URL = "https://next-portfolio-6xkof088i-web-equate.vercel.app";
+const ASSET_URL = "https://portfolio.webequate.com";
 
 export default function assetUrl(url: string) {
   if (url.startsWith("/") && !process.env.LOCAL_ASSETS) {
