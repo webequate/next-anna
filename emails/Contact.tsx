@@ -23,12 +23,6 @@ const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
         paddingBottom={64}
       >
         <MjmlColumn>
-          <MjmlImage
-            height={96}
-            width={148.45}
-            src={assetUrl("/assets/cards.png")}
-            paddingBottom={32}
-          />
           <Heading
             fontSize={fontSize.xxl}
             lg={{ fontSize: fontSize.xl }}
