@@ -20,7 +20,7 @@ export const colors = {
 
   // Accent colors
   lightAccent: "#5b8ee1",
-  darkAccent: "#346ac2",
+  darkAccent: "#0066ff",
 
   // Other colors
   neutral900: "#171717",

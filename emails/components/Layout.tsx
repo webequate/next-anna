@@ -75,10 +75,10 @@ export default function Layout({ children }: any) {
           >
             <MjmlColumn>
               <MjmlImage
-                width="110px"
-                height="32px"
+                width="256px"
+                height="45px"
                 align="left"
-                src={assetUrl("/assets/logo-webequate.png")}
+                src={assetUrl("/assets/logo-webequate-light.png")}
               />
             </MjmlColumn>
           </MjmlSection>
