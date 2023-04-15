@@ -1,33 +1,30 @@
 // pages/api/send-email.ts
-
 import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
+import sendMail from "@/emails";
 import { ContactForm } from "@/interfaces/ContactForm";
+import Contact from "@/emails/Contact";
 
 async function sendEmail(formData: ContactForm) {
-  const transporter = nodemailer.createTransport({
-    service: "lmw2-bwfj.accessdomain.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_RECIPIENT,
+  await sendMail({
+    from: process.env.EMAIL_FROM,
+    to: process.env.EMAIL_TO,
+    cc: process.env.EMAIL_CC,
     subject: formData.subject,
+    component: (
+      <Contact
+        name={formData.name}
+        email={formData.email}
+        subject={formData.subject}
+        message={formData.message}
+      />
+    ),
     text: `
       Name: ${formData.name}
       Email: ${formData.email}
       Subject: ${formData.subject}
       Message: ${formData.message}
     `,
-  };
-
-  await transporter.sendMail(mailOptions);
+  });
 }
 
 export default async function handler(
