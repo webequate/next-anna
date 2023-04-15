@@ -41,7 +41,7 @@ const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
           <Text color={colors.lightSecondary} paddingBottom={4}>
             Email:
           </Text>
-          <Text color={colors.lightPrimary} paddingBottom={24}>
+          <Text color={colors.lightAccent} paddingBottom={24}>
             {email}
           </Text>
           <Text color={colors.lightSecondary} paddingBottom={4}>
