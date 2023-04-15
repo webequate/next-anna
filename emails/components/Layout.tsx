@@ -39,10 +39,12 @@ export default function Layout({ children }: any) {
           }
           .top-section {
             border-radius: ${borderRadius.base}px ${borderRadius.base}px 0 0;
+            border: 1px solid ${colors.lightTertiary};
             padding-top: 24px !important;
           }
           .bottom-section {
             border-radius: 0 0 ${borderRadius.base}px ${borderRadius.base}px;
+            border: 1px solid ${colors.lightTertiary};
             padding-bottom: 24px !important;
           }
           .card-gutter {
@@ -67,7 +69,11 @@ export default function Layout({ children }: any) {
       </MjmlHead>
 
       <MjmlBody width={640} backgroundColor={colors.black}>
-        <MjmlWrapper fullWidth={true} padding="24px 16px">
+        <MjmlWrapper
+          fullWidth={true}
+          padding="24px 16px"
+          cssClass="border-ring"
+        >
           <MjmlSection
             backgroundColor={colors.neutral900}
             cssClass="top-section gutter border-bottom"

@@ -12,6 +12,10 @@ const cssHelpers = `
   .border-bottom {
     border-bottom: 1px solid ${colors.lightTertiary};
   }
+  .border {
+    border-left: 1px solid ${colors.lightTertiary};
+    border-right: 1px solid ${colors.lightTertiary};
+  }
   .no-wrap {
     white-space: nowrap;
   }

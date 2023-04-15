@@ -19,7 +19,7 @@ const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
     <Layout>
       <MjmlSection
         backgroundColor={colors.neutral900}
-        cssClass="gutter"
+        cssClass="gutter border"
         paddingTop={40}
         paddingBottom={16}
       >
