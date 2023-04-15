@@ -1,12 +1,12 @@
 // Colors
 export const colors = {
-  black: "#212529",
-  white: "#FFF",
+  black: "#000000",
+  white: "#ffffff",
   gray200: "#D7D8D8",
   gray300: "#BCC1C9",
   blue: "#B8CEFF",
   brandPrimary: "#F2BF45",
-  backgroundColor: "#1F314A",
+  backgroundColor: "#000000",
 
   // Light colors
   lightPrimary: "#f5f5f5", // 100
