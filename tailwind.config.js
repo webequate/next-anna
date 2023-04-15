@@ -20,7 +20,7 @@ module.exports = {
         "tertiary-dark": "#d4d4d4", // 300
 
         // Accent colors
-        "accent-light": "#5b8ee1",
+        "accent-light": "#5588ee",
         "accent-dark": "#346ac2",
 
         // Extended v3 color

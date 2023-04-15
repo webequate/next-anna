@@ -19,7 +19,7 @@ export const colors = {
   darkTertiary: "#d4d4d4", // 300
 
   // Accent colors
-  lightAccent: "#5b8ee1",
+  lightAccent: "#5588ee",
   darkAccent: "#0066ff",
 
   // Other colors
