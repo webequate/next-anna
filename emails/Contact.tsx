@@ -42,7 +42,9 @@ const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
             Email:
           </Text>
           <Text color={colors.lightAccent} paddingBottom={24}>
-            {email}
+            <a href="mailto:{email}" style={{ color: "inherit" }}>
+              {email}
+            </a>
           </Text>
           <Text color={colors.lightSecondary} paddingBottom={4}>
             Subject:
