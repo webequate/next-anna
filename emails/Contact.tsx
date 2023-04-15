@@ -20,13 +20,14 @@ const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
       <MjmlSection
         backgroundColor={colors.neutral900}
         cssClass="gutter"
+        paddingTop={40}
         paddingBottom={16}
       >
         <MjmlColumn>
           <Heading
             fontSize={fontSize.lg}
             lg={{ fontSize: fontSize.lg }}
-            align="center"
+            align="left"
             maxWidth={450}
             paddingBottom={32}
           >

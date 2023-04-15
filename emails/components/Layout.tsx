@@ -39,7 +39,7 @@ export default function Layout({ children }: any) {
           }
           .top-section {
             border-radius: ${borderRadius.base}px ${borderRadius.base}px 0 0;
-            padding-top: 28px !important;
+            padding-top: 24px !important;
           }
           .bottom-section {
             border-radius: 0 0 ${borderRadius.base}px ${borderRadius.base}px;
@@ -51,7 +51,7 @@ export default function Layout({ children }: any) {
           }
           @media (min-width: ${screens.xs}) {
             .top-section {
-              padding-top: ${spacing.desktopGutter}px !important;
+              padding-top: 24px !important;
             }
             .card-gutter {
               padding-left: ${spacing.desktopGutter - 10}px !important;
@@ -71,13 +71,13 @@ export default function Layout({ children }: any) {
           <MjmlSection
             backgroundColor={colors.neutral900}
             cssClass="top-section gutter border-bottom"
-            paddingBottom={48}
+            paddingBottom={24}
           >
             <MjmlColumn>
               <MjmlImage
                 width="256px"
                 height="45px"
-                align="left"
+                align="center"
                 src={assetUrl("/assets/logo-webequate-light.png")}
               />
             </MjmlColumn>

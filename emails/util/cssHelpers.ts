@@ -7,7 +7,10 @@ const cssHelpers = `
     padding-right: ${spacing.mobileGutter}px !important;
   }
   .border-top {
-    border-top: 2px solid ${colors.gray200};
+    border-top: 1px solid ${colors.lightTertiary};
+  }
+  .border-bottom {
+    border-bottom: 1px solid ${colors.lightTertiary};
   }
   .no-wrap {
     white-space: nowrap;
