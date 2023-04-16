@@ -42,7 +42,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects, name, socialLinks }) => {
         />
       </motion.div>
 
-      <Footer name={name} socialLinks={socialLinks} />
+      <Footer name={name} />
     </div>
   );
 };
