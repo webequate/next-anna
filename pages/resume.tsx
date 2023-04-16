@@ -92,7 +92,7 @@ const Resume: NextPage<ResumeProps> = ({
         ))}
       </motion.div>
 
-      <Footer name={name} socialLinks={socialLinks} />
+      <Footer name={name} />
     </>
   );
 };
