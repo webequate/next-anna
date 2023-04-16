@@ -8,11 +8,13 @@ export type Basics = {
   _id: string;
   name: string;
   titles: string[];
-  abouts: string[];
+  summaryItems: string[];
+  aboutIntro: string;
+  aboutItems: string[];
   resumeLink: string;
   socialLinks: SocialLink[];
-  website: string;
   location: string;
   phone: string;
+  website: string;
   contactIntro: string;
 };

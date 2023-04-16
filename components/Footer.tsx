@@ -6,22 +6,17 @@ import { useTheme } from "next-themes";
 
 interface FooterProps {
   name: string;
-  socialLinks: SocialLink[];
 }
 
-const Footer: React.FC<FooterProps> = ({ name, socialLinks }) => {
+const Footer: React.FC<FooterProps> = ({ name }) => {
   const { theme, setTheme } = useTheme();
 
   return (
     <div className="mx-auto">
-      <div className="pb-8 mt-20 border-t-2 border-light-1 dark:border-dark-2">
-        {/* Footer social links */}
-        <div className="font-general-regular flex flex-col justify-center items-center mb-2">
-          <Social socialLinks={socialLinks} />
-        </div>
+      <div className="pb-8 mt-8 border-t-2 border-light-1 dark:border-dark-2">
         <div>
           {/* Footer links large screen */}
-          <div className="m-0 sm:ml-4 sm:flex sm:p-0 justify-center items-center">
+          <div className="m-0 sm:ml-4 mt-8 sm:flex sm:p-0 justify-center items-center">
             <ul className="flex text-sm font-semibold text-dark-2 dark:text-light-2 rounded-full px-3 mx-6 bg-light-1 dark:bg-dark-1 ring-1 ring-dark-3 dark:ring-light-3">
               <li
                 className="hover:text-accent-1 dark:hover:text-accent-1 sm:mx-4 sm:py-2 duration-300"

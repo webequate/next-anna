@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Basics } from "@/types/basics";
 import Header from "@/components/Header";
+import AboutContent from "@/components/AboutContent";
+import AboutDetails from "@/components/AboutDetails";
 import Footer from "@/components/Footer";
-import DownloadCV from "@/components/DownloadCV";
 
 type AboutProps = {
   basics: Basics[];
@@ -13,15 +14,13 @@ type AboutProps = {
 
 const About: NextPage<AboutProps> = ({ basics }) => {
   const {
+    aboutIntro,
+    aboutItems,
     name,
-    titles,
-    abouts,
-    resumeLink,
-    socialLinks,
-    website,
     location,
     phone,
-    contactIntro,
+    website,
+    socialLinks,
   } = basics[0];
   return (
     <div className="mx-auto">
@@ -36,26 +35,21 @@ const About: NextPage<AboutProps> = ({ basics }) => {
           <h1 className="text-xl font-bold uppercase text-dark-1 dark:text-light-1 sm:text-3xl mb-6">
             About
           </h1>
-          <p className="mt-4 mb-4">{name}</p>
-          {titles.map((title, index) => (
-            <p key={index} className="mt-4 mb-4">
-              {title}
-            </p>
-          ))}
-          {abouts.map((about, index) => (
-            <p key={index} className="text-base mt-4 mb-4">
-              {about}
-            </p>
-          ))}
-          <DownloadCV resumelink={resumeLink} />
-          <p className="mt-4 mb-4">{website}</p>
-          <p className="mt-4 mb-4">{location}</p>
-          <p className="mt-4 mb-4">{phone}</p>
-          <p className="mt-4 mb-4">{contactIntro}</p>
+          <div className="mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
+            <AboutDetails
+              name={name}
+              location={location}
+              phone={phone}
+              website={website}
+            />
+            <AboutContent
+              aboutIntro={aboutIntro}
+              aboutItems={aboutItems}
+              socialLinks={socialLinks}
+            />
+          </div>
         </div>
       </motion.div>
-
-      <Footer name={name} socialLinks={socialLinks} />
     </div>
   );
 };

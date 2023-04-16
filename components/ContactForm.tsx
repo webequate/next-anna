@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
       <div className="leading-loose">
         <form
           onSubmit={handleSubmit}
-          className="max-w-xl bg-light-1 dark:bg-dark-1 rounded-xl text-left m-4 p-6 sm:p-10"
+          className="max-w-xl bg-light-1 dark:bg-dark-1 rounded-xl text-left mr-4 p-6 sm:p-8"
         >
           <p className="font-general-medium text-dark-1 dark:text-light-1 text-2xl mb-8">
             Contact Form
@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
             <button
               type="submit"
               aria-label="Send Message"
-              className="text-light-1 dark:text-light-1 bg-accent-1 dark:bg-accent-2 hover:bg-accent-2 dark:hover:bg-accent-1 font-general-medium flex justify-center items-center w-40 sm:w-40 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300"
+              className="text-light-1 dark:text-light-1 bg-accent-2 dark:bg-accent-2 hover:bg-accent-1 dark:hover:bg-accent-1 font-general-medium flex justify-center items-center w-40 sm:w-40 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300"
             >
               <span className="text-sm sm:text-lg">Send Message</span>
             </button>

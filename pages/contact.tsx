@@ -36,7 +36,7 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
           Contact
         </h1>
 
-        <div className="mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
+        <div className="mx-auto flex flex-col-reverse lg:flex-row">
           <ContactForm />
 
           <ContactDetails
@@ -50,7 +50,7 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
         </div>
       </motion.div>
 
-      <Footer name={name} socialLinks={socialLinks} />
+      <Footer name={name} />
     </div>
   );
 };

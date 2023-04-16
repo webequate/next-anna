@@ -1,6 +1,5 @@
 import { SocialLink } from "@/types/basics";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import {
   FaFacebook,
   FaGithub,
@@ -15,8 +14,6 @@ interface SocialProps {
 }
 
 const Social: React.FC<SocialProps> = ({ socialLinks }) => {
-  const { theme, setTheme } = useTheme();
-
   const iconFromName = (name: string) => {
     switch (name) {
       case "facebook":

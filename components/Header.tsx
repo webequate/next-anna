@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
   return (
     <nav>
-      <div className="container mx-auto px-6 py-3 mb-12">
+      <div className="container mx-auto px-2 pt-6 pb-3 mb-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link

@@ -22,8 +22,8 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
 }) => {
   return (
     <div className="w-full lg:w-1/2">
-      <div className="text-base text-left max-w-xl text-dark-2 dark:text-light-2 px-6">
-        <h2 className="font-general-medium text-2xl text-dark-1 dark:text-light-1 mt-12 mb-8">
+      <div className="text-base text-left max-w-xl text-dark-2 dark:text-light-2 ml-4 p-6 sm:p-8">
+        <h2 className="font-general-medium text-2xl text-dark-1 dark:text-light-1 mb-8">
           Contact Details
         </h2>
         <p className="text-base mt-4 mb-4">{contactIntro}</p>
@@ -46,20 +46,12 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
             </i>
             <span className="text-lg">{phone}</span>
           </li>
-          {/* <li className="flex mb-4">
-            <i className="text-2xl mr-4 mt-1">
-              <FiMail />
-            </i>
-            <span className="text-lg">
-              { email }
-            </span>
-          </li> */}
           <li className="flex mb-4">
             <i className="text-2xl mr-4 mt-1">
               <FiGlobe />
             </i>
             <span className="text-lg">
-              <Link href={website}>portfolio.webequate.com</Link>
+              <Link href={`http://${website}`}>{website}</Link>
             </span>
           </li>
         </ul>

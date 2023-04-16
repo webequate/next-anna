@@ -21,8 +21,8 @@ const ThemedImage = () => {
     <Image
       src={src}
       alt="Allen"
-      width={400}
-      height={400}
+      width={600}
+      height={600}
       className="w-100 h-100 rounded-xl bg-light-1 dark:bg-dark-1 p-0 m-0"
     />
   );

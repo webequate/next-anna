@@ -24,9 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ title = "Portfolio", children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-white dark:bg-neutral-900 border-x border-dark-3 dark:border-light-3 px-6 sm:px-8 lg:px-16">
-        <div className="bg-white dark:bg-neutral-900 px-6 sm:px-8 lg:px-16">
-          {children}
-        </div>
+        <div className="bg-white dark:bg-neutral-900">{children}</div>
       </main>
     </>
   );

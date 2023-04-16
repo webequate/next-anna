@@ -1,28 +1,39 @@
 {
   "name": "Allen Johnson",
-  "title": "Full Stack Software Engineer",
-  "about": [
+  "titles": [
+    "Full Stack Web Developer",
+    "Front End Software Engineer"
+  ],
+  "summaryItems": [
     "I am a veteran front end software engineer with considerable full stack development experience.",
     "I built this site using Next.js, React, TypeScript, MongoDB Atlas, TailwindCSS, and Vercel.",
     "I enjoy travel, hiking, photography, electronic music, and foreign languages."
   ],
+  "aboutIntro": "I'm Allen Johnson. I live in Denver, Colorado, where I build websites.",
+  "aboutItems": [
+    "I am a veteran front end software engineer with considerable full stack development experience. I am most comfortable with JavaScript, React, HTML, and CSS in various environments, including Node.js, PHP, Java, Ruby on Rails, and .NET.",
+    "I recently spent a year contracting with an Etsy team to facilitate server-side rendering of React component islands, able to communicate through a shared Redux store. This helped product engineers to provide enhanced user experiences for Etsy customers, while still maintaining fast page load times, through on-demand hydration of static content with interactive features.",
+    "In the months since Etsy, I have focused mostly on my own business, WebEquate. I have been rebuilding websites previously built with PHP and MySQL, instead using Next.js, React, TypeScript, and MongoDB, to modernize my development workflow, streamline site updates, and improve site performance.",
+    "Now I am seeking a new opportunity as a Front End Software Engineer or Full Stack Software Engineer, with a strong preference for fully remote roles.",
+    "I also enjoy travel, hiking, photography, electronic music, and foreign languages."
+  ],
+  "contactIntro": "Please send me a message if you have any questions about my skills and experience, or if you would like to inquire about hiring me for your project or team.",
+  "location": "Denver, Colorado",
+  "phone": "412.708.8946",
+  "website": "portfolio.webequate.com",
   "resumeLink": "http://www.webequate.com/resume/AllenJohnson-Resume.pdf",
   "socialLinks": [
     {
-      "name": "twitter",
-      "url": "https://twitter.com/WebEquate"
+      "name": "github",
+      "url": "https://github.com/webequate"
     },
     {
       "name": "linkedin",
       "url": "https://www.linkedin.com/in/allenhjohnson/"
     },
     {
-      "name": "github",
-      "url": "https://github.com/webequate"
+      "name": "twitter",
+      "url": "https://twitter.com/WebEquate"
     }
-  ],
-  "website": "http://portfolio.webequate.com",
-  "location": "Denver, Colorado",
-  "phone": "412.708.8946",
-  "contactIntro": "Please send me a message if you have any questions about my skills and experience, or if you would like to inquire about hiring me for your project or team."
+  ]
 }
