@@ -43,7 +43,7 @@ const Social: React.FC<SocialProps> = ({ socialLinks }) => {
           <Link
             key={index}
             href={socialLink.url}
-            className={`text-3xl text-secondary-dark dark:text-secondary-light hover:text-primary-light dark:hover:text-primary-light bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-light ring-1 ring-tertiary-dark dark:ring-tertiary-light cursor-pointer rounded-lg p-2 duration-300`}
+            className={`text-3xl text-dark-2 dark:text-light-2 hover:text-light-1 dark:hover:text-light-1 bg-light-1 dark:bg-dark-1 hover:bg-accent-1 dark:hover:bg-accent-1 ring-1 ring-dark-3 dark:ring-light-3 cursor-pointer rounded-lg p-2 duration-300`}
           >
             {iconFromName(socialLink.name)}
           </Link>

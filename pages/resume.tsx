@@ -35,24 +35,24 @@ const Resume: NextPage<ResumeProps> = ({
         {titles.map((title, index) => (
           <h3
             key={index}
-            className="text-3xl font-bold text-accent-light dark:text-accent-light"
+            className="text-3xl font-bold text-accent-1 dark:text-accent-1"
           >
             {title}
           </h3>
         ))}
-        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-primary-dark dark:decoration-primary-light mt-12 mb-12">
+        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-dark-1 dark:decoration-light-1 mt-12 mb-12">
           Education
         </h2>
         {schools.map((school, index) => (
           <div
             key={index}
-            className="text-base text-secondary-dark dark:text-secondary-light mb-6"
+            className="text-base text-dark-2 dark:text-light-2 mb-6"
           >
-            <h3 className="text-2xl font-bold text-primary-dark dark:text-primary-light">
+            <h3 className="text-2xl font-bold text-dark-1 dark:text-light-1">
               {school.school}
             </h3>
             <p className="mt-1 mb-2">
-              <span className="text-xl font-bold text-accent-light dark:text-accent-light">
+              <span className="text-xl font-bold text-accent-1 dark:text-accent-1">
                 {school.program}
               </span>
               <span className="font-semibold"> • {school.city} • </span>
@@ -61,19 +61,19 @@ const Resume: NextPage<ResumeProps> = ({
           </div>
         ))}
 
-        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-primary-dark dark:decoration-primary-light mt-12 mb-12">
+        <h2 className="text-3xl font-bold uppercase underline underline-offset-8 decoration-dark-1 dark:decoration-light-1 mt-12 mb-12">
           Work Experience
         </h2>
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="text-base text-secondary-dark dark:text-secondary-light mb-8"
+            className="text-base text-dark-2 dark:text-light-2 mb-8"
           >
-            <h3 className="text-2xl font-bold text-primary-dark dark:text-primary-light">
+            <h3 className="text-2xl font-bold text-dark-1 dark:text-light-1">
               {job.company}
             </h3>
             <p className="mt-1 mb-2">
-              <span className="text-xl font-bold text-accent-light dark:text-accent-light">
+              <span className="text-xl font-bold text-accent-1 dark:text-accent-1">
                 {job.role}
               </span>
               <span className="font-semibold"> • {job.city} • </span>

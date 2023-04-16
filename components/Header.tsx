@@ -27,47 +27,47 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex flex-shrink-0 items-center text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light p-1 ml-0 rounded-xl cursor-pointer duration-300"
+            className="flex flex-shrink-0 items-center text-dark-2 dark:text-light-2 bg-light-1 dark:bg-dark-1 ring-1 ring-dark-3 dark:ring-light-3 p-1 ml-0 rounded-xl cursor-pointer duration-300"
           >
             <Image src={logo} alt="Logo" width={40} height={40} />
           </Link>
 
-          <div className="flex items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0">
-            {/* Navigation links */}
-            <div className="flex items-center rounded-full text-sm lg:text-lg font-semibold text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark ring-1 ring-tertiary-dark dark:ring-tertiary-light px-3 mx-6">
+          <div className="items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0">
+            {/* Large screen - Header navigation links */}
+            <div className="flex items-center rounded-full text-sm lg:text-lg font-semibold text-dark-2 dark:text-light-2 bg-light-1 dark:bg-dark-1 ring-1 ring-dark-3 dark:ring-light-3 px-3 mx-6">
               <Link
                 href="/about"
-                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+                className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 About
               </Link>
               <Link
                 href="/projects"
-                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+                className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 Projects
               </Link>
               <Link
                 href="/resume"
-                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+                className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 Resume
               </Link>
               <Link
                 href="/skills"
-                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+                className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 Skills
               </Link>
               <Link
                 href="/testimonials"
-                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+                className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 Testimonials
               </Link>
               <Link
                 href="/contact"
-                className="hover:text-accent-light dark:hover:text-accent-light mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
+                className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 Contact
               </Link>
@@ -90,67 +90,67 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
             </button>
           </div>
 
-          {/* Small screen - Header links */}
-          <div
-            className={
-              showMenu
-                ? "block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none"
-                : "hidden"
-            }
-          >
-            <Link
-              href="/"
-              aria-label="Home"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 pt-3 sm:pt-2"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              aria-label="About"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
-            >
-              About
-            </Link>
-            <Link
-              href="/projects"
-              aria-label="Projects"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/resume"
-              aria-label="Resume"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
-            >
-              Resume
-            </Link>
-            <Link
-              href="/skills"
-              aria-label="Skills"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
-            >
-              Skills
-            </Link>
-            <Link
-              href="/testimonials"
-              aria-label="Testimonials"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
-            >
-              Testimonials
-            </Link>
-            <Link
-              href="/contact"
-              aria-label="Contact"
-              className="block text-left text-lg text-secondary-dark dark:text-secondary-light hover:text-accent-dark dark:hover:text-accent-light sm:mx-2 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-tertiary-dark dark:border-tertiary-light"
-            >
-              Contact
-            </Link>
-          </div>
-
           {/* Theme switcher */}
           <ThemeSwitcher />
+        </div>
+
+        {/* Small screen - Header navigation links */}
+        <div
+          className={
+            showMenu
+              ? "block text-lg text-left m-0 mt-3 py-3 justify-between items-center"
+              : "hidden"
+          }
+        >
+          <Link
+            href="/"
+            aria-label="Home"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            aria-label="About"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-t-2 md:border-t-0 border-dark-3 dark:border-light-3"
+          >
+            About
+          </Link>
+          <Link
+            href="/projects"
+            aria-label="Projects"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-t-2 md:border-t-0 border-dark-3 dark:border-light-3"
+          >
+            Projects
+          </Link>
+          <Link
+            href="/resume"
+            aria-label="Resume"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-t-2 md:border-t-0 border-dark-3 dark:border-light-3"
+          >
+            Resume
+          </Link>
+          <Link
+            href="/skills"
+            aria-label="Skills"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-t-2 md:border-t-0 border-dark-3 dark:border-light-3"
+          >
+            Skills
+          </Link>
+          <Link
+            href="/testimonials"
+            aria-label="Testimonials"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-t-2 md:border-t-0 border-dark-3 dark:border-light-3"
+          >
+            Testimonials
+          </Link>
+          <Link
+            href="/contact"
+            aria-label="Contact"
+            className="block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-t-2 md:border-t-0 border-dark-3 dark:border-light-3"
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </nav>

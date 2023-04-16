@@ -23,7 +23,7 @@ const ThemedImage = () => {
       alt="Allen"
       width={400}
       height={400}
-      className="w-100 h-100 rounded-xl bg-primary-light dark:bg-primary-dark p-0 m-0"
+      className="w-100 h-100 rounded-xl bg-light-1 dark:bg-dark-1 p-0 m-0"
     />
   );
 };

@@ -22,8 +22,8 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
 }) => {
   return (
     <div className="w-full lg:w-1/2">
-      <div className="text-base text-left max-w-xl text-secondary-dark dark:text-secondary-light px-6">
-        <h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
+      <div className="text-base text-left max-w-xl text-dark-2 dark:text-light-2 px-6">
+        <h2 className="font-general-medium text-2xl text-dark-1 dark:text-light-1 mt-12 mb-8">
           Contact Details
         </h2>
         <p className="text-base mt-4 mb-4">{contactIntro}</p>

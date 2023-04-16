@@ -10,7 +10,7 @@ const DownloadCV: React.FC<DownloadCVProps> = ({ resumelink }) => {
   return (
     <Link
       href={`${resumelink}`}
-      className="text-secondary-dark dark:text-secondary-light hover:text-primary-light dark:hover:text-primary-light bg-primary-light dark:bg-primary-dark hover:bg-accent-light dark:hover:bg-accent-light ring-1 ring-tertiary-dark dark:ring-tertiary-light font-general-medium flex justify-center items-center w-56 sm:w-56 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300"
+      className="text-dark-2 dark:text-light-2 hover:text-light-1 dark:hover:text-light-1 bg-light-1 dark:bg-dark-1 hover:bg-accent-1 dark:hover:bg-accent-1 ring-1 ring-dark-3 dark:ring-light-3 font-general-medium flex justify-center items-center w-56 sm:w-56 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300"
       aria-label="Download Resume"
     >
       <FaDownload className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-6 w-6"></FaDownload>

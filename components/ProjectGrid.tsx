@@ -13,7 +13,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
   setActiveModal,
 }) => {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 text-primary-light dark:text-primary-light">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 text-light-1 dark:text-light-1">
       {projects.map((project, index) => (
         <a
           key={index}

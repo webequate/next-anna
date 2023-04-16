@@ -29,7 +29,7 @@ const ProjectModals: React.FC<ProjectModalsProps> = ({
         >
           <div
             ref={modalContentRef}
-            className="modal-content text-secondary-dark dark:text-secondary-light bg-primary-light dark:bg-primary-dark"
+            className="modal-content text-dark-2 dark:text-light-2 bg-light-1 dark:bg-dark-1"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -39,7 +39,7 @@ const ProjectModals: React.FC<ProjectModalsProps> = ({
               height={700}
               className="w-full mb-4"
             />
-            <h2 className="text-2xl text-primary-dark dark:text-primary-light mb-4">
+            <h2 className="text-2xl text-dark-1 dark:text-light-1 mb-4">
               {project.modal.name}
             </h2>
             <p className="mb-4">{project.modal.description}</p>

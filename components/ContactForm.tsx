@@ -42,9 +42,9 @@ const ContactForm: React.FC = () => {
       <div className="leading-loose">
         <form
           onSubmit={handleSubmit}
-          className="max-w-xl bg-primary-light dark:bg-primary-dark rounded-xl text-left m-4 p-6 sm:p-10"
+          className="max-w-xl bg-light-1 dark:bg-dark-1 rounded-xl text-left m-4 p-6 sm:p-10"
         >
-          <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
+          <p className="font-general-medium text-dark-1 dark:text-light-1 text-2xl mb-8">
             Contact Form
           </p>
           <FormInput
@@ -83,13 +83,13 @@ const ContactForm: React.FC = () => {
 
           <div className="mb-4">
             <label
-              className="block text-lg text-secondary-dark dark:text-secondary-light mb-1"
+              className="block text-lg text-dark-2 dark:text-light-2 mb-1"
               htmlFor="message"
             >
               Message
             </label>
             <textarea
-              className="w-full px-5 py-2 border text-secondary-dark dark:text-secondary-light bg-white dark:bg-black border-secondary-dark dark:border-secondary-light rounded-md shadow-sm text-md"
+              className="w-full px-5 py-2 border text-dark-2 dark:text-light-2 bg-white dark:bg-black border-dark-2 dark:border-light-2 rounded-md shadow-sm text-md"
               id="message"
               name="message"
               cols={14}
@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
             <button
               type="submit"
               aria-label="Send Message"
-              className="text-primary-light dark:text-primary-light bg-accent-light dark:bg-accent-dark hover:bg-accent-dark dark:hover:bg-accent-light font-general-medium flex justify-center items-center w-40 sm:w-40 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300"
+              className="text-light-1 dark:text-light-1 bg-accent-1 dark:bg-accent-2 hover:bg-accent-2 dark:hover:bg-accent-1 font-general-medium flex justify-center items-center w-40 sm:w-40 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg duration-300"
             >
               <span className="text-sm sm:text-lg">Send Message</span>
             </button>

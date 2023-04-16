@@ -22,13 +22,13 @@ const Banner: React.FC<BannerProps> = ({
   return (
     <section className="flex flex-col items-top sm:justify-between sm:flex-row mt-5 md:mt-2">
       <div className="text-left">
-        <h1 className="text-5xl font-bold text-primary-dark dark:text-primary-light sm:text-5xl mb-6 uppercase">
+        <h1 className="text-5xl font-bold text-dark-1 dark:text-light-1 sm:text-5xl mb-6 uppercase">
           {name}
         </h1>
         {titles.map((title, index) => (
           <h2
             key={index}
-            className="text-3xl font-bold tracking-tight text-accent-light dark:text-accent-light"
+            className="text-3xl font-bold tracking-tight text-accent-1 dark:text-accent-1"
           >
             {title}
           </h2>
@@ -36,7 +36,7 @@ const Banner: React.FC<BannerProps> = ({
         {abouts.map((about, index) => (
           <p
             key={index}
-            className="text-base text-secondary-dark dark:text-secondary-light mt-4 mb-4"
+            className="text-base text-dark-2 dark:text-light-2 mt-4 mb-4"
           >
             {about}
           </p>

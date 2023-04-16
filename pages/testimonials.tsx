@@ -26,9 +26,9 @@ const Testimonials: NextPage<TestimonialsProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className={"text-base text-secondary-dark dark:text-secondary-light"}
+        className={"text-base text-dark-2 dark:text-light-2"}
       >
-        <h1 className="text-xl font-bold text-primary-dark dark:text-primary-light sm:text-3xl mb-6">
+        <h1 className="text-xl font-bold uppercase text-dark-1 dark:text-light-1 sm:text-3xl mb-6">
           Testimonials
         </h1>
 
