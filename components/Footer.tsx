@@ -42,12 +42,12 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
               >
                 <Link href="/skills">Skills</Link>
               </li>
-              <li
+              {/* <li
                 className="hover:text-accent-1 dark:hover:text-accent-1 sm:mx-4 sm:py-2 duration-300"
                 aria-label="Testimonials"
               >
                 <Link href="/testimonials">Testimonials</Link>
-              </li>
+              </li> */}
               <li
                 className="hover:text-accent-1 dark:hover:text-accent-1 sm:mx-4 sm:py-2 duration-300"
                 aria-label="Contact"

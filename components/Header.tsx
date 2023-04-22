@@ -59,12 +59,12 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
               >
                 Skills
               </Link>
-              <Link
+              {/* <Link
                 href="/testimonials"
                 className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
               >
                 Testimonials
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300"
