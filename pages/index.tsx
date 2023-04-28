@@ -2,19 +2,22 @@
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
+import { Project } from "@/types/project";
 import { Basics } from "@/types/basics";
 import Header from "@/components/Header";
-import DownloadCV from "@/components/DownloadCV";
-import Social from "@/components/Social";
-import ThemedImage from "@/components/ThemedImage";
+import ProjectGrid from "@/components/ProjectGrid";
+import ProjectModals from "@/components/ProjectModals";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
-type HomeProps = {
-  basics: Basics[];
-};
+interface ProjectsProps {
+  name: string;
+  projects: Project[];
+}
 
-const Home: NextPage<HomeProps> = ({ basics }) => {
-  const { name, titles, summaryItems, resumeLink, socialLinks } = basics[0];
+const Projects: NextPage<ProjectsProps> = ({ name, projects }) => {
+  const [activeModal, setActiveModal] = useState<number | null>(null);
+
   return (
     <div className="mx-auto">
       <Header name={name} />
@@ -23,40 +26,15 @@ const Home: NextPage<HomeProps> = ({ basics }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
+        className="text-base text-dark-2 dark:text-light-2"
       >
-        <section className="flex flex-col items-top sm:justify-between sm:flex-row mt-5 md:mt-2">
-          <div className="text-left">
-            <h1 className="text-5xl font-bold text-dark-1 dark:text-light-1 sm:text-5xl mb-6 uppercase">
-              {name}
-            </h1>
-            {titles.map((title, index) => (
-              <h2
-                key={index}
-                className="text-3xl font-bold tracking-tight text-accent-2 dark:text-accent-1"
-              >
-                {title}
-              </h2>
-            ))}
-            {summaryItems.map((summaryItem, index) => (
-              <p
-                key={index}
-                className="text-base text-dark-2 dark:text-light-2 mt-4 mb-4"
-              >
-                {summaryItem}
-              </p>
-            ))}
-            <Social socialLinks={socialLinks} />
-            <DownloadCV resumelink={resumeLink} />
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: -180 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-            className="ml-10"
-          >
-            <ThemedImage />
-          </motion.div>
-        </section>
+        <ProjectGrid projects={projects} setActiveModal={setActiveModal} />
+
+        <ProjectModals
+          projects={projects}
+          activeModal={activeModal}
+          setActiveModal={setActiveModal}
+        />
       </motion.div>
 
       <Footer name={name} />
@@ -64,18 +42,25 @@ const Home: NextPage<HomeProps> = ({ basics }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
   const db = await connectToDatabase(process.env.MONGODB_URI!);
+
+  const projectsCollection = db.collection<Project>("projects");
+  const projects: Project[] = await projectsCollection
+    .find()
+    .sort({ order: 1 })
+    .toArray();
 
   const basicsCollection = db.collection<Basics>("basics");
   const basics: Basics[] = await basicsCollection.find().toArray();
 
   return {
     props: {
-      basics: JSON.parse(JSON.stringify(basics)),
+      projects: JSON.parse(JSON.stringify(projects)),
+      name: basics[0].name,
     },
     revalidate: 60,
   };
 };
 
-export default Home;
+export default Projects;

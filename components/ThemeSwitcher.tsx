@@ -1,3 +1,4 @@
+// components/ThemeSwitcher.tsx
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -17,7 +18,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div
-      className="flex text-xl text-dark-2 dark:text-light-2 hover:text-light-1 dark:hover:text-light-1 bg-light-1 dark:bg-dark-1 hover:bg-accent-1 dark:hover:bg-accent-1 ring-1 ring-dark-3 dark:ring-light-3 p-3 ml-0 rounded-xl cursor-pointer duration-300"
+      className="flex text-xl text-dark-2 dark:text-light-2 hover:text-light-1 dark:hover:text-light-1 bg-light-1 dark:bg-dark-1 hover:bg-color-gradient dark:hover:bg-color-gradient ring-1 ring-dark-3 dark:ring-light-3 p-3 ml-0 rounded-xl cursor-pointer duration-300"
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}

@@ -1,4 +1,4 @@
-// pages/api/send-email.ts
+// pages/api/send-email.tsx
 import type { NextApiRequest, NextApiResponse } from "next";
 import sendMail from "@/emails";
 import { ContactForm } from "@/interfaces/ContactForm";

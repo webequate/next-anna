@@ -1,39 +1,19 @@
-{
-  "name": "Allen Johnson",
-  "titles": [
-    "Front End Software Engineer",
-    "Full Stack Web Developer"
-  ],
-  "summaryItems": [
-    "I am a veteran front end software engineer with considerable full stack development experience.",
-    "I built this site using Next.js, React, TypeScript, and MongoDB, and deploy to Vercel.",
-    "I enjoy travel, hiking, photography, electronic music, and foreign languages."
-  ],
-  "aboutIntro": "I'm Allen Johnson. I live in Denver, Colorado, where I build websites.",
-  "aboutItems": [
-    "I am a veteran front end software engineer with considerable full stack development experience. I am most comfortable with JavaScript / TypeScript, React, HTML, and CSS in various environments, including Node.js, PHP, Java, and Ruby on Rails.",
-    "I recently spent a year contracting with a team at Etsy to facilitate server-side rendering of React component islands, able to communicate through a shared Redux store. This helped product engineers to provide enhanced user experiences for Etsy customers, while still maintaining fast page load times, through on-demand hydration of static content with interactive features.",
-    "In the months since Etsy, I have focused mostly on my own business, WebEquate. I have been rebuilding websites previously built with PHP and MySQL, instead using Next.js, React, TypeScript, and MongoDB, to modernize my development workflow, streamline site updates, and improve site performance.",
-    "Now I am seeking a new opportunity as a Front End Software Engineer or Full Stack Software Engineer, with a strong preference for fully remote roles.",
-    "I also enjoy travel, hiking, photography, electronic music, and foreign languages."
-  ],
-  "contactIntro": "Please send me a message if you have any questions about my skills and experience, or if you would like to inquire about hiring me for your project or team.",
-  "location": "Denver, Colorado",
-  "phone": "412.708.8946",
-  "website": "portfolio.webequate.com",
-  "resumeLink": "http://www.webequate.com/resume/AllenJohnson-Resume.pdf",
-  "socialLinks": [
-    {
-      "name": "github",
-      "url": "https://github.com/webequate"
-    },
-    {
-      "name": "linkedin",
-      "url": "https://www.linkedin.com/in/allenhjohnson/"
-    },
-    {
-      "name": "twitter",
-      "url": "https://twitter.com/WebEquate"
-    }
-  ]
-}
+[
+  {
+    "name": "Anna Elise Johnson",
+    "titles": [
+      "Artist based in Los Angeles, California"
+    ],
+    "website": "new.annaelisejohnson.com",
+    "email": "annaelisejohnson@gmail.com",
+    "location": "Los Angeles, California",
+    "contactIntro": "Please send me a message if you have any questions about my skills and experience, or if you would like to inquire about hiring me for your project or team.",
+    "resumeLink": "http://www.annaelisejohnson.com/cv/AnnaEliseJohnsonCV2023.pdf",
+    "socialLinks": [
+      {
+        "name": "instagram",
+        "url": "https://instagram.com/annaelise_art"
+      }
+    ]
+  }
+]

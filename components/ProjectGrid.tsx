@@ -1,7 +1,6 @@
 // components/ProjectGrid.tsx
 import { Project } from "@/types/project";
 import Image from "next/image";
-import { useState, useRef } from "react";
 
 interface ProjectGridProps {
   projects: Project[];
@@ -21,17 +20,17 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
           className="group relative cursor-pointer"
         >
           <Image
-            src={`/${project.thumb.imgurl}`}
-            alt={project.thumb.name}
-            width={400}
-            height={400}
+            src={`/images/${project.image}`}
+            alt={project.title}
+            width={500}
+            height={500}
             className="rounded shadow-md transition duration-200 ease-in-out transform"
           />
           <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-200 rounded shadow-md"></div>
           <div className="absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 p-4">
-            <h2 className="text-xl mb-2">{project.name}</h2>
-            <p>{project.thumb.type}</p>
-            <p>@ {project.thumb.company}</p>
+            <h2 className="text-xl mb-2">{project.title}</h2>
+            <p className="mb-2">{project.dimensions}</p>
+            <p>{project.media}</p>
           </div>
           <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-200">
             <span className="text-4xl">+</span>

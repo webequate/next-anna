@@ -1,12 +1,9 @@
-import { useTheme } from "next-themes";
-
+// components/Copyright.tsx
 interface CopyrightProps {
   name: string;
 }
 
 const Copyright: React.FC<CopyrightProps> = ({ name }) => {
-  const { theme, setTheme } = useTheme();
-
   return (
     <div className="font-general-regular flex justify-center items-center text-center">
       <div className="text-sm text-dark-2 dark:text-light-2 mt-4">

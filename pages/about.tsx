@@ -1,29 +1,24 @@
-// pages/about.tsx
+// pages/experience.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
+import { ExperienceSection } from "@/types/experience";
 import { Basics } from "@/types/basics";
 import Header from "@/components/Header";
-import AboutContent from "@/components/AboutContent";
-import AboutDetails from "@/components/AboutDetails";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
-type AboutProps = {
-  basics: Basics[];
+type ExperienceProps = {
+  name: string;
+  experienceSections: ExperienceSection[];
 };
 
-const About: NextPage<AboutProps> = ({ basics }) => {
-  const {
-    aboutIntro,
-    aboutItems,
-    name,
-    location,
-    phone,
-    website,
-    socialLinks,
-  } = basics[0];
+const Experience: NextPage<ExperienceProps> = ({
+  name,
+  experienceSections,
+}) => {
   return (
-    <div className="mx-auto">
+    <>
       <Header name={name} />
 
       <motion.div
@@ -31,41 +26,78 @@ const About: NextPage<AboutProps> = ({ basics }) => {
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
-        <div className="text-base text-dark-2 dark:text-light-2">
-          <h1 className="text-xl font-bold uppercase text-dark-1 dark:text-light-1 sm:text-3xl mb-6">
-            About
-          </h1>
-          <div className="mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5">
-            <AboutDetails
-              name={name}
-              location={location}
-              phone={phone}
-              website={website}
+        <div className="mx-auto lg:flex lg:flex-row my-12 align-top">
+          <div className="w-full lg:w-1/3"></div>
+          <div className="w-full lg:w-2/3">
+            <Image
+              src="/images/anna.jpg"
+              width={800}
+              height={500}
+              alt="Anna Elise Johnson"
             />
-            <AboutContent
-              aboutIntro={aboutIntro}
-              aboutItems={aboutItems}
-              socialLinks={socialLinks}
-            />
+            <h1 className="text-3xl lg:text-5xl font-bold uppercase mt-16 mb-2">
+              {name}
+            </h1>
           </div>
         </div>
+
+        {experienceSections.map((section, index) => (
+          <div
+            key={index}
+            className="mx-auto lg:flex lg:flex-row my-12 align-top"
+          >
+            <div className="w-full lg:w-1/3">
+              <h2 className="text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-8 lg:pb-0">
+                {section.title}
+              </h2>
+            </div>
+            <div className="w-full lg:w-2/3">
+              {section.subsections.map((subsection, index) => (
+                <div
+                  key={index}
+                  className="text-base text-dark-2 dark:text-light-2 mb-8"
+                >
+                  <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-3">
+                    {subsection.name}
+                  </h3>
+                  <ul className="list-disc list-inside lg:list-outside">
+                    {subsection.items.map((item, index) => (
+                      <li key={index} className="mt-1 mb-2">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </motion.div>
-    </div>
+
+      <Footer name={name} />
+    </>
   );
 };
 
-export const getStaticProps: GetStaticProps<AboutProps> = async () => {
+export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
   const db = await connectToDatabase(process.env.MONGODB_URI!);
 
   const basicsCollection = db.collection<Basics>("basics");
   const basics: Basics[] = await basicsCollection.find().toArray();
 
+  const experienceCollection = db.collection<ExperienceSection>("experience");
+  const experienceSections: ExperienceSection[] = await experienceCollection
+    .find()
+    .sort({ order: 1 })
+    .toArray();
+
   return {
     props: {
-      basics: JSON.parse(JSON.stringify(basics)),
+      experienceSections: JSON.parse(JSON.stringify(experienceSections)),
+      name: basics[0].name,
     },
     revalidate: 60,
   };
 };
 
-export default About;
+export default Experience;

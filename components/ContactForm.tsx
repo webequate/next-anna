@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
           onSubmit={handleSubmit}
           className="max-w-xl bg-light-1 dark:bg-dark-1 rounded-xl text-left mr-4 p-6 sm:p-8"
         >
-          <p className="font-general-medium text-dark-1 dark:text-light-1 text-2xl mb-8">
+          <p className="text-color-gradient font-bold font-general-medium text-2xl mb-8">
             Contact Form
           </p>
           <FormInput
