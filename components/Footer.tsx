@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
       <div className="pb-8 mt-8 border-t-2 border-light-1 dark:border-dark-2">
         <div>
           {/* Footer links - large screen */}
-          <div className="m-0 sm:ml-4 mt-8 sm:flex sm:p-0 justify-center items-center">
+          <div className="m-0 sm:ml-4 mt-8 hidden sm:flex sm:p-0 justify-center items-center">
             <div className="nav-secondary">
               <Link href="/" aria-label="Home" className="nav-link">
                 Home

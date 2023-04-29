@@ -1,6 +1,7 @@
 // components/Header.tsx
 import Link from "next/link";
 import { useState } from "react";
+import AnnaEliseJohnson from "@/components/AnnaEliseJohnson";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Hamburger from "@/components/Hamburger";
 
@@ -17,16 +18,19 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
 
   return (
     <nav>
-      <div className="container mx-auto px-2 pt-6 pb-3 mb-12">
-        <div className="flex items-center justify-between">
-          {/* Home link */}
-          <Link href="/" className="home-link">
-            <span className="nav-link">Anna Elise Johnson</span>
-          </Link>
+      {/* Home link */}
+      <Link href="/">
+        <AnnaEliseJohnson />
+      </Link>
 
+      <div className="container mx-auto px-2 py-3 mb-10">
+        <div className="flex justify-center">
           {/* Navigation links - Large screen */}
           <div className="items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0">
             <div className="nav-primary">
+              <Link href="/" aria-label="Home" className="nav-link">
+                Home
+              </Link>
               <Link href="/about" aria-label="About" className="nav-link">
                 About the Artist
               </Link>
