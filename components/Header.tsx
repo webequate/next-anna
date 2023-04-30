@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import AnnaEliseJohnson from "@/components/AnnaEliseJohnson";
+import LayoutWidget from "@/components/LayoutWidget";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Hamburger from "@/components/Hamburger";
 
@@ -19,15 +20,15 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
   return (
     <nav>
       {/* Home link */}
-      <Link href="/" className="color-blue dark:color-red">
+      <Link href="/">
         <AnnaEliseJohnson />
       </Link>
 
       <div className="container mx-auto px-2 py-3 mb-10">
         <div className="flex justify-center items-center">
-          {/* Extraneous invisible layout DIV */}
+          {/* Extraneous invisible layout widget */}
           <div className="invisible flex mr-auto">
-            <ThemeSwitcher />
+            <LayoutWidget />
           </div>
 
           {/* Navigation links - Large screen */}
