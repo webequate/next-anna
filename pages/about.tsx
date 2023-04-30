@@ -26,18 +26,23 @@ const Experience: NextPage<ExperienceProps> = ({
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
-        <div className="mx-auto lg:flex lg:flex-row my-12 align-top">
+        <div className="mx-auto">
+          <Image
+            src="/images/anna.jpg"
+            width={1080}
+            height={720}
+            alt="Anna Elise Johnson"
+            className="w-full"
+          />
+        </div>
+
+        <div className="mx-auto lg:flex lg:flex-row">
           <div className="w-full lg:w-1/3"></div>
           <div className="w-full lg:w-2/3">
-            <Image
-              src="/images/anna.jpg"
-              width={800}
-              height={500}
-              alt="Anna Elise Johnson"
-            />
-            <h1 className="text-3xl lg:text-5xl font-bold uppercase mt-16 mb-2">
+            <h1 className="text-3xl lg:text-4xl font-bold uppercase mt-16 mb-4">
               {name}
             </h1>
+            <hr />
           </div>
         </div>
 
@@ -55,9 +60,9 @@ const Experience: NextPage<ExperienceProps> = ({
               {section.subsections.map((subsection, index) => (
                 <div
                   key={index}
-                  className="text-base text-dark-2 dark:text-light-2 mb-8"
+                  className="text-base text-dark-2 dark:text-light-2 mb-5"
                 >
-                  <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-3">
+                  <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-2">
                     {subsection.name}
                   </h3>
                   <ul className="list-disc list-inside lg:list-outside">

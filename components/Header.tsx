@@ -19,14 +19,19 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
   return (
     <nav>
       {/* Home link */}
-      <Link href="/">
+      <Link href="/" className="color-blue dark:color-red">
         <AnnaEliseJohnson />
       </Link>
 
       <div className="container mx-auto px-2 py-3 mb-10">
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center">
+          {/* Extraneous invisible layout DIV */}
+          <div className="invisible flex mr-auto">
+            <ThemeSwitcher />
+          </div>
+
           {/* Navigation links - Large screen */}
-          <div className="items-center hidden md:block font-general-medium m-0 sm:ml-4 sm:p-0">
+          <div className="hidden md:flex font-general-medium m-0 sm:ml-4 sm:p-0">
             <div className="nav-primary">
               <Link href="/" aria-label="Home" className="nav-link">
                 Home
@@ -44,10 +49,14 @@ const Header: React.FC<HeaderProps> = ({ name }) => {
           </div>
 
           {/* Hamburger menu - Small screen */}
-          <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
+          <div className="flex md:hidden">
+            <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
+          </div>
 
           {/* Theme switcher */}
-          <ThemeSwitcher />
+          <div className="flex ml-auto">
+            <ThemeSwitcher />
+          </div>
         </div>
 
         {/* Navigation links - Small screen */}

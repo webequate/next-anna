@@ -40,7 +40,9 @@ const ProjectModals: React.FC<ProjectModalsProps> = ({
             <h2 className="text-2xl text-dark-1 dark:text-light-1 mb-4">
               {project.title}
             </h2>
-            <p className="mb-4">Dimensions: {project.dimensions}</p>
+            <p className="mb-4">
+              Dimensions: {project.dimensions.replace(/(\d+)(?!\d)/g, '$1"')}
+            </p>
             <p className="mb-6">Media: {project.media}</p>
           </div>
         </div>

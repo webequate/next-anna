@@ -8,7 +8,7 @@ interface HamburgerProps {
 
 const Hamburger: React.FC<HamburgerProps> = ({ showMenu, toggleMenu }) => {
   return (
-    <div className="block md:hidden">
+    <div>
       <button
         onClick={toggleMenu}
         type="button"

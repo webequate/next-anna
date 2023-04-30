@@ -29,7 +29,9 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
           <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-200 rounded shadow-md"></div>
           <div className="absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 p-4">
             <h2 className="text-xl mb-2">{project.title}</h2>
-            <p className="mb-2">{project.dimensions}</p>
+            <p className="mb-2">
+              {project.dimensions.replace(/(\d+)(?!\d)/g, '$1"')}
+            </p>
             <p>{project.media}</p>
           </div>
           <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-200">

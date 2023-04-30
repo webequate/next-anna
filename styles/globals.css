@@ -20,7 +20,7 @@ a {
 
 /* Scroll to top style */
 .scrollToTop {
-	@apply bg-color-gradient;
+	@apply bg-accent-1;
 	@apply text-white;
 	position: fixed;
 	width: 100%;
