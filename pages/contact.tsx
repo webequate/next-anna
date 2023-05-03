@@ -24,7 +24,7 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
   } = basics[0];
   return (
     <div className="mx-auto">
-      <Header name={name} />
+      <Header name={name} socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -33,20 +33,24 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
         className={"text-base text-dark-2 dark:text-light-2"}
       >
         <div className="mx-auto flex flex-col-reverse lg:flex-row">
-          <ContactForm />
+          <div className="w-full lg:w-1/2">
+            <ContactForm />
+          </div>
 
-          <ContactDetails
-            name={name}
-            contactIntro={contactIntro}
-            location={location}
-            email={email}
-            website={website}
-            resumeLink={resumeLink}
-          />
+          <div className="w-full lg:w-1/2">
+            <ContactDetails
+              name={name}
+              contactIntro={contactIntro}
+              location={location}
+              email={email}
+              website={website}
+              resumeLink={resumeLink}
+            />
+          </div>
         </div>
       </motion.div>
 
-      <Footer name={name} />
+      <Footer name={name} socialLinks={socialLinks} />
     </div>
   );
 };

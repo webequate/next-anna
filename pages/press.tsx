@@ -3,7 +3,7 @@ import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
 import { PressItem } from "@/types/press";
-import { Basics } from "@/types/basics";
+import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -12,12 +12,13 @@ import Link from "next/link";
 type PressProps = {
   pressItems: PressItem[];
   name: string;
+  socialLinks: SocialLink[];
 };
 
-const Press: NextPage<PressProps> = ({ pressItems, name }) => {
+const Press: NextPage<PressProps> = ({ pressItems, name, socialLinks }) => {
   return (
     <div className="mx-auto">
-      <Header name={name} />
+      <Header name={name} socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -31,6 +32,7 @@ const Press: NextPage<PressProps> = ({ pressItems, name }) => {
               key={index}
               href={pressItem.url}
               aria-label={pressItem.name}
+              target="_blank"
               className="mx-auto mt-4 mb-8"
             >
               <Image
@@ -48,7 +50,7 @@ const Press: NextPage<PressProps> = ({ pressItems, name }) => {
         ))}
       </motion.div>
 
-      <Footer name={name} />
+      <Footer name={name} socialLinks={socialLinks} />
     </div>
   );
 };

@@ -3,28 +3,31 @@ import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
 import { ExperienceSection } from "@/types/experience";
-import { Basics } from "@/types/basics";
+import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
 type ExperienceProps = {
   name: string;
+  socialLinks: SocialLink[];
   experienceSections: ExperienceSection[];
 };
 
 const Experience: NextPage<ExperienceProps> = ({
   name,
+  socialLinks,
   experienceSections,
 }) => {
   return (
     <>
-      <Header name={name} />
+      <Header name={name} socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
+        className="text-base text-dark-2 dark:text-light-2"
       >
         <div className="mx-auto">
           <Image
@@ -79,7 +82,7 @@ const Experience: NextPage<ExperienceProps> = ({
         ))}
       </motion.div>
 
-      <Footer name={name} />
+      <Footer name={name} socialLinks={socialLinks} />
     </>
   );
 };
@@ -100,6 +103,7 @@ export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
     props: {
       experienceSections: JSON.parse(JSON.stringify(experienceSections)),
       name: basics[0].name,
+      socialLinks: basics[0].socialLinks,
     },
     revalidate: 60,
   };

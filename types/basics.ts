@@ -1,6 +1,7 @@
 // types/basics.ts
 export type SocialLink = {
   name: string;
+  handle: string;
   url: string;
 };
 

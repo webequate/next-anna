@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
 html,
 body {
 	padding: 0;
@@ -20,7 +27,7 @@ a {
 
 /* Scroll to top style */
 .scrollToTop {
-	@apply bg-accent-1;
+	@apply bg-accent-light;
 	@apply text-white;
 	position: fixed;
 	width: 100%;
@@ -56,24 +63,24 @@ a {
   }
   /* Primary navigation */
   .nav-primary {
-    @apply flex items-center text-sm lg:text-lg font-semibold rounded-full text-dark-2 dark:text-light-2 bg-light-1 dark:bg-dark-1 ring-1 ring-dark-3 dark:ring-light-3 px-3 mx-6;
+    @apply flex items-center text-sm md:text-lg font-semibold rounded-full text-dark-2 dark:text-light-2 bg-light-1 dark:bg-dark-1 ring-1 ring-dark-3 dark:ring-light-3 px-3 mx-6;
   }
   .nav-primary .nav-link {
-    @apply hover:text-accent-1 dark:hover:text-accent-1 mx-2 lg:mx-4 py-1 lg:py-2 duration-300;
+    @apply hover:text-accent-dark dark:hover:text-accent-light mx-2 md:mx-4 py-1 md:py-2 duration-300;
   }
   /* Secondary navigation */
   .nav-secondary {
     @apply flex text-sm font-semibold text-dark-2 dark:text-light-2 rounded-full px-3 mx-6 bg-light-1 dark:bg-dark-1 ring-1 ring-dark-3 dark:ring-light-3;
   }
   .nav-secondary .nav-link {
-    @apply hover:text-accent-1 dark:hover:text-accent-1 sm:mx-4 sm:py-2 duration-300;
+    @apply hover:text-accent-dark dark:hover:text-accent-light sm:mx-4 sm:py-2 duration-300;
   }
   /* Mobile navigation */
   .nav-mobile {
     @apply block text-lg text-left m-0 mt-3 py-3 justify-between items-center;
   }
   .nav-mobile .nav-link {
-    @apply block text-dark-2 dark:text-light-2 hover:text-accent-1 dark:hover:text-accent-1 py-2 border-b-2 md:border-b-0 border-dark-3 dark:border-light-3;
+    @apply block text-dark-2 dark:text-light-2 hover:text-accent-light dark:hover:text-accent-light py-2 border-b-2 md:border-b-0 border-dark-3 dark:border-light-3;
   }
   /* Text gradient */
   .text-color-gradient {

@@ -3,21 +3,21 @@
     "name": "Arts and Culture Texas",
     "url": "http://artsandculturetx.com/recording-the-landscape-anna-elise-johnson-at-cris-worley/",
     "text": "Recording the Landscape: Anna Elise Johnson at Cris Worley",
-    "image": "logo-arts-and-culture-texas.png",
+    "image": "logo-arts-and-culture-texas.jpg",
     "order": 1
   },
   {
     "name": "Shoutout LA",
     "url": "https://shoutoutla.com/meet-anna-elise-johnson-artist/",
     "text": "Meet Anna Elise Johnson: Artist",
-    "image": "logo-shoutout-la.png",
+    "image": "logo-shoutout-la.jpg",
     "order": 2
   },
   {
     "name": "Voyage LA",
     "url": "http://voyagela.com/interview/meet-anna-elise-johnson-of-the-fashion-district/",
     "text": "Meet Anna Elise Johnson",
-    "image": "logo-voyage-la.png",
+    "image": "logo-voyage-la.jpg",
     "order": 3
   }
 ]

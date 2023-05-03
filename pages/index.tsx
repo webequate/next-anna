@@ -3,7 +3,7 @@ import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Project } from "@/types/project";
-import { Basics } from "@/types/basics";
+import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import ProjectModals from "@/components/ProjectModals";
@@ -12,15 +12,16 @@ import { useState } from "react";
 
 interface ProjectsProps {
   name: string;
+  socialLinks: SocialLink[];
   projects: Project[];
 }
 
-const Projects: NextPage<ProjectsProps> = ({ name, projects }) => {
+const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
   const [activeModal, setActiveModal] = useState<number | null>(null);
 
   return (
     <div className="mx-auto">
-      <Header name={name} />
+      <Header name={name} socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -37,7 +38,7 @@ const Projects: NextPage<ProjectsProps> = ({ name, projects }) => {
         />
       </motion.div>
 
-      <Footer name={name} />
+      <Footer name={name} socialLinks={socialLinks} />
     </div>
   );
 };
@@ -58,6 +59,7 @@ export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
     props: {
       projects: JSON.parse(JSON.stringify(projects)),
       name: basics[0].name,
+      socialLinks: basics[0].socialLinks,
     },
     revalidate: 60,
   };
