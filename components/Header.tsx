@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ name, socialLink }) => {
       {/* Home link */}
       <Link
         href="/"
-        className="text-dark-1 dark:text-light-1 hover:text-accent-light dark:hover:text-accent-light my-4"
+        className="text-dark-1 dark:text-light-1 hover:text-accent-dark dark:hover:text-accent-light my-4"
       >
         <AnnaEliseJohnson />
       </Link>
