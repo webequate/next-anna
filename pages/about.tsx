@@ -27,59 +27,60 @@ const Experience: NextPage<ExperienceProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className="text-base text-dark-2 dark:text-light-2"
       >
-        <div className="mx-auto">
-          <Image
-            src="/images/anna.jpg"
-            width={1080}
-            height={720}
-            alt="Anna Elise Johnson"
-            className="w-full"
-          />
-        </div>
-
-        <div className="mx-auto lg:flex lg:flex-row">
-          <div className="w-full lg:w-1/3"></div>
-          <div className="w-full lg:w-2/3">
-            <h1 className="text-3xl lg:text-4xl font-bold uppercase mt-16 mb-4">
-              {name}
-            </h1>
-            <hr />
+        <div className="mx-auto text-base text-dark-2 dark:text-light-2 mb-10">
+          <div className="mb-10">
+            <Image
+              src="/images/anna.jpg"
+              width={1080}
+              height={720}
+              alt="Anna Elise Johnson"
+              className="w-full"
+            />
           </div>
-        </div>
 
-        {experienceSections.map((section, index) => (
-          <div
-            key={index}
-            className="mx-auto lg:flex lg:flex-row my-12 align-top"
-          >
-            <div className="w-full lg:w-1/3">
-              <h2 className="text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-8 lg:pb-0">
-                {section.title}
-              </h2>
-            </div>
+          <div className="mx-auto lg:flex lg:flex-row mb-4 lg:mb-10">
+            <div className="w-full lg:w-1/3"></div>
             <div className="w-full lg:w-2/3">
-              {section.subsections.map((subsection, index) => (
-                <div
-                  key={index}
-                  className="text-base text-dark-2 dark:text-light-2 mb-5"
-                >
-                  <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-2">
-                    {subsection.name}
-                  </h3>
-                  <ul className="list-disc list-inside lg:list-outside">
-                    {subsection.items.map((item, index) => (
-                      <li key={index} className="mt-1 mb-2">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <h1 className="text-2xl lg:text-4xl font-bold uppercase mt-4 mb-4">
+                {name}
+              </h1>
+              <hr />
             </div>
           </div>
-        ))}
+
+          {experienceSections.map((section, index) => (
+            <div
+              key={index}
+              className="lg:flex lg:flex-row mx-auto align-top mb-10"
+            >
+              <div className="w-full lg:w-1/3">
+                <h2 className="text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-6 lg:pb-0">
+                  {section.title}
+                </h2>
+              </div>
+              <div className="w-full lg:w-2/3">
+                {section.subsections.map((subsection, index) => (
+                  <div
+                    key={index}
+                    className="text-base text-dark-2 dark:text-light-2 mb-5"
+                  >
+                    <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-2">
+                      {subsection.name}
+                    </h3>
+                    <ul className="list-disc list-outside ml-5 lg:ml-0">
+                      {subsection.items.map((item, index) => (
+                        <li key={index} className="mb-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </motion.div>
 
       <Footer name={name} socialLinks={socialLinks} />

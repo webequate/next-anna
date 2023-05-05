@@ -42,7 +42,7 @@ const Press: NextPage<PressProps> = ({ pressItems, name, socialLinks }) => {
                 height={200}
                 className="mx-auto"
               />
-              <p className="flex font-bold mx-auto justify-center mt-2 mb-4">
+              <p className="font-bold mx-auto text-center mt-2 mb-4">
                 {pressItem.text}
               </p>
             </Link>

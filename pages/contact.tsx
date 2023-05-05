@@ -30,14 +30,13 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className={"text-base text-dark-2 dark:text-light-2"}
       >
-        <div className="mx-auto flex flex-col-reverse lg:flex-row">
-          <div className="w-full lg:w-1/2">
+        <div className="mx-auto flex flex-col-reverse lg:flex-row text-base text-dark-2 dark:text-light-2">
+          <div className="w-full lg:w-1/2 mb-10 lg:mb-0 md:ml-6">
             <ContactForm />
           </div>
 
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 mb-10 lg:mb-0 md:ml-6">
             <ContactDetails
               name={name}
               contactIntro={contactIntro}
