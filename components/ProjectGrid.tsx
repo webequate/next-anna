@@ -12,7 +12,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
   setActiveModal,
 }) => {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 text-light-1 dark:text-light-1">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-10 text-light-1 dark:text-light-1">
       {projects.map((project, index) => (
         <a
           key={index}
@@ -26,15 +26,15 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
             height={600}
             className="rounded shadow-md transition duration-200 ease-in-out transform"
           />
-          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-200 rounded shadow-md"></div>
-          <div className="absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 p-4">
+          <div className="absolute inset-0 bg-black opacity-0 sm:group-hover:opacity-50 transition duration-200 rounded shadow-md"></div>
+          <div className="absolute inset-0 items-center justify-center opacity-0 sm:group-hover:opacity-100 transition duration-200 p-4">
             <h2 className="text-lg mb-2">{project.title}</h2>
             <p className="mb-2">
               {project.dimensions.replace(/(\d+)(?!\d)/g, '$1"')}
             </p>
             <p>{project.media}</p>
           </div>
-          <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-200">
+          <div className="absolute inset-0 sm:flex items-center justify-center text-white opacity-0 sm:group-hover:opacity-100 transition duration-200">
             <span className="text-4xl">+</span>
           </div>
         </a>

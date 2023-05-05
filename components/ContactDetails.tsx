@@ -4,12 +4,12 @@ import Link from "next/link";
 import { FiUser, FiMapPin, FiPhone, FiMail, FiGlobe } from "react-icons/fi";
 
 interface ContactDetailsProps {
-  name: string;
+  name?: string;
   contactIntro?: string;
-  location: string;
-  phone: string;
-  email: string;
-  website: string;
+  location?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
   resumeLink?: string;
 }
 
