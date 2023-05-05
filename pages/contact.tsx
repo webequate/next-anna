@@ -32,7 +32,7 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
         <div className="mx-auto flex flex-col-reverse lg:flex-row text-base text-dark-2 dark:text-light-2">
-          <div className="w-full lg:w-1/2 mb-10 lg:mb-0 md:ml-6">
+          <div className="w-full lg:w-1/2 mb-10 lg:mb-0 md:mr-6">
             <ContactForm />
           </div>
 
