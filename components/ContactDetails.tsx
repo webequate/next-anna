@@ -60,7 +60,9 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
             <i className="text-2xl mr-4 mt-1">
               <FiMail />
             </i>
-            <span className="text-lg">{email}</span>
+            <span className="text-lg">
+              <Link href={`mailto:${email}`}>{email}</Link>
+            </span>
           </li>
         )}
         {website && (
