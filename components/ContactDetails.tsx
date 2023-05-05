@@ -23,11 +23,9 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({
   resumeLink,
 }) => {
   return (
-    <div className="text-base text-left text-dark-2 dark:text-light-2 mt-0 lg:mt-8">
-      <h2 className="text-2xl font-bold mb-6">
-        <span className="text-accent-dark dark:text-accent-light">
-          Contact Details
-        </span>
+    <div className="text-base text-left max-w-xl text-dark-2 dark:text-light-2 ml-4 p-6 sm:p-8">
+      <h2 className="text-accent-dark dark:text-accent-light font-bold text-2xl mb-8">
+        Contact Details
       </h2>
       {contactIntro && <p className="text-base mb-4">{contactIntro}</p>}
       <ul className="mb-6">
