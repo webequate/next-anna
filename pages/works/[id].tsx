@@ -46,10 +46,7 @@ const Project: NextPage<ProjectProps> = ({
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
         <div className="justify-center text-dark-1 dark:text-light-1">
-          <h2 className="text-2xl md:text-3xl text-center mb-4">
-            {project.title}
-          </h2>
-          <div className="flex justify-center text-3xl">
+          <div className="flex justify-between text-xl sm:text-2xl md:text-3xl">
             {prevProject ? (
               <Link href={`/works/${prevProject.id}`}>
                 <FaArrowLeft className="hover:text-accent-dark dark:hover:text-accent-light" />
@@ -59,13 +56,9 @@ const Project: NextPage<ProjectProps> = ({
                 <FaArrowLeft />
               </div>
             )}
-            <Image
-              src={`/images/${project.image}`}
-              alt={project.title}
-              width={600}
-              height={600}
-              className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-4"
-            />
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-center mb-4">
+              {project.title}
+            </h2>
             {nextProject ? (
               <Link href={`/works/${nextProject.id}`}>
                 <FaArrowRight className="hover:text-accent-dark dark:hover:text-accent-light" />
@@ -76,6 +69,13 @@ const Project: NextPage<ProjectProps> = ({
               </div>
             )}
           </div>
+          <Image
+            src={`/images/${project.image}`}
+            alt={project.title}
+            width={600}
+            height={600}
+            className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-4"
+          />
           <p className="text-center mb-2">
             Dimensions: {project.dimensions.replace(/(\d+)(?!\d|\.)/g, '$1"')}
           </p>
