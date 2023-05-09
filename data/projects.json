@@ -1,5 +1,6 @@
 [
   {
+    "id": "desert-view-road-1",
     "title": "Earthworks (Desert View Road I)",
     "dimensions": "48 x 38 x 3",
     "media": "dye, watercolor, acrylic, plaster on canvas",
@@ -7,6 +8,7 @@
     "order": 1
   },
   {
+    "id": "soledad-canyon-road-1",
     "title": "Earthworks (Soledad Canyon Road I)",
     "dimensions": "72 x 48 x 2",
     "media": "dye, watercolor, acrylic, plaster on canvas",
@@ -14,6 +16,7 @@
     "order": 2
   },
   {
+    "id": "soledad-canyon-road-2",
     "title": "Earthworks (Soledad Canyon Road II)",
     "dimensions": "48 x 34 x 2.5",
     "media": "dye, watercolor, acrylic, plaster on canvas",
@@ -21,6 +24,7 @@
     "order": 3
   },
   {
+    "id": "longview-road-at-magic-hour-1",
     "title": "Longview Road at Magic Hour I",
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
@@ -28,6 +32,7 @@
     "order": 4
   },
   {
+    "id": "longview-road-at-magic-hour-2",
     "title": "Longview Road at Magic Hour II",
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
@@ -35,6 +40,7 @@
     "order": 5
   },
   {
+    "id": "longview-road-at-magic-hour-3",
     "title": "Longview Road at Magic Hour III",
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
@@ -42,6 +48,7 @@
     "order": 6
   },
   {
+    "id": "pearlblossom-highway-at-magic-hour-1",
     "title": "Pearlblossom Highway at Magic Hour I",
     "dimensions": "30 x 22 x 2",
     "media": "concrete, rocks, acrylic paint",
@@ -49,6 +56,7 @@
     "order": 7
   },
   {
+    "id": "pearlblossom-highway-at-magic-hour-4",
     "title": "Pearlblossom Highway at Magic Hour IV",
     "dimensions": "30 x 22 x 2",
     "media": "concrete, rocks, acrylic paint",
@@ -56,6 +64,7 @@
     "order": 8
   },
   {
+    "id": "mojave-tropico-road-1",
     "title": "Earthworks (Mojave Tropico Road I)",
     "dimensions": "72 x 60",
     "media": "earth, plaster, watercolor, acrylic, wax",
@@ -63,6 +72,7 @@
     "order": 9
   },
   {
+    "id": "mojave-tropico-road-2",
     "title": "Earthworks (Mojave Tropico Road II)",
     "dimensions": "72 x 60",
     "media": "earth, plaster, watercolor, acrylic, wax",
@@ -70,6 +80,7 @@
     "order": 10
   },
   {
+    "id": "mojave-tropico-road-3",
     "title": "Earthworks (Mojave Tropico Road III)",
     "dimensions": "90 x 62",
     "media": "earth, plaster, watercolor, acrylic, wax",
@@ -77,6 +88,7 @@
     "order": 11
   },
   {
+    "id": "presswood-road-1",
     "title": "Earthworks (Presswood Road I)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, watercolor, acrylic",
@@ -84,6 +96,7 @@
     "order": 12
   },
   {
+    "id": "mulholand-hwy",
     "title": "Earthworks (Mulholland Hwy)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, watercolor, acrylic, wax",
@@ -91,6 +104,7 @@
     "order": 13
   },
   {
+    "id": "hwy-67-1",
     "title": "Earthworks (Hwy 67 I)",
     "dimensions": "48 x 72",
     "media": "earth, plaster, watercolor",
@@ -98,6 +112,7 @@
     "order": 14
   },
   {
+    "id": "hwy-90",
     "title": "Earthworks (Hwy 90)",
     "dimensions": "62 x 90",
     "media": "earth, plaster, watercolor",
@@ -105,6 +120,7 @@
     "order": 15
   },
   {
+    "id": "cibolo-creek-road-1",
     "title": "Earthworks (Cibolo Creek Road I)",
     "dimensions": "58 x 44",
     "media": "earth, plaster, watercolor",
@@ -112,6 +128,7 @@
     "order": 16
   },
   {
+    "id": "cibolo-creek-road-2",
     "title": "Earthworks (Cibolo Creek Road II)",
     "dimensions": "58 x 44",
     "media": "earth, plaster, watercolor",
@@ -119,6 +136,7 @@
     "order": 17
   },
   {
+    "id": "ranch-road-2810-1",
     "title": "Earthworks (Ranch Road 2810 I)",
     "dimensions": "52 x 32",
     "media": "earth, plaster, watercolor",
@@ -126,6 +144,7 @@
     "order": 18
   },
   {
+    "id": "ranch-road-2810-2",
     "title": "Earthworks (Ranch Road 2810 II)",
     "dimensions": "52 x 38",
     "media": "earth, plaster, watercolor",
@@ -133,6 +152,7 @@
     "order": 19
   },
   {
+    "id": "ranch-road-505-1",
     "title": "Earthworks (Ranch Road 505 I)",
     "dimensions": "64 x 58",
     "media": "earth, plaster, watercolor",
@@ -140,6 +160,7 @@
     "order": 20
   },
   {
+    "id": "ranch-road-505-2",
     "title": "Earthworks (Ranch Road 505 II)",
     "dimensions": "64 x 58",
     "media": "earth, plaster, watercolor",
@@ -147,6 +168,7 @@
     "order": 21
   },
   {
+    "id": "ranch-road-505-3",
     "title": "Earthworks (Ranch Road 505 III)",
     "dimensions": "60 x 46",
     "media": "earth, plaster, watercolor",
@@ -154,6 +176,7 @@
     "order": 22
   },
   {
+    "id": "red-hills-road-1",
     "title": "Earthworks (Red Hills Road I)",
     "dimensions": "48 x 32",
     "media": "earth, plaster, watercolor",
@@ -161,6 +184,7 @@
     "order": 23
   },
   {
+    "id": "red-hills-road-2",
     "title": "Earthworks (Red Hills Road II)",
     "dimensions": "48 x 32",
     "media": "earth, plaster, watercolor",
@@ -168,6 +192,7 @@
     "order": 24
   },
   {
+    "id": "wildrose-road-3",
     "title": "Earthworks (Wildrose Road III)",
     "dimensions": "50 x 42",
     "media": "earth, plaster, watercolor",
@@ -175,6 +200,7 @@
     "order": 25
   },
   {
+    "id": "wildrose-road-1",
     "title": "Earthworks (Wildrose Road I)",
     "dimensions": "52 x 46",
     "media": "earth, charcoal, plaster, watercolor",
@@ -182,6 +208,7 @@
     "order": 26
   },
   {
+    "id": "wildrose-road-2",
     "title": "Earthworks (Wildrose Road II)",
     "dimensions": "52 x 46",
     "media": "earth, plaster, watercolor",
@@ -189,6 +216,7 @@
     "order": 27
   },
   {
+    "id": "valley-of-fire-3",
     "title": "Earthworks (Valley of Fire III)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, matte medium, oil pastel, conté crayon",
@@ -196,6 +224,7 @@
     "order": 28
   },
   {
+    "id": "valley-of-fire-4",
     "title": "Earthworks (Valley of Fire IV)",
     "dimensions": "62 x 90",
     "media": "earth, plaster, conté crayon, oil pastel",
@@ -203,6 +232,7 @@
     "order": 29
   },
   {
+    "id": "valley-of-fire-6",
     "title": "Earthworks (Valley of Fire VI)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, oil pastel, conté crayon",
@@ -210,6 +240,7 @@
     "order": 30
   },
   {
+    "id": "sand-cove-1",
     "title": "Earthworks (Sand Cove I)",
     "dimensions": "60 x 46",
     "media": "earth, plaster, matte medium, pastel, oil pastel",
@@ -217,6 +248,7 @@
     "order": 31
   },
   {
+    "id": "sand-cove-2",
     "title": "Earthworks (Sand Cove II)",
     "dimensions": "60 x 46",
     "media": "earth, plaster, matte medium, conté crayon",
@@ -224,6 +256,7 @@
     "order": 32
   },
   {
+    "id": "sand-cove-3",
     "title": "Earthworks (Sand Cove III)",
     "dimensions": "52 x 38",
     "media": "earth, plaster, matte medium, watercolor, conté crayon",
@@ -231,6 +264,7 @@
     "order": 33
   },
   {
+    "id": "sand-cove-4",
     "title": "Earthworks (Sand Cove IV)",
     "dimensions": "52 x 38",
     "media": "earth, plaster, watercolor, conté crayon, charcoal",
@@ -238,6 +272,7 @@
     "order": 34
   },
   {
+    "id": "bobcat-fire-ochre",
     "title": "Earthworks (Bobcat Fire) Ochre)",
     "dimensions": "48 x 34",
     "media": "ash, plaster, conté crayon, watercolor",
@@ -245,6 +280,7 @@
     "order": 35
   },
   {
+    "id": "bobcat-fire-cobalt",
     "title": "Earthworks (Bobcat Fire) Cobalt",
     "dimensions": "50 x 32",
     "media": "ash, plaster, conté crayon, watercolor",
@@ -252,6 +288,7 @@
     "order": 36
   },
   {
+    "id": "pine-ridge-trail-1",
     "title": "Earthworks (Pine Ridge Trail I)",
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
@@ -259,6 +296,7 @@
     "order": 37
   },
   {
+    "id": "pine-ridge-trail-2",
     "title": "Earthworks (Pine Ridge Trail II)",
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
@@ -266,6 +304,7 @@
     "order": 38
   },
   {
+    "id": "pine-ridge-trail-3",
     "title": "Earthworks (Pine Ridge Trail III)",
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
@@ -273,6 +312,7 @@
     "order": 39
   },
   {
+    "id": "pine-ridge-trail-4",
     "title": "Earthworks (Pine Ridge Trail IV)",
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
@@ -280,6 +320,7 @@
     "order": 40
   },
   {
+    "id": "pine-ridge-trail-5",
     "title": "Earthworks (Pine Ridge Trail V)",
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas, oil stick on canvas",
@@ -287,6 +328,7 @@
     "order": 41
   },
   {
+    "id": "pine-ridge-trail-6",
     "title": "Earthworks (Pine Ridge Trail VI)",
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
@@ -294,6 +336,7 @@
     "order": 42
   },
   {
+    "id": "yucca-path-1",
     "title": "Earthworks (Yucca Path I)",
     "dimensions": "45 x 38",
     "media": "earth, plaster, matte medium, graphite, charcoal",
@@ -301,6 +344,7 @@
     "order": 43
   },
   {
+    "id": "yucca-path-2",
     "title": "Earthworks (Yucca Path II)",
     "dimensions": "45 x 37",
     "media": "earth, plaster, matte medium, graphite, charcoal",
@@ -308,6 +352,7 @@
     "order": 44
   },
   {
+    "id": "yucca-path-3",
     "title": "Earthworks (Yucca Path III)",
     "dimensions": "52 x 40",
     "media": "earth, plaster, matte medium, watercolor",
@@ -315,6 +360,7 @@
     "order": 45
   },
   {
+    "id": "yucca-path-4",
     "title": "Earthworks (Yucca Path IV)",
     "dimensions": "38 x 45",
     "media": "earth, plaster, matte medium, watercolor, gesso",

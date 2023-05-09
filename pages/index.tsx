@@ -6,9 +6,7 @@ import { Project } from "@/types/project";
 import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
-import ProjectModals from "@/components/ProjectModals";
 import Footer from "@/components/Footer";
-import { useState } from "react";
 
 interface ProjectsProps {
   name: string;
@@ -17,8 +15,6 @@ interface ProjectsProps {
 }
 
 const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
-  const [activeModal, setActiveModal] = useState<number | null>(null);
-
   return (
     <div className="mx-auto">
       <Header name={name} socialLink={socialLinks[0]} />
@@ -29,13 +25,7 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="text-base text-dark-2 dark:text-light-2"
       >
-        <ProjectGrid projects={projects} setActiveModal={setActiveModal} />
-
-        <ProjectModals
-          projects={projects}
-          activeModal={activeModal}
-          setActiveModal={setActiveModal}
-        />
+        <ProjectGrid projects={projects} />
       </motion.div>
 
       <Footer name={name} socialLinks={socialLinks} />
