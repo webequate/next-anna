@@ -63,16 +63,23 @@ export const getStaticProps: GetStaticProps<ContactProps> = async () => {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
   );
   const basics: Basics = await basicsRes.json();
+  // const name = basics.name || "Anna Elise Johnson";
+  // const contactIntro = basics.contactIntro || "";
+  // const location = basics.location || "";
+  // const email = basics.email || "";
+  // const website = basics.website || "";
+  // const resumeLink = basics.resumeLink || "";
+  // const socialLinks = basics.socialLinks || [];
 
   return {
     props: {
-      name: basics.name,
-      contactIntro: basics.contactIntro,
-      location: basics.location,
-      email: basics.email,
-      website: basics.website,
-      resumeLink: basics.resumeLink,
-      socialLinks: basics.socialLinks,
+      name: basics.name || "Anna Elise Johnson",
+      contactIntro: basics.contactIntro || "Please send a message.",
+      location: basics.location || "",
+      email: basics.email || "",
+      website: basics.website || "",
+      resumeLink: basics.resumeLink || "",
+      socialLinks: basics.socialLinks || [],
     },
     revalidate: 60,
   };
