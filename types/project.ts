@@ -6,5 +6,6 @@ export type Project = {
   dimensions: string;
   media: string;
   image: string;
+  feature: boolean;
   order: number;
 };

@@ -25,7 +25,7 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="text-base text-dark-2 dark:text-light-2"
       >
-        <ProjectGrid projects={projects} path="works" />
+        <ProjectGrid projects={projects} path="history" />
       </motion.div>
 
       <Footer name={name} socialLinks={socialLinks} />
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
 
   const projectsCollection = db.collection<Project>("projects");
   const projects: Project[] = await projectsCollection
-    .find({ feature: true })
+    .find({ feature: false })
     .sort({ order: 1 })
     .toArray();
 

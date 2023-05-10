@@ -5,15 +5,16 @@ import Link from "next/link";
 
 interface ProjectGridProps {
   projects: Project[];
+  path: string;
 }
 
-const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
+const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, path }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 text-light-1 dark:text-light-1">
       {projects.map((project) => (
         <Link
           key={project.id}
-          href={`/works/${project.id}`}
+          href={`/${path}/${project.id}`}
           className="group relative cursor-pointer"
         >
           <Image

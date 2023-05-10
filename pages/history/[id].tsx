@@ -51,7 +51,7 @@ const Project: NextPage<ProjectProps> = ({
             title={project.title}
             prevId={prevProject?.id}
             nextId={nextProject?.id}
-            path="works"
+            path="history"
           />
           <Image
             src={`/images/${project.image}`}
@@ -77,7 +77,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const projectsCollection = db.collection<Project>("projects");
   const projects: Project[] = await projectsCollection
-    .find({ feature: true })
+    .find({ feature: false })
     .sort({ order: 1 })
     .toArray();
 
@@ -101,12 +101,12 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
 
   const projectsCollection = db.collection<Project>("projects");
   const projects: Project[] = await projectsCollection
-    .find({ feature: true })
+    .find({ feature: false })
     .sort({ order: 1 })
     .toArray();
   const project: Project | null = await projectsCollection.findOne({
     id: params.id,
-    feature: true,
+    feature: false,
   });
 
   if (!project) {

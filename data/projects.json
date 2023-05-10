@@ -5,6 +5,7 @@
     "dimensions": "48 x 38 x 3",
     "media": "dye, watercolor, acrylic, plaster on canvas",
     "image": "2023/main/desert-view-road-1.jpg",
+    "feature": true,
     "order": 1
   },
   {
@@ -13,6 +14,7 @@
     "dimensions": "72 x 48 x 2",
     "media": "dye, watercolor, acrylic, plaster on canvas",
     "image": "2023/main/soledad-canyon-road-1.jpg",
+    "feature": true,
     "order": 2
   },
   {
@@ -21,6 +23,7 @@
     "dimensions": "48 x 34 x 2.5",
     "media": "dye, watercolor, acrylic, plaster on canvas",
     "image": "2023/main/soledad-canyon-road-2.jpg",
+    "feature": true,
     "order": 3
   },
   {
@@ -29,6 +32,7 @@
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
     "image": "2023/main/longview-road-1.jpg",
+    "feature": true,
     "order": 4
   },
   {
@@ -37,6 +41,7 @@
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
     "image": "2023/main/longview-road-2.jpg",
+    "feature": true,
     "order": 5
   },
   {
@@ -45,6 +50,7 @@
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
     "image": "2023/main/longview-road-3.jpg",
+    "feature": true,
     "order": 6
   },
   {
@@ -53,6 +59,7 @@
     "dimensions": "30 x 22 x 2",
     "media": "concrete, rocks, acrylic paint",
     "image": "2023/main/pearlblossom-hwy-1.jpg",
+    "feature": true,
     "order": 7
   },
   {
@@ -61,6 +68,7 @@
     "dimensions": "30 x 22 x 2",
     "media": "concrete, rocks, acrylic paint",
     "image": "2023/main/pearlblossom-hwy-4.jpg",
+    "feature": true,
     "order": 8
   },
   {
@@ -69,6 +77,7 @@
     "dimensions": "72 x 60",
     "media": "earth, plaster, watercolor, acrylic, wax",
     "image": "2022/main/mojave-tropico-road-1.jpg",
+    "feature": true,
     "order": 9
   },
   {
@@ -77,6 +86,7 @@
     "dimensions": "72 x 60",
     "media": "earth, plaster, watercolor, acrylic, wax",
     "image": "2022/main/mojave-tropico-road-2.jpg",
+    "feature": true,
     "order": 10
   },
   {
@@ -85,6 +95,7 @@
     "dimensions": "90 x 62",
     "media": "earth, plaster, watercolor, acrylic, wax",
     "image": "2022/main/mojave-tropico-road-3.jpg",
+    "feature": true,
     "order": 11
   },
   {
@@ -93,6 +104,7 @@
     "dimensions": "64 x 48",
     "media": "earth, plaster, watercolor, acrylic",
     "image": "2022/main/presswood-road-1.jpg",
+    "feature": true,
     "order": 12
   },
   {
@@ -101,6 +113,7 @@
     "dimensions": "64 x 48",
     "media": "earth, plaster, watercolor, acrylic, wax",
     "image": "2022/main/mulholland-hwy-1.jpg",
+    "feature": true,
     "order": 13
   },
   {
@@ -109,6 +122,7 @@
     "dimensions": "48 x 72",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/hwy-67-1.jpg",
+    "feature": true,
     "order": 14
   },
   {
@@ -117,6 +131,7 @@
     "dimensions": "62 x 90",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/hwy-90.jpg",
+    "feature": true,
     "order": 15
   },
   {
@@ -125,6 +140,7 @@
     "dimensions": "58 x 44",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/cibolo-creek-road-1.jpg",
+    "feature": true,
     "order": 16
   },
   {
@@ -133,6 +149,7 @@
     "dimensions": "58 x 44",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/cibolo-creek-road-2.jpg",
+    "feature": true,
     "order": 17
   },
   {
@@ -141,6 +158,7 @@
     "dimensions": "52 x 32",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/ranch-road-2810-1.jpg",
+    "feature": true,
     "order": 18
   },
   {
@@ -149,6 +167,7 @@
     "dimensions": "52 x 38",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/ranch-road-2810-2.jpg",
+    "feature": true,
     "order": 19
   },
   {
@@ -157,6 +176,7 @@
     "dimensions": "64 x 58",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/ranch-road-505-1.jpg",
+    "feature": true,
     "order": 20
   },
   {
@@ -165,6 +185,7 @@
     "dimensions": "64 x 58",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/ranch-road-505-2.jpg",
+    "feature": true,
     "order": 21
   },
   {
@@ -173,6 +194,7 @@
     "dimensions": "60 x 46",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/ranch-road-505-3.jpg",
+    "feature": true,
     "order": 22
   },
   {
@@ -181,6 +203,7 @@
     "dimensions": "48 x 32",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/red-hills-road-1.jpg",
+    "feature": true,
     "order": 23
   },
   {
@@ -189,6 +212,7 @@
     "dimensions": "48 x 32",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/red-hills-road-2.jpg",
+    "feature": true,
     "order": 24
   },
   {
@@ -197,6 +221,7 @@
     "dimensions": "50 x 42",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/wildrose-road-3.jpg",
+    "feature": true,
     "order": 25
   },
   {
@@ -205,6 +230,7 @@
     "dimensions": "52 x 46",
     "media": "earth, charcoal, plaster, watercolor",
     "image": "2021/main/wildrose-road-1.jpg",
+    "feature": true,
     "order": 26
   },
   {
@@ -213,6 +239,7 @@
     "dimensions": "52 x 46",
     "media": "earth, plaster, watercolor",
     "image": "2021/main/wildrose-road-2.jpg",
+    "feature": true,
     "order": 27
   },
   {
@@ -221,6 +248,7 @@
     "dimensions": "64 x 48",
     "media": "earth, plaster, matte medium, oil pastel, conté crayon",
     "image": "2020/main/valley-of-fire-3.jpg",
+    "feature": true,
     "order": 28
   },
   {
@@ -229,6 +257,7 @@
     "dimensions": "62 x 90",
     "media": "earth, plaster, conté crayon, oil pastel",
     "image": "2020/main/valley-of-fire-4.jpg",
+    "feature": true,
     "order": 29
   },
   {
@@ -237,6 +266,7 @@
     "dimensions": "64 x 48",
     "media": "earth, plaster, oil pastel, conté crayon",
     "image": "2021/main/valley-of-fire-6.jpg",
+    "feature": true,
     "order": 30
   },
   {
@@ -245,6 +275,7 @@
     "dimensions": "60 x 46",
     "media": "earth, plaster, matte medium, pastel, oil pastel",
     "image": "2020/main/sand-cove-1.jpg",
+    "feature": true,
     "order": 31
   },
   {
@@ -253,6 +284,7 @@
     "dimensions": "60 x 46",
     "media": "earth, plaster, matte medium, conté crayon",
     "image": "2020/main/sand-cove-2.jpg",
+    "feature": true,
     "order": 32
   },
   {
@@ -261,6 +293,7 @@
     "dimensions": "52 x 38",
     "media": "earth, plaster, matte medium, watercolor, conté crayon",
     "image": "2020/main/sand-cove-3.jpg",
+    "feature": true,
     "order": 33
   },
   {
@@ -269,6 +302,7 @@
     "dimensions": "52 x 38",
     "media": "earth, plaster, watercolor, conté crayon, charcoal",
     "image": "2020/main/sand-cove-4.jpg",
+    "feature": true,
     "order": 34
   },
   {
@@ -277,6 +311,7 @@
     "dimensions": "48 x 34",
     "media": "ash, plaster, conté crayon, watercolor",
     "image": "2020/main/bobcat-fire-ochre.jpg",
+    "feature": true,
     "order": 35
   },
   {
@@ -285,6 +320,7 @@
     "dimensions": "50 x 32",
     "media": "ash, plaster, conté crayon, watercolor",
     "image": "2020/main/bobcat-fire-cobalt.jpg",
+    "feature": true,
     "order": 36
   },
   {
@@ -293,6 +329,7 @@
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
     "image": "2020/main/pine-ridge-trail-1.jpg",
+    "feature": true,
     "order": 37
   },
   {
@@ -301,6 +338,7 @@
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
     "image": "2020/main/pine-ridge-trail-2.jpg",
+    "feature": true,
     "order": 38
   },
   {
@@ -309,6 +347,7 @@
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
     "image": "2020/main/pine-ridge-trail-3.jpg",
+    "feature": true,
     "order": 39
   },
   {
@@ -317,6 +356,7 @@
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
     "image": "2020/main/pine-ridge-trail-4.jpg",
+    "feature": true,
     "order": 40
   },
   {
@@ -325,6 +365,7 @@
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas, oil stick on canvas",
     "image": "2020/main/pine-ridge-trail-5.jpg",
+    "feature": true,
     "order": 41
   },
   {
@@ -333,6 +374,7 @@
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
     "image": "2020/main/pine-ridge-trail-6.jpg",
+    "feature": true,
     "order": 42
   },
   {
@@ -341,6 +383,7 @@
     "dimensions": "45 x 38",
     "media": "earth, plaster, matte medium, graphite, charcoal",
     "image": "2020/main/yucca-path-1.jpg",
+    "feature": true,
     "order": 43
   },
   {
@@ -349,6 +392,7 @@
     "dimensions": "45 x 37",
     "media": "earth, plaster, matte medium, graphite, charcoal",
     "image": "2020/main/yucca-path-2.jpg",
+    "feature": true,
     "order": 44
   },
   {
@@ -357,6 +401,7 @@
     "dimensions": "52 x 40",
     "media": "earth, plaster, matte medium, watercolor",
     "image": "2020/main/yucca-path-3.jpg",
+    "feature": true,
     "order": 45
   },
   {
@@ -365,6 +410,439 @@
     "dimensions": "38 x 45",
     "media": "earth, plaster, matte medium, watercolor, gesso",
     "image": "2020/main/yucca-path-4.jpg",
+    "feature": true,
     "order": 46
+  },
+  {
+    "id": "still-life-7",
+    "title": "Still Life VII",
+    "dimensions": "36 x 38",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-7.jpg",
+    "feature": false,
+    "order": 47
+  },
+  {
+    "id": "still-life-6",
+    "title": "Still Life VI",
+    "dimensions": "35 x 28",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-6.jpg",
+    "feature": false,
+    "order": 48
+  },
+  {
+    "id": "still-life-5",
+    "title": "Still Life V",
+    "dimensions": "34 x 36",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-5.jpg",
+    "feature": false,
+    "order": 49
+  },
+  {
+    "id": "still-life-4",
+    "title": "Still Life IV",
+    "dimensions": "34 x 32",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-4.jpg",
+    "feature": false,
+    "order": 50
+  },
+  {
+    "id": "still-life-3",
+    "title": "Still Life III",
+    "dimensions": "24 x 16",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-3.jpg",
+    "feature": false,
+    "order": 51
+  },
+  {
+    "id": "still-life-2",
+    "title": "Still Life II",
+    "dimensions": "30 x 30",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-2.jpg",
+    "feature": false,
+    "order": 52
+  },
+  {
+    "id": "still-life-1",
+    "title": "Still Life I",
+    "dimensions": "24 x 24",
+    "media": "oil on canvas",
+    "image": "2019/main/still-life-1.jpg",
+    "feature": false,
+    "order": 53
+  },
+  {
+    "id": "natura-morta-9",
+    "title": "Natura Morta 9",
+    "dimensions": "20 x 24",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-9.jpg",
+    "feature": false,
+    "order": 54
+  },
+  {
+    "id": "natura-morta-8",
+    "title": "Natura Morta 8",
+    "dimensions": "20 x 24",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-8.jpg",
+    "feature": false,
+    "order": 55
+  },
+  {
+    "id": "natura-morta-7",
+    "title": "Natura Morta 7",
+    "dimensions": "22 x 24",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-7.jpg",
+    "feature": false,
+    "order": 56
+  },
+  {
+    "id": "natura-morta-6",
+    "title": "Natura Morta 6",
+    "dimensions": "20 x 22",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-6.jpg",
+    "feature": false,
+    "order": 57
+  },
+  {
+    "id": "natura-morta-5",
+    "title": "Natura Morta 5",
+    "dimensions": "18 x 20",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-5.jpg",
+    "feature": false,
+    "order": 58
+  },
+  {
+    "id": "natura-morta-4",
+    "title": "Natura Morta 4",
+    "dimensions": "18 x 20",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-4.jpg",
+    "feature": false,
+    "order": 59
+  },
+  {
+    "id": "natura-morta-3",
+    "title": "Natura Morta 3",
+    "dimensions": "20 x 24",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-3.jpg",
+    "feature": false,
+    "order": 60
+  },
+  {
+    "id": "natura-morta-2",
+    "title": "Natura Morta 2",
+    "dimensions": "20 x 22",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-2.jpg",
+    "feature": false,
+    "order": 61
+  },
+  {
+    "id": "natura-morta-1",
+    "title": "Natura Morta 1",
+    "dimensions": "18 x 22",
+    "media": "oil on canvas",
+    "image": "2019/main/natura-morta-1.jpg",
+    "feature": false,
+    "order": 62
+  },
+  {
+    "id": "cezanne-waves-3",
+    "title": "Cezanne Waves 3",
+    "dimensions": "40 x 60",
+    "media": "oil on canvas",
+    "image": "2019/main/cezanne-waves-3.jpg",
+    "feature": false,
+    "order": 63
+  },
+  {
+    "id": "cezanne-waves-2",
+    "title": "Cezanne Waves 2",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2019/main/cezanne-waves-2.jpg",
+    "feature": false,
+    "order": 64
+  },
+  {
+    "id": "cezanne-waves-1",
+    "title": "Cezanne Waves 1",
+    "dimensions": "48 x 72",
+    "media": "oil on canvas",
+    "image": "2019/main/cezanne-waves-1.jpg",
+    "feature": false,
+    "order": 65
+  },
+  {
+    "id": "death-valley-1",
+    "title": "Death Valley 1",
+    "dimensions": "30 x 30",
+    "media": "oil on canvas",
+    "image": "2018/main/death-valley-1.jpg",
+    "feature": false,
+    "order": 66
+  },
+  {
+    "id": "death-valley-2",
+    "title": "Death Valley 2",
+    "dimensions": "36 x 36",
+    "media": "oil on canvas",
+    "image": "2018/main/death-valley-2.jpg",
+    "feature": false,
+    "order": 67
+  },
+  {
+    "id": "death-valley-3",
+    "title": "Death Valley 3",
+    "dimensions": "30 x 40",
+    "media": "oil on canvas",
+    "image": "2018/main/death-valley-3.jpg",
+    "feature": false,
+    "order": 68
+  },
+  {
+    "id": "antinious",
+    "title": "Antinious",
+    "dimensions": "26 x 34",
+    "media": "oil on canvas",
+    "image": "2017/main/antinious.jpg",
+    "feature": false,
+    "order": 69
+  },
+  {
+    "id": "bluff-1",
+    "title": "Bluff I",
+    "dimensions": "26 x 42",
+    "media": "oil on canvas",
+    "image": "2017/main/bluff-1.jpg",
+    "feature": false,
+    "order": 70
+  },
+  {
+    "id": "potential-1",
+    "title": "Potential I",
+    "dimensions": "24 x 18",
+    "media": "oil on canvas",
+    "image": "2017/main/potential-1.jpg",
+    "feature": false,
+    "order": 71
+  },
+  {
+    "id": "potential-2",
+    "title": "Potential II",
+    "dimensions": "24 x 18",
+    "media": "oil on canvas",
+    "image": "2017/main/potential-2.jpg",
+    "feature": false,
+    "order": 72
+  },
+  {
+    "id": "potential-3",
+    "title": "Potential III",
+    "dimensions": "24 x 18",
+    "media": "oil on canvas",
+    "image": "2017/main/potential-3.jpg",
+    "feature": false,
+    "order": 73
+  },
+  {
+    "id": "potential-4",
+    "title": "Potential IV",
+    "dimensions": "24 x 18",
+    "media": "oil on canvas",
+    "image": "2017/main/potential-4.jpg",
+    "feature": false,
+    "order": 74
+  },
+  {
+    "id": "waves-1",
+    "title": "Waves I",
+    "dimensions": "46 x 44",
+    "media": "oil on canvas",
+    "image": "2017/main/waves-1.jpg",
+    "feature": false,
+    "order": 75
+  },
+  {
+    "id": "waves-2",
+    "title": "Waves II",
+    "dimensions": "46 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/waves-2.jpg",
+    "feature": false,
+    "order": 76
+  },
+  {
+    "id": "waves-3",
+    "title": "Waves III",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/waves-3.jpg",
+    "feature": false,
+    "order": 77
+  },
+  {
+    "id": "klee-waves",
+    "title": "Klee Waves",
+    "dimensions": "36 x 36",
+    "media": "oil on canvas",
+    "image": "2017/main/klee-waves.jpg",
+    "feature": false,
+    "order": 78
+  },
+  {
+    "id": "klee-bluff-2",
+    "title": "Klee Bluff II",
+    "dimensions": "40 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/klee-bluff-2.jpg",
+    "feature": false,
+    "order": 79
+  },
+  {
+    "id": "klee-bluff-3",
+    "title": "Klee Bluff III",
+    "dimensions": "40 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/klee-bluff-3.jpg",
+    "feature": false,
+    "order": 80
+  },
+  {
+    "id": "klee-bluff-4",
+    "title": "Klee Bluff IV",
+    "dimensions": "38 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/klee-bluff-4.jpg",
+    "feature": false,
+    "order": 81
+  },
+  {
+    "id": "matisse-water-1",
+    "title": "Matisse Water I",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/matisse-water-1.jpg",
+    "feature": false,
+    "order": 82
+  },
+  {
+    "id": "matisse-water-2",
+    "title": "Matisse Water II",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/matisse-water-2.jpg",
+    "feature": false,
+    "order": 83
+  },
+  {
+    "id": "matisse-water-3",
+    "title": "Matisse Water III",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/matisse-water-3.jpg",
+    "feature": false,
+    "order": 84
+  },
+  {
+    "id": "matisse-water-4",
+    "title": "Matisse Water IV",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/matisse-water-4.jpg",
+    "feature": false,
+    "order": 85
+  },
+  {
+    "id": "matisse-water-5",
+    "title": "Matisse Water V",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "image": "2017/main/matisse-water-5.jpg",
+    "feature": false,
+    "order": 86
+  },
+  {
+    "id": "room-for-negotiation",
+    "title": "Room for Negotiation",
+    "dimensions": "15 x 19.5 x 4.5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2016/acrylic-collages/main/room-for-negotiation.jpg",
+    "feature": false,
+    "order": 87
+  },
+  {
+    "id": "break",
+    "title": "Break",
+    "dimensions": "15 x 19.5 x 4.5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2016/acrylic-collages/main/break.jpg",
+    "feature": false,
+    "order": 88
+  },
+  {
+    "id": "stela",
+    "title": "Stela",
+    "dimensions": "21 x 14 x 4.5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2016/acrylic-collages/main/break.jpg",
+    "feature": false,
+    "order": 89
+  },
+  {
+    "id": "table-1",
+    "title": "Table I",
+    "dimensions": "40 x 15 x 2",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2016/acrylic-collages/main/table-1.jpg",
+    "feature": false,
+    "order": 90
+  },
+  {
+    "id": "table-2",
+    "title": "Table II",
+    "dimensions": "40 x 19 x 2",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2016/acrylic-collages/main/table-2.jpg",
+    "feature": false,
+    "order": 91
+  },
+  {
+    "id": "mantle-piece",
+    "title": "Mantle Piece",
+    "dimensions": "36 x 58 x 2",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2016/acrylic-collages/main/mantle-piece.jpg",
+    "feature": false,
+    "order": 92
+  },
+  {
+    "id": "cushions-barricade",
+    "title": "Cushions Barricade",
+    "dimensions": "32 x 58 x 2",
+    "media": "acrylic, resin, archival digital print, spray paint",
+    "image": "2016/acrylic-collages/main/cushions-barricade.jpg",
+    "feature": false,
+    "order": 93
+  },
+  {
+    "id": "memorandum-of-understanding",
+    "title": "Memorandum of Understanding",
+    "dimensions": "32 x 27 x 2.5",
+    "media": "acrylic, resin, archival digital print, India ink, spray paint",
+    "image": "2016/acrylic-collages/main/memorandum-of-understanding.jpg",
+    "feature": false,
+    "order": 94
   }
 ]
