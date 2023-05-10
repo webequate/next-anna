@@ -124,7 +124,7 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
       revalidate: 60,
     };
   } catch (error) {
-    console.error("Error in getStaticProps:", error);
+    console.error("Error fetching data in history/[id].tsx:", error);
     throw error;
   }
 };

@@ -59,23 +59,28 @@ const Contact: NextPage<ContactProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<ContactProps> = async () => {
-  const basicsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-  );
-  const basics: Basics = await basicsRes.json();
+  try {
+    const basicsRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+    );
+    const basics: Basics = await basicsRes.json();
 
-  return {
-    props: {
-      name: basics.name || "Anna Elise Johnson",
-      contactIntro: basics.contactIntro || "Please send a message.",
-      location: basics.location || "",
-      email: basics.email || "",
-      website: basics.website || "",
-      resumeLink: basics.resumeLink || "",
-      socialLinks: basics.socialLinks || [],
-    },
-    revalidate: 60,
-  };
+    return {
+      props: {
+        name: basics.name || "Anna Elise Johnson",
+        contactIntro: basics.contactIntro || "Please send a message.",
+        location: basics.location || "",
+        email: basics.email || "",
+        website: basics.website || "",
+        resumeLink: basics.resumeLink || "",
+        socialLinks: basics.socialLinks || [],
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error fetching data in contact.tsx:", error);
+    throw error;
+  }
 };
 
 export default Contact;

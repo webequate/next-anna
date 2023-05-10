@@ -88,25 +88,30 @@ const Experience: NextPage<ExperienceProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
-  const experienceRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/experience`
-  );
-  const experienceSections: ExperienceSection[] = await experienceRes.json();
+  try {
+    const experienceRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/experience`
+    );
+    const experienceSections: ExperienceSection[] = await experienceRes.json();
 
-  const basicsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-  );
-  const basics: Basics = await basicsRes.json();
-  const name = basics.name || "Anna Elise Johnson";
+    const basicsRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+    );
+    const basics: Basics = await basicsRes.json();
+    const name = basics ? basics.name : "Anna Elise Johnson";
 
-  return {
-    props: {
-      name: name,
-      socialLinks: basics.socialLinks || [],
-      experienceSections: JSON.parse(JSON.stringify(experienceSections)),
-    },
-    revalidate: 60,
-  };
+    return {
+      props: {
+        name: name,
+        socialLinks: basics.socialLinks || [],
+        experienceSections: JSON.parse(JSON.stringify(experienceSections)),
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error fetching data in about.tsx:", error);
+    throw error;
+  }
 };
 
 export default Experience;

@@ -33,24 +33,29 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
 };
 
 export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
-  const projectsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true`
-  );
-  const projects: Project[] = await projectsRes.json();
+  try {
+    const projectsRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true`
+    );
+    const projects: Project[] = await projectsRes.json();
 
-  const basicsRes = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-  );
-  const basics: Basics = await basicsRes.json();
+    const basicsRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+    );
+    const basics: Basics = await basicsRes.json();
 
-  return {
-    props: {
-      name: basics.name || "Anna Elise Johnson",
-      socialLinks: basics.socialLinks || [],
-      projects: JSON.parse(JSON.stringify(projects)),
-    },
-    revalidate: 60,
-  };
+    return {
+      props: {
+        name: basics.name || "Anna Elise Johnson",
+        socialLinks: basics.socialLinks || [],
+        projects: JSON.parse(JSON.stringify(projects)),
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error fetching data in index.tsx:", error);
+    throw error;
+  }
 };
 
 export default Projects;

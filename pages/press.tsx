@@ -56,25 +56,30 @@ const Press: NextPage<PressProps> = ({ name, socialLinks, pressItems }) => {
 };
 
 export const getStaticProps: GetStaticProps<PressProps> = async () => {
-  const db = await connectToDatabase(process.env.MONGODB_URI!);
+  try {
+    const db = await connectToDatabase(process.env.MONGODB_URI!);
 
-  const pressCollection = db.collection<PressItem>("press");
-  const pressItems: PressItem[] = await pressCollection
-    .find()
-    .sort({ order: 1 })
-    .toArray();
+    const pressCollection = db.collection<PressItem>("press");
+    const pressItems: PressItem[] = await pressCollection
+      .find()
+      .sort({ order: 1 })
+      .toArray();
 
-  const basicsCollection = db.collection<Basics>("basics");
-  const basics: Basics[] = await basicsCollection.find().toArray();
+    const basicsCollection = db.collection<Basics>("basics");
+    const basics: Basics[] = await basicsCollection.find().toArray();
 
-  return {
-    props: {
-      name: basics[0].name || "Anna Elise Johnson",
-      socialLinks: basics[0].socialLinks || [],
-      pressItems: JSON.parse(JSON.stringify(pressItems)),
-    },
-    revalidate: 60,
-  };
+    return {
+      props: {
+        name: basics[0].name || "Anna Elise Johnson",
+        socialLinks: basics[0].socialLinks || [],
+        pressItems: JSON.parse(JSON.stringify(pressItems)),
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error fetching data in press.tsx:", error);
+    throw error;
+  }
 };
 
 export default Press;
