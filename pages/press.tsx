@@ -57,21 +57,20 @@ const Press: NextPage<PressProps> = ({ name, socialLinks, pressItems }) => {
 
 export const getStaticProps: GetStaticProps<PressProps> = async () => {
   try {
-    const db = await connectToDatabase(process.env.MONGODB_URI!);
+    const pressRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/press`
+    );
+    const pressItems: PressItem[] = await pressRes.json();
 
-    const pressCollection = db.collection<PressItem>("press");
-    const pressItems: PressItem[] = await pressCollection
-      .find()
-      .sort({ order: 1 })
-      .toArray();
-
-    const basicsCollection = db.collection<Basics>("basics");
-    const basics: Basics[] = await basicsCollection.find().toArray();
+    const basicsRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+    );
+    const basics: Basics = await basicsRes.json();
 
     return {
       props: {
-        name: basics[0].name || "Anna Elise Johnson",
-        socialLinks: basics[0].socialLinks || [],
+        name: JSON.parse(JSON.stringify(basics.name)),
+        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
         pressItems: JSON.parse(JSON.stringify(pressItems)),
       },
       revalidate: 60,

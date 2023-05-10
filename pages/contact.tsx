@@ -9,11 +9,11 @@ import Footer from "@/components/Footer";
 
 type ContactProps = {
   name: string;
-  contactIntro?: string;
-  location?: string;
-  email?: string;
-  website?: string;
-  resumeLink?: string;
+  contactIntro: string;
+  location: string;
+  email: string;
+  website: string;
+  resumeLink: string;
   socialLinks: SocialLink[];
 };
 
@@ -67,13 +67,13 @@ export const getStaticProps: GetStaticProps<ContactProps> = async () => {
 
     return {
       props: {
-        name: basics.name || "Anna Elise Johnson",
-        contactIntro: basics.contactIntro || "Please send a message.",
-        location: basics.location || "",
-        email: basics.email || "",
-        website: basics.website || "",
-        resumeLink: basics.resumeLink || "",
-        socialLinks: basics.socialLinks || [],
+        name: JSON.parse(JSON.stringify(basics.name)),
+        contactIntro: JSON.parse(JSON.stringify(basics.contactIntro)),
+        location: JSON.parse(JSON.stringify(basics.location)),
+        email: JSON.parse(JSON.stringify(basics.email)),
+        website: JSON.parse(JSON.stringify(basics.website)),
+        resumeLink: JSON.parse(JSON.stringify(basics.resumeLink)),
+        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
       },
       revalidate: 60,
     };
