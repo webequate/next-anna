@@ -1,7 +1,6 @@
 // pages/experience.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { connectToDatabase } from "@/lib/mongodb";
 import { ExperienceSection } from "@/types/experience";
 import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
@@ -21,7 +20,7 @@ const Experience: NextPage<ExperienceProps> = ({
 }) => {
   return (
     <>
-      <Header name={name} socialLink={socialLinks[0]} />
+      <Header socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -89,22 +88,21 @@ const Experience: NextPage<ExperienceProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
-  const db = await connectToDatabase(process.env.MONGODB_URI!);
+  const experienceRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/experience`
+  );
+  const experienceSections: ExperienceSection[] = await experienceRes.json();
 
-  const basicsCollection = db.collection<Basics>("basics");
-  const basics: Basics[] = await basicsCollection.find().toArray();
-
-  const experienceCollection = db.collection<ExperienceSection>("experience");
-  const experienceSections: ExperienceSection[] = await experienceCollection
-    .find()
-    .sort({ order: 1 })
-    .toArray();
+  const basicsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+  );
+  const basics: Basics = await basicsRes.json();
 
   return {
     props: {
+      name: basics.name,
+      socialLinks: basics.socialLinks,
       experienceSections: JSON.parse(JSON.stringify(experienceSections)),
-      name: basics[0].name,
-      socialLinks: basics[0].socialLinks,
     },
     revalidate: 60,
   };

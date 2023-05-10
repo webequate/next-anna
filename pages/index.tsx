@@ -1,7 +1,6 @@
 // pages/index.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { connectToDatabase } from "@/lib/mongodb";
 import { Project } from "@/types/project";
 import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
@@ -17,7 +16,7 @@ interface ProjectsProps {
 const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
   return (
     <div className="mx-auto">
-      <Header name={name} socialLink={socialLinks[0]} />
+      <Header socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -34,22 +33,21 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
 };
 
 export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
-  const db = await connectToDatabase(process.env.MONGODB_URI!);
+  const projectsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true`
+  );
+  const projects: Project[] = await projectsRes.json();
 
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find({ feature: true })
-    .sort({ order: 1 })
-    .toArray();
-
-  const basicsCollection = db.collection<Basics>("basics");
-  const basics: Basics[] = await basicsCollection.find().toArray();
+  const basicsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+  );
+  const basics: Basics = await basicsRes.json();
 
   return {
     props: {
+      name: basics.name,
+      socialLinks: basics.socialLinks,
       projects: JSON.parse(JSON.stringify(projects)),
-      name: basics[0].name,
-      socialLinks: basics[0].socialLinks,
     },
     revalidate: 60,
   };

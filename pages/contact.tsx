@@ -1,30 +1,34 @@
 // pages/contact.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { connectToDatabase } from "@/lib/mongodb";
-import { Basics } from "@/types/basics";
+import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
 import ContactDetails from "@/components/ContactDetails";
 import Footer from "@/components/Footer";
 
 type ContactProps = {
-  basics: Basics[];
+  name: string;
+  contactIntro?: string;
+  location?: string;
+  email?: string;
+  website?: string;
+  resumeLink?: string;
+  socialLinks: SocialLink[];
 };
 
-const Contact: NextPage<ContactProps> = ({ basics }) => {
-  const {
-    name,
-    contactIntro,
-    location,
-    email,
-    website,
-    resumeLink,
-    socialLinks,
-  } = basics[0];
+const Contact: NextPage<ContactProps> = ({
+  name,
+  contactIntro,
+  location,
+  email,
+  website,
+  resumeLink,
+  socialLinks,
+}) => {
   return (
     <div className="mx-auto">
-      <Header name={name} socialLink={socialLinks[0]} />
+      <Header socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -55,14 +59,20 @@ const Contact: NextPage<ContactProps> = ({ basics }) => {
 };
 
 export const getStaticProps: GetStaticProps<ContactProps> = async () => {
-  const db = await connectToDatabase(process.env.MONGODB_URI!);
-
-  const basicsCollection = db.collection<Basics>("basics");
-  const basics: Basics[] = await basicsCollection.find().toArray();
+  const basicsRes = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+  );
+  const basics: Basics = await basicsRes.json();
 
   return {
     props: {
-      basics: JSON.parse(JSON.stringify(basics)),
+      name: basics.name,
+      contactIntro: basics.contactIntro,
+      location: basics.location,
+      email: basics.email,
+      website: basics.website,
+      resumeLink: basics.resumeLink,
+      socialLinks: basics.socialLinks,
     },
     revalidate: 60,
   };

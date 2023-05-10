@@ -1,7 +1,6 @@
-// pages/works/[id].tsx
+// pages/history/[id].tsx
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { motion } from "framer-motion";
-import { connectToDatabase } from "@/lib/mongodb";
 import { Project } from "@/types/project";
 import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
@@ -14,7 +13,6 @@ import { useRouter } from "next/router";
 interface ProjectProps {
   project: Project;
   projects: Project[];
-  featured?: boolean;
   name: string;
   socialLinks: SocialLink[];
 }
@@ -39,7 +37,7 @@ const Project: NextPage<ProjectProps> = ({
 
   return (
     <div className="mx-auto">
-      <Header name={name} socialLink={socialLinks[0]} />
+      <Header socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -73,60 +71,61 @@ const Project: NextPage<ProjectProps> = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const db = await connectToDatabase(process.env.MONGODB_URI!);
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+    );
+    const projects: Project[] = await res.json();
 
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find({ feature: false })
-    .sort({ order: 1 })
-    .toArray();
+    const paths = projects.map((project) => ({
+      params: { id: project.id.toString() },
+    }));
 
-  const paths = projects.map((project) => ({
-    params: { id: project.id.toString() },
-  }));
-
-  return { paths, fallback: true };
+    return { paths, fallback: true };
+  } catch (error) {
+    console.error("Error in getStaticPaths:", error);
+    throw error;
+  }
 };
 
 export const getStaticProps: GetStaticProps<ProjectProps> = async ({
   params,
 }) => {
-  if (!params) {
+  try {
+    if (!params) {
+      return { notFound: true };
+    }
+
+    const resProjects = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+    );
+    const projects: Project[] = await resProjects.json();
+    const project: Project | undefined = projects.find(
+      (p) => p.id === params.id
+    );
+
+    if (!project) {
+      return { notFound: true };
+    }
+
+    const resBasics = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+    );
+    const basics: Basics = await resBasics.json();
+
     return {
-      notFound: true,
+      props: {
+        name: basics.name,
+        socialLinks: basics.socialLinks,
+        projects,
+        project,
+      },
+      revalidate: 60,
     };
+  } catch (error) {
+    console.error("Error in getStaticProps:", error);
+    throw error;
   }
-
-  const db = await connectToDatabase(process.env.MONGODB_URI!);
-
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find({ feature: false })
-    .sort({ order: 1 })
-    .toArray();
-  const project: Project | null = await projectsCollection.findOne({
-    id: params.id,
-    feature: false,
-  });
-
-  if (!project) {
-    return {
-      notFound: true,
-    };
-  }
-
-  const basicsCollection = db.collection<Basics>("basics");
-  const basics: Basics[] = await basicsCollection.find().toArray();
-
-  return {
-    props: {
-      project: JSON.parse(JSON.stringify(project)),
-      projects: JSON.parse(JSON.stringify(projects)),
-      name: basics[0].name,
-      socialLinks: basics[0].socialLinks,
-    },
-    revalidate: 60,
-  };
 };
 
 export default Project;

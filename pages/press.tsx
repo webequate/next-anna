@@ -1,4 +1,4 @@
-// pages/testimonials.tsx
+// pages/press.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { connectToDatabase } from "@/lib/mongodb";
@@ -10,15 +10,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 type PressProps = {
-  pressItems: PressItem[];
   name: string;
   socialLinks: SocialLink[];
+  pressItems: PressItem[];
 };
 
-const Press: NextPage<PressProps> = ({ pressItems, name, socialLinks }) => {
+const Press: NextPage<PressProps> = ({ name, socialLinks, pressItems }) => {
   return (
     <div className="mx-auto">
-      <Header name={name} socialLink={socialLinks[0]} />
+      <Header socialLink={socialLinks[0]} />
 
       <motion.div
         initial={{ opacity: 0 }}
