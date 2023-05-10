@@ -1,4 +1,4 @@
-// pages/experience.tsx
+// pages/about.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { ExperienceSection } from "@/types/experience";
@@ -97,11 +97,13 @@ export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
   );
   const basics: Basics = await basicsRes.json();
+  const name = basics.name || "Anna Elise Johnson";
+  const socialLinks = basics.socialLinks || [];
 
   return {
     props: {
-      name: basics.name,
-      socialLinks: basics.socialLinks,
+      name: name,
+      socialLinks: socialLinks,
       experienceSections: JSON.parse(JSON.stringify(experienceSections)),
     },
     revalidate: 60,
