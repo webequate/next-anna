@@ -1,7 +1,6 @@
 // pages/press.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { connectToDatabase } from "@/lib/mongodb";
 import { PressItem } from "@/types/press";
 import { Basics, SocialLink } from "@/types/basics";
 import Header from "@/components/Header";

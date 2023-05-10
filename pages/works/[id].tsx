@@ -11,17 +11,17 @@ import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 
 interface ProjectProps {
-  project: Project;
-  projects: Project[];
   name: string;
   socialLinks: SocialLink[];
+  projects: Project[];
+  project: Project;
 }
 
 const Project: NextPage<ProjectProps> = ({
-  project,
-  projects,
   name,
   socialLinks,
+  projects,
+  project,
 }) => {
   const router = useRouter();
   const { id } = router.query;
