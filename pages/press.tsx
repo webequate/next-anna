@@ -70,7 +70,7 @@ export const getStaticProps: GetStaticProps<PressProps> = async () => {
       props: {
         name: JSON.parse(JSON.stringify(basics.name)),
         socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        pressItems: JSON.parse(JSON.stringify(pressItems)),
+        pressItems: pressItems,
       },
       revalidate: 60,
     };

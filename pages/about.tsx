@@ -103,7 +103,7 @@ export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
       props: {
         name: JSON.parse(JSON.stringify(basics.name)),
         socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        experienceSections: JSON.parse(JSON.stringify(experienceSections)),
+        experienceSections: experienceSections,
       },
       revalidate: 60,
     };
