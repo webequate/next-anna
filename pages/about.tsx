@@ -98,12 +98,11 @@ export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
     );
     const basics: Basics = await basicsRes.json();
-    const name = basics ? basics.name : "Anna Elise Johnson";
 
     return {
       props: {
-        name: name,
-        socialLinks: basics.socialLinks || [],
+        name: JSON.parse(JSON.stringify(basics.name)),
+        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
         experienceSections: JSON.parse(JSON.stringify(experienceSections)),
       },
       revalidate: 60,
