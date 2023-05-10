@@ -112,13 +112,11 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
     );
     const basics: Basics = await resBasics.json();
-    const name = basics.name || "Default Name";
-    const socialLinks = basics.socialLinks || [];
 
     return {
       props: {
-        name: name,
-        socialLinks: socialLinks,
+        name: basics.name || "Anna Elise Johnson",
+        socialLinks: basics.socialLinks || [],
         projects,
         project,
       },

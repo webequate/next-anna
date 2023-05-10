@@ -69,9 +69,9 @@ export const getStaticProps: GetStaticProps<PressProps> = async () => {
 
   return {
     props: {
+      name: basics[0].name || "Anna Elise Johnson",
+      socialLinks: basics[0].socialLinks || [],
       pressItems: JSON.parse(JSON.stringify(pressItems)),
-      name: basics[0].name,
-      socialLinks: basics[0].socialLinks,
     },
     revalidate: 60,
   };

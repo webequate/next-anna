@@ -63,13 +63,6 @@ export const getStaticProps: GetStaticProps<ContactProps> = async () => {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
   );
   const basics: Basics = await basicsRes.json();
-  // const name = basics.name || "Anna Elise Johnson";
-  // const contactIntro = basics.contactIntro || "";
-  // const location = basics.location || "";
-  // const email = basics.email || "";
-  // const website = basics.website || "";
-  // const resumeLink = basics.resumeLink || "";
-  // const socialLinks = basics.socialLinks || [];
 
   return {
     props: {

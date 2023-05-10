@@ -1,4 +1,4 @@
-// pages/index.tsx
+// pages/history.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
@@ -45,8 +45,8 @@ export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
 
   return {
     props: {
-      name: basics.name,
-      socialLinks: basics.socialLinks,
+      name: basics.name || "Anna Elise Johnson",
+      socialLinks: basics.socialLinks || [],
       projects: JSON.parse(JSON.stringify(projects)),
     },
     revalidate: 60,
