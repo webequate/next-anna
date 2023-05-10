@@ -116,7 +116,7 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
     return {
       props: {
         name: basics.name || "",
-        socialLinks: basics.socialLinks,
+        socialLinks: basics.socialLinks || [],
         projects,
         project,
       },
