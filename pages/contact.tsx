@@ -63,7 +63,11 @@ export const getStaticProps: GetStaticProps<ContactProps> = async () => {
     const basicsRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
     );
+    if (!basicsRes.ok) {
+      throw new Error("HTTP error! status: ${basicsRes.status}");
+    }
     const basics: Basics = await basicsRes.json();
+    console.log("getStaticProps::basics", basics);
 
     return {
       props: {

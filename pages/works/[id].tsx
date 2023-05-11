@@ -73,40 +73,46 @@ const Project = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true&limit=6`
   );
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
   const projects: Project[] = await res.json();
+  console.log("getStaticPaths::projects", projects);
 
   const paths = projects.map((project) => ({
     params: { id: project.id },
   }));
+  console.log("getStaticPaths::paths", paths);
 
-  return { paths, fallback: true };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params as Params;
+  console.log("getStaticProps::params", params);
 
   const resBasics = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
   );
   const basics = await resBasics.json();
-  console.log("basics", basics);
+  console.log("getStaticProps::basics", basics);
 
   const resProjects = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true&limit=6`
   );
   const projects: Project[] = await resProjects.json();
-  console.log("projects", projects);
+  console.log("getStaticProps::projects", projects);
 
   const projectIndex = projects.findIndex((p) => p.id === id);
   const project = projects[projectIndex];
   const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
   const nextProject =
     projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
-  console.log("project", project);
-  console.log("prevProject", prevProject);
-  console.log("nextProject", nextProject);
+  console.log("getStaticProps::project", project);
+  console.log("getStaticProps::prevProject", prevProject);
+  console.log("getStaticProps::nextProject", nextProject);
 
   return {
     props: {

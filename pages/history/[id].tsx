@@ -1,4 +1,4 @@
-// pages/works/[id].tsx
+// pages/history/[id].tsx
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
@@ -15,7 +15,7 @@ interface Params extends ParsedUrlQuery {
   id: string;
 }
 
-interface ProjectPageProps {
+interface ProjectHistoryPageProps {
   project: Project;
   name: string;
   socialLinks: SocialLink[];
@@ -23,13 +23,13 @@ interface ProjectPageProps {
   nextProject: Project | null;
 }
 
-const Project = ({
+const ProjectHistory = ({
   project,
   name,
   socialLinks,
   prevProject,
   nextProject,
-}: ProjectPageProps) => {
+}: ProjectHistoryPageProps) => {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -73,15 +73,20 @@ const Project = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false&limit=6`
   );
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
   const projects: Project[] = await res.json();
+  console.log("getStaticPaths::projects", projects);
 
   const paths = projects.map((project) => ({
     params: { id: project.id },
   }));
+  console.log("getStaticPaths::paths", paths);
 
-  return { paths, fallback: true };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -91,22 +96,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
   );
   const basics = await resBasics.json();
-  console.log("basics", basics);
+  console.log("getStaticProps::basics", basics);
 
   const resProjects = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false&limit=6`
   );
   const projects: Project[] = await resProjects.json();
-  console.log("projects", projects);
+  console.log("getStaticProps::projects", projects);
 
   const projectIndex = projects.findIndex((p) => p.id === id);
   const project = projects[projectIndex];
   const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
   const nextProject =
     projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
-  console.log("project", project);
-  console.log("prevProject", prevProject);
-  console.log("nextProject", nextProject);
+  console.log("getStaticProps::project", project);
+  console.log("getStaticProps::prevProject", prevProject);
+  console.log("getStaticProps::nextProject", nextProject);
 
   return {
     props: {
@@ -120,4 +125,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default Project;
+export default ProjectHistory;

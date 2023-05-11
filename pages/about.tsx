@@ -92,12 +92,20 @@ export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
     const experienceRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/experience`
     );
+    if (!experienceRes.ok) {
+      throw new Error("HTTP error! status: ${experienceRes.status}");
+    }
     const experienceSections: ExperienceSection[] = await experienceRes.json();
+    console.log("experienceSections:", experienceSections);
 
     const basicsRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
     );
+    if (!basicsRes.ok) {
+      throw new Error("HTTP error! status: ${basicsRes.status}");
+    }
     const basics: Basics = await basicsRes.json();
+    console.log("basics:", basics);
 
     return {
       props: {

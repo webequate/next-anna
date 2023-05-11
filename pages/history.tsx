@@ -7,13 +7,17 @@ import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
 
-interface ProjectsProps {
+interface ProjectsHistoryProps {
   name: string;
   socialLinks: SocialLink[];
   projects: Project[];
 }
 
-const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
+const ProjectsHistory: NextPage<ProjectsHistoryProps> = ({
+  name,
+  socialLinks,
+  projects,
+}) => {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
@@ -32,17 +36,21 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
+export const getStaticProps: GetStaticProps<
+  ProjectsHistoryProps
+> = async () => {
   try {
     const projectsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false&limit=6`
     );
     const projects: Project[] = await projectsRes.json();
+    console.log("getStaticProps::projects", projects);
 
     const basicsRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
     );
     const basics: Basics = await basicsRes.json();
+    console.log("getStaticProps::basics", basics);
 
     return {
       props: {
@@ -58,4 +66,4 @@ export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
   }
 };
 
-export default Projects;
+export default ProjectsHistory;

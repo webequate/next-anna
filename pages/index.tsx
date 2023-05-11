@@ -35,14 +35,16 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
 export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
   try {
     const projectsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true&limit=6`
     );
     const projects: Project[] = await projectsRes.json();
+    console.log("getStaticProps::projects", projects);
 
     const basicsRes = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
     );
     const basics: Basics = await basicsRes.json();
+    console.log("getStaticProps::basics", basics);
 
     return {
       props: {
