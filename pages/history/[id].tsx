@@ -1,39 +1,40 @@
-// pages/history/[id].tsx
+// pages/works/[id].tsx
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
-import { Basics, SocialLink } from "@/types/basics";
+import { SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
 import ProjectFooter from "@/components/ProjectFooter";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
+import { ParsedUrlQuery } from "querystring";
 
-interface ProjectProps {
-  name: string;
-  socialLinks: SocialLink[];
-  projects: Project[];
-  project: Project;
+interface Params extends ParsedUrlQuery {
+  id: string;
 }
 
-const Project: NextPage<ProjectProps> = ({
+interface ProjectPageProps {
+  project: Project;
+  name: string;
+  socialLinks: SocialLink[];
+  prevProject: Project | null;
+  nextProject: Project | null;
+}
+
+const Project = ({
+  project,
   name,
   socialLinks,
-  projects,
-  project,
-}) => {
+  prevProject,
+  nextProject,
+}: ProjectPageProps) => {
   const router = useRouter();
-  const { id } = router.query;
 
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-
-  const currentIndex = projects.findIndex((p) => p.id === id);
-  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject =
-    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
     <div className="mx-auto">
@@ -71,61 +72,52 @@ const Project: NextPage<ProjectProps> = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
-    );
-    const projects: Project[] = await res.json();
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+  );
+  const projects: Project[] = await res.json();
 
-    const paths = projects.map((project) => ({
-      params: { id: project.id.toString() },
-    }));
+  const paths = projects.map((project) => ({
+    params: { id: project.id },
+  }));
 
-    return { paths, fallback: true };
-  } catch (error) {
-    console.error("Error in getStaticPaths:", error);
-    throw error;
-  }
+  return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps<ProjectProps> = async ({
-  params,
-}) => {
-  try {
-    if (!params) {
-      return { notFound: true };
-    }
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { id } = params as Params;
 
-    const resProjects = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
-    );
-    const projects: Project[] = await resProjects.json();
-    const project: Project | undefined = projects.find(
-      (p) => p.id === params.id
-    );
+  const resBasics = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
+  );
+  const basics = await resBasics.json();
+  console.log("basics", basics);
 
-    if (!project) {
-      return { notFound: true };
-    }
+  const resProjects = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false`
+  );
+  const projects: Project[] = await resProjects.json();
+  console.log("projects", projects);
 
-    const resBasics = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-    );
-    const basics: Basics = await resBasics.json();
+  const projectIndex = projects.findIndex((p) => p.id === id);
+  const project = projects[projectIndex];
+  const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
+  const nextProject =
+    projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+  console.log("project", project);
+  console.log("prevProject", prevProject);
+  console.log("nextProject", nextProject);
 
-    return {
-      props: {
-        name: JSON.parse(JSON.stringify(basics.name)),
-        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        projects: JSON.parse(JSON.stringify(projects)),
-        project: JSON.parse(JSON.stringify(project)),
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error fetching data in history/[id].tsx:", error);
-    throw error;
-  }
+  return {
+    props: {
+      project,
+      name: JSON.parse(JSON.stringify(basics.name)),
+      socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
+      prevProject,
+      nextProject,
+    },
+    revalidate: 60,
+  };
 };
 
 export default Project;

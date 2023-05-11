@@ -2,7 +2,7 @@
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
-import { Basics, SocialLink } from "@/types/basics";
+import { SocialLink } from "@/types/basics";
 import Header from "@/components/Header";
 import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
