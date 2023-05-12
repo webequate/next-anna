@@ -68,7 +68,7 @@ export const getStaticProps: GetStaticProps<PressPageProps> = async () => {
   const pressLinks: PressLink[] = await pressLinksCollection
     .find({})
     .sort({ order: 1 })
-    .limit(6)
+    .limit(0)
     .toArray();
 
   return {

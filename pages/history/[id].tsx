@@ -39,7 +39,7 @@ const Project = ({
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
-        <div className="max-w-2xl justify-center mx-auto text-dark-1 dark:text-light-1">
+        <div className="justify-center mx-auto text-dark-1 dark:text-light-1">
           <ProjectHeader
             title={project.title}
             prevId={prevProject?.id}
@@ -73,7 +73,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const projects: Project[] = await projectsCollection
     .find({ featured: false })
     .sort({ order: 1 })
-    .limit(6)
+    .limit(0)
     .toArray();
 
   const paths = projects.map((project) => ({
@@ -97,7 +97,7 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
   const projects: Project[] = await projectsCollection
     .find({ featured: false })
     .sort({ order: 1 })
-    .limit(6)
+    .limit(0)
     .toArray();
 
   const projectIndex = projects.findIndex((p) => p.id === params.id);

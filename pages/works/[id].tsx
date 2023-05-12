@@ -77,7 +77,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const projects: Project[] = await projectsCollection
     .find({ featured: true })
     .sort({ order: 1 })
-    .limit(6)
+    .limit(0)
     .toArray();
 
   const paths = projects.map((project) => ({
@@ -101,7 +101,7 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
   const projects: Project[] = await projectsCollection
     .find({ featured: true })
     .sort({ order: 1 })
-    .limit(6)
+    .limit(0)
     .toArray();
 
   const projectIndex = projects.findIndex((p) => p.id === params.id);
