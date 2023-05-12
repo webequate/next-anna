@@ -1,22 +1,24 @@
 // pages/about.tsx
+import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { ExperienceSection } from "@/types/experience";
-import { Basics, SocialLink } from "@/types/basics";
+import { Experience } from "@/types/experience";
+import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
-type ExperienceProps = {
+type AboutPageProps = {
   name: string;
   socialLinks: SocialLink[];
-  experienceSections: ExperienceSection[];
+  experiences: Experience[];
 };
 
-const Experience: NextPage<ExperienceProps> = ({
+const AboutPage: NextPage<AboutPageProps> = ({
   name,
   socialLinks,
-  experienceSections,
+  experiences,
 }) => {
   return (
     <>
@@ -48,27 +50,27 @@ const Experience: NextPage<ExperienceProps> = ({
             </div>
           </div>
 
-          {experienceSections.map((section, index) => (
+          {experiences.map((experience, index) => (
             <div
               key={index}
               className="lg:flex lg:flex-row mx-auto align-top mb-10"
             >
               <div className="w-full lg:w-1/3">
                 <h2 className="text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-6 lg:pb-0">
-                  {section.title}
+                  {experience.title}
                 </h2>
               </div>
               <div className="w-full lg:w-2/3">
-                {section.subsections.map((subsection, index) => (
+                {experience.sections.map((section, index) => (
                   <div
                     key={index}
                     className="text-base text-dark-2 dark:text-light-2 mb-5"
                   >
                     <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-2">
-                      {subsection.name}
+                      {section.name}
                     </h3>
                     <ul className="list-disc list-outside ml-5 lg:ml-0">
-                      {subsection.items.map((item, index) => (
+                      {section.items.map((item, index) => (
                         <li key={index} className="mb-2">
                           {item}
                         </li>
@@ -87,38 +89,23 @@ const Experience: NextPage<ExperienceProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<ExperienceProps> = async () => {
-  try {
-    const experienceRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/experience`
-    );
-    if (!experienceRes.ok) {
-      throw new Error("HTTP error! status: ${experienceRes.status}");
-    }
-    const experienceSections: ExperienceSection[] = await experienceRes.json();
-    console.log("experienceSections:", experienceSections);
+export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
+  const client = await clientPromise;
+  const db = client.db("Anna");
 
-    const basicsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-    );
-    if (!basicsRes.ok) {
-      throw new Error("HTTP error! status: ${basicsRes.status}");
-    }
-    const basics: Basics = await basicsRes.json();
-    console.log("basics:", basics);
+  const experiencesCollection = db.collection<Experience>("experiences");
+  const experiences: Experience[] = await experiencesCollection
+    .find({})
+    .toArray();
 
-    return {
-      props: {
-        name: JSON.parse(JSON.stringify(basics.name)),
-        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        experienceSections: experienceSections,
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error fetching data in about.tsx:", error);
-    throw error;
-  }
+  return {
+    props: {
+      name: basics.name,
+      socialLinks: basics.socialLinks,
+      experiences: JSON.parse(JSON.stringify(experiences)),
+    },
+    revalidate: 60,
+  };
 };
 
-export default Experience;
+export default AboutPage;

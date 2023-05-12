@@ -1,19 +1,21 @@
 // pages/index.tsx
+import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
-import { Basics, SocialLink } from "@/types/basics";
+import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
 
-interface ProjectsProps {
+interface HomePageProps {
   name: string;
   socialLinks: SocialLink[];
   projects: Project[];
 }
 
-const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
+const HomePage: NextPage<HomePageProps> = ({ name, socialLinks, projects }) => {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
@@ -32,32 +34,25 @@ const Projects: NextPage<ProjectsProps> = ({ name, socialLinks, projects }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<ProjectsProps> = async () => {
-  try {
-    const projectsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true&limit=6`
-    );
-    const projects: Project[] = await projectsRes.json();
-    console.log("getStaticProps::projects", projects);
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
+  const client = await clientPromise;
+  const db = client.db("Anna");
 
-    const basicsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-    );
-    const basics: Basics = await basicsRes.json();
-    console.log("getStaticProps::basics", basics);
+  const projectsCollection = db.collection<Project>("projects");
+  const projects: Project[] = await projectsCollection
+    .find({ featured: true })
+    .sort({ order: 1 })
+    .limit(6)
+    .toArray();
 
-    return {
-      props: {
-        name: JSON.parse(JSON.stringify(basics.name)),
-        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        projects: projects,
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error fetching data in index.tsx:", error);
-    throw error;
-  }
+  return {
+    props: {
+      name: basics.name,
+      socialLinks: basics.socialLinks,
+      projects: JSON.parse(JSON.stringify(projects)),
+    },
+    revalidate: 60,
+  };
 };
 
-export default Projects;
+export default HomePage;

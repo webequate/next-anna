@@ -1,10 +1,11 @@
 // types/experience.ts
-export type ExperienceSubSection = {
+export type ExperienceSection = {
   name: string;
   items: string[];
 };
 
-export type ExperienceSection = {
+export type Experience = {
+  _id: string;
   title: string;
-  subsections: ExperienceSubSection[];
+  sections: ExperienceSection[];
 };

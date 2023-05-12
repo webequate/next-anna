@@ -1,20 +1,26 @@
 // pages/press.tsx
+import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { PressItem } from "@/types/press";
-import { Basics, SocialLink } from "@/types/basics";
+import { PressLink } from "@/types/press";
+import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-type PressProps = {
+type PressPageProps = {
   name: string;
   socialLinks: SocialLink[];
-  pressItems: PressItem[];
+  pressLinks: PressLink[];
 };
 
-const Press: NextPage<PressProps> = ({ name, socialLinks, pressItems }) => {
+const PressPage: NextPage<PressPageProps> = ({
+  name,
+  socialLinks,
+  pressLinks,
+}) => {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
@@ -25,24 +31,24 @@ const Press: NextPage<PressProps> = ({ name, socialLinks, pressItems }) => {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className={"text-base text-dark-2 dark:text-light-2"}
       >
-        {pressItems.map((pressItem, index) => (
+        {pressLinks.map((pressLink, index) => (
           <div key={index} className="flex mx-auto justify-center">
             <Link
               key={index}
-              href={pressItem.url}
-              aria-label={pressItem.name}
+              href={pressLink.url}
+              aria-label={pressLink.name}
               target="_blank"
               className="mx-auto mt-4 mb-8"
             >
               <Image
-                src={`/images/press/${pressItem.image}`}
-                alt={pressItem.name}
+                src={`/images/press/${pressLink.image}`}
+                alt={pressLink.name}
                 width={300}
                 height={200}
                 className="mx-auto"
               />
               <p className="font-bold mx-auto text-center mt-2 mb-4">
-                {pressItem.text}
+                {pressLink.text}
               </p>
             </Link>
           </div>
@@ -54,30 +60,25 @@ const Press: NextPage<PressProps> = ({ name, socialLinks, pressItems }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<PressProps> = async () => {
-  try {
-    const pressRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/press`
-    );
-    const pressItems: PressItem[] = await pressRes.json();
+export const getStaticProps: GetStaticProps<PressPageProps> = async () => {
+  const client = await clientPromise;
+  const db = client.db("Anna");
 
-    const basicsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-    );
-    const basics: Basics = await basicsRes.json();
+  const pressLinksCollection = db.collection<PressLink>("press");
+  const pressLinks: PressLink[] = await pressLinksCollection
+    .find({})
+    .sort({ order: 1 })
+    .limit(6)
+    .toArray();
 
-    return {
-      props: {
-        name: JSON.parse(JSON.stringify(basics.name)),
-        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        pressItems: pressItems,
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error fetching data in press.tsx:", error);
-    throw error;
-  }
+  return {
+    props: {
+      name: basics.name,
+      socialLinks: basics.socialLinks,
+      pressLinks: JSON.parse(JSON.stringify(pressLinks)),
+    },
+    revalidate: 60,
+  };
 };
 
-export default Press;
+export default PressPage;

@@ -1,5 +1,5 @@
-// types/press.ts
-export type PressItem = {
+// types/pressLink.ts
+export type PressLink = {
   _id: string;
   name: string;
   url: string;

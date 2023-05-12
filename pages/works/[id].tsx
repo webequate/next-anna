@@ -1,36 +1,34 @@
 // pages/works/[id].tsx
+import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
 import ProjectFooter from "@/components/ProjectFooter";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
 
-interface Params extends ParsedUrlQuery {
-  id: string;
-}
-
-interface ProjectPageProps {
-  project: Project;
+interface ProjectProps {
   name: string;
   socialLinks: SocialLink[];
+  project: Project;
   prevProject: Project | null;
   nextProject: Project | null;
 }
 
 const Project = ({
-  project,
   name,
   socialLinks,
+  project,
   prevProject,
   nextProject,
-}: ProjectPageProps) => {
+}: ProjectProps) => {
   const router = useRouter();
+  const { id } = router.query;
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -45,7 +43,7 @@ const Project = ({
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
-        <div className="justify-center text-dark-1 dark:text-light-1">
+        <div className="justify-center mx-auto text-dark-1 dark:text-light-1">
           <ProjectHeader
             title={project.title}
             prevId={prevProject?.id}
@@ -72,40 +70,41 @@ const Project = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true&limit=6`
-  );
-  if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
-  }
-  const projects: Project[] = await res.json();
-  console.log("getStaticPaths::projects", projects);
+  const client = await clientPromise;
+  const db = client.db("Anna");
+
+  const projectsCollection = db.collection<Project>("projects");
+  const projects: Project[] = await projectsCollection
+    .find({ featured: true })
+    .sort({ order: 1 })
+    .limit(6)
+    .toArray();
 
   const paths = projects.map((project) => ({
     params: { id: project.id },
   }));
-  console.log("getStaticPaths::paths", paths);
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { id } = params as Params;
-  console.log("getStaticProps::params", params);
+export const getStaticProps: GetStaticProps<ProjectProps> = async ({
+  params,
+}) => {
+  if (!params) {
+    return { notFound: true };
+  }
 
-  const resBasics = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-  );
-  const basics = await resBasics.json();
-  console.log("getStaticProps::basics", basics);
+  const client = await clientPromise;
+  const db = client.db("Anna");
 
-  const resProjects = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=true&limit=6`
-  );
-  const projects: Project[] = await resProjects.json();
-  console.log("getStaticProps::projects", projects);
+  const projectsCollection = db.collection<Project>("projects");
+  const projects: Project[] = await projectsCollection
+    .find({ featured: true })
+    .sort({ order: 1 })
+    .limit(6)
+    .toArray();
 
-  const projectIndex = projects.findIndex((p) => p.id === id);
+  const projectIndex = projects.findIndex((p) => p.id === params.id);
   const project = projects[projectIndex];
   const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
   const nextProject =
@@ -114,13 +113,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   console.log("getStaticProps::prevProject", prevProject);
   console.log("getStaticProps::nextProject", nextProject);
 
+  if (!project) {
+    return { notFound: true };
+  }
+
   return {
     props: {
-      project,
-      name: JSON.parse(JSON.stringify(basics.name)),
-      socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-      prevProject,
-      nextProject,
+      name: basics.name,
+      socialLinks: basics.socialLinks,
+      project: JSON.parse(JSON.stringify(project)),
+      prevProject: prevProject ? JSON.parse(JSON.stringify(prevProject)) : null,
+      nextProject: nextProject ? JSON.parse(JSON.stringify(nextProject)) : null,
     },
     revalidate: 60,
   };

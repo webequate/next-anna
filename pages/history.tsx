@@ -1,19 +1,21 @@
 // pages/history.tsx
+import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
-import { Basics, SocialLink } from "@/types/basics";
+import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
 
-interface ProjectsHistoryProps {
+interface HistoryPageProps {
   name: string;
   socialLinks: SocialLink[];
   projects: Project[];
 }
 
-const ProjectsHistory: NextPage<ProjectsHistoryProps> = ({
+const HistoryPage: NextPage<HistoryPageProps> = ({
   name,
   socialLinks,
   projects,
@@ -36,34 +38,25 @@ const ProjectsHistory: NextPage<ProjectsHistoryProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<
-  ProjectsHistoryProps
-> = async () => {
-  try {
-    const projectsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects?featured=false&limit=6`
-    );
-    const projects: Project[] = await projectsRes.json();
-    console.log("getStaticProps::projects", projects);
+export const getStaticProps: GetStaticProps<HistoryPageProps> = async () => {
+  const client = await clientPromise;
+  const db = client.db("Anna");
 
-    const basicsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-    );
-    const basics: Basics = await basicsRes.json();
-    console.log("getStaticProps::basics", basics);
+  const projectsCollection = db.collection<Project>("projects");
+  const projects: Project[] = await projectsCollection
+    .find({ featured: false })
+    .sort({ order: 1 })
+    .limit(6)
+    .toArray();
 
-    return {
-      props: {
-        name: JSON.parse(JSON.stringify(basics.name)),
-        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-        projects: projects,
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error fetching data in history.tsx:", error);
-    throw error;
-  }
+  return {
+    props: {
+      name: basics.name,
+      socialLinks: basics.socialLinks,
+      projects: JSON.parse(JSON.stringify(projects)),
+    },
+    revalidate: 60,
+  };
 };
 
-export default ProjectsHistory;
+export default HistoryPage;

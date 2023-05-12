@@ -1,13 +1,14 @@
 // pages/contact.tsx
 import { GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { Basics, SocialLink } from "@/types/basics";
+import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
 import ContactDetails from "@/components/ContactDetails";
 import Footer from "@/components/Footer";
 
-type ContactProps = {
+type ContactPageProps = {
   name: string;
   contactIntro: string;
   location: string;
@@ -17,7 +18,7 @@ type ContactProps = {
   socialLinks: SocialLink[];
 };
 
-const Contact: NextPage<ContactProps> = ({
+const ContactPage: NextPage<ContactPageProps> = ({
   name,
   contactIntro,
   location,
@@ -58,33 +59,19 @@ const Contact: NextPage<ContactProps> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<ContactProps> = async () => {
-  try {
-    const basicsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/basics`
-    );
-    if (!basicsRes.ok) {
-      throw new Error("HTTP error! status: ${basicsRes.status}");
-    }
-    const basics: Basics = await basicsRes.json();
-    console.log("getStaticProps::basics", basics);
-
-    return {
-      props: {
-        name: JSON.parse(JSON.stringify(basics.name)),
-        contactIntro: JSON.parse(JSON.stringify(basics.contactIntro)),
-        location: JSON.parse(JSON.stringify(basics.location)),
-        email: JSON.parse(JSON.stringify(basics.email)),
-        website: JSON.parse(JSON.stringify(basics.website)),
-        resumeLink: JSON.parse(JSON.stringify(basics.resumeLink)),
-        socialLinks: JSON.parse(JSON.stringify(basics.socialLinks)),
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error fetching data in contact.tsx:", error);
-    throw error;
-  }
+export const getStaticProps: GetStaticProps<ContactPageProps> = async () => {
+  return {
+    props: {
+      name: basics.name,
+      contactIntro: basics.contactIntro,
+      location: basics.location,
+      email: basics.email,
+      website: basics.website,
+      resumeLink: basics.resumeLink,
+      socialLinks: basics.socialLinks,
+    },
+    revalidate: 60,
+  };
 };
 
-export default Contact;
+export default ContactPage;
