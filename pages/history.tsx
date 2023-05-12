@@ -46,7 +46,6 @@ export const getStaticProps: GetStaticProps<HistoryPageProps> = async () => {
   const projects: Project[] = await projectsCollection
     .find({ featured: false })
     .sort({ order: 1 })
-    .limit(0)
     .toArray();
 
   return {

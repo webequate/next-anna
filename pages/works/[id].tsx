@@ -1,6 +1,6 @@
 // pages/works/[id].tsx
 import clientPromise from "@/lib/mongodb";
-import { GetStaticProps, GetStaticPaths, NextPage } from "next";
+import { GetStaticProps, GetStaticPaths } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
@@ -10,7 +10,6 @@ import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
 import ProjectFooter from "@/components/ProjectFooter";
 import Footer from "@/components/Footer";
-import { useRouter } from "next/router";
 
 interface ProjectProps {
   name: string;
@@ -27,13 +26,6 @@ const Project = ({
   prevProject,
   nextProject,
 }: ProjectProps) => {
-  const router = useRouter();
-  const { id } = router.query;
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
@@ -77,7 +69,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const projects: Project[] = await projectsCollection
     .find({ featured: true })
     .sort({ order: 1 })
-    .limit(0)
     .toArray();
 
   const paths = projects.map((project) => ({
@@ -101,7 +92,6 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
   const projects: Project[] = await projectsCollection
     .find({ featured: true })
     .sort({ order: 1 })
-    .limit(0)
     .toArray();
 
   const projectIndex = projects.findIndex((p) => p.id === params.id);
@@ -109,9 +99,6 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
   const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
   const nextProject =
     projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
-  console.log("getStaticProps::project", project);
-  console.log("getStaticProps::prevProject", prevProject);
-  console.log("getStaticProps::nextProject", nextProject);
 
   if (!project) {
     return { notFound: true };
