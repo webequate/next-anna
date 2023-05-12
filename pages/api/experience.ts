@@ -7,7 +7,7 @@ const fetchExperience = async (req: NextApiRequest, res: NextApiResponse) => {
     const client = await clientPromise;
     const db = client.db("Anna");
 
-    const data = await db.collection("experience").find({}).toArray();
+    const data = await db.collection("experiences").find({}).toArray();
 
     res.json(data);
   } catch (e) {
