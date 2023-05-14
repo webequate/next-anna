@@ -844,5 +844,230 @@
     "image": "2016/acrylic-collages/main/memorandum-of-understanding.jpg",
     "featured": false,
     "order": 94
+  },
+  {
+    "id": "good-governance-install-shot",
+    "title": "Good Governance (New Delhi, India)",
+    "dimensions": "10.5 x 18 (feet)",
+    "media": "digital print on glass",
+    "image": "2015/installations/main/good-governance-install-shot.jpg",
+    "featured": false,
+    "order": 95
+  },
+  {
+    "id": "good-governance-detail-1",
+    "title": "Good Governance (New Delhi, India)",
+    "dimensions": "10.5 x 18 (feet)",
+    "media": "digital print on glass",
+    "image": "2015/installations/main/good-governance-detail-1.jpg",
+    "featured": false,
+    "order": 96
+  },
+  {
+    "id": "good-governance-detail-2",
+    "title": "Good Governance (New Delhi, India)",
+    "dimensions": "10.5 x 18 (feet)",
+    "media": "digital print on glass",
+    "image": "2015/installations/main/good-governance-detail-2.jpg",
+    "featured": false,
+    "order": 97
+  },
+  {
+    "id": "clues-for-scale",
+    "title": "Clues for Scale",
+    "dimensions": "8 x 10",
+    "media": "graphite on paper",
+    "image": "2015/drawings/main/clues-for-scale.jpg",
+    "featured": false,
+    "order": 98
+  },
+  {
+    "id": "specificity-of-materials",
+    "title": "Specificity of Materials",
+    "dimensions": "9 x 12",
+    "media": "graphite, spray paint, gesso",
+    "image": "2015/drawings/main/specificity-of-materials.jpg",
+    "featured": false,
+    "order": 99
+  },
+  {
+    "id": "scale-as-evidence",
+    "title": "Scale as Evidence",
+    "dimensions": "9 x 12",
+    "media": "graphite, spray paint, gesso",
+    "image": "2015/drawings/main/scale-as-evidence.jpg",
+    "featured": false,
+    "order": 100
+  },
+  {
+    "id": "making-solid-the-unfinished",
+    "title": "Making Solid the Unfinished",
+    "dimensions": "9 x 12",
+    "media": "graphite, spray paint, gesso",
+    "image": "2015/drawings/main/making-solid-the-unfinished.jpg",
+    "featured": false,
+    "order": 101
+  },
+  {
+    "id": "to-make-the-hole-in-the-dividing-wall-solid",
+    "title": "To make the hole in the dividing wall solid",
+    "dimensions": "9 x 12",
+    "media": "graphite, spray paint, gesso",
+    "image": "2015/drawings/main/to-make-the-hole-in-the-dividing-wall-solid.jpg",
+    "featured": false,
+    "order": 102
+  },
+  {
+    "id": "remembering-how-to-build-a-barricade",
+    "title": "Remembering How to Build a Barricade",
+    "dimensions": "14 x 21 x 4",
+    "media": "acrylic, resin, archival digital prints, spray paint, India Ink",
+    "image": "2015/acrylic-collages/main/remembering-how-to-build-a-barricade.jpg",
+    "featured": false,
+    "order": 103
+  },
+  {
+    "id": "summit-2",
+    "title": "Summit II",
+    "dimensions": "13.5 x 21 x 5",
+    "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/summit-2.jpg",
+    "featured": false,
+    "order": 104
+  },
+  {
+    "id": "summit-2-2",
+    "title": "Summit II",
+    "dimensions": "13.5 x 21 x 5",
+    "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/summit-2-2.jpg",
+    "featured": false,
+    "order": 105
+  },
+  {
+    "id": "the-ambassadors-1",
+    "title": "The Ambassadors I",
+    "dimensions": "14 x 21 x 4",
+    "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "image": "2015/acrylic-collages/main/the-ambassadors-1.jpg",
+    "featured": false,
+    "order": 106
+  },
+  {
+    "id": "the-ambassadors-2",
+    "title": "The Ambassadors II",
+    "dimensions": "14 x 21 x 4",
+    "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "image": "2015/acrylic-collages/main/the-ambassadors-2.jpg",
+    "featured": false,
+    "order": 107
+  },
+  {
+    "id": "the-ambassadors-3",
+    "title": "The Ambassadors III",
+    "dimensions": "14 x 21 x 4",
+    "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "image": "2015/acrylic-collages/main/the-ambassadors-3.jpg",
+    "featured": false,
+    "order": 108
+  },
+  {
+    "id": "tete-a-tete",
+    "title": "Tête-à-tête",
+    "dimensions": "15 x 12 x 5",
+    "media": "acrylic, resin, archival digital print, spray paint",
+    "image": "2015/acrylic-collages/main/tete-a-tete.jpg",
+    "featured": false,
+    "order": 109
+  },
+  {
+    "id": "mise-en-scene",
+    "title": "Mise-en-scène",
+    "dimensions": "15 x 18 x 5",
+    "media": "acrylic, resin, archival digital print, spray paint",
+    "image": "2015/acrylic-collages/main/mise-en-scene.jpg",
+    "featured": false,
+    "order": 110
+  },
+  {
+    "id": "attache",
+    "title": "Attaché",
+    "dimensions": "16 x 16 x 5",
+    "media": "acrylic, resin, archival digital print, spray paint",
+    "image": "2015/acrylic-collages/main/attache.jpg",
+    "featured": false,
+    "order": 111
+  },
+  {
+    "id": "state-of-flux",
+    "title": "State of Flux",
+    "dimensions": "14 x 20.5 x 4.5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/state-of-flux.jpg",
+    "featured": false,
+    "order": 112
+  },
+  {
+    "id": "proxy",
+    "title": "Proxy",
+    "dimensions": "14 x 21 x 5",
+    "media": "acrylic, resin, archival digital print, spray paint",
+    "image": "2015/acrylic-collages/main/proxy.jpg",
+    "featured": false,
+    "order": 113
+  },
+  {
+    "id": "agreement",
+    "title": "Agreement",
+    "dimensions": "14 x 21 x 5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/agreement.jpg",
+    "featured": false,
+    "order": 114
+  },
+  {
+    "id": "agreement-2",
+    "title": "Agreement II",
+    "dimensions": "14 x 21 x 5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/agreement-2.jpg",
+    "featured": false,
+    "order": 115
+  },
+  {
+    "id": "floral-diplomacy",
+    "title": "Floral Diplomacy",
+    "dimensions": "16 x 21 x 5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/floral-diplomacy.jpg",
+    "featured": false,
+    "order": 116
+  },
+  {
+    "id": "regalia-red",
+    "title": "Regalia (Red)",
+    "dimensions": "18 x 14 x 5",
+    "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "image": "2015/acrylic-collages/main/regalia-red.jpg",
+    "featured": false,
+    "order": 117
+  },
+  {
+    "id": "in-absentia",
+    "title": "In Absentia",
+    "dimensions": "14 x 21 x 5",
+    "media": "acrylic, resin, archival digital print, spray paint",
+    "image": "2015/acrylic-collages/main/in-absentia.jpg",
+    "featured": false,
+    "order": 118
+  },
+  {
+    "id": "good-governance-2",
+    "title": "Good Governance II",
+    "dimensions": "15 x 21 x 5",
+    "media": "acrylic, resin, archival digital print, spray paint, India Ink",
+    "image": "2015/acrylic-collages/main/good-governance-2.jpg",
+    "featured": false,
+    "order": 119
   }
 ]
