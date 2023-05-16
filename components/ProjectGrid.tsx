@@ -11,7 +11,7 @@ interface ProjectGridProps {
 const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, path }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 text-light-1 dark:text-light-1">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <Link
           key={project.id}
           href={`/${path}/${project.id}`}
@@ -22,6 +22,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, path }) => {
             alt={project.title}
             width={320}
             height={480}
+            priority={index < 3}
             className="rounded shadow-md transition ease-in-out transform duration-300"
           />
           <div className="absolute inset-0 bg-black opacity-0 md:group-hover:opacity-50 transition duration-300 rounded shadow-md"></div>
