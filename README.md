@@ -1,4 +1,4 @@
-# New.AnnaEliseJohnson.com
+# AnnaEliseJohnson.com
 
 This is a Next.js website, using React, TypeScript, and MongoDB.
 
