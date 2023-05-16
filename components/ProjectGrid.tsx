@@ -21,7 +21,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, path }) => {
             src={`/images/${project.image}`}
             alt={project.title}
             width={314}
-            height={480}
+            height={464}
             priority={index < 3}
             className="rounded shadow-md transition ease-in-out transform duration-300"
           />
