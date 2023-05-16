@@ -52,6 +52,7 @@ const Project = ({
           <ProjectFooter
             dimensions={project.dimensions}
             media={project.media}
+            year={project.year}
           />
         </div>
       </motion.div>

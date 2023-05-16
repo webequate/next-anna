@@ -5,7 +5,7 @@ export type Project = {
   title: string;
   dimensions: string;
   media: string;
-  year: string;
+  year?: string;
   image: string;
   featured: boolean;
   order: number;

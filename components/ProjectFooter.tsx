@@ -3,7 +3,7 @@
 interface ProjectFooterProps {
   dimensions: string;
   media: string;
-  year: string;
+  year?: string;
 }
 
 const ProjectFooter: React.FC<ProjectFooterProps> = ({
