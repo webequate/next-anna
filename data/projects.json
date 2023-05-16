@@ -4,6 +4,7 @@
     "title": "Earthworks (Desert View Road I)",
     "dimensions": "48 x 38 x 3",
     "media": "dye, watercolor, acrylic, plaster on canvas",
+    "year": "2023",
     "image": "2023/desert-view-road-1.jpg",
     "featured": true,
     "order": 1
@@ -13,6 +14,7 @@
     "title": "Earthworks (Soledad Canyon Road I)",
     "dimensions": "72 x 48 x 2",
     "media": "dye, watercolor, acrylic, plaster on canvas",
+    "year": "2023",
     "image": "2023/soledad-canyon-road-1.jpg",
     "featured": true,
     "order": 2
@@ -22,6 +24,7 @@
     "title": "Earthworks (Soledad Canyon Road II)",
     "dimensions": "48 x 34 x 2.5",
     "media": "dye, watercolor, acrylic, plaster on canvas",
+    "year": "2023",
     "image": "2023/soledad-canyon-road-2.jpg",
     "featured": true,
     "order": 3
@@ -31,6 +34,7 @@
     "title": "Longview Road at Magic Hour I",
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
+    "year": "2023",
     "image": "2023/longview-road-1.jpg",
     "featured": true,
     "order": 4
@@ -40,6 +44,7 @@
     "title": "Longview Road at Magic Hour II",
     "dimensions": "12 x 9 x 3.5",
     "media": "concrete, rocks, acrylic paint",
+    "year": "2023",
     "image": "2023/longview-road-2.jpg",
     "featured": true,
     "order": 5
@@ -58,6 +63,7 @@
     "title": "Pearlblossom Highway at Magic Hour I",
     "dimensions": "30 x 22 x 2",
     "media": "concrete, rocks, acrylic paint",
+    "year": "2023",
     "image": "2023/pearlblossom-hwy-1.jpg",
     "featured": true,
     "order": 7
@@ -67,6 +73,7 @@
     "title": "Pearlblossom Highway at Magic Hour IV",
     "dimensions": "30 x 22 x 2",
     "media": "concrete, rocks, acrylic paint",
+    "year": "2023",
     "image": "2023/pearlblossom-hwy-4.jpg",
     "featured": true,
     "order": 8
@@ -76,6 +83,7 @@
     "title": "Earthworks (Mojave Tropico Road I)",
     "dimensions": "72 x 60",
     "media": "earth, plaster, watercolor, acrylic, wax",
+    "year": "2022",
     "image": "2022/mojave-tropico-road-1.jpg",
     "featured": true,
     "order": 9
@@ -85,6 +93,7 @@
     "title": "Earthworks (Mojave Tropico Road II)",
     "dimensions": "72 x 60",
     "media": "earth, plaster, watercolor, acrylic, wax",
+    "year": "2022",
     "image": "2022/mojave-tropico-road-2.jpg",
     "featured": true,
     "order": 10
@@ -94,6 +103,7 @@
     "title": "Earthworks (Mojave Tropico Road III)",
     "dimensions": "90 x 62",
     "media": "earth, plaster, watercolor, acrylic, wax",
+    "year": "2022",
     "image": "2022/mojave-tropico-road-3.jpg",
     "featured": true,
     "order": 11
@@ -103,6 +113,7 @@
     "title": "Earthworks (Presswood Road I)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, watercolor, acrylic",
+    "year": "2022",
     "image": "2022/presswood-road-1.jpg",
     "featured": true,
     "order": 12
@@ -112,6 +123,7 @@
     "title": "Earthworks (Mulholland Hwy)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, watercolor, acrylic, wax",
+    "year": "2022",
     "image": "2022/mulholland-hwy-1.jpg",
     "featured": true,
     "order": 13
@@ -121,6 +133,7 @@
     "title": "Earthworks (Hwy 67 I)",
     "dimensions": "48 x 72",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/hwy-67-1.jpg",
     "featured": true,
     "order": 14
@@ -130,6 +143,7 @@
     "title": "Earthworks (Hwy 90)",
     "dimensions": "62 x 90",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/hwy-90.jpg",
     "featured": true,
     "order": 15
@@ -139,6 +153,7 @@
     "title": "Earthworks (Cibolo Creek Road I)",
     "dimensions": "58 x 44",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/cibolo-creek-road-1.jpg",
     "featured": true,
     "order": 16
@@ -148,6 +163,7 @@
     "title": "Earthworks (Cibolo Creek Road II)",
     "dimensions": "58 x 44",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/cibolo-creek-road-2.jpg",
     "featured": true,
     "order": 17
@@ -157,6 +173,7 @@
     "title": "Earthworks (Ranch Road 2810 I)",
     "dimensions": "52 x 32",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/ranch-road-2810-1.jpg",
     "featured": true,
     "order": 18
@@ -166,6 +183,7 @@
     "title": "Earthworks (Ranch Road 2810 II)",
     "dimensions": "52 x 38",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/ranch-road-2810-2.jpg",
     "featured": true,
     "order": 19
@@ -175,6 +193,7 @@
     "title": "Earthworks (Ranch Road 505 I)",
     "dimensions": "64 x 58",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/ranch-road-505-1.jpg",
     "featured": true,
     "order": 20
@@ -184,6 +203,7 @@
     "title": "Earthworks (Ranch Road 505 II)",
     "dimensions": "64 x 58",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/ranch-road-505-2.jpg",
     "featured": true,
     "order": 21
@@ -202,6 +222,7 @@
     "title": "Earthworks (Red Hills Road I)",
     "dimensions": "48 x 32",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/red-hills-road-1.jpg",
     "featured": true,
     "order": 23
@@ -211,6 +232,7 @@
     "title": "Earthworks (Red Hills Road II)",
     "dimensions": "48 x 32",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/red-hills-road-2.jpg",
     "featured": true,
     "order": 24
@@ -220,6 +242,7 @@
     "title": "Earthworks (Wildrose Road III)",
     "dimensions": "50 x 42",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/wildrose-road-3.jpg",
     "featured": true,
     "order": 25
@@ -229,6 +252,7 @@
     "title": "Earthworks (Wildrose Road I)",
     "dimensions": "52 x 46",
     "media": "earth, charcoal, plaster, watercolor",
+    "year": "2021",
     "image": "2021/wildrose-road-1.jpg",
     "featured": true,
     "order": 26
@@ -238,6 +262,7 @@
     "title": "Earthworks (Wildrose Road II)",
     "dimensions": "52 x 46",
     "media": "earth, plaster, watercolor",
+    "year": "2021",
     "image": "2021/wildrose-road-2.jpg",
     "featured": true,
     "order": 27
@@ -247,6 +272,7 @@
     "title": "Earthworks (Valley of Fire III)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, matte medium, oil pastel, conté crayon",
+    "year": "2020",
     "image": "2020/valley-of-fire-3.jpg",
     "featured": true,
     "order": 28
@@ -256,6 +282,7 @@
     "title": "Earthworks (Valley of Fire IV)",
     "dimensions": "62 x 90",
     "media": "earth, plaster, conté crayon, oil pastel",
+    "year": "2020",
     "image": "2020/valley-of-fire-4.jpg",
     "featured": true,
     "order": 29
@@ -265,6 +292,7 @@
     "title": "Earthworks (Valley of Fire VI)",
     "dimensions": "64 x 48",
     "media": "earth, plaster, oil pastel, conté crayon",
+    "year": "2021",
     "image": "2021/valley-of-fire-6.jpg",
     "featured": true,
     "order": 30
@@ -274,6 +302,7 @@
     "title": "Earthworks (Sand Cove I)",
     "dimensions": "60 x 46",
     "media": "earth, plaster, matte medium, pastel, oil pastel",
+    "year": "2020",
     "image": "2020/sand-cove-1.jpg",
     "featured": true,
     "order": 31
@@ -283,6 +312,7 @@
     "title": "Earthworks (Sand Cove II)",
     "dimensions": "60 x 46",
     "media": "earth, plaster, matte medium, conté crayon",
+    "year": "2020",
     "image": "2020/sand-cove-2.jpg",
     "featured": true,
     "order": 32
@@ -292,6 +322,7 @@
     "title": "Earthworks (Sand Cove III)",
     "dimensions": "52 x 38",
     "media": "earth, plaster, matte medium, watercolor, conté crayon",
+    "year": "2020",
     "image": "2020/sand-cove-3.jpg",
     "featured": true,
     "order": 33
@@ -301,6 +332,7 @@
     "title": "Earthworks (Sand Cove IV)",
     "dimensions": "52 x 38",
     "media": "earth, plaster, watercolor, conté crayon, charcoal",
+    "year": "2020",
     "image": "2020/sand-cove-4.jpg",
     "featured": true,
     "order": 34
@@ -310,6 +342,7 @@
     "title": "Earthworks (Bobcat Fire) Ochre)",
     "dimensions": "48 x 34",
     "media": "ash, plaster, conté crayon, watercolor",
+    "year": "2020",
     "image": "2020/bobcat-fire-ochre.jpg",
     "featured": true,
     "order": 35
@@ -319,6 +352,7 @@
     "title": "Earthworks (Bobcat Fire) Cobalt",
     "dimensions": "50 x 32",
     "media": "ash, plaster, conté crayon, watercolor",
+    "year": "2020",
     "image": "2020/bobcat-fire-cobalt.jpg",
     "featured": true,
     "order": 36
@@ -328,6 +362,7 @@
     "title": "Earthworks (Pine Ridge Trail I)",
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
+    "year": "2020",
     "image": "2020/pine-ridge-trail-1.jpg",
     "featured": true,
     "order": 37
@@ -337,6 +372,7 @@
     "title": "Earthworks (Pine Ridge Trail II)",
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
+    "year": "2020",
     "image": "2020/pine-ridge-trail-2.jpg",
     "featured": true,
     "order": 38
@@ -346,6 +382,7 @@
     "title": "Earthworks (Pine Ridge Trail III)",
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
+    "year": "2020",
     "image": "2020/pine-ridge-trail-3.jpg",
     "featured": true,
     "order": 39
@@ -355,6 +392,7 @@
     "title": "Earthworks (Pine Ridge Trail IV)",
     "dimensions": "30 x 25",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
+    "year": "2020",
     "image": "2020/pine-ridge-trail-4.jpg",
     "featured": true,
     "order": 40
@@ -364,6 +402,7 @@
     "title": "Earthworks (Pine Ridge Trail V)",
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas, oil stick on canvas",
+    "year": "2020",
     "image": "2020/pine-ridge-trail-5.jpg",
     "featured": true,
     "order": 41
@@ -373,6 +412,7 @@
     "title": "Earthworks (Pine Ridge Trail VI)",
     "dimensions": "30 x 24",
     "media": "earth, plaster, matte medium, conté crayon, graphite on canvas",
+    "year": "2020",
     "image": "2020/pine-ridge-trail-6.jpg",
     "featured": true,
     "order": 42
@@ -382,6 +422,7 @@
     "title": "Earthworks (Yucca Path I)",
     "dimensions": "45 x 38",
     "media": "earth, plaster, matte medium, graphite, charcoal",
+    "year": "2020",
     "image": "2020/yucca-path-1.jpg",
     "featured": true,
     "order": 43
@@ -391,6 +432,7 @@
     "title": "Earthworks (Yucca Path II)",
     "dimensions": "45 x 37",
     "media": "earth, plaster, matte medium, graphite, charcoal",
+    "year": "2020",
     "image": "2020/yucca-path-2.jpg",
     "featured": true,
     "order": 44
@@ -400,6 +442,7 @@
     "title": "Earthworks (Yucca Path III)",
     "dimensions": "52 x 40",
     "media": "earth, plaster, matte medium, watercolor",
+    "year": "2020",
     "image": "2020/yucca-path-3.jpg",
     "featured": true,
     "order": 45
@@ -409,6 +452,7 @@
     "title": "Earthworks (Yucca Path IV)",
     "dimensions": "38 x 45",
     "media": "earth, plaster, matte medium, watercolor, gesso",
+    "year": "2020",
     "image": "2020/yucca-path-4.jpg",
     "featured": true,
     "order": 46
@@ -418,6 +462,7 @@
     "title": "Still Life VII",
     "dimensions": "36 x 38",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-7.jpg",
     "featured": false,
     "order": 47
@@ -427,6 +472,7 @@
     "title": "Still Life VI",
     "dimensions": "35 x 28",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-6.jpg",
     "featured": false,
     "order": 48
@@ -436,6 +482,7 @@
     "title": "Still Life V",
     "dimensions": "34 x 36",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-5.jpg",
     "featured": false,
     "order": 49
@@ -445,6 +492,7 @@
     "title": "Still Life IV",
     "dimensions": "34 x 32",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-4.jpg",
     "featured": false,
     "order": 50
@@ -454,6 +502,7 @@
     "title": "Still Life III",
     "dimensions": "24 x 16",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-3.jpg",
     "featured": false,
     "order": 51
@@ -463,6 +512,7 @@
     "title": "Still Life II",
     "dimensions": "30 x 30",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-2.jpg",
     "featured": false,
     "order": 52
@@ -472,6 +522,7 @@
     "title": "Still Life I",
     "dimensions": "24 x 24",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/still-life-1.jpg",
     "featured": false,
     "order": 53
@@ -481,6 +532,7 @@
     "title": "Natura Morta 9",
     "dimensions": "20 x 24",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-9.jpg",
     "featured": false,
     "order": 54
@@ -490,6 +542,7 @@
     "title": "Natura Morta 8",
     "dimensions": "20 x 24",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-8.jpg",
     "featured": false,
     "order": 55
@@ -499,6 +552,7 @@
     "title": "Natura Morta 7",
     "dimensions": "22 x 24",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-7.jpg",
     "featured": false,
     "order": 56
@@ -508,6 +562,7 @@
     "title": "Natura Morta 6",
     "dimensions": "20 x 22",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-6.jpg",
     "featured": false,
     "order": 57
@@ -517,6 +572,7 @@
     "title": "Natura Morta 5",
     "dimensions": "18 x 20",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-5.jpg",
     "featured": false,
     "order": 58
@@ -526,6 +582,7 @@
     "title": "Natura Morta 4",
     "dimensions": "18 x 20",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-4.jpg",
     "featured": false,
     "order": 59
@@ -535,6 +592,7 @@
     "title": "Natura Morta 3",
     "dimensions": "20 x 24",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-3.jpg",
     "featured": false,
     "order": 60
@@ -544,6 +602,7 @@
     "title": "Natura Morta 2",
     "dimensions": "20 x 22",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-2.jpg",
     "featured": false,
     "order": 61
@@ -553,6 +612,7 @@
     "title": "Natura Morta 1",
     "dimensions": "18 x 22",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/natura-morta-1.jpg",
     "featured": false,
     "order": 62
@@ -562,6 +622,7 @@
     "title": "Cezanne Waves 3",
     "dimensions": "40 x 60",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/cezanne-waves-3.jpg",
     "featured": false,
     "order": 63
@@ -571,6 +632,7 @@
     "title": "Cezanne Waves 2",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/cezanne-waves-2.jpg",
     "featured": false,
     "order": 64
@@ -580,6 +642,7 @@
     "title": "Cezanne Waves 1",
     "dimensions": "48 x 72",
     "media": "oil on canvas",
+    "year": "2019",
     "image": "2019/cezanne-waves-1.jpg",
     "featured": false,
     "order": 65
@@ -589,6 +652,7 @@
     "title": "Death Valley 1",
     "dimensions": "30 x 30",
     "media": "oil on canvas",
+    "year": "2018",
     "image": "2018/death-valley-1.jpg",
     "featured": false,
     "order": 66
@@ -598,6 +662,7 @@
     "title": "Death Valley 2",
     "dimensions": "36 x 36",
     "media": "oil on canvas",
+    "year": "2018",
     "image": "2018/death-valley-2.jpg",
     "featured": false,
     "order": 67
@@ -607,6 +672,7 @@
     "title": "Death Valley 3",
     "dimensions": "30 x 40",
     "media": "oil on canvas",
+    "year": "2018",
     "image": "2018/death-valley-3.jpg",
     "featured": false,
     "order": 68
@@ -616,6 +682,7 @@
     "title": "Antinious",
     "dimensions": "26 x 34",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/antinious.jpg",
     "featured": false,
     "order": 69
@@ -625,6 +692,7 @@
     "title": "Bluff I",
     "dimensions": "26 x 42",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/bluff-1.jpg",
     "featured": false,
     "order": 70
@@ -634,6 +702,7 @@
     "title": "Potential I",
     "dimensions": "24 x 18",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/potential-1.jpg",
     "featured": false,
     "order": 71
@@ -643,6 +712,7 @@
     "title": "Potential II",
     "dimensions": "24 x 18",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/potential-2.jpg",
     "featured": false,
     "order": 72
@@ -652,6 +722,7 @@
     "title": "Potential III",
     "dimensions": "24 x 18",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/potential-3.jpg",
     "featured": false,
     "order": 73
@@ -661,6 +732,7 @@
     "title": "Potential IV",
     "dimensions": "24 x 18",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/potential-4.jpg",
     "featured": false,
     "order": 74
@@ -670,6 +742,7 @@
     "title": "Waves I",
     "dimensions": "46 x 44",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/waves-1.jpg",
     "featured": false,
     "order": 75
@@ -679,6 +752,7 @@
     "title": "Waves II",
     "dimensions": "46 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/waves-2.jpg",
     "featured": false,
     "order": 76
@@ -688,6 +762,7 @@
     "title": "Waves III",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/waves-3.jpg",
     "featured": false,
     "order": 77
@@ -697,6 +772,7 @@
     "title": "Klee Waves",
     "dimensions": "36 x 36",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/klee-waves.jpg",
     "featured": false,
     "order": 78
@@ -706,6 +782,7 @@
     "title": "Klee Bluff II",
     "dimensions": "40 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/klee-bluff-2.jpg",
     "featured": false,
     "order": 79
@@ -715,6 +792,7 @@
     "title": "Klee Bluff III",
     "dimensions": "40 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/klee-bluff-3.jpg",
     "featured": false,
     "order": 80
@@ -724,6 +802,7 @@
     "title": "Klee Bluff IV",
     "dimensions": "38 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/klee-bluff-4.jpg",
     "featured": false,
     "order": 81
@@ -733,6 +812,7 @@
     "title": "Matisse Water I",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/matisse-water-1.jpg",
     "featured": false,
     "order": 82
@@ -742,6 +822,7 @@
     "title": "Matisse Water II",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/matisse-water-2.jpg",
     "featured": false,
     "order": 83
@@ -751,6 +832,7 @@
     "title": "Matisse Water III",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/matisse-water-3.jpg",
     "featured": false,
     "order": 84
@@ -760,6 +842,7 @@
     "title": "Matisse Water IV",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/matisse-water-4.jpg",
     "featured": false,
     "order": 85
@@ -769,6 +852,7 @@
     "title": "Matisse Water V",
     "dimensions": "42 x 60",
     "media": "oil on canvas",
+    "year": "2017",
     "image": "2017/matisse-water-5.jpg",
     "featured": false,
     "order": 86
@@ -778,6 +862,7 @@
     "title": "Room for Negotiation",
     "dimensions": "15 x 19.5 x 4.5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/room-for-negotiation.jpg",
     "featured": false,
     "order": 87
@@ -787,6 +872,7 @@
     "title": "Break",
     "dimensions": "15 x 19.5 x 4.5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/break.jpg",
     "featured": false,
     "order": 88
@@ -796,6 +882,7 @@
     "title": "Stela",
     "dimensions": "21 x 14 x 4.5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/break.jpg",
     "featured": false,
     "order": 89
@@ -805,6 +892,7 @@
     "title": "Table I",
     "dimensions": "40 x 15 x 2",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/table-1.jpg",
     "featured": false,
     "order": 90
@@ -814,6 +902,7 @@
     "title": "Table II",
     "dimensions": "40 x 19 x 2",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/table-2.jpg",
     "featured": false,
     "order": 91
@@ -823,6 +912,7 @@
     "title": "Mantle Piece",
     "dimensions": "36 x 58 x 2",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/mantle-piece.jpg",
     "featured": false,
     "order": 92
@@ -832,6 +922,7 @@
     "title": "Cushions Barricade",
     "dimensions": "32 x 58 x 2",
     "media": "acrylic, resin, archival digital print, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/cushions-barricade.jpg",
     "featured": false,
     "order": 93
@@ -841,6 +932,7 @@
     "title": "Memorandum of Understanding",
     "dimensions": "32 x 27 x 2.5",
     "media": "acrylic, resin, archival digital print, India ink, spray paint",
+    "year": "2016",
     "image": "2016/acrylic-collages/memorandum-of-understanding.jpg",
     "featured": false,
     "order": 94
@@ -850,6 +942,7 @@
     "title": "Good Governance (New Delhi, India)",
     "dimensions": "10.5 x 18 (feet)",
     "media": "digital print on glass",
+    "year": "2015",
     "image": "2015/installations/good-governance-install-shot.jpg",
     "featured": false,
     "order": 95
@@ -859,6 +952,7 @@
     "title": "Good Governance (New Delhi, India)",
     "dimensions": "10.5 x 18 (feet)",
     "media": "digital print on glass",
+    "year": "2015",
     "image": "2015/installations/good-governance-detail-1.jpg",
     "featured": false,
     "order": 96
@@ -868,6 +962,7 @@
     "title": "Good Governance (New Delhi, India)",
     "dimensions": "10.5 x 18 (feet)",
     "media": "digital print on glass",
+    "year": "2015",
     "image": "2015/installations/good-governance-detail-2.jpg",
     "featured": false,
     "order": 97
@@ -877,6 +972,7 @@
     "title": "Clues for Scale",
     "dimensions": "8 x 10",
     "media": "graphite on paper",
+    "year": "2015",
     "image": "2015/drawings/clues-for-scale.jpg",
     "featured": false,
     "order": 98
@@ -886,6 +982,7 @@
     "title": "Specificity of Materials",
     "dimensions": "9 x 12",
     "media": "graphite, spray paint, gesso",
+    "year": "2015",
     "image": "2015/drawings/specificity-of-materials.jpg",
     "featured": false,
     "order": 99
@@ -895,6 +992,7 @@
     "title": "Scale as Evidence",
     "dimensions": "9 x 12",
     "media": "graphite, spray paint, gesso",
+    "year": "2015",
     "image": "2015/drawings/scale-as-evidence.jpg",
     "featured": false,
     "order": 100
@@ -904,6 +1002,7 @@
     "title": "Making Solid the Unfinished",
     "dimensions": "9 x 12",
     "media": "graphite, spray paint, gesso",
+    "year": "2015",
     "image": "2015/drawings/making-solid-the-unfinished.jpg",
     "featured": false,
     "order": 101
@@ -913,6 +1012,7 @@
     "title": "To make the hole in the dividing wall solid",
     "dimensions": "9 x 12",
     "media": "graphite, spray paint, gesso",
+    "year": "2015",
     "image": "2015/drawings/to-make-the-hole-in-the-dividing-wall-solid.jpg",
     "featured": false,
     "order": 102
@@ -922,6 +1022,7 @@
     "title": "Remembering How to Build a Barricade",
     "dimensions": "14 x 21 x 4",
     "media": "acrylic, resin, archival digital prints, spray paint, India Ink",
+    "year": "2015",
     "image": "2015/acrylic-collages/remembering-how-to-build-a-barricade.jpg",
     "featured": false,
     "order": 103
@@ -931,6 +1032,7 @@
     "title": "Summit II",
     "dimensions": "13.5 x 21 x 5",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/summit-2-1.jpg",
     "featured": false,
     "order": 104
@@ -940,6 +1042,7 @@
     "title": "Summit II",
     "dimensions": "13.5 x 21 x 5",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/summit-2-2.jpg",
     "featured": false,
     "order": 105
@@ -949,6 +1052,7 @@
     "title": "The Ambassadors I",
     "dimensions": "14 x 21 x 4",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-1.jpg",
     "featured": false,
     "order": 106
@@ -958,6 +1062,7 @@
     "title": "The Ambassadors II",
     "dimensions": "14 x 21 x 4",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-2.jpg",
     "featured": false,
     "order": 107
@@ -967,6 +1072,7 @@
     "title": "The Ambassadors III",
     "dimensions": "14 x 21 x 4",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-3.jpg",
     "featured": false,
     "order": 108
@@ -976,6 +1082,7 @@
     "title": "Tête-à-tête",
     "dimensions": "15 x 12 x 5",
     "media": "acrylic, resin, archival digital print, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/tete-a-tete.jpg",
     "featured": false,
     "order": 109
@@ -985,6 +1092,7 @@
     "title": "Mise-en-scène",
     "dimensions": "15 x 18 x 5",
     "media": "acrylic, resin, archival digital print, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/mise-en-scene.jpg",
     "featured": false,
     "order": 110
@@ -994,6 +1102,7 @@
     "title": "Attaché",
     "dimensions": "16 x 16 x 5",
     "media": "acrylic, resin, archival digital print, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/attache.jpg",
     "featured": false,
     "order": 111
@@ -1003,6 +1112,7 @@
     "title": "State of Flux",
     "dimensions": "14 x 20.5 x 4.5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/state-of-flux.jpg",
     "featured": false,
     "order": 112
@@ -1012,6 +1122,7 @@
     "title": "Proxy",
     "dimensions": "14 x 21 x 5",
     "media": "acrylic, resin, archival digital print, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/proxy.jpg",
     "featured": false,
     "order": 113
@@ -1021,6 +1132,7 @@
     "title": "Agreement",
     "dimensions": "14 x 21 x 5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/agreement-1.jpg",
     "featured": false,
     "order": 114
@@ -1030,6 +1142,7 @@
     "title": "Agreement II",
     "dimensions": "14 x 21 x 5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/agreement-2.jpg",
     "featured": false,
     "order": 115
@@ -1039,6 +1152,7 @@
     "title": "Floral Diplomacy",
     "dimensions": "16 x 21 x 5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/floral-diplomacy.jpg",
     "featured": false,
     "order": 116
@@ -1048,6 +1162,7 @@
     "title": "Regalia (Red)",
     "dimensions": "18 x 14 x 5",
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/regalia-red.jpg",
     "featured": false,
     "order": 117
@@ -1057,6 +1172,7 @@
     "title": "In Absentia",
     "dimensions": "14 x 21 x 5",
     "media": "acrylic, resin, archival digital print, spray paint",
+    "year": "2015",
     "image": "2015/acrylic-collages/in-absentia.jpg",
     "featured": false,
     "order": 118
@@ -1066,6 +1182,7 @@
     "title": "Good Governance II",
     "dimensions": "15 x 21 x 5",
     "media": "acrylic, resin, archival digital print, spray paint, India Ink",
+    "year": "2015",
     "image": "2015/acrylic-collages/good-governance-2.jpg",
     "featured": false,
     "order": 119
@@ -1075,6 +1192,7 @@
     "title": "Barricade I (sketch)",
     "dimensions": "10 x 14",
     "media": "color pencil and graphite on paper",
+    "year": "2014",
     "image": "2014/drawings/barricade-1.jpg",
     "featured": false,
     "order": 120
@@ -1084,6 +1202,7 @@
     "title": "Barricade II (sketch)",
     "dimensions": "10 x 14",
     "media": "color pencil and graphite on paper",
+    "year": "2014",
     "image": "2014/drawings/barricade-2.jpg",
     "featured": false,
     "order": 121
@@ -1093,6 +1212,7 @@
     "title": "Barricade III (sketch)",
     "dimensions": "14 x 10",
     "media": "color pencil and graphite on paper",
+    "year": "2014",
     "image": "2014/drawings/barricade-3.jpg",
     "featured": false,
     "order": 122
@@ -1102,6 +1222,7 @@
     "title": "Armchair Diplomacy",
     "dimensions": "13.75 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-1.jpg",
     "featured": false,
     "order": 123
@@ -1111,6 +1232,7 @@
     "title": "Armchair Diplomacy",
     "dimensions": "13.75 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-2.jpg",
     "featured": false,
     "order": 124
@@ -1120,6 +1242,7 @@
     "title": "Armchair Diplomacy",
     "dimensions": "13.75 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-3.jpg",
     "featured": false,
     "order": 125
@@ -1129,6 +1252,7 @@
     "title": "Diplomacy II",
     "dimensions": "14 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2014",
     "image": "2014/acrylic-collages/diplomacy-2-1.jpg",
     "featured": false,
     "order": 126
@@ -1138,6 +1262,7 @@
     "title": "Diplomacy II",
     "dimensions": "14 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2014",
     "image": "2014/acrylic-collages/diplomacy-2-2.jpg",
     "featured": false,
     "order": 127
@@ -1147,6 +1272,7 @@
     "title": "Salon",
     "dimensions": "13.5 x 19.75 x 3.25",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/salon-1.jpg",
     "featured": false,
     "order": 128
@@ -1156,6 +1282,7 @@
     "title": "Salon",
     "dimensions": "13.5 x 19.75 x 3.25",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/salon-2.jpg",
     "featured": false,
     "order": 129
@@ -1165,6 +1292,7 @@
     "title": "Situation Room",
     "dimensions": "14 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2014",
     "image": "2014/acrylic-collages/situation-room-1.jpg",
     "featured": false,
     "order": 130
@@ -1174,6 +1302,7 @@
     "title": "Situation Room",
     "dimensions": "14 x 21 x 4.5",
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
+    "year": "2014",
     "image": "2014/acrylic-collages/situation-room-2.jpg",
     "featured": false,
     "order": 131
@@ -1183,6 +1312,7 @@
     "title": "Summit",
     "dimensions": "13.5 x 21 x 3.75",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/summit-1.jpg",
     "featured": false,
     "order": 132
@@ -1192,6 +1322,7 @@
     "title": "Summit",
     "dimensions": "13.5 x 21 x 3.75",
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/summit-2.jpg",
     "featured": false,
     "order": 133
@@ -1201,6 +1332,7 @@
     "title": "Summit III",
     "dimensions": "14 x 21 x 4.5",
     "media": "acrylic, resin-based adhesive, archival digital prints, India Ink, Spray Paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/summit-3-1.jpg",
     "featured": false,
     "order": 134
@@ -1210,6 +1342,7 @@
     "title": "Summit III",
     "dimensions": "14 x 21 x 4.5",
     "media": "acrylic, resin-based adhesive, archival digital prints, India Ink, Spray Paint",
+    "year": "2014",
     "image": "2014/acrylic-collages/summit-3-2.jpg",
     "featured": false,
     "order": 135
@@ -1219,6 +1352,7 @@
     "title": "Barricade I",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-1-1.jpg",
     "featured": false,
     "order": 136
@@ -1228,6 +1362,7 @@
     "title": "Barricade I",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-1-2.jpg",
     "featured": false,
     "order": 137
@@ -1237,6 +1372,7 @@
     "title": "Barricade II",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-1.jpg",
     "featured": false,
     "order": 138
@@ -1246,6 +1382,7 @@
     "title": "Barricade II",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-2.jpg",
     "featured": false,
     "order": 139
@@ -1255,6 +1392,7 @@
     "title": "Barricade II",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-3.jpg",
     "featured": false,
     "order": 140
@@ -1264,6 +1402,7 @@
     "title": "Barricade III",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-3-1.jpg",
     "featured": false,
     "order": 141
@@ -1273,6 +1412,7 @@
     "title": "Barricade III",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic collage, archival digital prints, resin",
+    "year": "2014",
     "image": "2014/acrylic-collages/barricade-3-2.jpg",
     "featured": false,
     "order": 142
@@ -1282,6 +1422,7 @@
     "title": "Slantwise, Otherwise, 2012",
     "dimensions": "Eight 60 x 32 sheets",
     "media": "archival digital prints on acrylic",
+    "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-14.jpg",
     "featured": false,
     "order": 143
@@ -1291,6 +1432,7 @@
     "title": "Slantwise, Otherwise, 2012",
     "dimensions": "Eight 60 x 32 sheets",
     "media": "archival digital prints on acrylic",
+    "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-15.jpg",
     "featured": false,
     "order": 144
@@ -1300,6 +1442,7 @@
     "title": "Slantwise, Otherwise, 2012",
     "dimensions": "Eight 60 x 32 sheets",
     "media": "archival digital prints on acrylic",
+    "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-16.jpg",
     "featured": false,
     "order": 145
@@ -1309,6 +1452,7 @@
     "title": "Slantwise, Otherwise, 2012",
     "dimensions": "Eight 60 x 32 sheets",
     "media": "archival digital prints on acrylic",
+    "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-17.jpg",
     "featured": false,
     "order": 146
@@ -1318,6 +1462,7 @@
     "title": "Diplomacy",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2013",
     "image": "2013/acrylic-collages/diplomacy.jpg",
     "featured": false,
     "order": 147
@@ -1327,6 +1472,7 @@
     "title": "Treaty",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2013",
     "image": "2013/acrylic-collages/treaty.jpg",
     "featured": false,
     "order": 148
@@ -1336,6 +1482,7 @@
     "title": "Battle",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2013",
     "image": "2013/acrylic-collages/battle-1.jpg",
     "featured": false,
     "order": 149
@@ -1345,6 +1492,7 @@
     "title": "Battle",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2013",
     "image": "2013/acrylic-collages/battle-3.jpg",
     "featured": false,
     "order": 150
@@ -1354,6 +1502,7 @@
     "title": "Interior (Thatcher)",
     "dimensions": "14 x 21 x 3.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2013",
     "image": "2013/acrylic-collages/interior-thatcher.jpg",
     "featured": false,
     "order": 151
@@ -1363,6 +1512,7 @@
     "title": "A Time for Choosing",
     "dimensions": "13 x 21 x 3.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2013",
     "image": "2013/acrylic-collages/a-time-for-choosing.jpg",
     "featured": false,
     "order": 152
@@ -1372,6 +1522,7 @@
     "title": "Congress Applauding (Address on the Program for Economic Recovery, Ronald Reagan, April 28, 1981)",
     "dimensions": "7' x 16' window",
     "media": "projection, backlit film, plastic",
+    "year": "2012",
     "image": "2012/installations/congress-applauding-1.jpg",
     "featured": false,
     "order": 153
@@ -1381,6 +1532,7 @@
     "title": "Congress Applauding (Address on the Program for Economic Recovery, Ronald Reagan, April 28, 1981)",
     "dimensions": "7' x 16' window",
     "media": "projection, backlit film, plastic",
+    "year": "2012",
     "image": "2012/installations/congress-applauding-2.jpg",
     "featured": false,
     "order": 154
@@ -1390,6 +1542,7 @@
     "title": "Congress Applauding (Address on the Program for Economic Recovery, Ronald Reagan, April 28, 1981)",
     "dimensions": "7' x 16' window",
     "media": "projection, backlit film, plastic",
+    "year": "2012",
     "image": "2012/installations/congress-applauding-3.jpg",
     "featured": false,
     "order": 155
@@ -1399,6 +1552,7 @@
     "title": "Congress Applauding (Address on the Program for Economic Recovery, Ronald Reagan, April 28, 1981)",
     "dimensions": "7' x 16' window",
     "media": "projection, backlit film, plastic",
+    "year": "2012",
     "image": "2012/installations/congress-applauding-4.jpg",
     "featured": false,
     "order": 156
@@ -1408,6 +1562,7 @@
     "title": "Congress Applauding (Address on the Program for Economic Recovery, Ronald Reagan, April 28, 1981)",
     "dimensions": "7' x 16' window",
     "media": "digital print",
+    "year": "2012",
     "image": "2012/installations/congress-applauding-6.jpg",
     "featured": false,
     "order": 157
@@ -1417,6 +1572,7 @@
     "title": "Congress Applauding (Address on the Program for Economic Recovery, Ronald Reagan, April 28, 1981)",
     "dimensions": "7' x 16' window",
     "media": "digital print",
+    "year": "2012",
     "image": "2012/installations/congress-applauding-7.jpg",
     "featured": false,
     "order": 158
@@ -1426,6 +1582,7 @@
     "title": "Four Positions within a Gesture",
     "dimensions": "",
     "media": "plaster cast hands, video projection, pedestal",
+    "year": "2012",
     "image": "2012/installations/four-positions-within-a-gesture-1.jpg",
     "featured": false,
     "order": 159
@@ -1435,6 +1592,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it",
     "dimensions": "56 x 70 x 27",
     "media": "aluminum, vinyl, plastic, projection",
+    "year": "2012",
     "image": "2012/installations/if-they-were-able-to-conceive-or-dream-of-another-time-1.jpg",
     "featured": false,
     "order": 160
@@ -1444,6 +1602,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it",
     "dimensions": "56 x 70 x 27",
     "media": "aluminum, vinyl, plastic, projection",
+    "year": "2012",
     "image": "2012/installations/if-they-were-able-to-conceive-or-dream-of-another-time-2.jpg",
     "featured": false,
     "order": 161
@@ -1453,6 +1612,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Bodies)",
     "dimensions": "14 x 20 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/bodies.jpg",
     "featured": false,
     "order": 162
@@ -1462,6 +1622,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Handshake)",
     "dimensions": "14 x 19 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/handshake.jpg",
     "featured": false,
     "order": 163
@@ -1471,6 +1632,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Rubble)",
     "dimensions": "14 x 22 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/rubble-1.jpg",
     "featured": false,
     "order": 164
@@ -1480,6 +1642,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Rubble)",
     "dimensions": "14 x 22 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/rubble-2.jpg",
     "featured": false,
     "order": 165
@@ -1489,6 +1652,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Rubble)",
     "dimensions": "14 x 22 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/rubble-3.jpg",
     "featured": false,
     "order": 166
@@ -1498,6 +1662,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Rubble)",
     "dimensions": "14 x 22 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/rubble-4.jpg",
     "featured": false,
     "order": 167
@@ -1507,6 +1672,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Counter/Revolution)",
     "dimensions": "14 x 18 x 2.5",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/counter-revolution.jpg",
     "featured": false,
     "order": 168
@@ -1516,6 +1682,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Barricade)",
     "dimensions": "14 x 22 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/barricade.jpg",
     "featured": false,
     "order": 169
@@ -1525,6 +1692,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Hand Position)",
     "dimensions": "14 x 22 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/hand-position.jpg",
     "featured": false,
     "order": 170
@@ -1534,6 +1702,7 @@
     "title": "If they were able to conceive or dream another time, perhaps they would be able to live in it (Red Banner)",
     "dimensions": "14 x 21 x 2.25",
     "media": "acrylic, archival digital prints, resin",
+    "year": "2012",
     "image": "2012/acrylic-collages/red-banner.jpg",
     "featured": false,
     "order": 171
@@ -1543,6 +1712,7 @@
     "title": "The Rose Garden, February 20, 1985, Thatcher",
     "dimensions": "28 x 40",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/the-rose-garden.jpg",
     "featured": false,
     "order": 172
@@ -1552,6 +1722,7 @@
     "title": "Camp David, November 15, 1986, Reagan/Thatcher",
     "dimensions": "38 x 58",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/camp-david.jpg",
     "featured": false,
     "order": 173
@@ -1561,6 +1732,7 @@
     "title": "Aspen, Colorado, August 2, 1990 George H. Bush/ Thatcher",
     "dimensions": "50 x 38",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/aspen.jpg",
     "featured": false,
     "order": 174
@@ -1570,6 +1742,7 @@
     "title": "Meeting in Kabul, November 26, 2011, Panetta/Karzai",
     "dimensions": "34 x 30",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/meeting-in-kabul.jpg",
     "featured": false,
     "order": 175
@@ -1579,6 +1752,7 @@
     "title": "Moscow, March 15, 2011, Blankfein/ Medvedev",
     "dimensions": "30 x 60",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/moscow.jpg",
     "featured": false,
     "order": 176
@@ -1588,6 +1762,7 @@
     "title": "The White House, August 3, 1981, Reagan, 2012",
     "dimensions": "58 x 80",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/the-white-house.jpg",
     "featured": false,
     "order": 177
@@ -1597,6 +1772,7 @@
     "title": "Snow Covered Trees (Chloe)",
     "dimensions": "10 x 7.5",
     "media": "oil on book page",
+    "year": "2011",
     "image": "2011/paintings/snow-covered-trees-chloe.jpg",
     "featured": false,
     "order": 178
@@ -1606,6 +1782,7 @@
     "title": "A Streak of Light (Shane)",
     "dimensions": "10 x 7.5",
     "media": "oil on book page",
+    "year": "2011",
     "image": "2011/paintings/a-streak-of-light-shane.jpg",
     "featured": false,
     "order": 179
@@ -1615,6 +1792,7 @@
     "title": "What Did She Make of The Fragments She Saw When Her Eyes Were Open",
     "dimensions": "22 x 16",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/what-did-she-make-of-the-fragments-she-saw-when-her-eyes-were-open.jpg",
     "featured": false,
     "order": 180
@@ -1624,6 +1802,7 @@
     "title": "We Cannot Accept Your Position, triptych",
     "dimensions": "24 x 20 per canvas",
     "media": "oil on canvas",
+    "year": "2011",
     "image": "2011/paintings/we-cannot-accept-your-position.jpg",
     "featured": false,
     "order": 181
@@ -1633,6 +1812,7 @@
     "title": "The Speaker - Newt Gingrich",
     "dimensions": "10 x 15",
     "media": "xerox, spray paint, glue",
+    "year": "2011",
     "image": "2011/drawings/the-speaker-newt-gingrich.jpg",
     "featured": false,
     "order": 182
@@ -1642,6 +1822,7 @@
     "title": "Press Conference - George H.W. Bush",
     "dimensions": "11 x 12",
     "media": "xerox, spray paint, glue",
+    "year": "2011",
     "image": "2011/drawings/press-conference-george-hw-bush.jpg",
     "featured": false,
     "order": 183
@@ -1651,6 +1832,7 @@
     "title": "Press Secretary - Jay Carney",
     "dimensions": "11 x 12",
     "media": "xerox, spray paint, glue",
+    "year": "2011",
     "image": "2011/drawings/press-secretary-jay-carney.jpg",
     "featured": false,
     "order": 184
@@ -1660,6 +1842,7 @@
     "title": "Defense Ministers - Ehud Barak and Robert Gates",
     "dimensions": "9.5 x 15.5",
     "media": "xerox, spray paint, glue",
+    "year": "2011",
     "image": "2011/drawings/defense-ministers-ehud-barak-and-robert-gates.jpg",
     "featured": false,
     "order": 185
@@ -1669,6 +1852,7 @@
     "title": "Meeting - Blankfein and Medvedev",
     "dimensions": "7 x 12",
     "media": "xerox, spray paint, glue",
+    "year": "2011",
     "image": "2011/drawings/meeting-blankfein-and-medvedev.jpg",
     "featured": false,
     "order": 186
@@ -1678,6 +1862,7 @@
     "title": "Homo Sacer",
     "dimensions": "14 x 18",
     "media": "digital print",
+    "year": "2011",
     "image": "2011/digital-prints/homo-sacer.jpg",
     "featured": false,
     "order": 187
@@ -1687,6 +1872,7 @@
     "title": "Revision",
     "dimensions": "15 x 18",
     "media": "digital print",
+    "year": "2011",
     "image": "2011/digital-prints/revision.jpg",
     "featured": false,
     "order": 188
@@ -1696,6 +1882,7 @@
     "title": "Hang Them",
     "dimensions": "12 x 18",
     "media": "digital print",
+    "year": "2011",
     "image": "2011/digital-prints/hang-them.jpg",
     "featured": false,
     "order": 189
@@ -1705,6 +1892,7 @@
     "title": "The Moment of Execution",
     "dimensions": "12.5 x 18",
     "media": "digital print",
+    "year": "2011",
     "image": "2011/digital-prints/the-moment-of-execution.jpg",
     "featured": false,
     "order": 190
