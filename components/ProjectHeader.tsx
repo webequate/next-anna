@@ -18,7 +18,11 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   return (
     <div className="flex justify-between text-xl sm:text-2xl md:text-3xl">
       {prevId ? (
-        <Link href={`/${path}/${prevId}`}>
+        <Link
+          href={`/${path}/${prevId}`}
+          title="Previous Artwork"
+          aria-label="Previous Artwork"
+        >
           <FaArrowLeft className="hover:text-accent-dark dark:hover:text-accent-light" />
         </Link>
       ) : (
@@ -30,7 +34,11 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
         {title}
       </h2>
       {nextId ? (
-        <Link href={`/${path}/${nextId}`}>
+        <Link
+          href={`/${path}/${nextId}`}
+          title="Next Artwork"
+          aria-label="Next Artwork"
+        >
           <FaArrowRight className="hover:text-accent-dark dark:hover:text-accent-light" />
         </Link>
       ) : (
