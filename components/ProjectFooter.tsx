@@ -17,7 +17,7 @@ const ProjectFooter: React.FC<ProjectFooterProps> = ({
         Dimensions: {dimensions.replace(/(\d+)(?!\d|\.)/g, '$1"')}
       </p>
       <p className="mb-2">Media: {media}</p>
-      <p className="mb-2">Year: {year}</p>
+      {year && <p className="mb-2">Year: {year}</p>}
     </div>
   );
 };
