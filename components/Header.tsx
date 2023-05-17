@@ -28,12 +28,12 @@ const Header: React.FC<HeaderProps> = ({ socialLink }) => {
         href="/"
         title="Home"
         aria-label="Home"
-        className="text-dark-1 dark:text-light-1 hover:text-accent-dark dark:hover:text-accent-light my-4 transition duration-300"
+        className="text-dark-1 dark:text-light-1 hover:text-accent-dark dark:hover:text-accent-light mt-4 mb-2 md:mb-4 transition duration-300"
       >
         <AnnaEliseJohnson />
       </Link>
 
-      <div className="container mx-auto px-2 py-3 mb-6 md:mb-10">
+      <div className="container mx-auto px-2 pt-0 sm:pt-3 pb-0 sm:pb-3 mb-2 sm:mb-4 md:mb-10">
         <div className="flex justify-center items-center">
           {/* Extraneous invisible layout widget */}
           <div className="invisible flex mr-auto">
