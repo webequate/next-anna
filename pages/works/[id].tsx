@@ -47,6 +47,7 @@ const Project = ({
             alt={project.title}
             width={600}
             height={600}
+            priority
             className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-4"
           />
           <ProjectFooter
