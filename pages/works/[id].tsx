@@ -10,6 +10,8 @@ import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
 import ProjectFooter from "@/components/ProjectFooter";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/router";
+import { useSwipeable } from "react-swipeable";
 
 interface ProjectProps {
   name: string;
@@ -26,6 +28,19 @@ const Project = ({
   prevProject,
   nextProject,
 }: ProjectProps) => {
+  const router = useRouter();
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (!nextProject) return;
+      router.push(`/works/${nextProject?.id}`);
+    },
+    onSwipedRight: () => {
+      if (!prevProject) return;
+      router.push(`/works/${prevProject?.id}`);
+    },
+    trackMouse: true,
+  });
+
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
@@ -35,7 +50,10 @@ const Project = ({
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
-        <div className="justify-center mx-auto text-dark-1 dark:text-light-1">
+        <div
+          {...handlers}
+          className="justify-center mx-auto text-dark-1 dark:text-light-1"
+        >
           <ProjectHeader
             title={project.title}
             prevId={prevProject?.id}
