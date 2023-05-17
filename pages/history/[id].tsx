@@ -4,12 +4,12 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
+import basics from "@/data/basics.json";
 import Header from "@/components/Header";
 import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
 import ProjectFooter from "@/components/ProjectFooter";
 import Footer from "@/components/Footer";
-import basics from "@/data/basics.json";
 
 interface ProjectProps {
   name: string;
