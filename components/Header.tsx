@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ socialLink }) => {
         <AnnaEliseJohnson />
       </Link>
 
-      <div className="container mx-auto px-2 pt-0 sm:pt-3 pb-0 sm:pb-3 mb-2 sm:mb-4 md:mb-10">
+      <div className="container mx-auto px-0 pt-0 sm:pt-3 pb-0 sm:pb-3 mb-2 sm:mb-4 md:mb-10">
         <div className="flex justify-center items-center">
           {/* Extraneous invisible layout widget */}
           <div className="invisible flex mr-auto">

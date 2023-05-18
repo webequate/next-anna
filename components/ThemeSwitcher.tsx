@@ -18,15 +18,15 @@ const ThemeSwitcher = () => {
 
   return (
     <div
-      className="text-xl text-dark-2 dark:text-light-2 hover:text-light-1 dark:hover:text-light-1 bg-light-1 dark:bg-dark-1 hover:bg-accent-light dark:hover:bg-accent-dark ring-1 ring-dark-3 dark:ring-light-3 p-1 sm:p-3 mt-0 ml-0 rounded-xl cursor-pointer duration-300"
+      className="text-xl text-dark-2 dark:text-light-2 hover:text-light-1 dark:hover:text-light-1 bg-light-1 dark:bg-dark-1 hover:bg-accent-light dark:hover:bg-accent-dark ring-1 ring-dark-3 dark:ring-light-3 p-2 sm:p-3 mt-0 mr-0 ml-0 rounded-xl cursor-pointer duration-300"
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
     >
       {theme === "light" ? (
-        <FaMoon className="text-xl" />
+        <FaMoon className="text-lg sm:text-xl" />
       ) : (
-        <FaSun className="text-xl" />
+        <FaSun className="text-lg sm:text-xl" />
       )}
     </div>
   );
