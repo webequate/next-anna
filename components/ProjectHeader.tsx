@@ -22,6 +22,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           href={`/${path}/${prevId}`}
           title="Previous Artwork"
           aria-label="Previous Artwork"
+          className="mr-2"
         >
           <FaArrowLeft className="md:hover:text-accent-dark md:dark:hover:text-accent-light" />
         </Link>
@@ -36,6 +37,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           href={`/${path}/${nextId}`}
           title="Next Artwork"
           aria-label="Next Artwork"
+          className="ml-2"
         >
           <FaArrowRight className="md:hover:text-accent-dark md:dark:hover:text-accent-light" />
         </Link>
