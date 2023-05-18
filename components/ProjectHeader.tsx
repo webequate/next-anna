@@ -22,9 +22,8 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           href={`/${path}/${prevId}`}
           title="Previous Artwork"
           aria-label="Previous Artwork"
-          className="invisible sm:visible"
         >
-          <FaArrowLeft className="hover:text-accent-dark dark:hover:text-accent-light" />
+          <FaArrowLeft className="md:hover:text-accent-dark md:dark:hover:text-accent-light" />
         </Link>
       ) : (
         <div className="invisible">
@@ -39,9 +38,8 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           href={`/${path}/${nextId}`}
           title="Next Artwork"
           aria-label="Next Artwork"
-          className="invisible sm:visible"
         >
-          <FaArrowRight className="hover:text-accent-dark dark:hover:text-accent-light" />
+          <FaArrowRight className="md:hover:text-accent-dark md:dark:hover:text-accent-light" />
         </Link>
       ) : (
         <div className="invisible">
