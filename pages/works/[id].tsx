@@ -12,6 +12,7 @@ import ProjectFooter from "@/components/ProjectFooter";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 import { useSwipeable } from "react-swipeable";
+import { useEffect, useState } from "react";
 
 interface ProjectProps {
   name: string;
@@ -29,16 +30,36 @@ const Project = ({
   nextProject,
 }: ProjectProps) => {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", checkMobile);
+    checkMobile();
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       if (!nextProject) return;
-      router.push(`/works/${nextProject?.id}`);
+      if (isMobile) {
+        router.push(`/works/${nextProject?.id}`);
+      }
     },
     onSwipedRight: () => {
       if (!prevProject) return;
-      router.push(`/works/${prevProject?.id}`);
+      if (isMobile) {
+        router.push(`/works/${prevProject?.id}`);
+      }
     },
-    trackMouse: true,
+    preventScrollOnSwipe: true,
+    trackTouch: true,
+    trackMouse: false,
   });
 
   return (
