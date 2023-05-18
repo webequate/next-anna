@@ -71,10 +71,7 @@ const Project = ({
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       >
-        <div
-          {...handlers}
-          className="justify-center mx-auto text-dark-1 dark:text-light-1"
-        >
+        <div className="justify-center mx-auto text-dark-1 dark:text-light-1">
           <ProjectHeader
             title={project.title}
             prevId={prevProject?.id}
@@ -82,6 +79,7 @@ const Project = ({
             path="works"
           />
           <Image
+            {...handlers}
             src={`/images/${project.image}`}
             alt={project.title}
             width={600}
