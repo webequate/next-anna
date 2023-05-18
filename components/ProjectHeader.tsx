@@ -16,7 +16,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   path,
 }) => {
   return (
-    <div className="flex justify-between text-lg sm:text-xl md:text-2xl">
+    <div className="flex justify-between text-lg sm:text-xl md:text-3xl">
       {prevId ? (
         <Link
           href={`/${path}/${prevId}`}
@@ -31,7 +31,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           <FaArrowLeft />
         </div>
       )}
-      <h2 className="montserrat text-center mb-2">{title}</h2>
+      <h2 className="text-center mb-2">{title}</h2>
       {nextId ? (
         <Link
           href={`/${path}/${nextId}`}

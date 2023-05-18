@@ -43,7 +43,7 @@ const AboutPage: NextPage<AboutPageProps> = ({
           <div className="mx-auto lg:flex lg:flex-row mb-4 lg:mb-10">
             <div className="w-full lg:w-1/3"></div>
             <div className="w-full lg:w-2/3">
-              <h1 className="text-2xl lg:text-4xl font-bold uppercase mt-4 mb-4">
+              <h1 className="montserrat text-2xl lg:text-4xl font-bold uppercase mt-4 mb-4">
                 {name}
               </h1>
               <hr />
@@ -56,7 +56,7 @@ const AboutPage: NextPage<AboutPageProps> = ({
               className="lg:flex lg:flex-row mx-auto align-top mb-10"
             >
               <div className="w-full lg:w-1/3">
-                <h2 className="text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-6 lg:pb-0">
+                <h2 className="montserrat text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-6 lg:pb-0">
                   {experience.title}
                 </h2>
               </div>
@@ -66,7 +66,7 @@ const AboutPage: NextPage<AboutPageProps> = ({
                     key={index}
                     className="text-base text-dark-2 dark:text-light-2 mb-5"
                   >
-                    <h3 className="text-lg font-bold text-dark-1 dark:text-light-1 mb-2">
+                    <h3 className="montserrat text-lg font-bold text-dark-1 dark:text-light-1 mb-2">
                       {section.name}
                     </h3>
                     <ul className="list-disc list-outside ml-5 lg:ml-0">
