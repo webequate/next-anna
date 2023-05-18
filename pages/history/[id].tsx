@@ -85,7 +85,7 @@ const Project = ({
             width={600}
             height={600}
             priority
-            className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-4"
+            className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-2"
           />
           <ProjectFooter
             dimensions={project.dimensions}
