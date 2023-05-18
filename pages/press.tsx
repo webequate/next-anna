@@ -38,7 +38,7 @@ const PressPage: NextPage<PressPageProps> = ({
               href={pressLink.url}
               aria-label={pressLink.name}
               target="_blank"
-              className="mx-auto mt-4 mb-8"
+              className="mx-auto mt-4 mb-4"
             >
               <Image
                 src={`/images/press/${pressLink.image}`}
