@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 .montserrat {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-weight: 400;
 }
 
