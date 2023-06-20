@@ -107,7 +107,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const projectsCollection = db.collection<Project>("projects");
   const projects: Project[] = await projectsCollection
     .find({ featured: false })
-    .sort({ order: 1 })
+    .sort({ order: -1 })
     .toArray();
 
   const paths = projects.map((project) => ({

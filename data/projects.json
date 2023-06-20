@@ -1,5 +1,45 @@
 [
   {
+    "id": "el-mirage-road-1",
+    "title": "Earthworks (El Mirage Road I)",
+    "dimensions": "38 x 52",
+    "media": "dye, acrylic, oil pastel, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/el-mirage-road-1.jpg",
+    "featured": true,
+    "order": 194
+  },
+  {
+    "id": "el-mirage-road-2",
+    "title": "Earthworks (El Mirage Road II)",
+    "dimensions": "64 x 48",
+    "media": "dye, acrylic, oil pastel, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/el-mirage-road-2.jpg",
+    "featured": true,
+    "order": 193
+  },
+  {
+    "id": "valley-view-road-1",
+    "title": "Earthworks (Valley View Road I)",
+    "dimensions": "46 x 60",
+    "media": "dye, acrylic, oil pastel, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/valley-view-road-1.jpg",
+    "featured": true,
+    "order": 192
+  },
+  {
+    "id": "valley-view-road-2",
+    "title": "Earthworks (Valley View Road II)",
+    "dimensions": "48 x 56",
+    "media": "dye, acrylic, oil pastel, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/valley-view-road-2.jpg",
+    "featured": true,
+    "order": 191
+  },
+  {
     "id": "desert-view-road-1",
     "title": "Earthworks (Desert View Road I)",
     "dimensions": "48 x 38 x 3",
@@ -7,7 +47,7 @@
     "year": "2023",
     "image": "2023/desert-view-road-1.jpg",
     "featured": true,
-    "order": 1
+    "order": 190
   },
   {
     "id": "soledad-canyon-road-1",
@@ -17,7 +57,7 @@
     "year": "2023",
     "image": "2023/soledad-canyon-road-1.jpg",
     "featured": true,
-    "order": 2
+    "order": 189
   },
   {
     "id": "soledad-canyon-road-2",
@@ -27,7 +67,7 @@
     "year": "2023",
     "image": "2023/soledad-canyon-road-2.jpg",
     "featured": true,
-    "order": 3
+    "order": 188
   },
   {
     "id": "longview-road-at-magic-hour-1",
@@ -37,7 +77,7 @@
     "year": "2023",
     "image": "2023/longview-road-1.jpg",
     "featured": true,
-    "order": 4
+    "order": 187
   },
   {
     "id": "longview-road-at-magic-hour-2",
@@ -47,7 +87,7 @@
     "year": "2023",
     "image": "2023/longview-road-2.jpg",
     "featured": true,
-    "order": 5
+    "order": 186
   },
   {
     "id": "longview-road-at-magic-hour-3",
@@ -56,7 +96,7 @@
     "media": "concrete, rocks, acrylic paint",
     "image": "2023/longview-road-3.jpg",
     "featured": true,
-    "order": 6
+    "order": 185
   },
   {
     "id": "pearlblossom-highway-at-magic-hour-1",
@@ -66,7 +106,7 @@
     "year": "2023",
     "image": "2023/pearlblossom-hwy-1.jpg",
     "featured": true,
-    "order": 7
+    "order": 184
   },
   {
     "id": "pearlblossom-highway-at-magic-hour-4",
@@ -76,7 +116,7 @@
     "year": "2023",
     "image": "2023/pearlblossom-hwy-4.jpg",
     "featured": true,
-    "order": 8
+    "order": 183
   },
   {
     "id": "mojave-tropico-road-1",
@@ -86,7 +126,7 @@
     "year": "2022",
     "image": "2022/mojave-tropico-road-1.jpg",
     "featured": true,
-    "order": 9
+    "order": 182
   },
   {
     "id": "mojave-tropico-road-2",
@@ -96,7 +136,7 @@
     "year": "2022",
     "image": "2022/mojave-tropico-road-2.jpg",
     "featured": true,
-    "order": 10
+    "order": 181
   },
   {
     "id": "mojave-tropico-road-3",
@@ -106,7 +146,7 @@
     "year": "2022",
     "image": "2022/mojave-tropico-road-3.jpg",
     "featured": true,
-    "order": 11
+    "order": 180
   },
   {
     "id": "presswood-road-1",
@@ -116,7 +156,7 @@
     "year": "2022",
     "image": "2022/presswood-road-1.jpg",
     "featured": true,
-    "order": 12
+    "order": 179
   },
   {
     "id": "mulholand-hwy",
@@ -126,7 +166,7 @@
     "year": "2022",
     "image": "2022/mulholland-hwy-1.jpg",
     "featured": true,
-    "order": 13
+    "order": 178
   },
   {
     "id": "hwy-67-1",
@@ -136,7 +176,7 @@
     "year": "2021",
     "image": "2021/hwy-67-1.jpg",
     "featured": true,
-    "order": 14
+    "order": 177
   },
   {
     "id": "hwy-90",
@@ -146,7 +186,7 @@
     "year": "2021",
     "image": "2021/hwy-90.jpg",
     "featured": true,
-    "order": 15
+    "order": 176
   },
   {
     "id": "cibolo-creek-road-1",
@@ -156,7 +196,7 @@
     "year": "2021",
     "image": "2021/cibolo-creek-road-1.jpg",
     "featured": true,
-    "order": 16
+    "order": 175
   },
   {
     "id": "cibolo-creek-road-2",
@@ -166,7 +206,7 @@
     "year": "2021",
     "image": "2021/cibolo-creek-road-2.jpg",
     "featured": true,
-    "order": 17
+    "order": 174
   },
   {
     "id": "ranch-road-2810-1",
@@ -176,7 +216,7 @@
     "year": "2021",
     "image": "2021/ranch-road-2810-1.jpg",
     "featured": true,
-    "order": 18
+    "order": 173
   },
   {
     "id": "ranch-road-2810-2",
@@ -186,7 +226,7 @@
     "year": "2021",
     "image": "2021/ranch-road-2810-2.jpg",
     "featured": true,
-    "order": 19
+    "order": 172
   },
   {
     "id": "ranch-road-505-1",
@@ -196,7 +236,7 @@
     "year": "2021",
     "image": "2021/ranch-road-505-1.jpg",
     "featured": true,
-    "order": 20
+    "order": 171
   },
   {
     "id": "ranch-road-505-2",
@@ -206,7 +246,7 @@
     "year": "2021",
     "image": "2021/ranch-road-505-2.jpg",
     "featured": true,
-    "order": 21
+    "order": 170
   },
   {
     "id": "ranch-road-505-3",
@@ -215,7 +255,7 @@
     "media": "earth, plaster, watercolor",
     "image": "2021/ranch-road-505-3.jpg",
     "featured": true,
-    "order": 22
+    "order": 169
   },
   {
     "id": "red-hills-road-1",
@@ -225,7 +265,7 @@
     "year": "2021",
     "image": "2021/red-hills-road-1.jpg",
     "featured": true,
-    "order": 23
+    "order": 168
   },
   {
     "id": "red-hills-road-2",
@@ -235,7 +275,7 @@
     "year": "2021",
     "image": "2021/red-hills-road-2.jpg",
     "featured": true,
-    "order": 24
+    "order": 167
   },
   {
     "id": "wildrose-road-3",
@@ -245,7 +285,7 @@
     "year": "2021",
     "image": "2021/wildrose-road-3.jpg",
     "featured": true,
-    "order": 25
+    "order": 166
   },
   {
     "id": "wildrose-road-1",
@@ -255,7 +295,7 @@
     "year": "2021",
     "image": "2021/wildrose-road-1.jpg",
     "featured": true,
-    "order": 26
+    "order": 165
   },
   {
     "id": "wildrose-road-2",
@@ -265,7 +305,7 @@
     "year": "2021",
     "image": "2021/wildrose-road-2.jpg",
     "featured": true,
-    "order": 27
+    "order": 164
   },
   {
     "id": "valley-of-fire-3",
@@ -275,7 +315,7 @@
     "year": "2020",
     "image": "2020/valley-of-fire-3.jpg",
     "featured": true,
-    "order": 28
+    "order": 163
   },
   {
     "id": "valley-of-fire-4",
@@ -285,7 +325,7 @@
     "year": "2020",
     "image": "2020/valley-of-fire-4.jpg",
     "featured": true,
-    "order": 29
+    "order": 162
   },
   {
     "id": "valley-of-fire-6",
@@ -295,7 +335,7 @@
     "year": "2021",
     "image": "2021/valley-of-fire-6.jpg",
     "featured": true,
-    "order": 30
+    "order": 161
   },
   {
     "id": "sand-cove-1",
@@ -305,7 +345,7 @@
     "year": "2020",
     "image": "2020/sand-cove-1.jpg",
     "featured": true,
-    "order": 31
+    "order": 160
   },
   {
     "id": "sand-cove-2",
@@ -315,7 +355,7 @@
     "year": "2020",
     "image": "2020/sand-cove-2.jpg",
     "featured": true,
-    "order": 32
+    "order": 159
   },
   {
     "id": "sand-cove-3",
@@ -325,7 +365,7 @@
     "year": "2020",
     "image": "2020/sand-cove-3.jpg",
     "featured": true,
-    "order": 33
+    "order": 158
   },
   {
     "id": "sand-cove-4",
@@ -335,7 +375,7 @@
     "year": "2020",
     "image": "2020/sand-cove-4.jpg",
     "featured": true,
-    "order": 34
+    "order": 157
   },
   {
     "id": "bobcat-fire-ochre",
@@ -345,7 +385,7 @@
     "year": "2020",
     "image": "2020/bobcat-fire-ochre.jpg",
     "featured": true,
-    "order": 35
+    "order": 156
   },
   {
     "id": "bobcat-fire-cobalt",
@@ -355,7 +395,7 @@
     "year": "2020",
     "image": "2020/bobcat-fire-cobalt.jpg",
     "featured": true,
-    "order": 36
+    "order": 155
   },
   {
     "id": "pine-ridge-trail-1",
@@ -365,7 +405,7 @@
     "year": "2020",
     "image": "2020/pine-ridge-trail-1.jpg",
     "featured": true,
-    "order": 37
+    "order": 154
   },
   {
     "id": "pine-ridge-trail-2",
@@ -375,7 +415,7 @@
     "year": "2020",
     "image": "2020/pine-ridge-trail-2.jpg",
     "featured": true,
-    "order": 38
+    "order": 153
   },
   {
     "id": "pine-ridge-trail-3",
@@ -385,7 +425,7 @@
     "year": "2020",
     "image": "2020/pine-ridge-trail-3.jpg",
     "featured": true,
-    "order": 39
+    "order": 152
   },
   {
     "id": "pine-ridge-trail-4",
@@ -395,7 +435,7 @@
     "year": "2020",
     "image": "2020/pine-ridge-trail-4.jpg",
     "featured": true,
-    "order": 40
+    "order": 151
   },
   {
     "id": "pine-ridge-trail-5",
@@ -405,7 +445,7 @@
     "year": "2020",
     "image": "2020/pine-ridge-trail-5.jpg",
     "featured": true,
-    "order": 41
+    "order": 150
   },
   {
     "id": "pine-ridge-trail-6",
@@ -415,7 +455,7 @@
     "year": "2020",
     "image": "2020/pine-ridge-trail-6.jpg",
     "featured": true,
-    "order": 42
+    "order": 149
   },
   {
     "id": "yucca-path-1",
@@ -425,7 +465,7 @@
     "year": "2020",
     "image": "2020/yucca-path-1.jpg",
     "featured": true,
-    "order": 43
+    "order": 148
   },
   {
     "id": "yucca-path-2",
@@ -435,7 +475,7 @@
     "year": "2020",
     "image": "2020/yucca-path-2.jpg",
     "featured": true,
-    "order": 44
+    "order": 147
   },
   {
     "id": "yucca-path-3",
@@ -445,7 +485,7 @@
     "year": "2020",
     "image": "2020/yucca-path-3.jpg",
     "featured": true,
-    "order": 45
+    "order": 146
   },
   {
     "id": "yucca-path-4",
@@ -455,7 +495,7 @@
     "year": "2020",
     "image": "2020/yucca-path-4.jpg",
     "featured": true,
-    "order": 46
+    "order": 145
   },
   {
     "id": "still-life-7",
@@ -465,7 +505,7 @@
     "year": "2019",
     "image": "2019/still-life-7.jpg",
     "featured": false,
-    "order": 47
+    "order": 144
   },
   {
     "id": "still-life-6",
@@ -475,7 +515,7 @@
     "year": "2019",
     "image": "2019/still-life-6.jpg",
     "featured": false,
-    "order": 48
+    "order": 143
   },
   {
     "id": "still-life-5",
@@ -485,7 +525,7 @@
     "year": "2019",
     "image": "2019/still-life-5.jpg",
     "featured": false,
-    "order": 49
+    "order": 142
   },
   {
     "id": "still-life-4",
@@ -495,7 +535,7 @@
     "year": "2019",
     "image": "2019/still-life-4.jpg",
     "featured": false,
-    "order": 50
+    "order": 141
   },
   {
     "id": "still-life-3",
@@ -505,7 +545,7 @@
     "year": "2019",
     "image": "2019/still-life-3.jpg",
     "featured": false,
-    "order": 51
+    "order": 140
   },
   {
     "id": "still-life-2",
@@ -515,7 +555,7 @@
     "year": "2019",
     "image": "2019/still-life-2.jpg",
     "featured": false,
-    "order": 52
+    "order": 139
   },
   {
     "id": "still-life-1",
@@ -525,7 +565,7 @@
     "year": "2019",
     "image": "2019/still-life-1.jpg",
     "featured": false,
-    "order": 53
+    "order": 138
   },
   {
     "id": "natura-morta-9",
@@ -535,7 +575,7 @@
     "year": "2019",
     "image": "2019/natura-morta-9.jpg",
     "featured": false,
-    "order": 54
+    "order": 137
   },
   {
     "id": "natura-morta-8",
@@ -545,7 +585,7 @@
     "year": "2019",
     "image": "2019/natura-morta-8.jpg",
     "featured": false,
-    "order": 55
+    "order": 136
   },
   {
     "id": "natura-morta-7",
@@ -555,7 +595,7 @@
     "year": "2019",
     "image": "2019/natura-morta-7.jpg",
     "featured": false,
-    "order": 56
+    "order": 135
   },
   {
     "id": "natura-morta-6",
@@ -565,7 +605,7 @@
     "year": "2019",
     "image": "2019/natura-morta-6.jpg",
     "featured": false,
-    "order": 57
+    "order": 134
   },
   {
     "id": "natura-morta-5",
@@ -575,7 +615,7 @@
     "year": "2019",
     "image": "2019/natura-morta-5.jpg",
     "featured": false,
-    "order": 58
+    "order": 133
   },
   {
     "id": "natura-morta-4",
@@ -585,7 +625,7 @@
     "year": "2019",
     "image": "2019/natura-morta-4.jpg",
     "featured": false,
-    "order": 59
+    "order": 132
   },
   {
     "id": "natura-morta-3",
@@ -595,7 +635,7 @@
     "year": "2019",
     "image": "2019/natura-morta-3.jpg",
     "featured": false,
-    "order": 60
+    "order": 131
   },
   {
     "id": "natura-morta-2",
@@ -605,7 +645,7 @@
     "year": "2019",
     "image": "2019/natura-morta-2.jpg",
     "featured": false,
-    "order": 61
+    "order": 130
   },
   {
     "id": "natura-morta-1",
@@ -615,7 +655,7 @@
     "year": "2019",
     "image": "2019/natura-morta-1.jpg",
     "featured": false,
-    "order": 62
+    "order": 129
   },
   {
     "id": "cezanne-waves-3",
@@ -625,7 +665,7 @@
     "year": "2019",
     "image": "2019/cezanne-waves-3.jpg",
     "featured": false,
-    "order": 63
+    "order": 128
   },
   {
     "id": "cezanne-waves-2",
@@ -635,7 +675,7 @@
     "year": "2019",
     "image": "2019/cezanne-waves-2.jpg",
     "featured": false,
-    "order": 64
+    "order": 127
   },
   {
     "id": "cezanne-waves-1",
@@ -645,7 +685,7 @@
     "year": "2019",
     "image": "2019/cezanne-waves-1.jpg",
     "featured": false,
-    "order": 65
+    "order": 126
   },
   {
     "id": "death-valley-1",
@@ -655,7 +695,7 @@
     "year": "2018",
     "image": "2018/death-valley-1.jpg",
     "featured": false,
-    "order": 66
+    "order": 125
   },
   {
     "id": "death-valley-2",
@@ -665,7 +705,7 @@
     "year": "2018",
     "image": "2018/death-valley-2.jpg",
     "featured": false,
-    "order": 67
+    "order": 124
   },
   {
     "id": "death-valley-3",
@@ -675,7 +715,7 @@
     "year": "2018",
     "image": "2018/death-valley-3.jpg",
     "featured": false,
-    "order": 68
+    "order": 123
   },
   {
     "id": "antinious",
@@ -685,7 +725,7 @@
     "year": "2017",
     "image": "2017/antinious.jpg",
     "featured": false,
-    "order": 69
+    "order": 122
   },
   {
     "id": "bluff-1",
@@ -695,7 +735,7 @@
     "year": "2017",
     "image": "2017/bluff-1.jpg",
     "featured": false,
-    "order": 70
+    "order": 121
   },
   {
     "id": "potential-1",
@@ -705,7 +745,7 @@
     "year": "2017",
     "image": "2017/potential-1.jpg",
     "featured": false,
-    "order": 71
+    "order": 120
   },
   {
     "id": "potential-2",
@@ -715,7 +755,7 @@
     "year": "2017",
     "image": "2017/potential-2.jpg",
     "featured": false,
-    "order": 72
+    "order": 119
   },
   {
     "id": "potential-3",
@@ -725,7 +765,7 @@
     "year": "2017",
     "image": "2017/potential-3.jpg",
     "featured": false,
-    "order": 73
+    "order": 118
   },
   {
     "id": "potential-4",
@@ -735,7 +775,7 @@
     "year": "2017",
     "image": "2017/potential-4.jpg",
     "featured": false,
-    "order": 74
+    "order": 117
   },
   {
     "id": "waves-1",
@@ -745,7 +785,7 @@
     "year": "2017",
     "image": "2017/waves-1.jpg",
     "featured": false,
-    "order": 75
+    "order": 116
   },
   {
     "id": "waves-2",
@@ -755,7 +795,7 @@
     "year": "2017",
     "image": "2017/waves-2.jpg",
     "featured": false,
-    "order": 76
+    "order": 115
   },
   {
     "id": "waves-3",
@@ -765,7 +805,7 @@
     "year": "2017",
     "image": "2017/waves-3.jpg",
     "featured": false,
-    "order": 77
+    "order": 114
   },
   {
     "id": "klee-waves",
@@ -775,7 +815,7 @@
     "year": "2017",
     "image": "2017/klee-waves.jpg",
     "featured": false,
-    "order": 78
+    "order": 113
   },
   {
     "id": "klee-bluff-2",
@@ -785,7 +825,7 @@
     "year": "2017",
     "image": "2017/klee-bluff-2.jpg",
     "featured": false,
-    "order": 79
+    "order": 112
   },
   {
     "id": "klee-bluff-3",
@@ -795,7 +835,7 @@
     "year": "2017",
     "image": "2017/klee-bluff-3.jpg",
     "featured": false,
-    "order": 80
+    "order": 111
   },
   {
     "id": "klee-bluff-4",
@@ -805,7 +845,7 @@
     "year": "2017",
     "image": "2017/klee-bluff-4.jpg",
     "featured": false,
-    "order": 81
+    "order": 110
   },
   {
     "id": "matisse-water-1",
@@ -815,7 +855,7 @@
     "year": "2017",
     "image": "2017/matisse-water-1.jpg",
     "featured": false,
-    "order": 82
+    "order": 109
   },
   {
     "id": "matisse-water-2",
@@ -825,7 +865,7 @@
     "year": "2017",
     "image": "2017/matisse-water-2.jpg",
     "featured": false,
-    "order": 83
+    "order": 108
   },
   {
     "id": "matisse-water-3",
@@ -835,7 +875,7 @@
     "year": "2017",
     "image": "2017/matisse-water-3.jpg",
     "featured": false,
-    "order": 84
+    "order": 107
   },
   {
     "id": "matisse-water-4",
@@ -845,7 +885,7 @@
     "year": "2017",
     "image": "2017/matisse-water-4.jpg",
     "featured": false,
-    "order": 85
+    "order": 106
   },
   {
     "id": "matisse-water-5",
@@ -855,7 +895,7 @@
     "year": "2017",
     "image": "2017/matisse-water-5.jpg",
     "featured": false,
-    "order": 86
+    "order": 105
   },
   {
     "id": "room-for-negotiation",
@@ -865,7 +905,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/room-for-negotiation.jpg",
     "featured": false,
-    "order": 87
+    "order": 104
   },
   {
     "id": "break",
@@ -875,7 +915,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/break.jpg",
     "featured": false,
-    "order": 88
+    "order": 103
   },
   {
     "id": "stela",
@@ -885,7 +925,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/break.jpg",
     "featured": false,
-    "order": 89
+    "order": 102
   },
   {
     "id": "table-1",
@@ -895,7 +935,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/table-1.jpg",
     "featured": false,
-    "order": 90
+    "order": 101
   },
   {
     "id": "table-2",
@@ -905,7 +945,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/table-2.jpg",
     "featured": false,
-    "order": 91
+    "order": 100
   },
   {
     "id": "mantle-piece",
@@ -915,7 +955,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/mantle-piece.jpg",
     "featured": false,
-    "order": 92
+    "order": 99
   },
   {
     "id": "cushions-barricade",
@@ -925,7 +965,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/cushions-barricade.jpg",
     "featured": false,
-    "order": 93
+    "order": 98
   },
   {
     "id": "memorandum-of-understanding",
@@ -935,7 +975,7 @@
     "year": "2016",
     "image": "2016/acrylic-collages/memorandum-of-understanding.jpg",
     "featured": false,
-    "order": 94
+    "order": 97
   },
   {
     "id": "good-governance-install-shot",
@@ -945,7 +985,7 @@
     "year": "2015",
     "image": "2015/installations/good-governance-install-shot.jpg",
     "featured": false,
-    "order": 95
+    "order": 96
   },
   {
     "id": "good-governance-detail-1",
@@ -955,7 +995,7 @@
     "year": "2015",
     "image": "2015/installations/good-governance-detail-1.jpg",
     "featured": false,
-    "order": 96
+    "order": 95
   },
   {
     "id": "good-governance-detail-2",
@@ -965,7 +1005,7 @@
     "year": "2015",
     "image": "2015/installations/good-governance-detail-2.jpg",
     "featured": false,
-    "order": 97
+    "order": 94
   },
   {
     "id": "clues-for-scale",
@@ -975,7 +1015,7 @@
     "year": "2015",
     "image": "2015/drawings/clues-for-scale.jpg",
     "featured": false,
-    "order": 98
+    "order": 93
   },
   {
     "id": "specificity-of-materials",
@@ -985,7 +1025,7 @@
     "year": "2015",
     "image": "2015/drawings/specificity-of-materials.jpg",
     "featured": false,
-    "order": 99
+    "order": 92
   },
   {
     "id": "scale-as-evidence",
@@ -995,7 +1035,7 @@
     "year": "2015",
     "image": "2015/drawings/scale-as-evidence.jpg",
     "featured": false,
-    "order": 100
+    "order": 91
   },
   {
     "id": "making-solid-the-unfinished",
@@ -1005,7 +1045,7 @@
     "year": "2015",
     "image": "2015/drawings/making-solid-the-unfinished.jpg",
     "featured": false,
-    "order": 101
+    "order": 90
   },
   {
     "id": "to-make-the-hole-in-the-dividing-wall-solid",
@@ -1015,7 +1055,7 @@
     "year": "2015",
     "image": "2015/drawings/to-make-the-hole-in-the-dividing-wall-solid.jpg",
     "featured": false,
-    "order": 102
+    "order": 89
   },
   {
     "id": "remembering-how-to-build-a-barricade",
@@ -1025,7 +1065,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/remembering-how-to-build-a-barricade.jpg",
     "featured": false,
-    "order": 103
+    "order": 88
   },
   {
     "id": "summit-2-1",
@@ -1035,7 +1075,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/summit-2-1.jpg",
     "featured": false,
-    "order": 104
+    "order": 87
   },
   {
     "id": "summit-2-2",
@@ -1045,7 +1085,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/summit-2-2.jpg",
     "featured": false,
-    "order": 105
+    "order": 86
   },
   {
     "id": "the-ambassadors-1",
@@ -1055,7 +1095,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-1.jpg",
     "featured": false,
-    "order": 106
+    "order": 85
   },
   {
     "id": "the-ambassadors-2",
@@ -1065,7 +1105,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-2.jpg",
     "featured": false,
-    "order": 107
+    "order": 84
   },
   {
     "id": "the-ambassadors-3",
@@ -1075,7 +1115,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-3.jpg",
     "featured": false,
-    "order": 108
+    "order": 83
   },
   {
     "id": "tete-a-tete",
@@ -1085,7 +1125,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/tete-a-tete.jpg",
     "featured": false,
-    "order": 109
+    "order": 82
   },
   {
     "id": "mise-en-scene",
@@ -1095,7 +1135,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/mise-en-scene.jpg",
     "featured": false,
-    "order": 110
+    "order": 81
   },
   {
     "id": "attache",
@@ -1105,7 +1145,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/attache.jpg",
     "featured": false,
-    "order": 111
+    "order": 80
   },
   {
     "id": "state-of-flux",
@@ -1115,7 +1155,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/state-of-flux.jpg",
     "featured": false,
-    "order": 112
+    "order": 79
   },
   {
     "id": "proxy",
@@ -1125,7 +1165,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/proxy.jpg",
     "featured": false,
-    "order": 113
+    "order": 78
   },
   {
     "id": "agreement-1",
@@ -1135,7 +1175,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/agreement-1.jpg",
     "featured": false,
-    "order": 114
+    "order": 77
   },
   {
     "id": "agreement-2",
@@ -1145,7 +1185,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/agreement-2.jpg",
     "featured": false,
-    "order": 115
+    "order": 76
   },
   {
     "id": "floral-diplomacy",
@@ -1155,7 +1195,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/floral-diplomacy.jpg",
     "featured": false,
-    "order": 116
+    "order": 75
   },
   {
     "id": "regalia-red",
@@ -1165,7 +1205,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/regalia-red.jpg",
     "featured": false,
-    "order": 117
+    "order": 74
   },
   {
     "id": "in-absentia",
@@ -1175,7 +1215,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/in-absentia.jpg",
     "featured": false,
-    "order": 118
+    "order": 73
   },
   {
     "id": "good-governance-2",
@@ -1185,7 +1225,7 @@
     "year": "2015",
     "image": "2015/acrylic-collages/good-governance-2.jpg",
     "featured": false,
-    "order": 119
+    "order": 72
   },
   {
     "id": "barricade-1",
@@ -1195,7 +1235,7 @@
     "year": "2014",
     "image": "2014/drawings/barricade-1.jpg",
     "featured": false,
-    "order": 120
+    "order": 71
   },
   {
     "id": "barricade-2",
@@ -1205,7 +1245,7 @@
     "year": "2014",
     "image": "2014/drawings/barricade-2.jpg",
     "featured": false,
-    "order": 121
+    "order": 70
   },
   {
     "id": "barricade-3",
@@ -1215,7 +1255,7 @@
     "year": "2014",
     "image": "2014/drawings/barricade-3.jpg",
     "featured": false,
-    "order": 122
+    "order": 69
   },
   {
     "id": "armchair-diplomacy-2-1",
@@ -1225,7 +1265,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-1.jpg",
     "featured": false,
-    "order": 123
+    "order": 68
   },
   {
     "id": "armchair-diplomacy-2-2",
@@ -1235,7 +1275,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-2.jpg",
     "featured": false,
-    "order": 124
+    "order": 67
   },
   {
     "id": "armchair-diplomacy-2-3",
@@ -1245,7 +1285,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-3.jpg",
     "featured": false,
-    "order": 125
+    "order": 66
   },
   {
     "id": "diplomacy-2-1",
@@ -1255,7 +1295,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/diplomacy-2-1.jpg",
     "featured": false,
-    "order": 126
+    "order": 65
   },
   {
     "id": "diplomacy-2-2",
@@ -1265,7 +1305,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/diplomacy-2-2.jpg",
     "featured": false,
-    "order": 127
+    "order": 64
   },
   {
     "id": "salon-1",
@@ -1275,7 +1315,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/salon-1.jpg",
     "featured": false,
-    "order": 128
+    "order": 63
   },
   {
     "id": "salon-2",
@@ -1285,7 +1325,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/salon-2.jpg",
     "featured": false,
-    "order": 129
+    "order": 62
   },
   {
     "id": "situtation-room-1",
@@ -1295,7 +1335,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/situation-room-1.jpg",
     "featured": false,
-    "order": 130
+    "order": 61
   },
   {
     "id": "situation-room-2",
@@ -1305,7 +1345,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/situation-room-2.jpg",
     "featured": false,
-    "order": 131
+    "order": 60
   },
   {
     "id": "summit-1",
@@ -1315,7 +1355,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/summit-1.jpg",
     "featured": false,
-    "order": 132
+    "order": 59
   },
   {
     "id": "summit-2",
@@ -1325,7 +1365,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/summit-2.jpg",
     "featured": false,
-    "order": 133
+    "order": 58
   },
   {
     "id": "summit-3-1",
@@ -1335,7 +1375,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/summit-3-1.jpg",
     "featured": false,
-    "order": 134
+    "order": 57
   },
   {
     "id": "summit-3-2",
@@ -1345,7 +1385,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/summit-3-2.jpg",
     "featured": false,
-    "order": 135
+    "order": 56
   },
   {
     "id": "barricade-1-1",
@@ -1355,7 +1395,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-1-1.jpg",
     "featured": false,
-    "order": 136
+    "order": 55
   },
   {
     "id": "barricade-1-2",
@@ -1365,7 +1405,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-1-2.jpg",
     "featured": false,
-    "order": 137
+    "order": 54
   },
   {
     "id": "barricade-2-1",
@@ -1375,7 +1415,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-1.jpg",
     "featured": false,
-    "order": 138
+    "order": 53
   },
   {
     "id": "barricade-2-2",
@@ -1385,7 +1425,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-2.jpg",
     "featured": false,
-    "order": 139
+    "order": 52
   },
   {
     "id": "barricade-2-3",
@@ -1395,7 +1435,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-3.jpg",
     "featured": false,
-    "order": 140
+    "order": 51
   },
   {
     "id": "barricade-3-1",
@@ -1405,7 +1445,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-3-1.jpg",
     "featured": false,
-    "order": 141
+    "order": 50
   },
   {
     "id": "barricade-3-2",
@@ -1415,7 +1455,7 @@
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-3-2.jpg",
     "featured": false,
-    "order": 142
+    "order": 49
   },
   {
     "id": "slantwise-otherwise-2012-14",
@@ -1425,7 +1465,7 @@
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-14.jpg",
     "featured": false,
-    "order": 143
+    "order": 48
   },
   {
     "id": "slantwise-otherwise-2012-15",
@@ -1435,7 +1475,7 @@
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-15.jpg",
     "featured": false,
-    "order": 144
+    "order": 47
   },
   {
     "id": "slantwise-otherwise-2012-16",
@@ -1445,7 +1485,7 @@
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-16.jpg",
     "featured": false,
-    "order": 145
+    "order": 46
   },
   {
     "id": "slantwise-otherwise-2012-17",
@@ -1455,7 +1495,7 @@
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-17.jpg",
     "featured": false,
-    "order": 146
+    "order": 45
   },
   {
     "id": "diplomacy",
@@ -1465,7 +1505,7 @@
     "year": "2013",
     "image": "2013/acrylic-collages/diplomacy.jpg",
     "featured": false,
-    "order": 147
+    "order": 44
   },
   {
     "id": "treaty",
@@ -1475,7 +1515,7 @@
     "year": "2013",
     "image": "2013/acrylic-collages/treaty.jpg",
     "featured": false,
-    "order": 148
+    "order": 43
   },
   {
     "id": "battle-1",
@@ -1485,7 +1525,7 @@
     "year": "2013",
     "image": "2013/acrylic-collages/battle-1.jpg",
     "featured": false,
-    "order": 149
+    "order": 42
   },
   {
     "id": "battle-3",
@@ -1495,7 +1535,7 @@
     "year": "2013",
     "image": "2013/acrylic-collages/battle-3.jpg",
     "featured": false,
-    "order": 150
+    "order": 41
   },
   {
     "id": "interior-thatcher",
@@ -1505,7 +1545,7 @@
     "year": "2013",
     "image": "2013/acrylic-collages/interior-thatcher.jpg",
     "featured": false,
-    "order": 151
+    "order": 40
   },
   {
     "id": "a-time-for-choosing",
@@ -1515,7 +1555,7 @@
     "year": "2013",
     "image": "2013/acrylic-collages/a-time-for-choosing.jpg",
     "featured": false,
-    "order": 152
+    "order": 39
   },
   {
     "id": "congress-applauding-1",
@@ -1525,7 +1565,7 @@
     "year": "2012",
     "image": "2012/installations/congress-applauding-1.jpg",
     "featured": false,
-    "order": 153
+    "order": 38
   },
   {
     "id": "congress-applauding-2",
@@ -1535,7 +1575,7 @@
     "year": "2012",
     "image": "2012/installations/congress-applauding-2.jpg",
     "featured": false,
-    "order": 154
+    "order": 37
   },
   {
     "id": "congress-applauding-3",
@@ -1545,7 +1585,7 @@
     "year": "2012",
     "image": "2012/installations/congress-applauding-3.jpg",
     "featured": false,
-    "order": 155
+    "order": 36
   },
   {
     "id": "congress-applauding-4",
@@ -1555,7 +1595,7 @@
     "year": "2012",
     "image": "2012/installations/congress-applauding-4.jpg",
     "featured": false,
-    "order": 156
+    "order": 35
   },
   {
     "id": "congress-applauding-6",
@@ -1565,7 +1605,7 @@
     "year": "2012",
     "image": "2012/installations/congress-applauding-6.jpg",
     "featured": false,
-    "order": 157
+    "order": 34
   },
   {
     "id": "congress-applauding-7",
@@ -1575,7 +1615,7 @@
     "year": "2012",
     "image": "2012/installations/congress-applauding-7.jpg",
     "featured": false,
-    "order": 158
+    "order": 33
   },
   {
     "id": "four-positions-within-a-gesture-1",
@@ -1585,7 +1625,7 @@
     "year": "2012",
     "image": "2012/installations/four-positions-within-a-gesture-1.jpg",
     "featured": false,
-    "order": 159
+    "order": 32
   },
   {
     "id": "if-they-were-able-to-conceive-or-dream-of-another-time-1",
@@ -1595,7 +1635,7 @@
     "year": "2012",
     "image": "2012/installations/if-they-were-able-to-conceive-or-dream-of-another-time-1.jpg",
     "featured": false,
-    "order": 160
+    "order": 31
   },
   {
     "id": "if-they-were-able-to-conceive-or-dream-of-another-time-2",
@@ -1605,7 +1645,7 @@
     "year": "2012",
     "image": "2012/installations/if-they-were-able-to-conceive-or-dream-of-another-time-2.jpg",
     "featured": false,
-    "order": 161
+    "order": 30
   },
   {
     "id": "bodies",
@@ -1615,7 +1655,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/bodies.jpg",
     "featured": false,
-    "order": 162
+    "order": 29
   },
   {
     "id": "handshake",
@@ -1625,7 +1665,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/handshake.jpg",
     "featured": false,
-    "order": 163
+    "order": 28
   },
   {
     "id": "rubble-1",
@@ -1635,7 +1675,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-1.jpg",
     "featured": false,
-    "order": 164
+    "order": 27
   },
   {
     "id": "rubble-2",
@@ -1645,7 +1685,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-2.jpg",
     "featured": false,
-    "order": 165
+    "order": 26
   },
   {
     "id": "rubble-3",
@@ -1655,7 +1695,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-3.jpg",
     "featured": false,
-    "order": 166
+    "order": 25
   },
   {
     "id": "rubble-4",
@@ -1665,7 +1705,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-4.jpg",
     "featured": false,
-    "order": 167
+    "order": 24
   },
   {
     "id": "counter-revolution",
@@ -1675,7 +1715,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/counter-revolution.jpg",
     "featured": false,
-    "order": 168
+    "order": 23
   },
   {
     "id": "barricade",
@@ -1685,7 +1725,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/barricade.jpg",
     "featured": false,
-    "order": 169
+    "order": 22
   },
   {
     "id": "hand-position",
@@ -1695,7 +1735,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/hand-position.jpg",
     "featured": false,
-    "order": 170
+    "order": 21
   },
   {
     "id": "red-banner",
@@ -1705,7 +1745,7 @@
     "year": "2012",
     "image": "2012/acrylic-collages/red-banner.jpg",
     "featured": false,
-    "order": 171
+    "order": 20
   },
   {
     "id": "the-rose-garden",
@@ -1715,7 +1755,7 @@
     "year": "2011",
     "image": "2011/paintings/the-rose-garden.jpg",
     "featured": false,
-    "order": 172
+    "order": 19
   },
   {
     "id": "camp-david",
@@ -1725,7 +1765,7 @@
     "year": "2011",
     "image": "2011/paintings/camp-david.jpg",
     "featured": false,
-    "order": 173
+    "order": 18
   },
   {
     "id": "aspen",
@@ -1735,7 +1775,7 @@
     "year": "2011",
     "image": "2011/paintings/aspen.jpg",
     "featured": false,
-    "order": 174
+    "order": 17
   },
   {
     "id": "meeting-in-kabul",
@@ -1745,7 +1785,7 @@
     "year": "2011",
     "image": "2011/paintings/meeting-in-kabul.jpg",
     "featured": false,
-    "order": 175
+    "order": 16
   },
   {
     "id": "moscow",
@@ -1755,7 +1795,7 @@
     "year": "2011",
     "image": "2011/paintings/moscow.jpg",
     "featured": false,
-    "order": 176
+    "order": 15
   },
   {
     "id": "the-white-house",
@@ -1765,7 +1805,7 @@
     "year": "2011",
     "image": "2011/paintings/the-white-house.jpg",
     "featured": false,
-    "order": 177
+    "order": 14
   },
   {
     "id": "snow-covered-trees-chloe",
@@ -1775,7 +1815,7 @@
     "year": "2011",
     "image": "2011/paintings/snow-covered-trees-chloe.jpg",
     "featured": false,
-    "order": 178
+    "order": 13
   },
   {
     "id": "a-streak-of-light-shane",
@@ -1785,7 +1825,7 @@
     "year": "2011",
     "image": "2011/paintings/a-streak-of-light-shane.jpg",
     "featured": false,
-    "order": 179
+    "order": 12
   },
   {
     "id": "what-did-she-make-of-the-fragments-she-saw-when-her-eyes-were-open",
@@ -1795,7 +1835,7 @@
     "year": "2011",
     "image": "2011/paintings/what-did-she-make-of-the-fragments-she-saw-when-her-eyes-were-open.jpg",
     "featured": false,
-    "order": 180
+    "order": 11
   },
   {
     "id": "we-cannot-accept-your-position",
@@ -1805,7 +1845,7 @@
     "year": "2011",
     "image": "2011/paintings/we-cannot-accept-your-position.jpg",
     "featured": false,
-    "order": 181
+    "order": 10
   },
   {
     "id": "the-speaker-newt-gingrich",
@@ -1815,7 +1855,7 @@
     "year": "2011",
     "image": "2011/drawings/the-speaker-newt-gingrich.jpg",
     "featured": false,
-    "order": 182
+    "order": 9
   },
   {
     "id": "press-conference-george-hw-bush",
@@ -1825,7 +1865,7 @@
     "year": "2011",
     "image": "2011/drawings/press-conference-george-hw-bush.jpg",
     "featured": false,
-    "order": 183
+    "order": 8
   },
   {
     "id": "press-secretary-jay-carney",
@@ -1835,7 +1875,7 @@
     "year": "2011",
     "image": "2011/drawings/press-secretary-jay-carney.jpg",
     "featured": false,
-    "order": 184
+    "order": 7
   },
   {
     "id": "defense-ministers-ehud-barak-and-robert-gates",
@@ -1845,7 +1885,7 @@
     "year": "2011",
     "image": "2011/drawings/defense-ministers-ehud-barak-and-robert-gates.jpg",
     "featured": false,
-    "order": 185
+    "order": 6
   },
   {
     "id": "meeting-blankfein-and-medvedev",
@@ -1855,7 +1895,7 @@
     "year": "2011",
     "image": "2011/drawings/meeting-blankfein-and-medvedev.jpg",
     "featured": false,
-    "order": 186
+    "order": 5
   },
   {
     "id": "homo-sacer",
@@ -1865,7 +1905,7 @@
     "year": "2011",
     "image": "2011/digital-prints/homo-sacer.jpg",
     "featured": false,
-    "order": 187
+    "order": 4
   },
   {
     "id": "revision",
@@ -1875,7 +1915,7 @@
     "year": "2011",
     "image": "2011/digital-prints/revision.jpg",
     "featured": false,
-    "order": 188
+    "order": 3
   },
   {
     "id": "hang-them",
@@ -1885,7 +1925,7 @@
     "year": "2011",
     "image": "2011/digital-prints/hang-them.jpg",
     "featured": false,
-    "order": 189
+    "order": 2
   },
   {
     "id": "the-moment-of-execution",
@@ -1895,6 +1935,6 @@
     "year": "2011",
     "image": "2011/digital-prints/the-moment-of-execution.jpg",
     "featured": false,
-    "order": 190
+    "order": 1
   }
 ]
