@@ -1,5 +1,125 @@
 [
   {
+    "id": "rampart-range-road-1",
+    "title": "Rampart Range Road I",
+    "dimensions": "48 x 72",
+    "media": "dye, plaster, acrylic, oil pastel, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/rampart-range-road-1.jpg",
+    "featured": true,
+    "order": 206
+  },
+  {
+    "id": "rampart-range-road-2",
+    "title": "Rampart Range Road II",
+    "dimensions": "42 x 68",
+    "media": "dye, plaster, acrylic, oil pastel, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/rampart-range-road-2.jpg",
+    "featured": true,
+    "order": 205
+  },
+  {
+    "id": "turner-gulch-road",
+    "title": "Turner Gulch Road",
+    "dimensions": "64 x 46",
+    "media": "dye, plaster, acrylic, oil pastel, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/turner-gulch-road.jpg",
+    "featured": true,
+    "order": 204
+  },
+  {
+    "id": "tarryall-road",
+    "title": "Tarryall Road",
+    "dimensions": "64 x 48",
+    "media": "dye, plaster, acrylic, oil pastel, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/tarryall-road.jpg",
+    "featured": true,
+    "order": 203
+  },
+  {
+    "id": "colorado-county-road-216-1",
+    "title": "Colorado County Road 216 I",
+    "dimensions": "50 x 42",
+    "media": "dye, acrylic, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/colorado-county-road-216-1.jpg",
+    "featured": true,
+    "order": 202
+  },
+  {
+    "id": "colorado-county-road-216-2",
+    "title": "Colorado County Road 216 II",
+    "dimensions": "50 x 38",
+    "media": "dye, acrylic, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/colorado-county-road-216-2.jpg",
+    "featured": true,
+    "order": 201
+  },
+  {
+    "id": "colorado-county-road-31",
+    "title": "Colorado County Road 31",
+    "dimensions": "40 x 32",
+    "media": "dye, acrylic, and watercolor on canvas",
+    "year": "2023",
+    "image": "2023/colorado-county-road-31.jpg",
+    "featured": true,
+    "order": 200
+  },
+  {
+    "id": "pearblossom-highway",
+    "title": "Pearblossom Highway",
+    "dimensions": "30 x 24",
+    "media": "dye, acrylic, oil pastel, watercolor, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/pearblossom-highway.jpg",
+    "featured": true,
+    "order": 199
+  },
+  {
+    "id": "mojave-freeway-1",
+    "title": "Mojave Freeway I",
+    "dimensions": "52 x 38",
+    "media": "dye, acrylic, oil pastel, watercolor, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/mojave-freeway-1.jpg",
+    "featured": true,
+    "order": 198
+  },
+  {
+    "id": "mojave-freeway-2",
+    "title": "Mojave Freeway II",
+    "dimensions": "48 x 34",
+    "media": "dye, acrylic, oil pastel, watercolor, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/mojave-freeway-2.jpg",
+    "featured": true,
+    "order": 197
+  },
+  {
+    "id": "barstow-highway-1",
+    "title": "Barstow Highway I",
+    "dimensions": "50 x 60",
+    "media": "dye, acrylic, oil pastel, watercolor, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/barstow-highway-1.jpg",
+    "featured": true,
+    "order": 196
+  },
+  {
+    "id": "barstow-highway-2",
+    "title": "Barstow Highway II",
+    "dimensions": "72 x 60",
+    "media": "dye, acrylic, oil pastel, watercolor, and plaster on canvas",
+    "year": "2023",
+    "image": "2023/barstow-highway-2.jpg",
+    "featured": true,
+    "order": 195
+  },
+  {
     "id": "el-mirage-road-1",
     "title": "Earthworks (El Mirage Road I)",
     "dimensions": "38 x 52",
