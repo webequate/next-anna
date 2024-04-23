@@ -1,6 +1,7 @@
 // pages/works/[id].tsx
 import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, GetStaticPaths } from "next";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import type { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
@@ -64,6 +65,16 @@ const Project = ({
 
   return (
     <div className="mx-auto">
+      <Head>
+        <title>{`${name} | ${project.title}`}</title>
+        <meta
+          name="description"
+          content={`${project.title} by ${name}`}
+          key="desc"
+        />
+        <meta name="robots" content="index, follow" />
+      </Head>
+
       <Header socialLink={socialLinks[0]} />
 
       <motion.div

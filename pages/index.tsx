@@ -1,6 +1,7 @@
 // pages/index.tsx
 import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
@@ -18,6 +19,16 @@ interface HomePageProps {
 const HomePage: NextPage<HomePageProps> = ({ name, socialLinks, projects }) => {
   return (
     <div className="mx-auto">
+      <Head>
+        <title>{`${name}`}</title>
+        <meta
+          name="description"
+          content="Anna Elise Johnson's artist website."
+          key="desc"
+        />
+        <meta name="robots" content="index, follow" />
+      </Head>
+
       <Header socialLink={socialLinks[0]} />
 
       <motion.div

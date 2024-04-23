@@ -1,6 +1,7 @@
 // pages/about.tsx
 import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { Experience } from "@/types/experience";
 import { SocialLink } from "@/types/basics";
@@ -22,6 +23,16 @@ const AboutPage: NextPage<AboutPageProps> = ({
 }) => {
   return (
     <>
+      <Head>
+        <title>{`${name} | About`}</title>
+        <meta
+          name="description"
+          content="About Anna Elise Johnson."
+          key="desc"
+        />
+        <meta name="robots" content="index, follow" />
+      </Head>
+
       <Header socialLink={socialLinks[0]} />
 
       <motion.div

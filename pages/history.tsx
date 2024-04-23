@@ -1,6 +1,7 @@
 // pages/history.tsx
 import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
@@ -22,6 +23,16 @@ const HistoryPage: NextPage<HistoryPageProps> = ({
 }) => {
   return (
     <div className="mx-auto">
+      <Head>
+        <title>{`${name} | History`}</title>
+        <meta
+          name="description"
+          content="History of artwork by Anna Elise Johnson."
+          key="desc"
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
       <Header socialLink={socialLinks[0]} />
 
       <motion.div
