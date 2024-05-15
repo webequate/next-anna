@@ -1,5 +1,85 @@
 [
   {
+    "id": "a-realization-as-the-sun-set",
+    "title": "A Realization as the Sun Set",
+    "dimensions": "64 x 60",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/a-realization-as-the-sun-set.jpg",
+    "featured": true,
+    "order": 214
+  },
+  {
+    "id": "repetition-or-resemblance",
+    "title": "Repetition or Resemblance",
+    "dimensions": "48 x 44",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/repetition-or-resemblance.jpg",
+    "featured": true,
+    "order": 213
+  },
+  {
+    "id": "a-neologism-on-the-tip-of-her-tongue",
+    "title": "A Neologism on the Tip of Her Tongue",
+    "dimensions": "52 x 46",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/a-neologism-on-the-tip-of-her-tongue.jpg",
+    "featured": true,
+    "order": 212
+  },
+  {
+    "id": "temple-of-the-sun-1",
+    "title": "Temple of The Sun I",
+    "dimensions": "50 x 44",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/temple-of-the-sun-1.jpg",
+    "featured": true,
+    "order": 211
+  },
+  {
+    "id": "temple-of-the-sun-a-study-1",
+    "title": "Temple of The Sun (A Study) I",
+    "dimensions": "40 x 32",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/temple-of-the-sun-a-study-1.jpg",
+    "featured": true,
+    "order": 210
+  },
+  {
+    "id": "absence-and-presence-a-study-1",
+    "title": "Absence and Presence (A Study) I",
+    "dimensions": "50 x 40",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/absence-and-presence-a-study-1.jpg",
+    "featured": true,
+    "order": 209
+  },
+  {
+    "id": "absence-and-presence-a-study-2",
+    "title": "Absence and Presence (A Study) II",
+    "dimensions": "48 x 40",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/absence-and-presence-a-study-2.jpg",
+    "featured": true,
+    "order": 208
+  },
+  {
+    "id": "a-new-order-of-things-at-sunset-a-study",
+    "title": "A New Order of Things At Sunset (A Study)",
+    "dimensions": "42 x 35",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/a-new-order-of-things-at-sunset-a-study.jpg",
+    "featured": true,
+    "order": 207
+  },
+  {
     "id": "rampart-range-road-1",
     "title": "Rampart Range Road I",
     "dimensions": "48 x 72",
