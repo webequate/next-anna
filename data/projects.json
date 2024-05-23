@@ -704,7 +704,7 @@
     "media": "graphite, color pencil, spray paint, gesso",
     "year": "drawings",
     "image": "drawings/brick-ash-concrete.jpg",
-    "featured": false,
+    "featured": true,
     "order": 172
   },
   {
@@ -714,7 +714,7 @@
     "media": "graphite, color pencil, spray paint, gesso",
     "year": "drawings",
     "image": "drawings/brick-ash-glass-concrete.jpg",
-    "featured": false,
+    "featured": true,
     "order": 171
   },
   {
@@ -724,7 +724,7 @@
     "media": "graphite, color pencil, spray paint, gesso",
     "year": "drawings",
     "image": "drawings/brick-and-ash.jpg",
-    "featured": false,
+    "featured": true,
     "order": 170
   },
   {
@@ -734,7 +734,7 @@
     "media": "graphite, spray paint, gesso",
     "year": "drawings",
     "image": "drawings/burnt-log.jpg",
-    "featured": false,
+    "featured": true,
     "order": 169
   },
   {
@@ -744,7 +744,7 @@
     "media": "graphite, spray paint, gesso",
     "year": "drawings",
     "image": "drawings/glass-and-concrete.jpg",
-    "featured": false,
+    "featured": true,
     "order": 168
   },
   {
@@ -753,8 +753,8 @@
     "dimensions": "size variable",
     "media": "photograph",
     "year": "collages",
-    "image": "collages/mockup-for-vertical-ground.jpg",
-    "featured": false,
+    "image": "collages/mockup-vertical-ground.jpg",
+    "featured": true,
     "order": 167
   },
   {
@@ -763,8 +763,8 @@
     "dimensions": "size variable",
     "media": "photograph",
     "year": "collages",
-    "image": "collages/mockup-for-vertical-horizon.jpg",
-    "featured": false,
+    "image": "collages/mockup-vertical-horizon.jpg",
+    "featured": true,
     "order": 166
   },
   {
@@ -774,7 +774,7 @@
     "media": "photograph",
     "year": "collages",
     "image": "collages/studio-view.jpg",
-    "featured": false,
+    "featured": true,
     "order": 165
   },
   {
@@ -784,7 +784,7 @@
     "media": "photograph",
     "year": "collages",
     "image": "collages/fashion-alley.jpg",
-    "featured": false,
+    "featured": true,
     "order": 164
   },
   {
@@ -793,8 +793,8 @@
     "dimensions": "size variable",
     "media": "photograph",
     "year": "collages",
-    "image": "collages/maple-ave.jpg",
-    "featured": false,
+    "image": "collages/maple-avenue.jpg",
+    "featured": true,
     "order": 163
   },
   {
@@ -804,7 +804,7 @@
     "media": "photograph",
     "year": "collages",
     "image": "collages/maple-ave-alley.jpg",
-    "featured": false,
+    "featured": true,
     "order": 162
   },
   {
@@ -814,7 +814,7 @@
     "media": "photograph",
     "year": "collages",
     "image": "collages/fletcher-blvd.jpg",
-    "featured": false,
+    "featured": true,
     "order": 161
   },
   {
@@ -824,7 +824,7 @@
     "media": "photograph",
     "year": "collages",
     "image": "collages/eagle-rock-blvd.jpg",
-    "featured": false,
+    "featured": true,
     "order": 160
   },
   {
@@ -834,7 +834,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/precipice.jpg",
-    "featured": false,
+    "featured": true,
     "order": 159
   },
   {
@@ -844,7 +844,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/drink.jpg",
-    "featured": false,
+    "featured": true,
     "order": 158
   },
   {
@@ -854,7 +854,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/kiss.jpg",
-    "featured": false,
+    "featured": true,
     "order": 157
   },
   {
@@ -864,7 +864,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/pause.jpg",
-    "featured": false,
+    "featured": true,
     "order": 156
   },
   {
@@ -874,7 +874,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/collapse.jpg",
-    "featured": false,
+    "featured": true,
     "order": 155
   },
   {
@@ -884,7 +884,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/searcher.jpg",
-    "featured": false,
+    "featured": true,
     "order": 154
   },
   {
@@ -894,7 +894,7 @@
     "media": "oil on canvas",
     "year": "westerns",
     "image": "westerns/deserted.jpg",
-    "featured": false,
+    "featured": true,
     "order": 153
   },
   {
@@ -904,7 +904,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-7.jpg",
-    "featured": false,
+    "featured": true,
     "order": 152
   },
   {
@@ -914,7 +914,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-6.jpg",
-    "featured": false,
+    "featured": true,
     "order": 151
   },
   {
@@ -924,7 +924,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-5.jpg",
-    "featured": false,
+    "featured": true,
     "order": 150
   },
   {
@@ -934,7 +934,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 149
   },
   {
@@ -944,7 +944,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 148
   },
   {
@@ -954,7 +954,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 147
   },
   {
@@ -964,7 +964,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/still-life-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 146
   },
   {
@@ -974,7 +974,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-9.jpg",
-    "featured": false,
+    "featured": true,
     "order": 145
   },
   {
@@ -984,7 +984,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-8.jpg",
-    "featured": false,
+    "featured": true,
     "order": 144
   },
   {
@@ -994,7 +994,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-7.jpg",
-    "featured": false,
+    "featured": true,
     "order": 143
   },
   {
@@ -1004,7 +1004,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-6.jpg",
-    "featured": false,
+    "featured": true,
     "order": 142
   },
   {
@@ -1014,7 +1014,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-5.jpg",
-    "featured": false,
+    "featured": true,
     "order": 141
   },
   {
@@ -1024,7 +1024,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 140
   },
   {
@@ -1034,7 +1034,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 139
   },
   {
@@ -1044,7 +1044,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 138
   },
   {
@@ -1054,7 +1054,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/natura-morta-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 137
   },
   {
@@ -1064,7 +1064,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/cezanne-waves-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 136
   },
   {
@@ -1074,7 +1074,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/cezanne-waves-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 135
   },
   {
@@ -1084,7 +1084,7 @@
     "media": "oil on canvas",
     "year": "2019",
     "image": "2019/cezanne-waves-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 134
   },
   {
@@ -1094,7 +1094,7 @@
     "media": "oil on canvas",
     "year": "2018",
     "image": "2018/death-valley-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 133
   },
   {
@@ -1104,7 +1104,7 @@
     "media": "oil on canvas",
     "year": "2018",
     "image": "2018/death-valley-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 132
   },
   {
@@ -1114,7 +1114,7 @@
     "media": "oil on canvas",
     "year": "2018",
     "image": "2018/death-valley-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 131
   },
   {
@@ -1124,7 +1124,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/antinious.jpg",
-    "featured": false,
+    "featured": true,
     "order": 130
   },
   {
@@ -1134,7 +1134,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/bluff-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 129
   },
   {
@@ -1144,7 +1144,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/potential-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 128
   },
   {
@@ -1154,7 +1154,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/potential-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 127
   },
   {
@@ -1164,7 +1164,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/potential-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 126
   },
   {
@@ -1174,7 +1174,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/potential-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 125
   },
   {
@@ -1184,7 +1184,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/waves-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 124
   },
   {
@@ -1194,7 +1194,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/waves-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 123
   },
   {
@@ -1204,7 +1204,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/waves-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 122
   },
   {
@@ -1214,7 +1214,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/klee-waves.jpg",
-    "featured": false,
+    "featured": true,
     "order": 121
   },
   {
@@ -1224,7 +1224,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/klee-bluff-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 120
   },
   {
@@ -1234,7 +1234,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/klee-bluff-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 119
   },
   {
@@ -1244,7 +1244,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/klee-bluff-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 118
   },
   {
@@ -1254,7 +1254,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/matisse-water-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 117
   },
   {
@@ -1264,7 +1264,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/matisse-water-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 116
   },
   {
@@ -1274,7 +1274,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/matisse-water-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 115
   },
   {
@@ -1284,7 +1284,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/matisse-water-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 114
   },
   {
@@ -1294,7 +1294,7 @@
     "media": "oil on canvas",
     "year": "2017",
     "image": "2017/matisse-water-5.jpg",
-    "featured": false,
+    "featured": true,
     "order": 113
   },
   {
@@ -1304,7 +1304,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/room-for-negotiation.jpg",
-    "featured": false,
+    "featured": true,
     "order": 112
   },
   {
@@ -1314,7 +1314,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/break.jpg",
-    "featured": false,
+    "featured": true,
     "order": 111
   },
   {
@@ -1324,7 +1324,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/break.jpg",
-    "featured": false,
+    "featured": true,
     "order": 110
   },
   {
@@ -1334,7 +1334,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/table-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 109
   },
   {
@@ -1344,7 +1344,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/table-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 108
   },
   {
@@ -1354,7 +1354,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/mantle-piece.jpg",
-    "featured": false,
+    "featured": true,
     "order": 107
   },
   {
@@ -1364,7 +1364,7 @@
     "media": "acrylic, resin, archival digital print, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/cushions-barricade.jpg",
-    "featured": false,
+    "featured": true,
     "order": 106
   },
   {
@@ -1374,7 +1374,7 @@
     "media": "acrylic, resin, archival digital print, India ink, spray paint",
     "year": "2016",
     "image": "2016/acrylic-collages/memorandum-of-understanding.jpg",
-    "featured": false,
+    "featured": true,
     "order": 105
   },
   {
@@ -1384,7 +1384,7 @@
     "media": "digital print on glass",
     "year": "2015",
     "image": "2015/installations/good-governance-install-shot.jpg",
-    "featured": false,
+    "featured": true,
     "order": 104
   },
   {
@@ -1394,7 +1394,7 @@
     "media": "digital print on glass",
     "year": "2015",
     "image": "2015/installations/good-governance-detail-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 103
   },
   {
@@ -1404,7 +1404,7 @@
     "media": "digital print on glass",
     "year": "2015",
     "image": "2015/installations/good-governance-detail-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 102
   },
   {
@@ -1414,7 +1414,7 @@
     "media": "graphite on paper",
     "year": "2015",
     "image": "2015/drawings/clues-for-scale.jpg",
-    "featured": false,
+    "featured": true,
     "order": 101
   },
   {
@@ -1424,7 +1424,7 @@
     "media": "graphite, spray paint, gesso",
     "year": "2015",
     "image": "2015/drawings/specificity-of-materials.jpg",
-    "featured": false,
+    "featured": true,
     "order": 100
   },
   {
@@ -1434,7 +1434,7 @@
     "media": "graphite, spray paint, gesso",
     "year": "2015",
     "image": "2015/drawings/scale-as-evidence.jpg",
-    "featured": false,
+    "featured": true,
     "order": 99
   },
   {
@@ -1444,7 +1444,7 @@
     "media": "graphite, spray paint, gesso",
     "year": "2015",
     "image": "2015/drawings/making-solid-the-unfinished.jpg",
-    "featured": false,
+    "featured": true,
     "order": 98
   },
   {
@@ -1454,7 +1454,7 @@
     "media": "graphite, spray paint, gesso",
     "year": "2015",
     "image": "2015/drawings/to-make-the-hole-in-the-dividing-wall-solid.jpg",
-    "featured": false,
+    "featured": true,
     "order": 97
   },
   {
@@ -1464,7 +1464,7 @@
     "media": "acrylic, resin, archival digital prints, spray paint, India Ink",
     "year": "2015",
     "image": "2015/acrylic-collages/remembering-how-to-build-a-barricade.jpg",
-    "featured": false,
+    "featured": true,
     "order": 96
   },
   {
@@ -1474,7 +1474,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/summit-2-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 95
   },
   {
@@ -1484,7 +1484,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/summit-2-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 94
   },
   {
@@ -1494,7 +1494,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 93
   },
   {
@@ -1504,7 +1504,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 92
   },
   {
@@ -1514,7 +1514,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2015",
     "image": "2015/acrylic-collages/the-ambassadors-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 91
   },
   {
@@ -1524,7 +1524,7 @@
     "media": "acrylic, resin, archival digital print, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/tete-a-tete.jpg",
-    "featured": false,
+    "featured": true,
     "order": 90
   },
   {
@@ -1534,7 +1534,7 @@
     "media": "acrylic, resin, archival digital print, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/mise-en-scene.jpg",
-    "featured": false,
+    "featured": true,
     "order": 89
   },
   {
@@ -1544,7 +1544,7 @@
     "media": "acrylic, resin, archival digital print, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/attache.jpg",
-    "featured": false,
+    "featured": true,
     "order": 88
   },
   {
@@ -1554,7 +1554,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/state-of-flux.jpg",
-    "featured": false,
+    "featured": true,
     "order": 87
   },
   {
@@ -1564,7 +1564,7 @@
     "media": "acrylic, resin, archival digital print, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/proxy.jpg",
-    "featured": false,
+    "featured": true,
     "order": 86
   },
   {
@@ -1574,7 +1574,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/agreement-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 85
   },
   {
@@ -1584,7 +1584,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/agreement-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 84
   },
   {
@@ -1594,7 +1594,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/floral-diplomacy.jpg",
-    "featured": false,
+    "featured": true,
     "order": 83
   },
   {
@@ -1604,7 +1604,7 @@
     "media": "acrylic, resin, archival digital print, India Ink, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/regalia-red.jpg",
-    "featured": false,
+    "featured": true,
     "order": 82
   },
   {
@@ -1614,7 +1614,7 @@
     "media": "acrylic, resin, archival digital print, spray paint",
     "year": "2015",
     "image": "2015/acrylic-collages/in-absentia.jpg",
-    "featured": false,
+    "featured": true,
     "order": 81
   },
   {
@@ -1624,7 +1624,7 @@
     "media": "acrylic, resin, archival digital print, spray paint, India Ink",
     "year": "2015",
     "image": "2015/acrylic-collages/good-governance-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 80
   },
   {
@@ -1634,7 +1634,7 @@
     "media": "color pencil and graphite on paper",
     "year": "2014",
     "image": "2014/drawings/barricade-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 79
   },
   {
@@ -1644,7 +1644,7 @@
     "media": "color pencil and graphite on paper",
     "year": "2014",
     "image": "2014/drawings/barricade-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 78
   },
   {
@@ -1654,7 +1654,7 @@
     "media": "color pencil and graphite on paper",
     "year": "2014",
     "image": "2014/drawings/barricade-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 77
   },
   {
@@ -1664,7 +1664,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 76
   },
   {
@@ -1674,7 +1674,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 75
   },
   {
@@ -1684,7 +1684,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/armchair-diplomacy-2-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 74
   },
   {
@@ -1694,7 +1694,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2014",
     "image": "2014/acrylic-collages/diplomacy-2-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 73
   },
   {
@@ -1704,7 +1704,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2014",
     "image": "2014/acrylic-collages/diplomacy-2-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 72
   },
   {
@@ -1714,7 +1714,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/salon-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 71
   },
   {
@@ -1724,7 +1724,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/salon-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 70
   },
   {
@@ -1734,7 +1734,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2014",
     "image": "2014/acrylic-collages/situation-room-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 69
   },
   {
@@ -1744,7 +1744,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, spray paint, India Ink",
     "year": "2014",
     "image": "2014/acrylic-collages/situation-room-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 68
   },
   {
@@ -1754,7 +1754,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/summit-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 67
   },
   {
@@ -1764,7 +1764,7 @@
     "media": "acrylic, resin based adhesive, archival digital prints, India Ink, spray paint",
     "year": "2014",
     "image": "2014/acrylic-collages/summit-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 66
   },
   {
@@ -1774,7 +1774,7 @@
     "media": "acrylic, resin-based adhesive, archival digital prints, India Ink, Spray Paint",
     "year": "2014",
     "image": "2014/acrylic-collages/summit-3-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 65
   },
   {
@@ -1784,7 +1784,7 @@
     "media": "acrylic, resin-based adhesive, archival digital prints, India Ink, Spray Paint",
     "year": "2014",
     "image": "2014/acrylic-collages/summit-3-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 64
   },
   {
@@ -1794,7 +1794,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-1-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 63
   },
   {
@@ -1804,7 +1804,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-1-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 62
   },
   {
@@ -1814,7 +1814,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 61
   },
   {
@@ -1824,7 +1824,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 60
   },
   {
@@ -1834,7 +1834,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-2-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 59
   },
   {
@@ -1844,7 +1844,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-3-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 58
   },
   {
@@ -1854,7 +1854,7 @@
     "media": "acrylic collage, archival digital prints, resin",
     "year": "2014",
     "image": "2014/acrylic-collages/barricade-3-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 57
   },
   {
@@ -1864,7 +1864,7 @@
     "media": "archival digital prints on acrylic",
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-14.jpg",
-    "featured": false,
+    "featured": true,
     "order": 56
   },
   {
@@ -1874,7 +1874,7 @@
     "media": "archival digital prints on acrylic",
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-15.jpg",
-    "featured": false,
+    "featured": true,
     "order": 55
   },
   {
@@ -1884,7 +1884,7 @@
     "media": "archival digital prints on acrylic",
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-16.jpg",
-    "featured": false,
+    "featured": true,
     "order": 54
   },
   {
@@ -1894,7 +1894,7 @@
     "media": "archival digital prints on acrylic",
     "year": "2013",
     "image": "2013/installations/slantwise-otherwise-2012-17.jpg",
-    "featured": false,
+    "featured": true,
     "order": 53
   },
   {
@@ -1904,7 +1904,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2013",
     "image": "2013/acrylic-collages/diplomacy.jpg",
-    "featured": false,
+    "featured": true,
     "order": 52
   },
   {
@@ -1914,7 +1914,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2013",
     "image": "2013/acrylic-collages/treaty.jpg",
-    "featured": false,
+    "featured": true,
     "order": 51
   },
   {
@@ -1924,7 +1924,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2013",
     "image": "2013/acrylic-collages/battle-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 50
   },
   {
@@ -1934,7 +1934,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2013",
     "image": "2013/acrylic-collages/battle-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 49
   },
   {
@@ -1944,7 +1944,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2013",
     "image": "2013/acrylic-collages/interior-thatcher.jpg",
-    "featured": false,
+    "featured": true,
     "order": 48
   },
   {
@@ -1954,7 +1954,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2013",
     "image": "2013/acrylic-collages/a-time-for-choosing.jpg",
-    "featured": false,
+    "featured": true,
     "order": 47
   },
   {
@@ -1964,7 +1964,7 @@
     "media": "projection, backlit film, plastic",
     "year": "2012",
     "image": "2012/installations/congress-applauding-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 46
   },
   {
@@ -1974,7 +1974,7 @@
     "media": "projection, backlit film, plastic",
     "year": "2012",
     "image": "2012/installations/congress-applauding-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 45
   },
   {
@@ -1984,7 +1984,7 @@
     "media": "projection, backlit film, plastic",
     "year": "2012",
     "image": "2012/installations/congress-applauding-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 44
   },
   {
@@ -1994,7 +1994,7 @@
     "media": "projection, backlit film, plastic",
     "year": "2012",
     "image": "2012/installations/congress-applauding-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 43
   },
   {
@@ -2004,7 +2004,7 @@
     "media": "digital print",
     "year": "2012",
     "image": "2012/installations/congress-applauding-6.jpg",
-    "featured": false,
+    "featured": true,
     "order": 42
   },
   {
@@ -2014,7 +2014,7 @@
     "media": "plaster cast hands, video projection, pedestal",
     "year": "2012",
     "image": "2012/installations/four-positions-within-a-gesture-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 40
   },
   {
@@ -2024,7 +2024,7 @@
     "media": "aluminum, vinyl, plastic, projection",
     "year": "2012",
     "image": "2012/installations/if-they-were-able-to-conceive-or-dream-of-another-time-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 39
   },
   {
@@ -2034,7 +2034,7 @@
     "media": "aluminum, vinyl, plastic, projection",
     "year": "2012",
     "image": "2012/installations/if-they-were-able-to-conceive-or-dream-of-another-time-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 38
   },
   {
@@ -2044,7 +2044,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/bodies.jpg",
-    "featured": false,
+    "featured": true,
     "order": 37
   },
   {
@@ -2054,7 +2054,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/handshake.jpg",
-    "featured": false,
+    "featured": true,
     "order": 36
   },
   {
@@ -2064,7 +2064,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-1.jpg",
-    "featured": false,
+    "featured": true,
     "order": 35
   },
   {
@@ -2074,7 +2074,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-2.jpg",
-    "featured": false,
+    "featured": true,
     "order": 34
   },
   {
@@ -2084,7 +2084,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-3.jpg",
-    "featured": false,
+    "featured": true,
     "order": 33
   },
   {
@@ -2094,7 +2094,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/rubble-4.jpg",
-    "featured": false,
+    "featured": true,
     "order": 32
   },
   {
@@ -2104,7 +2104,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/counter-revolution.jpg",
-    "featured": false,
+    "featured": true,
     "order": 31
   },
   {
@@ -2114,7 +2114,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/barricade.jpg",
-    "featured": false,
+    "featured": true,
     "order": 30
   },
   {
@@ -2124,7 +2124,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/hand-position.jpg",
-    "featured": false,
+    "featured": true,
     "order": 29
   },
   {
@@ -2134,7 +2134,7 @@
     "media": "acrylic, archival digital prints, resin",
     "year": "2012",
     "image": "2012/acrylic-collages/red-banner.jpg",
-    "featured": false,
+    "featured": true,
     "order": 28
   },
   {
@@ -2144,7 +2144,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/the-rose-garden.jpg",
-    "featured": false,
+    "featured": true,
     "order": 27
   },
   {
@@ -2154,7 +2154,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/camp-david.jpg",
-    "featured": false,
+    "featured": true,
     "order": 26
   },
   {
@@ -2164,7 +2164,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/aspen.jpg",
-    "featured": false,
+    "featured": true,
     "order": 25
   },
   {
@@ -2174,7 +2174,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/meeting-in-kabul.jpg",
-    "featured": false,
+    "featured": true,
     "order": 24
   },
   {
@@ -2184,7 +2184,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/moscow.jpg",
-    "featured": false,
+    "featured": true,
     "order": 23
   },
   {
@@ -2194,7 +2194,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/the-white-house.jpg",
-    "featured": false,
+    "featured": true,
     "order": 22
   },
   {
@@ -2204,7 +2204,7 @@
     "media": "oil on book page",
     "year": "2011",
     "image": "2011/paintings/snow-covered-trees-chloe.jpg",
-    "featured": false,
+    "featured": true,
     "order": 21
   },
   {
@@ -2214,7 +2214,7 @@
     "media": "oil on book page",
     "year": "2011",
     "image": "2011/paintings/a-streak-of-light-shane.jpg",
-    "featured": false,
+    "featured": true,
     "order": 20
   },
   {
@@ -2224,7 +2224,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/what-did-she-make-of-the-fragments-she-saw-when-her-eyes-were-open.jpg",
-    "featured": false,
+    "featured": true,
     "order": 19
   },
   {
@@ -2234,7 +2234,7 @@
     "media": "oil on canvas",
     "year": "2011",
     "image": "2011/paintings/we-cannot-accept-your-position.jpg",
-    "featured": false,
+    "featured": true,
     "order": 18
   },
   {
@@ -2244,7 +2244,7 @@
     "media": "xerox, spray paint, glue",
     "year": "2011",
     "image": "2011/drawings/the-speaker-newt-gingrich.jpg",
-    "featured": false,
+    "featured": true,
     "order": 17
   },
   {
@@ -2254,7 +2254,7 @@
     "media": "xerox, spray paint, glue",
     "year": "2011",
     "image": "2011/drawings/press-conference-george-hw-bush.jpg",
-    "featured": false,
+    "featured": true,
     "order": 16
   },
   {
@@ -2264,7 +2264,7 @@
     "media": "xerox, spray paint, glue",
     "year": "2011",
     "image": "2011/drawings/press-secretary-jay-carney.jpg",
-    "featured": false,
+    "featured": true,
     "order": 15
   },
   {
@@ -2274,7 +2274,7 @@
     "media": "xerox, spray paint, glue",
     "year": "2011",
     "image": "2011/drawings/defense-ministers-ehud-barak-and-robert-gates.jpg",
-    "featured": false,
+    "featured": true,
     "order": 14
   },
   {
@@ -2284,7 +2284,7 @@
     "media": "xerox, spray paint, glue",
     "year": "2011",
     "image": "2011/drawings/meeting-blankfein-and-medvedev.jpg",
-    "featured": false,
+    "featured": true,
     "order": 13
   },
   {
@@ -2294,7 +2294,7 @@
     "media": "digital print",
     "year": "2011",
     "image": "2011/digital-prints/homo-sacer.jpg",
-    "featured": false,
+    "featured": true,
     "order": 12
   },
   {
@@ -2304,7 +2304,7 @@
     "media": "digital print",
     "year": "2011",
     "image": "2011/digital-prints/revision.jpg",
-    "featured": false,
+    "featured": true,
     "order": 11
   },
   {
@@ -2314,7 +2314,7 @@
     "media": "digital print",
     "year": "2011",
     "image": "2011/digital-prints/hang-them.jpg",
-    "featured": false,
+    "featured": true,
     "order": 10
   },
   {
@@ -2324,7 +2324,7 @@
     "media": "digital print",
     "year": "2011",
     "image": "2011/digital-prints/the-moment-of-execution.jpg",
-    "featured": false,
+    "featured": true,
     "order": 9
   },
   {
@@ -2334,7 +2334,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/mary.jpg",
-    "featured": false,
+    "featured": true,
     "order": 8
   },
   {
@@ -2344,7 +2344,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/robe-and-heart.jpg",
-    "featured": false,
+    "featured": true,
     "order": 7
   },
   {
@@ -2354,7 +2354,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/robe.jpg",
-    "featured": false,
+    "featured": true,
     "order": 6
   },
   {
@@ -2364,7 +2364,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/heilige-frau.jpg",
-    "featured": false,
+    "featured": true,
     "order": 5
   },
   {
@@ -2374,7 +2374,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/santiago-monk.jpg",
-    "featured": false,
+    "featured": true,
     "order": 4
   },
   {
@@ -2384,7 +2384,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/yellow-mary.jpg",
-    "featured": false,
+    "featured": true,
     "order": 3
   },
   {
@@ -2394,7 +2394,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/saint-elizabet.jpg",
-    "featured": false,
+    "featured": true,
     "order": 2
   },
   {
@@ -2404,7 +2404,7 @@
     "media": "oil on canvas",
     "year": "saints",
     "image": "saints/bishop.jpg",
-    "featured": false,
+    "featured": true,
     "order": 1
   }
 ]
