@@ -95,6 +95,18 @@
     "title": "Solo Exhibitions",
     "sections": [
       {
+        "name": "2024",
+        "items": [
+          "Earthworks - Colorado Front Range, Space Gallery, Denver, CO"
+        ]
+      },
+      {
+        "name": "2023",
+        "items": [
+          "Earthworks - Mojave Desert, Cris Worley Fine Art, Dallas, TX"
+        ]
+      },
+      {
         "name": "2022",
         "items": [
           "Vertical Ground, The Mission Projects, Chicago, IL"
@@ -146,7 +158,7 @@
       {
         "name": "2011",
         "items": [
-          "We cannot accept your position, Lage Egal, Berlin, Germany"
+          "\"We Cannot Accept Your Position\", Lage Egal, Berlin, Germany"
         ]
       }
     ]
@@ -155,14 +167,9 @@
     "title": "Group Exhibitions",
     "sections": [
       {
-        "name": "2023",
-        "items": [
-          "Homecoming, The Residence, Chicago, IL"
-        ]
-      },
-      {
         "name": "2022",
         "items": [
+          "Psycho Geology, Bendix Building, Los Angeles, CA",
           "Passing Through, Logan Center, Chicago, IL",
           "Summer, Maple Street Constructs, Los Angeles, CA",
           "Garden II, Ladies' Room, Los Angeles, CA"
