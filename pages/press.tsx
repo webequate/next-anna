@@ -1,11 +1,11 @@
 // pages/press.tsx
-import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { PressLink } from "@/types/press";
 import { SocialLink } from "@/types/basics";
 import basics from "@/data/basics.json";
+import pressLinksData from "@/data/press.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -40,12 +40,11 @@ const PressPage: NextPage<PressPageProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className={"text-base text-dark-2 dark:text-light-2"}
+        className="text-base text-dark-2 dark:text-light-2"
       >
         {pressLinks.map((pressLink, index) => (
           <div key={index} className="flex mx-auto justify-center">
             <Link
-              key={index}
               href={pressLink.url}
               aria-label={pressLink.name}
               target="_blank"
@@ -72,20 +71,14 @@ const PressPage: NextPage<PressPageProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<PressPageProps> = async () => {
-  const client = await clientPromise;
-  const db = client.db("Anna");
-
-  const pressLinksCollection = db.collection<PressLink>("press");
-  const pressLinks: PressLink[] = await pressLinksCollection
-    .find({})
-    .sort({ order: 1 })
-    .toArray();
+  // Sort pressLinks by "order" field
+  const pressLinks = pressLinksData.sort((a, b) => a.order - b.order);
 
   return {
     props: {
       name: basics.name,
       socialLinks: basics.socialLinks,
-      pressLinks: JSON.parse(JSON.stringify(pressLinks)),
+      pressLinks,
     },
     revalidate: 60,
   };

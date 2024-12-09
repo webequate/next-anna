@@ -5,7 +5,6 @@ export type ExperienceSection = {
 };
 
 export type Experience = {
-  _id: string;
   title: string;
   sections: ExperienceSection[];
 };

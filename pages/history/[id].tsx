@@ -1,11 +1,10 @@
-// pages/history/[id].tsx
-import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import type { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
 import basics from "@/data/basics.json";
+import projects from "@/data/projects.json";
 import Header from "@/components/Header";
 import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
@@ -41,7 +40,6 @@ const Project = ({
     window.addEventListener("resize", checkMobile);
     checkMobile();
 
-    // Cleanup
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
@@ -112,18 +110,11 @@ const Project = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const client = await clientPromise;
-  const db = client.db("Anna");
-
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find({ featured: false })
-    .sort({ order: -1 })
-    .toArray();
-
-  const paths = projects.map((project) => ({
-    params: { id: project.id },
-  }));
+  const paths = projects
+    .filter((project) => !project.featured) // Use only non-featured projects
+    .map((project) => ({
+      params: { id: project.id },
+    }));
 
   return { paths, fallback: false };
 };
@@ -131,18 +122,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<ProjectProps> = async ({
   params,
 }) => {
-  if (!params) {
+  if (!params || !params.id) {
     return { notFound: true };
   }
-
-  const client = await clientPromise;
-  const db = client.db("Anna");
-
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find({ featured: false })
-    .sort({ order: -1 })
-    .toArray();
 
   const projectIndex = projects.findIndex((p) => p.id === params.id);
   const project = projects[projectIndex];
@@ -158,9 +140,9 @@ export const getStaticProps: GetStaticProps<ProjectProps> = async ({
     props: {
       name: basics.name,
       socialLinks: basics.socialLinks,
-      project: JSON.parse(JSON.stringify(project)),
-      prevProject: prevProject ? JSON.parse(JSON.stringify(prevProject)) : null,
-      nextProject: nextProject ? JSON.parse(JSON.stringify(nextProject)) : null,
+      project,
+      prevProject,
+      nextProject,
     },
     revalidate: 60,
   };

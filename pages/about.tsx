@@ -1,11 +1,11 @@
 // pages/about.tsx
-import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Experience } from "@/types/experience";
 import { SocialLink } from "@/types/basics";
 import basics from "@/data/basics.json";
+import experiences from "@/data/experience.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -68,7 +68,7 @@ const AboutPage: NextPage<AboutPageProps> = ({
             >
               <div className="w-full lg:w-1/3">
                 <h2 className="montserrat text-xl text-align-top font-bold uppercase decoration-dark-1 dark:decoration-light-1 pr-8 pb-6 lg:pb-0">
-                  {experience.title}
+                  {experience.title || ""}
                 </h2>
               </div>
               <div className="w-full lg:w-2/3">
@@ -100,20 +100,13 @@ const AboutPage: NextPage<AboutPageProps> = ({
   );
 };
 
+// Load data from experiences.json at build time
 export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
-  const client = await clientPromise;
-  const db = client.db("Anna");
-
-  const experiencesCollection = db.collection<Experience>("experiences");
-  const experiences: Experience[] = await experiencesCollection
-    .find({})
-    .toArray();
-
   return {
     props: {
       name: basics.name,
       socialLinks: basics.socialLinks,
-      experiences: JSON.parse(JSON.stringify(experiences)),
+      experiences, // Use imported experiences.json
     },
     revalidate: 60,
   };

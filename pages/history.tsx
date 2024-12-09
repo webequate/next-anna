@@ -1,11 +1,11 @@
 // pages/history.tsx
-import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
 import basics from "@/data/basics.json";
+import projectsData from "@/data/projects.json";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
@@ -50,20 +50,14 @@ const HistoryPage: NextPage<HistoryPageProps> = ({
 };
 
 export const getStaticProps: GetStaticProps<HistoryPageProps> = async () => {
-  const client = await clientPromise;
-  const db = client.db("Anna");
-
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find()
-    .sort({ order: -1 })
-    .toArray();
+  // Sort projects by "order" field in descending order
+  const projects = projectsData.sort((a, b) => b.order - a.order);
 
   return {
     props: {
       name: basics.name,
       socialLinks: basics.socialLinks,
-      projects: JSON.parse(JSON.stringify(projects)),
+      projects,
     },
     revalidate: 60,
   };

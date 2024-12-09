@@ -1,11 +1,11 @@
 // pages/index.tsx
-import clientPromise from "@/lib/mongodb";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
 import basics from "@/data/basics.json";
+import projects from "@/data/projects.json";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
@@ -45,21 +45,18 @@ const HomePage: NextPage<HomePageProps> = ({ name, socialLinks, projects }) => {
   );
 };
 
+// Load data from the projects.json file at build time
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-  const client = await clientPromise;
-  const db = client.db("Anna");
-
-  const projectsCollection = db.collection<Project>("projects");
-  const projects: Project[] = await projectsCollection
-    .find({ featured: true })
-    .sort({ order: -1 })
-    .toArray();
+  // Filter featured projects and sort them
+  const featuredProjects = projects
+    .filter((project) => project.featured)
+    .sort((a, b) => b.order - a.order);
 
   return {
     props: {
       name: basics.name,
       socialLinks: basics.socialLinks,
-      projects: JSON.parse(JSON.stringify(projects)),
+      projects: featuredProjects,
     },
     revalidate: 60,
   };
