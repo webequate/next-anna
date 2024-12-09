@@ -1,5 +1,75 @@
 [
   {
+    "id": "formations-1",
+    "title": "Formations I",
+    "dimensions": "36 x 36",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/formations-1.jpg",
+    "featured": true,
+    "order": 249
+  },
+  {
+    "id": "formations-2",
+    "title": "Formations II",
+    "dimensions": "40 x 60",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/formations-2.jpg",
+    "featured": true,
+    "order": 248
+  },
+  {
+    "id": "ghost-ranch",
+    "title": "Ghost Ranch",
+    "dimensions": "40 x 36",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/ghost-ranch.jpg",
+    "featured": true,
+    "order": 247
+  },
+  {
+    "id": "klee-bluff-1",
+    "title": "Klee Bluff I",
+    "dimensions": "36 x 36",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/klee-bluff-1.jpg",
+    "featured": true,
+    "order": 246
+  },
+  {
+    "id": "repetition-or-rhyme-1",
+    "title": "Repetition or Rhyme I",
+    "dimensions": "48 x 40",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/repetition-or-rhyme-1.jpg",
+    "featured": true,
+    "order": 245
+  },
+  {
+    "id": "repetition-or-rhyme-2",
+    "title": "Repetition or Rhyme II",
+    "dimensions": "48 x 52",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/repetition-or-rhyme-2.jpg",
+    "featured": true,
+    "order": 244
+  },
+  {
+    "id": "repetition-or-rhyme-3",
+    "title": "Repetition or Rhyme III",
+    "dimensions": "60 x 46",
+    "media": "oil on canvas",
+    "year": "2024",
+    "image": "2024/repetition-or-rhyme-3.jpg",
+    "featured": true,
+    "order": 243
+  },
+  {
     "id": "a-realization-as-the-sun-set",
     "title": "A Realization as the Sun Set",
     "dimensions": "64 x 60",
