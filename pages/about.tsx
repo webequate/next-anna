@@ -55,7 +55,28 @@ const AboutPage: NextPage<AboutPageProps> = ({
             <div className="w-full lg:w-1/3"></div>
             <div className="w-full lg:w-2/3">
               <h1 className="montserrat text-2xl lg:text-4xl font-bold uppercase mt-4 mb-4">
-                {name}
+                Anna Elise Johnson
+              </h1>
+              <hr />
+            </div>
+          </div>
+
+          <div className="mx-auto lg:flex lg:flex-row mb-4 lg:mb-10">
+            <div className="w-full lg:w-1/3"></div>
+            <div className="w-full lg:w-2/3">
+              {basics.abouts.map((about, index) => (
+                <p key={index} className="mb-5">
+                  {about}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          <div className="mx-auto lg:flex lg:flex-row mb-4 lg:mb-10">
+            <div className="w-full lg:w-1/3"></div>
+            <div className="w-full lg:w-2/3">
+              <h1 className="montserrat text-2xl lg:text-4xl font-bold uppercase mt-4 mb-4">
+                C.V. (Curriculum Vitae)
               </h1>
               <hr />
             </div>
