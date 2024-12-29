@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://annaelisejohnson.com
+
+# Sitemaps
+Sitemap: https://annaelisejohnson.com/sitemap.xml
