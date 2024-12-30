@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.annaelisejohnson.com
+Host: https://annaelisejohnson.com
 
 # Sitemaps
-Sitemap: https://www.annaelisejohnson.com/sitemap.xml
+Sitemap: https://annaelisejohnson.com/sitemap.xml
