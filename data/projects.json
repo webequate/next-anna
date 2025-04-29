@@ -1,5 +1,125 @@
 [
   {
+    "id": "as-a-geological-force-12-terrain-conditions",
+    "title": "As a Geological Force 12 (Terrain Conditions)",
+    "dimensions": "52 x 44",
+    "media": "dye and acrylic on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-12-terrain-conditions.jpg",
+    "featured": true,
+    "order": 261
+  },
+  {
+    "id": "as-a-geological-force-11-tectonics",
+    "title": "As a Geological Force 11 (Tectonics)",
+    "dimensions": "38 x 52",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-11-tectonics.jpg",
+    "featured": true,
+    "order": 260
+  },
+  {
+    "id": "as-a-geological-force-10-blue-flow",
+    "title": "As a Geological Force 10 (Blue Flow)",
+    "dimensions": "38 x 52",
+    "media": "dye and acrylic on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-10-blue-flow.jpg",
+    "featured": true,
+    "order": 259
+  },
+  {
+    "id": "as-a-geological-force-9-red-erosion",
+    "title": "As a Geological Force 9 (Red Erosion)",
+    "dimensions": "38 x 52",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-09-red-erosion.jpg",
+    "featured": true,
+    "order": 258
+  },
+  {
+    "id": "as-a-geological-force-8-night-terrain",
+    "title": "As a Geological Force 8 (Night Terrain)",
+    "dimensions": "52 x 48",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-08-night-terrain.jpg",
+    "featured": true,
+    "order": 257
+  },
+  {
+    "id": "as-a-geological-force-7-rococo-erosion",
+    "title": "As a Geological Force 7 (Rococo Erosion)",
+    "dimensions": "54 x 34",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-07-rococo-erosion.jpg",
+    "featured": true,
+    "order": 256
+  },
+  {
+    "id": "as-a-geological-force-6-blue-erosion",
+    "title": "As a Geological Force 6 (Blue Erosion)",
+    "dimensions": "34 x 22",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-06-blue-erosion.jpg",
+    "featured": true,
+    "order": 255
+  },
+  {
+    "id": "as-a-geological-force-5-color-flow",
+    "title": "As a Geological Force 5 (Color Flow)",
+    "dimensions": "34 x 22",
+    "media": "dye and acrylic on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-05-color-flow.jpg",
+    "featured": true,
+    "order": 254
+  },
+  {
+    "id": "as-a-geological-force-4-flow",
+    "title": "As a Geological Force 4 (Flow)",
+    "dimensions": "44 x 32",
+    "media": "dye and acrylic on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-04-flow.jpg",
+    "featured": true,
+    "order": 253
+  },
+  {
+    "id": "as-a-geological-force-3-terrain",
+    "title": "As a Geological Force 3 (Terrain)",
+    "dimensions": "34 x 36",
+    "media": "dye and acrylic on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-03-terrain.jpg",
+    "featured": true,
+    "order": 252
+  },
+  {
+    "id": "as-a-geological-force-2-remnants",
+    "title": "As a Geological Force 2 (Remnants)",
+    "dimensions": "28 x 22",
+    "media": "dye and acrylic on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-02-remnants.jpg",
+    "featured": true,
+    "order": 251
+  },
+  {
+    "id": "as-a-geological-force-1-time-scale",
+    "title": "As a Geological Force 1 (Time Scale)",
+    "dimensions": "28 x 22",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-01-time-scale.jpg",
+    "featured": true,
+    "order": 250
+  },
+  {
     "id": "formations-1",
     "title": "Formations I",
     "dimensions": "36 x 36",
