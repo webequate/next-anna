@@ -38,12 +38,12 @@ const Layout: React.FC<LayoutProps> = ({
         />
         <meta
           property="og:image"
-          content="https://www.annaelisejohnson.com/images/anna-og.jpg"
+          content="https://annaelisejohnson.com/images/anna-og.jpg"
           key="ogimage"
         />
         <meta
           property="og:url"
-          content="https://www.annaelisejohnson.com"
+          content="https://annaelisejohnson.com"
           key="ogurl"
         />
         <meta property="og:type" content="website" key="ogtype" />
