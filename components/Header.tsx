@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ socialLink }) => {
   // Determine if the link should be active based on the prefix in the path
   const isActive = (path: string) => {
     if (path === "/") {
-      return asPath === "/" || asPath.startsWith("/featured"); // Home & featured
+      return asPath === "/" || asPath.startsWith("/works"); // Home & works
     }
     return asPath.startsWith(path); // Other prefixes
   };
