@@ -1,7 +1,8 @@
 // components/Header.tsx
+"use client";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import type { SocialLink } from "@/types/basics";
 import AnnaEliseJohnson from "@/components/AnnaEliseJohnson";
 import SocialButton from "@/components/SocialButton";
@@ -14,15 +15,14 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ socialLink }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const router = useRouter();
-  const asPath = router.asPath;
+  const pathname = usePathname();
 
   // Determine if the link should be active based on the prefix in the path
   const isActive = (path: string) => {
     if (path === "/") {
-      return asPath === "/" || asPath.startsWith("/works"); // Home & works
+      return pathname === "/" || pathname.startsWith("/works");
     }
-    return asPath.startsWith(path); // Other prefixes
+    return pathname.startsWith(path);
   };
 
   function toggleMenu() {

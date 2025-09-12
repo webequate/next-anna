@@ -1,8 +1,8 @@
 # AnnaEliseJohnson.com
 
-This is a Next.js website, built using React, TypeScript, and Tailwind CSS.
+This is a Next.js website built with React, TypeScript, Tailwind CSS, Framer Motion, and the Next.js App Router (Next 14).
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Originally created with the Pages Router, it was migrated to the App Router in September 2025 for improved data/loading patterns, metadata handling, and layout composition.
 
 ## Getting Started
 
@@ -18,13 +18,45 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the root page by modifying `app/page.tsx`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### App Router Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Key directories:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+app/
+	layout.tsx          // Root layout with providers & global styles
+	page.tsx            // Home (featured works)
+	about/page.tsx
+	contact/page.tsx
+	press/page.tsx
+	history/page.tsx    // Full history (noindex)
+	works/[id]/page.tsx // Featured project detail
+	history/[id]/page.tsx // Historical project detail (noindex)
+	api/send-email/route.ts // Route handler for contact form email
+```
+
+### Email Sending
+The contact form posts to `/api/send-email` which lazily loads `nodemailer`, `mjml`, and `mailing-core` to avoid bundling overhead during build.
+
+### Metadata
+Per-route SEO metadata is defined via `export const metadata` and dynamic metadata functions in dynamic routes.
+
+### Theming & Animation
+Dark/light mode via `next-themes`. Page fade-in animations use a small client component wrapper (`components/AnimatedFade.tsx`).
+
+### Scroll To Top
+`hooks/useScrollToTop.tsx` was converted into a client component and injected at the root via `app/providers.tsx`.
+
+### Migration Notes
+- Legacy `pages/` directory removed (except for API which was converted to a route handler).
+- Replaced `next/router` with `next/navigation` in interactive components.
+- Dynamic routes use `generateStaticParams` for static pre-rendering.
+
+### Future Enhancements
+- Use `next/font` for Montserrat instead of external stylesheet.
+- Add `app/sitemap.ts` & `app/robots.ts` for native sitemap / robots control (currently using `next-sitemap`).
 
 ## Learn More
 

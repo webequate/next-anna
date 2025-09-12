@@ -1,4 +1,5 @@
 // components/ThemeSwitcher.tsx
+"use client";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
