@@ -1,7 +1,4 @@
 module.exports = {
-  experimental: {
-    appDir: true,
-  },
   webpack(config) {
     // Externalize heavy MJML-related libraries to keep their internal dynamic
     // requires from being bundled / rewritten into RSC virtual paths that

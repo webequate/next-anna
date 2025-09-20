@@ -1,5 +1,5 @@
-"use client";
 // components/ContactForm.tsx
+"use client";
 import { useState } from "react";
 import { ContactForm as ContactFormData } from "@/interfaces/ContactForm";
 import Heading from "@/components/Heading";
@@ -12,6 +12,12 @@ const ContactForm: React.FC = () => {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    | { type: "idle" }
+    | { type: "submitting" }
+    | { type: "success"; message: string }
+    | { type: "error"; message: string; errors?: string[] }
+  >({ type: "idle" });
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -22,21 +28,38 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    setStatus({ type: "submitting" });
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    const result = await response.json();
-    alert(result.message);
+      const result = await response.json();
+      if (!response.ok) {
+        const message = result.message || "Failed to send message.";
+        setStatus({ type: "error", message, errors: result.errors });
+        return;
+      }
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+      setStatus({
+        type: "success",
+        message: result.message || "Message sent!",
+      });
+      // Reset form only on success
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (e: any) {
+      setStatus({
+        type: "error",
+        message: "Unexpected error sending message.",
+      });
+    }
   };
 
   return (
@@ -100,14 +123,36 @@ const ContactForm: React.FC = () => {
           ></textarea>
         </div>
 
-        <div>
+        <div className="mt-4 flex flex-col gap-4">
           <button
             type="submit"
             aria-label="Send Message"
-            className="text-light-1 dark:text-light-1 bg-accent-dark dark:bg-accent-dark hover:bg-accent-light dark:hover:bg-accent-light font-general-medium flex justify-center items-center w-40 sm:w-40 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 rounded-lg transition duration-300"
+            disabled={status.type === "submitting"}
+            className="text-light-1 dark:text-light-1 bg-accent-dark dark:bg-accent-dark hover:bg-accent-light dark:hover:bg-accent-light disabled:opacity-60 disabled:cursor-not-allowed font-general-medium flex justify-center items-center w-40 sm:w-40 mb-2 text-lg py-2.5 sm:py-3 rounded-lg transition duration-300"
           >
-            <span className="text-sm sm:text-lg">Send Message</span>
+            <span className="text-sm sm:text-lg">
+              {status.type === "submitting" ? "Sending..." : "Send Message"}
+            </span>
           </button>
+          <div aria-live="polite" className="min-h-[1.25rem] text-sm">
+            {status.type === "success" && (
+              <p className="text-green-600 dark:text-green-400 font-medium">
+                {status.message}
+              </p>
+            )}
+            {status.type === "error" && (
+              <div className="text-red-600 dark:text-red-400 space-y-1">
+                <p className="font-medium">{status.message}</p>
+                {status.errors?.length ? (
+                  <ul className="list-disc list-inside text-red-600 dark:text-red-400">
+                    {status.errors.map((err, i) => (
+                      <li key={i}>{err}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
+            )}
+          </div>
         </div>
       </form>
     </div>
