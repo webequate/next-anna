@@ -1,5 +1,105 @@
 [
   {
+    "id": "waves-chinatown-1-missing-waves",
+    "title": "Waves - Chinatown I (Missing Waves)",
+    "dimensions": "40 x 60",
+    "media": "oil on canvas",
+    "year": "2025",
+    "image": "2025/waves-chinatown-1-missing-waves.jpg",
+    "featured": true,
+    "order": 271
+  },
+  {
+    "id": "waves-chinatown-2-diversion",
+    "title": "Waves - Chinatown II (Diversion)",
+    "dimensions": "40 x 64",
+    "media": "oil on canvas",
+    "year": "2025",
+    "image": "2025/waves-chinatown-2-diversion.jpg",
+    "featured": true,
+    "order": 270
+  },
+  {
+    "id": "waves-solaris-1-solaris-waves",
+    "title": "Waves - Solaris I (Solaris Waves)",
+    "dimensions": "44 x 70",
+    "media": "oil on canvas",
+    "year": "2025",
+    "image": "2025/waves-solaris-1-solaris-waves.jpg",
+    "featured": true,
+    "order": 269
+  },
+  {
+    "id": "klee-mountain-1",
+    "title": "Klee Mountain I",
+    "dimensions": "34 x 36",
+    "media": "oil on canvas",
+    "year": "2025",
+    "image": "2025/klee-mountain-1.jpg",
+    "featured": true,
+    "order": 268
+  },
+  {
+    "id": "as-a-geological-force-19",
+    "title": "As a Geological Force 19",
+    "dimensions": "26 x 22",
+    "media": "dye, acrylic, and oil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-19.jpg",
+    "featured": true,
+    "order": 267
+  },
+  {
+    "id": "as-a-geological-force-18",
+    "title": "As a Geological Force 18",
+    "dimensions": "54 x 40",
+    "media": "dye, acrylic, and oil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-18.jpg",
+    "featured": true,
+    "order": 266
+  },
+  {
+    "id": "as-a-geological-force-17",
+    "title": "As a Geological Force 17",
+    "dimensions": "27 x 22",
+    "media": "dye, acrylic, and oil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-17.jpg",
+    "featured": true,
+    "order": 265
+  },
+  {
+    "id": "as-a-geological-force-16",
+    "title": "As a Geological Force 16",
+    "dimensions": "40 x 34",
+    "media": "dye, acrylic, and oil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-16.jpg",
+    "featured": true,
+    "order": 264
+  },
+  {
+    "id": "as-a-geological-force-15",
+    "title": "As a Geological Force 15",
+    "dimensions": "46 x 32",
+    "media": "dye, acrylic, and oil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-15.jpg",
+    "featured": true,
+    "order": 263
+  },
+  {
+    "id": "as-a-geological-force-13-night-glow",
+    "title": "As a Geological Force 13 (Night Glow)",
+    "dimensions": "48 x 56",
+    "media": "dye, acrylic, and color pencil on canvas",
+    "year": "2025",
+    "image": "2025/as-a-geological-force-13-night-glow.jpg",
+    "featured": true,
+    "order": 262
+  },
+  {
     "id": "as-a-geological-force-12-terrain-conditions",
     "title": "As a Geological Force 12 (Terrain Conditions)",
     "dimensions": "52 x 44",
