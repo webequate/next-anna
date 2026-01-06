@@ -11,11 +11,15 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://annaelisejohnson.com"),
   title: {
     default: "Anna Elise Johnson",
     template: "%s | Anna Elise Johnson",
   },
   description: "Anna Elise Johnson's artist website.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Anna Elise Johnson",
     description: "Anna Elise Johnson's artist website.",
