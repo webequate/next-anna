@@ -21,11 +21,11 @@ module.exports = {
         const urlRegex = /<url>[\s\S]*?<\/url>/g;
         const urls = content.match(urlRegex) || [];
 
-        // Sort URLs alphabetically by their loc value
+        // Sort URLs with natural alphanumeric sorting
         urls.sort((a, b) => {
           const locA = a.match(/<loc>(.*?)<\/loc>/)?.[1] || "";
           const locB = b.match(/<loc>(.*?)<\/loc>/)?.[1] || "";
-          return locA.localeCompare(locB);
+          return locA.localeCompare(locB, undefined, { numeric: true, sensitivity: 'base' });
         });
 
         // Reconstruct the sitemap with sorted URLs
