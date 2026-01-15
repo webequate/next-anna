@@ -22,6 +22,9 @@ export function generateMetadata({ params }: { params: { id: string } }) {
     title: `${basics.name} | ${project.title}`,
     description: `${project.title} by ${basics.name}`,
     robots: { index: false, follow: false },
+    alternates: {
+      canonical: `/history/${params.id}`,
+    },
   };
 }
 

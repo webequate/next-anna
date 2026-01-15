@@ -11,6 +11,9 @@ export const metadata = {
   title: `${basics.name} | History`,
   description: "History of artwork by Anna Elise Johnson.",
   robots: { index: false, follow: false },
+  alternates: {
+    canonical: "/history",
+  },
 };
 
 export const revalidate = 60;

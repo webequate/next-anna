@@ -11,6 +11,9 @@ export const metadata = {
   title: basics.name,
   description: "Anna Elise Johnson's artist website.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export const revalidate = 60;

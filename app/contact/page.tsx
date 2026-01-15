@@ -10,6 +10,9 @@ export const metadata = {
   title: `${basics.name} | Contact`,
   description: "Send a message to Anna Elise Johnson.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export const revalidate = 60;

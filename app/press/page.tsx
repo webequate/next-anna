@@ -12,6 +12,9 @@ export const metadata = {
   title: `${basics.name} | Recent Press`,
   description: "Recent press about Anna Elise Johnson.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/press",
+  },
 };
 
 export const revalidate = 60;

@@ -11,6 +11,9 @@ export const metadata = {
   title: `${basics.name} | About`,
   description: "About Anna Elise Johnson.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export const revalidate = 60;
