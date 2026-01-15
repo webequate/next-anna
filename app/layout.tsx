@@ -17,9 +17,6 @@ export const metadata: Metadata = {
     template: "%s | Anna Elise Johnson",
   },
   description: "Anna Elise Johnson's artist website.",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Anna Elise Johnson",
     description: "Anna Elise Johnson's artist website.",
