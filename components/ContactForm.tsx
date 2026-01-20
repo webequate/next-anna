@@ -11,6 +11,7 @@ const ContactForm: React.FC = () => {
     email: "",
     subject: "",
     message: "",
+    website: "",
   });
   const [status, setStatus] = useState<
     | { type: "idle" }
@@ -53,6 +54,7 @@ const ContactForm: React.FC = () => {
         email: "",
         subject: "",
         message: "",
+        website: "",
       });
     } catch (e: any) {
       setStatus({
@@ -122,6 +124,19 @@ const ContactForm: React.FC = () => {
             required
           ></textarea>
         </div>
+
+        {/* Honeypot field - hidden from humans, bots may fill it */}
+        <input
+          type="text"
+          name="website"
+          id="website"
+          value={formData.website}
+          onChange={handleChange}
+          autoComplete="off"
+          tabIndex={-1}
+          style={{ position: "absolute", left: "-9999px" }}
+          aria-hidden="true"
+        />
 
         <div className="mt-4 flex flex-col gap-4">
           <button

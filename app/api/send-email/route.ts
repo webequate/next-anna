@@ -6,6 +6,7 @@ interface ContactForm {
   email: string;
   subject: string;
   message: string;
+  website?: string;
 }
 
 // Ensure this route is always dynamic (no prerender) and uses the Node.js runtime
@@ -14,6 +15,11 @@ export const runtime = "nodejs";
 
 function validate(formData: ContactForm) {
   const errors: string[] = [];
+  // Honeypot check - if filled, it's likely a bot
+  if (formData.website) {
+    errors.push("Invalid submission detected");
+    return errors;
+  }
   if (!formData.name?.trim()) errors.push("Name is required");
   if (!formData.email?.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/))
     errors.push("Valid email is required");
