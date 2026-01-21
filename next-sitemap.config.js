@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = {
   siteUrl: "https://annaelisejohnson.com",
-  exclude: [],
+  exclude: ["/history"],
   generateRobotsTxt: true,
   changefreq: null,
   priority: null,
@@ -25,7 +25,10 @@ module.exports = {
         urls.sort((a, b) => {
           const locA = a.match(/<loc>(.*?)<\/loc>/)?.[1] || "";
           const locB = b.match(/<loc>(.*?)<\/loc>/)?.[1] || "";
-          return locA.localeCompare(locB, undefined, { numeric: true, sensitivity: 'base' });
+          return locA.localeCompare(locB, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          });
         });
 
         // Reconstruct the sitemap with sorted URLs
