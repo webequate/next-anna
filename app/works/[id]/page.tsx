@@ -21,7 +21,7 @@ export function generateMetadata({ params }: { params: { id: string } }) {
 
   const ogImage = `https://annaelisejohnson.com/images/${project.image}`;
   const pageUrl = `https://annaelisejohnson.com/works/${params.id}`;
-  const description = `${project.title} by ${basics.name}. ${project.media}, ${project.dimensions}, ${project.year}.`;
+  const description = `${project.title} by ${basics.name}. ${project.media}, ${project.dimensions}.`;
 
   return {
     title: project.title,
@@ -38,8 +38,6 @@ export function generateMetadata({ params }: { params: { id: string } }) {
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
           alt: project.title,
         },
       ],

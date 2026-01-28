@@ -25,8 +25,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://annaelisejohnson.com/images/anna-og.jpg",
-        width: 1200,
-        height: 630,
         alt: "Anna Elise Johnson",
       },
     ],
