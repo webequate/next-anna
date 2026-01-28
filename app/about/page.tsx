@@ -8,11 +8,32 @@ import { Experience } from "@/types/experience";
 import { SocialLink } from "@/types/basics";
 
 export const metadata = {
-  title: `${basics.name} | About`,
+  title: "About",
   description: "About Anna Elise Johnson.",
   robots: { index: true, follow: true },
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "About | Anna Elise Johnson",
+    description: "About Anna Elise Johnson.",
+    url: "https://annaelisejohnson.com/about",
+    siteName: "Anna Elise Johnson",
+    images: [
+      {
+        url: "https://annaelisejohnson.com/images/anna-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anna Elise Johnson",
+      },
+    ],
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Anna Elise Johnson",
+    description: "About Anna Elise Johnson.",
+    images: ["https://annaelisejohnson.com/images/anna-og.jpg"],
   },
 };
 

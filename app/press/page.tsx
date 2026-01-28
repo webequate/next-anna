@@ -9,11 +9,32 @@ import { PressLink } from "@/types/press";
 import { SocialLink } from "@/types/basics";
 
 export const metadata = {
-  title: `${basics.name} | Recent Press`,
+  title: "Recent Press",
   description: "Recent press about Anna Elise Johnson.",
   robots: { index: true, follow: true },
   alternates: {
     canonical: "/press",
+  },
+  openGraph: {
+    title: "Recent Press | Anna Elise Johnson",
+    description: "Recent press about Anna Elise Johnson.",
+    url: "https://annaelisejohnson.com/press",
+    siteName: "Anna Elise Johnson",
+    images: [
+      {
+        url: "https://annaelisejohnson.com/images/anna-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anna Elise Johnson",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Recent Press | Anna Elise Johnson",
+    description: "Recent press about Anna Elise Johnson.",
+    images: ["https://annaelisejohnson.com/images/anna-og.jpg"],
   },
 };
 

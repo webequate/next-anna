@@ -14,6 +14,27 @@ export const metadata = {
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: basics.name,
+    description: "Anna Elise Johnson's artist website.",
+    url: "https://annaelisejohnson.com",
+    siteName: "Anna Elise Johnson",
+    images: [
+      {
+        url: "https://annaelisejohnson.com/images/anna-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anna Elise Johnson",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: basics.name,
+    description: "Anna Elise Johnson's artist website.",
+    images: ["https://annaelisejohnson.com/images/anna-og.jpg"],
+  },
 };
 
 export const revalidate = 60;

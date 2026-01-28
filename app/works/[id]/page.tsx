@@ -18,12 +18,38 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { id: string } }) {
   const project = (projectsData as Project[]).find((p) => p.id === params.id);
   if (!project) return {};
+
+  const ogImage = `https://annaelisejohnson.com/images/${project.image}`;
+  const pageUrl = `https://annaelisejohnson.com/works/${params.id}`;
+  const description = `${project.title} by ${basics.name}. ${project.media}, ${project.dimensions}, ${project.year}.`;
+
   return {
-    title: `${basics.name} | ${project.title}`,
-    description: `${project.title} by ${basics.name}`,
+    title: project.title,
+    description: description,
     robots: { index: true, follow: true },
     alternates: {
       canonical: `/works/${params.id}`,
+    },
+    openGraph: {
+      title: `${project.title} | Anna Elise Johnson`,
+      description: description,
+      url: pageUrl,
+      siteName: "Anna Elise Johnson",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Anna Elise Johnson`,
+      description: description,
+      images: [ogImage],
     },
   };
 }

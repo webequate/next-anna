@@ -7,11 +7,32 @@ import AnimatedFade from "@/components/AnimatedFade";
 import { SocialLink } from "@/types/basics";
 
 export const metadata = {
-  title: `${basics.name} | Contact`,
+  title: "Contact",
   description: "Send a message to Anna Elise Johnson.",
   robots: { index: true, follow: true },
   alternates: {
     canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact | Anna Elise Johnson",
+    description: "Send a message to Anna Elise Johnson.",
+    url: "https://annaelisejohnson.com/contact",
+    siteName: "Anna Elise Johnson",
+    images: [
+      {
+        url: "https://annaelisejohnson.com/images/anna-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anna Elise Johnson",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Anna Elise Johnson",
+    description: "Send a message to Anna Elise Johnson.",
+    images: ["https://annaelisejohnson.com/images/anna-og.jpg"],
   },
 };
 

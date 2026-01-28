@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anna Elise Johnson",
+    description: "Anna Elise Johnson's artist website.",
+    images: ["https://annaelisejohnson.com/images/anna-og.jpg"],
+  },
   icons: {
     icon: "/anna.png",
   },

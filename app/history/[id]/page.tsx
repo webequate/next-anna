@@ -18,8 +18,9 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { id: string } }) {
   const project = (projectsData as Project[]).find((p) => p.id === params.id);
   if (!project) return {};
+
   return {
-    title: `${basics.name} | ${project.title}`,
+    title: project.title,
     description: `${project.title} by ${basics.name}`,
     robots: { index: false, follow: false },
     alternates: {
