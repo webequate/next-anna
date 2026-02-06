@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import ContactDetails from "@/components/ContactDetails";
+import PageFade from "@/components/PageFade";
 import { SocialLink } from "@/types/basics";
 
 export const metadata = {
@@ -41,7 +42,7 @@ export default function ContactPage() {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <div className="fade-in">
+      <PageFade>
         <div className="mx-auto flex flex-col-reverse lg:flex-row text-base text-dark-2 dark:text-light-2">
           <div className="w-full lg:w-1/2 mb-10 lg:mb-0 md:mr-6">
             <ContactForm />
@@ -57,7 +58,7 @@ export default function ContactPage() {
             />
           </div>
         </div>
-      </div>
+      </PageFade>
       <Footer name={name} socialLinks={socialLinks} />
     </div>
   );

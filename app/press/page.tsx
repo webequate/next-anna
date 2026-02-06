@@ -2,6 +2,7 @@ import basics from "@/data/basics.json";
 import pressLinksData from "@/data/press.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageFade from "@/components/PageFade";
 import Image from "next/image";
 import Link from "next/link";
 import { PressLink } from "@/types/press";
@@ -48,29 +49,31 @@ export default function PressPage() {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <div className="fade-in text-base text-dark-2 dark:text-light-2">
-        {pressLinks.map((pressLink, index) => (
-          <div key={index} className="flex mx-auto justify-center">
-            <Link
-              href={pressLink.url}
-              aria-label={pressLink.name}
-              target="_blank"
-              className="mx-auto mt-4 mb-4"
-            >
-              <Image
-                src={`/images/press/${pressLink.image}`}
-                alt={pressLink.name}
-                width={300}
-                height={200}
-                className="mx-auto"
-              />
-              <p className="font-bold mx-auto text-center mt-2 mb-4">
-                {pressLink.text}
-              </p>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <PageFade>
+        <div className="text-base text-dark-2 dark:text-light-2">
+          {pressLinks.map((pressLink, index) => (
+            <div key={index} className="flex mx-auto justify-center">
+              <Link
+                href={pressLink.url}
+                aria-label={pressLink.name}
+                target="_blank"
+                className="mx-auto mt-4 mb-4"
+              >
+                <Image
+                  src={`/images/press/${pressLink.image}`}
+                  alt={pressLink.name}
+                  width={300}
+                  height={200}
+                  className="mx-auto"
+                />
+                <p className="font-bold mx-auto text-center mt-2 mb-4">
+                  {pressLink.text}
+                </p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </PageFade>
       <Footer name={name} socialLinks={socialLinks} />
     </div>
   );

@@ -1,6 +1,7 @@
 import basics from "@/data/basics.json";
 import projectsData from "@/data/projects.json";
 import Header from "@/components/Header";
+import PageFade from "@/components/PageFade";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
 import { Project } from "@/types/project";
@@ -49,9 +50,11 @@ export default function HomePage() {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <div className="fade-in text-base text-dark-2 dark:text-light-2">
-        <ProjectGrid projects={projects} path="works" />
-      </div>
+      <PageFade>
+        <div className="text-base text-dark-2 dark:text-light-2">
+          <ProjectGrid projects={projects} path="works" />
+        </div>
+      </PageFade>
       <Footer name={name} socialLinks={socialLinks} />
     </div>
   );

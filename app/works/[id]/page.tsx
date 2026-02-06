@@ -3,6 +3,7 @@ import projectsData from "@/data/projects.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectViewer from "@/components/ProjectViewer";
+import PageFade from "@/components/PageFade";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
 import { notFound } from "next/navigation";
@@ -63,14 +64,16 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <ProjectViewer
-        project={project}
-        prevProject={prevProject}
-        nextProject={nextProject}
-        name={basics.name}
-        socialLinks={socialLinks}
-        path="works"
-      />
+      <PageFade>
+        <ProjectViewer
+          project={project}
+          prevProject={prevProject}
+          nextProject={nextProject}
+          name={basics.name}
+          socialLinks={socialLinks}
+          path="works"
+        />
+      </PageFade>
       <Footer name={basics.name} socialLinks={socialLinks} />
     </div>
   );
