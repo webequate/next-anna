@@ -2,7 +2,6 @@ import basics from "@/data/basics.json";
 import pressLinksData from "@/data/press.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AnimatedFade from "@/components/AnimatedFade";
 import Image from "next/image";
 import Link from "next/link";
 import { PressLink } from "@/types/press";
@@ -49,7 +48,7 @@ export default function PressPage() {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <AnimatedFade className="text-base text-dark-2 dark:text-light-2">
+      <div className="fade-in text-base text-dark-2 dark:text-light-2">
         {pressLinks.map((pressLink, index) => (
           <div key={index} className="flex mx-auto justify-center">
             <Link
@@ -71,7 +70,7 @@ export default function PressPage() {
             </Link>
           </div>
         ))}
-      </AnimatedFade>
+      </div>
       <Footer name={name} socialLinks={socialLinks} />
     </div>
   );

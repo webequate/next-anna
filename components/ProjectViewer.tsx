@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 import { useSwipeable } from "react-swipeable";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import ProjectHeader from "@/components/ProjectHeader";
 import ProjectFooter from "@/components/ProjectFooter";
@@ -51,35 +50,32 @@ export default function ProjectViewer({
   });
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-    >
+    <div className="fade-in">
       <div className="justify-center mx-auto text-dark-1 dark:text-light-1">
-        <ProjectHeader
-          title={project.title}
-          prevId={prevProject?.id}
-          nextId={nextProject?.id}
-          path={path}
-        />
-        <Image
-          {...handlers}
-          src={`/images/${project.image}`}
-          alt={project.title}
-          width={600}
-          height={600}
-          priority
-          className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-2"
-        />
-        <ProjectFooter
-          dimensions={project.dimensions}
-          media={project.media}
-          {...(path === "history" && (project as any).year
-            ? { year: (project as any).year }
-            : {})}
-        />
+          <ProjectHeader
+            title={project.title}
+            prevId={prevProject?.id}
+            nextId={nextProject?.id}
+            path={path}
+          />
+          <Image
+            {...handlers}
+            src={`/images/${project.image}`}
+            alt={project.title}
+            width={600}
+            height={600}
+            priority
+            className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-2"
+          />
+          <ProjectFooter
+            dimensions={project.dimensions}
+            media={project.media}
+            {...(path === "history" && (project as any).year
+              ? { year: (project as any).year }
+              : {})}
+          />
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

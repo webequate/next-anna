@@ -55,6 +55,19 @@ a {
 	}
 }
 
+@keyframes pageLoadFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation: pageLoadFadeIn 0.9s ease-in-out 0.2s both;
+}
+
 @layer components {
   /* Primary navigation */
   .nav-primary {

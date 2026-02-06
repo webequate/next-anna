@@ -3,7 +3,6 @@ import projectsData from "@/data/projects.json";
 import Header from "@/components/Header";
 import ProjectGrid from "@/components/ProjectGrid";
 import Footer from "@/components/Footer";
-import AnimatedFade from "@/components/AnimatedFade";
 import { Project } from "@/types/project";
 import { SocialLink } from "@/types/basics";
 
@@ -29,9 +28,9 @@ export default function HistoryPage() {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <AnimatedFade className="text-base text-dark-2 dark:text-light-2">
+      <div className="fade-in text-base text-dark-2 dark:text-light-2">
         <ProjectGrid projects={projects} path="history" />
-      </AnimatedFade>
+      </div>
       <Footer name={name} socialLinks={socialLinks} />
     </div>
   );

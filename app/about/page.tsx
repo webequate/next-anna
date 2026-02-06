@@ -2,7 +2,6 @@ import basics from "@/data/basics.json";
 import experiences from "@/data/experience.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AnimatedFade from "@/components/AnimatedFade";
 import Image from "next/image";
 import { Experience } from "@/types/experience";
 import { SocialLink } from "@/types/basics";
@@ -44,7 +43,7 @@ export default function AboutPage() {
   return (
     <>
       <Header socialLink={socialLinks[0]} />
-      <AnimatedFade>
+      <div className="fade-in">
         <div className="mx-auto text-base text-dark-2 dark:text-light-2 mb-10">
           <div className="mb-10">
             <Image
@@ -115,7 +114,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AnimatedFade>
+      </div>
       <Footer name={name} socialLinks={socialLinks} />
     </>
   );
