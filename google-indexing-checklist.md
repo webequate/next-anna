@@ -1,0 +1,291 @@
+# Google Indexing Checklist
+
+Track which pages have been indexed by Google or have had indexing requested.
+
+## Main Pages
+
+- [x] https://annaelisejohnson.com
+- [x] https://annaelisejohnson.com/about
+- [x] https://annaelisejohnson.com/contact
+- [x] https://annaelisejohnson.com/press
+
+## Works Pages
+
+- [x] https://annaelisejohnson.com/works/a-neologism-on-the-tip-of-her-tongue
+- [x] https://annaelisejohnson.com/works/a-new-order-of-things-at-sunset-a-study
+- [x] https://annaelisejohnson.com/works/a-realization-as-the-sun-set
+- [x] https://annaelisejohnson.com/works/a-streak-of-light-shane
+- [x] https://annaelisejohnson.com/works/a-time-for-choosing
+- [x] https://annaelisejohnson.com/works/absence-and-presence-a-study-1
+- [x] https://annaelisejohnson.com/works/absence-and-presence-a-study-2
+- [x] https://annaelisejohnson.com/works/agreement-1
+- [x] https://annaelisejohnson.com/works/agreement-2
+- [x] https://annaelisejohnson.com/works/antinious
+- [x] https://annaelisejohnson.com/works/armchair-diplomacy-2-1
+- [x] https://annaelisejohnson.com/works/armchair-diplomacy-2-2
+- [x] https://annaelisejohnson.com/works/armchair-diplomacy-2-3
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-1-time-scale
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-2-remnants
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-3-terrain
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-4-flow
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-5-color-flow
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-6-blue-erosion
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-7-rococo-erosion
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-8-night-terrain
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-9-red-erosion
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-10-blue-flow
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-11-tectonics
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-12-terrain-conditions
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-13-night-glow
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-15
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-16
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-17
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-18
+- [ ] https://annaelisejohnson.com/works/as-a-geological-force-19
+- [ ] https://annaelisejohnson.com/works/aspen
+- [ ] https://annaelisejohnson.com/works/attache
+- [ ] https://annaelisejohnson.com/works/barricade
+- [ ] https://annaelisejohnson.com/works/barricade-1
+- [ ] https://annaelisejohnson.com/works/barricade-1-1
+- [ ] https://annaelisejohnson.com/works/barricade-1-2
+- [ ] https://annaelisejohnson.com/works/barricade-2
+- [ ] https://annaelisejohnson.com/works/barricade-2-1
+- [ ] https://annaelisejohnson.com/works/barricade-2-2
+- [ ] https://annaelisejohnson.com/works/barricade-2-3
+- [ ] https://annaelisejohnson.com/works/barricade-3
+- [ ] https://annaelisejohnson.com/works/barricade-3-1
+- [ ] https://annaelisejohnson.com/works/barricade-3-2
+- [ ] https://annaelisejohnson.com/works/barstow-highway-1
+- [ ] https://annaelisejohnson.com/works/barstow-highway-2
+- [ ] https://annaelisejohnson.com/works/battle-1
+- [ ] https://annaelisejohnson.com/works/battle-3
+- [ ] https://annaelisejohnson.com/works/bishop
+- [ ] https://annaelisejohnson.com/works/bluff-1
+- [ ] https://annaelisejohnson.com/works/bobcat-fire-cobalt
+- [ ] https://annaelisejohnson.com/works/bobcat-fire-ochre
+- [ ] https://annaelisejohnson.com/works/bodies
+- [ ] https://annaelisejohnson.com/works/break
+- [ ] https://annaelisejohnson.com/works/brick-and-ash
+- [ ] https://annaelisejohnson.com/works/brick-ash-concrete
+- [ ] https://annaelisejohnson.com/works/brick-ash-glass-concrete
+- [ ] https://annaelisejohnson.com/works/burnt-log
+- [ ] https://annaelisejohnson.com/works/camp-david
+- [ ] https://annaelisejohnson.com/works/cezanne-waves-1
+- [ ] https://annaelisejohnson.com/works/cezanne-waves-2
+- [ ] https://annaelisejohnson.com/works/cezanne-waves-3
+- [ ] https://annaelisejohnson.com/works/cibolo-creek-road-1
+- [ ] https://annaelisejohnson.com/works/cibolo-creek-road-2
+- [ ] https://annaelisejohnson.com/works/clues-for-scale
+- [ ] https://annaelisejohnson.com/works/collapse
+- [ ] https://annaelisejohnson.com/works/colorado-county-road-31
+- [ ] https://annaelisejohnson.com/works/colorado-county-road-216-1
+- [ ] https://annaelisejohnson.com/works/colorado-county-road-216-2
+- [ ] https://annaelisejohnson.com/works/congress-applauding-1
+- [ ] https://annaelisejohnson.com/works/congress-applauding-2
+- [ ] https://annaelisejohnson.com/works/congress-applauding-3
+- [ ] https://annaelisejohnson.com/works/congress-applauding-4
+- [ ] https://annaelisejohnson.com/works/congress-applauding-6
+- [ ] https://annaelisejohnson.com/works/counter-revolution
+- [ ] https://annaelisejohnson.com/works/cushions-barricade
+- [ ] https://annaelisejohnson.com/works/death-valley-1
+- [ ] https://annaelisejohnson.com/works/death-valley-2
+- [ ] https://annaelisejohnson.com/works/death-valley-3
+- [ ] https://annaelisejohnson.com/works/defense-ministers-ehud-barak-and-robert-gates
+- [ ] https://annaelisejohnson.com/works/desert-view-road-1
+- [ ] https://annaelisejohnson.com/works/deserted
+- [ ] https://annaelisejohnson.com/works/diplomacy
+- [ ] https://annaelisejohnson.com/works/diplomacy-2-1
+- [ ] https://annaelisejohnson.com/works/diplomacy-2-2
+- [ ] https://annaelisejohnson.com/works/drink
+- [ ] https://annaelisejohnson.com/works/eagle-rock-blvd
+- [ ] https://annaelisejohnson.com/works/el-mirage-road-1
+- [ ] https://annaelisejohnson.com/works/el-mirage-road-2
+- [ ] https://annaelisejohnson.com/works/fashion-alley
+- [ ] https://annaelisejohnson.com/works/fletcher-blvd
+- [ ] https://annaelisejohnson.com/works/floral-diplomacy
+- [ ] https://annaelisejohnson.com/works/formations-1
+- [ ] https://annaelisejohnson.com/works/formations-2
+- [ ] https://annaelisejohnson.com/works/four-positions-within-a-gesture-1
+- [ ] https://annaelisejohnson.com/works/ghost-ranch
+- [ ] https://annaelisejohnson.com/works/glass-and-concrete
+- [ ] https://annaelisejohnson.com/works/good-governance-2
+- [ ] https://annaelisejohnson.com/works/good-governance-detail-1
+- [ ] https://annaelisejohnson.com/works/good-governance-detail-2
+- [ ] https://annaelisejohnson.com/works/good-governance-install-shot
+- [ ] https://annaelisejohnson.com/works/hand-position
+- [ ] https://annaelisejohnson.com/works/handshake
+- [ ] https://annaelisejohnson.com/works/hang-them
+- [ ] https://annaelisejohnson.com/works/heilige-frau
+- [ ] https://annaelisejohnson.com/works/homo-sacer
+- [ ] https://annaelisejohnson.com/works/hwy-67-1
+- [ ] https://annaelisejohnson.com/works/hwy-90
+- [ ] https://annaelisejohnson.com/works/if-they-were-able-to-conceive-or-dream-of-another-time-1
+- [ ] https://annaelisejohnson.com/works/if-they-were-able-to-conceive-or-dream-of-another-time-2
+- [ ] https://annaelisejohnson.com/works/in-absentia
+- [ ] https://annaelisejohnson.com/works/interior-thatcher
+- [ ] https://annaelisejohnson.com/works/kiss
+- [ ] https://annaelisejohnson.com/works/klee-bluff-1
+- [ ] https://annaelisejohnson.com/works/klee-bluff-2
+- [ ] https://annaelisejohnson.com/works/klee-bluff-3
+- [ ] https://annaelisejohnson.com/works/klee-bluff-4
+- [ ] https://annaelisejohnson.com/works/klee-mountain-1
+- [ ] https://annaelisejohnson.com/works/klee-waves
+- [ ] https://annaelisejohnson.com/works/longview-road-at-magic-hour-1
+- [ ] https://annaelisejohnson.com/works/longview-road-at-magic-hour-2
+- [ ] https://annaelisejohnson.com/works/longview-road-at-magic-hour-3
+- [ ] https://annaelisejohnson.com/works/making-solid-the-unfinished
+- [ ] https://annaelisejohnson.com/works/mantle-piece
+- [ ] https://annaelisejohnson.com/works/maple-ave
+- [ ] https://annaelisejohnson.com/works/maple-ave-alley
+- [ ] https://annaelisejohnson.com/works/mary
+- [ ] https://annaelisejohnson.com/works/matisse-water-1
+- [ ] https://annaelisejohnson.com/works/matisse-water-2
+- [ ] https://annaelisejohnson.com/works/matisse-water-3
+- [ ] https://annaelisejohnson.com/works/matisse-water-4
+- [ ] https://annaelisejohnson.com/works/matisse-water-5
+- [ ] https://annaelisejohnson.com/works/meeting-blankfein-and-medvedev
+- [ ] https://annaelisejohnson.com/works/meeting-in-kabul
+- [ ] https://annaelisejohnson.com/works/memorandum-of-understanding
+- [ ] https://annaelisejohnson.com/works/mise-en-scene
+- [ ] https://annaelisejohnson.com/works/mockup-for-vertical-ground
+- [ ] https://annaelisejohnson.com/works/mockup-for-vertical-horizon
+- [ ] https://annaelisejohnson.com/works/mojave-freeway-1
+- [ ] https://annaelisejohnson.com/works/mojave-freeway-2
+- [ ] https://annaelisejohnson.com/works/mojave-tropico-road-1
+- [ ] https://annaelisejohnson.com/works/mojave-tropico-road-2
+- [ ] https://annaelisejohnson.com/works/mojave-tropico-road-3
+- [ ] https://annaelisejohnson.com/works/moscow
+- [ ] https://annaelisejohnson.com/works/mulholand-hwy
+- [ ] https://annaelisejohnson.com/works/natura-morta-1
+- [ ] https://annaelisejohnson.com/works/natura-morta-2
+- [ ] https://annaelisejohnson.com/works/natura-morta-3
+- [ ] https://annaelisejohnson.com/works/natura-morta-4
+- [ ] https://annaelisejohnson.com/works/natura-morta-5
+- [ ] https://annaelisejohnson.com/works/natura-morta-6
+- [ ] https://annaelisejohnson.com/works/natura-morta-7
+- [ ] https://annaelisejohnson.com/works/natura-morta-8
+- [ ] https://annaelisejohnson.com/works/natura-morta-9
+- [ ] https://annaelisejohnson.com/works/pause
+- [ ] https://annaelisejohnson.com/works/pearblossom-highway
+- [ ] https://annaelisejohnson.com/works/pearlblossom-highway-at-magic-hour-1
+- [ ] https://annaelisejohnson.com/works/pearlblossom-highway-at-magic-hour-4
+- [ ] https://annaelisejohnson.com/works/pine-ridge-trail-1
+- [ ] https://annaelisejohnson.com/works/pine-ridge-trail-2
+- [ ] https://annaelisejohnson.com/works/pine-ridge-trail-3
+- [ ] https://annaelisejohnson.com/works/pine-ridge-trail-4
+- [ ] https://annaelisejohnson.com/works/pine-ridge-trail-5
+- [ ] https://annaelisejohnson.com/works/pine-ridge-trail-6
+- [ ] https://annaelisejohnson.com/works/potential-1
+- [ ] https://annaelisejohnson.com/works/potential-2
+- [ ] https://annaelisejohnson.com/works/potential-3
+- [ ] https://annaelisejohnson.com/works/potential-4
+- [ ] https://annaelisejohnson.com/works/precipice
+- [ ] https://annaelisejohnson.com/works/press-conference-george-hw-bush
+- [ ] https://annaelisejohnson.com/works/press-secretary-jay-carney
+- [ ] https://annaelisejohnson.com/works/presswood-road-1
+- [ ] https://annaelisejohnson.com/works/proxy
+- [ ] https://annaelisejohnson.com/works/rampart-range-road-1
+- [ ] https://annaelisejohnson.com/works/rampart-range-road-2
+- [ ] https://annaelisejohnson.com/works/ranch-road-505-1
+- [ ] https://annaelisejohnson.com/works/ranch-road-505-2
+- [ ] https://annaelisejohnson.com/works/ranch-road-505-3
+- [ ] https://annaelisejohnson.com/works/ranch-road-2810-1
+- [ ] https://annaelisejohnson.com/works/ranch-road-2810-2
+- [ ] https://annaelisejohnson.com/works/red-banner
+- [ ] https://annaelisejohnson.com/works/red-hills-road-1
+- [ ] https://annaelisejohnson.com/works/red-hills-road-2
+- [ ] https://annaelisejohnson.com/works/regalia-red
+- [ ] https://annaelisejohnson.com/works/remembering-how-to-build-a-barricade
+- [ ] https://annaelisejohnson.com/works/repetition-or-resemblance
+- [ ] https://annaelisejohnson.com/works/repetition-or-rhyme-1
+- [ ] https://annaelisejohnson.com/works/repetition-or-rhyme-2
+- [ ] https://annaelisejohnson.com/works/repetition-or-rhyme-3
+- [ ] https://annaelisejohnson.com/works/revision
+- [ ] https://annaelisejohnson.com/works/robe
+- [ ] https://annaelisejohnson.com/works/robe-and-heart
+- [ ] https://annaelisejohnson.com/works/room-for-negotiation
+- [ ] https://annaelisejohnson.com/works/rubble-1
+- [ ] https://annaelisejohnson.com/works/rubble-2
+- [ ] https://annaelisejohnson.com/works/rubble-3
+- [ ] https://annaelisejohnson.com/works/rubble-4
+- [ ] https://annaelisejohnson.com/works/saint-elizabet
+- [ ] https://annaelisejohnson.com/works/salon-1
+- [ ] https://annaelisejohnson.com/works/salon-2
+- [ ] https://annaelisejohnson.com/works/sand-cove-1
+- [ ] https://annaelisejohnson.com/works/sand-cove-2
+- [ ] https://annaelisejohnson.com/works/sand-cove-3
+- [ ] https://annaelisejohnson.com/works/sand-cove-4
+- [ ] https://annaelisejohnson.com/works/santiago-monk
+- [ ] https://annaelisejohnson.com/works/scale-as-evidence
+- [ ] https://annaelisejohnson.com/works/searcher
+- [ ] https://annaelisejohnson.com/works/situation-room-2
+- [ ] https://annaelisejohnson.com/works/situtation-room-1
+- [ ] https://annaelisejohnson.com/works/slantwise-otherwise-2012-14
+- [ ] https://annaelisejohnson.com/works/slantwise-otherwise-2012-15
+- [ ] https://annaelisejohnson.com/works/slantwise-otherwise-2012-16
+- [ ] https://annaelisejohnson.com/works/slantwise-otherwise-2012-17
+- [ ] https://annaelisejohnson.com/works/snow-covered-trees-chloe
+- [ ] https://annaelisejohnson.com/works/soledad-canyon-road-1
+- [ ] https://annaelisejohnson.com/works/soledad-canyon-road-2
+- [ ] https://annaelisejohnson.com/works/specificity-of-materials
+- [ ] https://annaelisejohnson.com/works/state-of-flux
+- [ ] https://annaelisejohnson.com/works/stela
+- [ ] https://annaelisejohnson.com/works/still-life-1
+- [ ] https://annaelisejohnson.com/works/still-life-2
+- [ ] https://annaelisejohnson.com/works/still-life-3
+- [ ] https://annaelisejohnson.com/works/still-life-4
+- [ ] https://annaelisejohnson.com/works/still-life-5
+- [ ] https://annaelisejohnson.com/works/still-life-6
+- [ ] https://annaelisejohnson.com/works/still-life-7
+- [ ] https://annaelisejohnson.com/works/studio-view
+- [ ] https://annaelisejohnson.com/works/summit-1
+- [ ] https://annaelisejohnson.com/works/summit-2
+- [ ] https://annaelisejohnson.com/works/summit-2-1
+- [ ] https://annaelisejohnson.com/works/summit-2-2
+- [ ] https://annaelisejohnson.com/works/summit-3-1
+- [ ] https://annaelisejohnson.com/works/summit-3-2
+- [ ] https://annaelisejohnson.com/works/table-1
+- [ ] https://annaelisejohnson.com/works/table-2
+- [ ] https://annaelisejohnson.com/works/tarryall-road
+- [ ] https://annaelisejohnson.com/works/temple-of-the-sun-1
+- [ ] https://annaelisejohnson.com/works/temple-of-the-sun-a-study-1
+- [ ] https://annaelisejohnson.com/works/tete-a-tete
+- [ ] https://annaelisejohnson.com/works/the-ambassadors-1
+- [ ] https://annaelisejohnson.com/works/the-ambassadors-2
+- [ ] https://annaelisejohnson.com/works/the-ambassadors-3
+- [ ] https://annaelisejohnson.com/works/the-moment-of-execution
+- [ ] https://annaelisejohnson.com/works/the-rose-garden
+- [ ] https://annaelisejohnson.com/works/the-speaker-newt-gingrich
+- [ ] https://annaelisejohnson.com/works/the-white-house
+- [ ] https://annaelisejohnson.com/works/to-make-the-hole-in-the-dividing-wall-solid
+- [ ] https://annaelisejohnson.com/works/treaty
+- [ ] https://annaelisejohnson.com/works/turner-gulch-road
+- [ ] https://annaelisejohnson.com/works/valley-of-fire-3
+- [ ] https://annaelisejohnson.com/works/valley-of-fire-4
+- [ ] https://annaelisejohnson.com/works/valley-of-fire-6
+- [ ] https://annaelisejohnson.com/works/valley-view-road-1
+- [ ] https://annaelisejohnson.com/works/valley-view-road-2
+- [ ] https://annaelisejohnson.com/works/waves-1
+- [ ] https://annaelisejohnson.com/works/waves-2
+- [ ] https://annaelisejohnson.com/works/waves-3
+- [ ] https://annaelisejohnson.com/works/waves-chinatown-1-missing-waves
+- [ ] https://annaelisejohnson.com/works/waves-chinatown-2-diversion
+- [ ] https://annaelisejohnson.com/works/waves-solaris-1-solaris-waves
+- [ ] https://annaelisejohnson.com/works/we-cannot-accept-your-position
+- [ ] https://annaelisejohnson.com/works/what-did-she-make-of-the-fragments-she-saw-when-her-eyes-were-open
+- [ ] https://annaelisejohnson.com/works/wildrose-road-1
+- [ ] https://annaelisejohnson.com/works/wildrose-road-2
+- [ ] https://annaelisejohnson.com/works/wildrose-road-3
+- [ ] https://annaelisejohnson.com/works/yellow-mary
+- [ ] https://annaelisejohnson.com/works/yucca-path-1
+- [ ] https://annaelisejohnson.com/works/yucca-path-2
+- [ ] https://annaelisejohnson.com/works/yucca-path-3
+- [ ] https://annaelisejohnson.com/works/yucca-path-4
+
+---
+
+## Summary
+
+**Total URLs:** 273 (4 main pages + 269 works pages)
+
+*Last updated: February 9, 2026*
