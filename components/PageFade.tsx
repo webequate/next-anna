@@ -13,10 +13,18 @@ const getRootPath = (path: string) => {
   return parts.length ? `/${parts[0]}` : "/";
 };
 
-export default function PageFade({ children, mode = "pathname" }: PageFadeProps) {
+export default function PageFade({
+  children,
+  mode = "pathname",
+}: PageFadeProps) {
   const pathname = usePathname();
   const containerRef = useRef<HTMLDivElement>(null);
-  const fadeKey = mode === "mount" ? "mount" : mode === "root" ? getRootPath(pathname) : pathname;
+  const fadeKey =
+    mode === "mount"
+      ? "mount"
+      : mode === "root"
+      ? getRootPath(pathname)
+      : pathname;
 
   useLayoutEffect(() => {
     const el = containerRef.current;
@@ -33,11 +41,7 @@ export default function PageFade({ children, mode = "pathname" }: PageFadeProps)
 
     void el.offsetWidth;
     el.classList.add("fade-in");
-  }, [fadeKey]);
+  }, [fadeKey, mode]);
 
-  return (
-    <div ref={containerRef}>
-      {children}
-    </div>
-  );
+  return <div ref={containerRef}>{children}</div>;
 }
