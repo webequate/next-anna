@@ -16,8 +16,13 @@ export function generateStaticParams() {
     .map((p) => ({ id: p.id }));
 }
 
-export function generateMetadata({ params }: { params: { id: string } }) {
-  const project = (projectsData as Project[]).find((p) => p.id === params.id);
+type HistoryPageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: HistoryPageProps) {
+  const { id } = await params;
+  const project = (projectsData as Project[]).find((p) => p.id === id);
   if (!project) return {};
 
   return {
@@ -25,18 +30,15 @@ export function generateMetadata({ params }: { params: { id: string } }) {
     description: `${project.title} by ${basics.name}`,
     robots: { index: false, follow: false },
     alternates: {
-      canonical: `/history/${params.id}`,
+      canonical: `/history/${id}`,
     },
   };
 }
 
-export default function HistoryProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function HistoryProjectPage({ params }: HistoryPageProps) {
+  const { id } = await params;
   const projects = (projectsData as Project[]).filter((p) => !p.featured);
-  const index = projects.findIndex((p) => p.id === params.id);
+  const index = projects.findIndex((p) => p.id === id);
   if (index === -1) return notFound();
   const project = projects[index];
   const prevProject = index > 0 ? projects[index - 1] : null;
@@ -45,7 +47,7 @@ export default function HistoryProjectPage({
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <PageFade>
+      <PageFade mode="root">
         <ProjectViewer
           project={project}
           prevProject={prevProject}

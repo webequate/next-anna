@@ -16,12 +16,17 @@ export function generateStaticParams() {
     .map((p) => ({ id: p.id }));
 }
 
-export function generateMetadata({ params }: { params: { id: string } }) {
-  const project = (projectsData as Project[]).find((p) => p.id === params.id);
+type WorksPageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: WorksPageProps) {
+  const { id } = await params;
+  const project = (projectsData as Project[]).find((p) => p.id === id);
   if (!project) return {};
 
   const ogImage = `https://annaelisejohnson.com/images/${project.image}`;
-  const pageUrl = `https://annaelisejohnson.com/works/${params.id}`;
+  const pageUrl = `https://annaelisejohnson.com/works/${id}`;
   const description = `${project.title} by ${basics.name}. ${project.media}, ${project.dimensions}.`;
 
   return {
@@ -29,7 +34,7 @@ export function generateMetadata({ params }: { params: { id: string } }) {
     description: description,
     robots: { index: true, follow: true },
     alternates: {
-      canonical: `/works/${params.id}`,
+      canonical: `/works/${id}`,
     },
     openGraph: {
       title: `${project.title} | Anna Elise Johnson`,
@@ -53,9 +58,10 @@ export function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage({ params }: WorksPageProps) {
+  const { id } = await params;
   const projects = (projectsData as Project[]).filter((p) => p.featured);
-  const index = projects.findIndex((p) => p.id === params.id);
+  const index = projects.findIndex((p) => p.id === id);
   if (index === -1) return notFound();
   const project = projects[index];
   const prevProject = index > 0 ? projects[index - 1] : null;
@@ -64,7 +70,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
-      <PageFade>
+      <PageFade mode="root">
         <ProjectViewer
           project={project}
           prevProject={prevProject}

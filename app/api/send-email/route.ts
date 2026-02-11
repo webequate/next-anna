@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import React from "react";
 
 interface ContactForm {
   name: string;
@@ -28,6 +27,14 @@ function validate(formData: ContactForm) {
   return errors;
 }
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
 async function sendEmail(formData: ContactForm) {
   if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASS) {
     throw new Error(
@@ -38,33 +45,71 @@ async function sendEmail(formData: ContactForm) {
     throw new Error("EMAIL_FROM and EMAIL_TO must be set");
   }
 
-  const [mjmlReact, mjml, nodemailer, ContactModule] = await Promise.all([
-    import("mjml-react"),
-    import("mjml"),
-    import("nodemailer"),
-    import("@/emails/Contact"),
-  ]);
+  const nodemailer = await import("nodemailer");
 
-  const Contact = ContactModule.default;
-
-  // Render MJML React component to MJML markup
-  const { renderToMjml } = mjmlReact;
-  const mjmlMarkup = renderToMjml(
-    React.createElement(Contact, {
-      name: formData.name,
-      email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-    })
+  const safeName = escapeHtml(formData.name.trim());
+  const safeEmail = escapeHtml(formData.email.trim());
+  const safeSubject = escapeHtml(formData.subject.trim());
+  const safeMessage = escapeHtml(formData.message.trim()).replace(
+    /\n/g,
+    "<br/>"
   );
 
-  // Convert MJML -> HTML
-  const { html, errors } = mjml.default(mjmlMarkup, {
-    validationLevel: "soft",
-  });
-  if (errors && errors.length) {
-    console.warn("MJML validation warnings", errors);
-  }
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://annaelisejohnson.com";
+  const webEquateUrl = "https://webequate.com";
+  const reachOutMailto =
+    "mailto:webequate@gmail.com?subject=Contact%20Form%20Email%20Help%3A%20AnnaEliseJohnson.com";
+  const logoUrl = `${siteUrl}/assets/logo-webequate-light.png`;
+
+  const html = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Submission</title>
+  </head>
+  <body style="margin:0;padding:24px;background:#0b0b0b;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background:#111;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden;">
+            <tr>
+              <td style="padding:24px;border-bottom:1px solid #1f1f1f;background:#0f0f0f;">
+                <a href="${webEquateUrl}" style="display:inline-block;text-decoration:none;">
+                  <img src="${logoUrl}" alt="WebEquate" width="200" style="display:block;border:0;outline:none;" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 24px 8px 24px;font-size:20px;font-weight:700;letter-spacing:0.2px;">
+                New website contact form submission
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 24px 24px 24px;font-size:14px;color:#cfcfcf;">
+                <div style="margin-bottom:12px;">
+                  <strong style="color:#8bd3ff;">Website:</strong>
+                  <a href="${siteUrl}" style="color:#8bd3ff;text-decoration:none;">AnnaEliseJohnson.com</a>
+                </div>
+                <div style="margin-bottom:8px;"><strong style="color:#8bd3ff;">Name:</strong> ${safeName}</div>
+                <div style="margin-bottom:8px;"><strong style="color:#8bd3ff;">Email:</strong> <a href="mailto:${safeEmail}" style="color:#8bd3ff;text-decoration:none;">${safeEmail}</a></div>
+                <div style="margin-bottom:8px;"><strong style="color:#8bd3ff;">Subject:</strong> ${safeSubject}</div>
+                <div style="margin-top:16px;"><strong style="color:#8bd3ff;">Message:</strong></div>
+                <div style="margin-top:8px;line-height:1.6;">${safeMessage}</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px 24px 24px 24px;border-top:1px solid #1f1f1f;font-size:12px;color:#9b9b9b;">
+                Need help? <a href="${reachOutMailto}" style="color:#8bd3ff;text-decoration:none;">Reach out</a> anytime.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>`;
 
   // Create transport (on-demand to avoid build-time fs scans)
   const transporter = nodemailer.createTransport({

@@ -1,10 +1,12 @@
 # AnnaEliseJohnson.com
 
-This is a Next.js website built with React, TypeScript, Tailwind CSS, Framer Motion, and the Next.js App Router (Next 14).
+This is a Next.js website built with React, TypeScript, Tailwind CSS, Framer Motion, and the Next.js App Router (Next 15).
 
 Originally created with the Pages Router, it was migrated to the App Router in September 2025 for improved data/loading patterns, metadata handling, and layout composition.
 
 ## Getting Started
+
+This project targets Node.js 22 (see `package.json` engines). If you use nvm or fnm, make sure you're on Node 22 before installing dependencies.
 
 First, run the development server:
 
@@ -38,7 +40,7 @@ app/
 ```
 
 ### Email Sending
-The contact form posts to `/api/send-email` which lazily loads `nodemailer`, `mjml`, and `mailing-core` to avoid bundling overhead during build.
+The contact form posts to `/api/send-email` which lazily loads `nodemailer` and sends a plain HTML email template.
 
 ### Metadata
 Per-route SEO metadata is defined via `export const metadata` and dynamic metadata functions in dynamic routes.

@@ -1,26 +1,42 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 interface PageFadeProps {
   children: React.ReactNode;
+  mode?: "pathname" | "root" | "mount";
 }
 
-export default function PageFade({ children }: PageFadeProps) {
+const getRootPath = (path: string) => {
+  const parts = path.split("/").filter(Boolean);
+  return parts.length ? `/${parts[0]}` : "/";
+};
+
+export default function PageFade({ children, mode = "pathname" }: PageFadeProps) {
   const pathname = usePathname();
   const containerRef = useRef<HTMLDivElement>(null);
+  const fadeKey = mode === "mount" ? "mount" : mode === "root" ? getRootPath(pathname) : pathname;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     el.classList.remove("fade-in");
+    if (mode !== "mount") {
+      const storageKey = "page-fade-key";
+      const lastKey = sessionStorage.getItem(storageKey);
+      if (lastKey === fadeKey) {
+        return;
+      }
+      sessionStorage.setItem(storageKey, fadeKey);
+    }
+
     void el.offsetWidth;
     el.classList.add("fade-in");
-  }, [pathname]);
+  }, [fadeKey]);
 
   return (
-    <div ref={containerRef} className="fade-in">
+    <div ref={containerRef}>
       {children}
     </div>
   );

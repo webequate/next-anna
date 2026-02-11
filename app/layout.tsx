@@ -54,9 +54,9 @@ export default function RootLayout({
         {/* Consider self-hosting fonts or using next/font for optimal loading */}
       </head>
       <body
-        className={`flex flex-col bg-light-1 dark:bg-black ${montserrat.variable}`}
+        className={`flex flex-col items-center bg-light-1 dark:bg-black ${montserrat.variable}`}
       >
-        <div className="mx-auto w-full max-w-7xl sm:px-8 lg:px-16">
+        <div className="w-full max-w-7xl sm:px-8 lg:px-16">
           <main className="min-h-screen bg-white dark:bg-neutral-900 sm:border-x border-dark-3 dark:border-light-3 px-6 sm:px-8 lg:px-16">
             <div className="bg-white dark:bg-neutral-900">
               <Providers>{children}</Providers>

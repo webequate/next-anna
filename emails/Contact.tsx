@@ -1,5 +1,4 @@
-import { MjmlSection, MjmlColumn, MjmlImage } from "mjml-react";
-import { Template } from "mailing-core";
+import { MjmlSection, MjmlColumn } from "mjml-react";
 import Layout from "./components/Layout";
 import Button from "./components/Button";
 import Heading from "./components/Heading";
@@ -14,7 +13,7 @@ type ContactProps = {
   message: string;
 };
 
-const Contact: Template<ContactProps> = ({ name, email, subject, message }) => {
+const Contact = ({ name, email, subject, message }: ContactProps) => {
   return (
     <Layout>
       <MjmlSection
