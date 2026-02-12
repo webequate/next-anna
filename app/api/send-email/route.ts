@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 interface ContactForm {
   name: string;
   email: string;
   subject: string;
   message: string;
-  website?: string;
+  website?: string; // honeypot field
 }
 
 // Ensure this route is always dynamic (no prerender) and uses the Node.js runtime
@@ -14,11 +15,12 @@ export const runtime = "nodejs";
 
 function validate(formData: ContactForm) {
   const errors: string[] = [];
-  // Honeypot check - if filled, it's likely a bot
+
+  // Honeypot check - if filled, it's a bot
   if (formData.website) {
-    errors.push("Invalid submission detected");
-    return errors;
+    errors.push("Bot submission detected");
   }
+
   if (!formData.name?.trim()) errors.push("Name is required");
   if (!formData.email?.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/))
     errors.push("Valid email is required");
@@ -27,13 +29,112 @@ function validate(formData: ContactForm) {
   return errors;
 }
 
-const escapeHtml = (value: string) =>
-  value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
+function escapeHtml(text: string): string {
+  const map: { [key: string]: string } = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (char) => map[char]);
+}
+
+function buildReplyMailto(formData: ContactForm): string {
+  const quotedMessage = formData.message
+    .split("\n")
+    .map((line) => "> " + line)
+    .join("\n");
+
+  const subject = `Re: ${formData.subject}`;
+  const body = `\n\n${quotedMessage}`;
+
+  const mailtoHref = `mailto:${encodeURIComponent(
+    formData.email
+  )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return mailtoHref;
+}
+
+function buildHtmlEmail(formData: ContactForm, receivedAt: string): string {
+  const name = escapeHtml(formData.name);
+  const email = escapeHtml(formData.email);
+  const subject = escapeHtml(formData.subject || "New contact form submission");
+  const message = escapeHtml(formData.message).replace(/\n/g, "<br />");
+  const logoUrl =
+    "https://annaelisejohnson.com/assets/logo-webequate-light.png";
+  const replyMailto = buildReplyMailto(formData);
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${subject}</title>
+  </head>
+  <body style="margin:0; padding:24px; font-family: Arial, Helvetica, sans-serif; background:#0b1020; color:#e2e8f0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:680px; margin:0 auto; background:#0f172a; border-radius:16px; overflow:hidden; border:1px solid #1f2937;">
+      <tr>
+        <td style="padding:20px 24px; background:#0b1224; border-bottom:1px solid #1f2937; text-align:center;">
+          <a href="https://webequate.com" target="_blank" rel="noopener" style="display:inline-block; text-decoration:none;">
+            <img src="${logoUrl}" alt="" role="presentation" width="160" height="40" style="display:block; width:160px; height:auto; border:0; outline:none; text-decoration:none;" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:24px; color:#cbd5f5; font-size:14px;">
+          <h1 style="margin:0 0 12px 0; font-size:20px; line-height:1.3; color:#f8fafc;">Contact Form Submission</h1>
+          <p style="margin:0 0 20px 0; color:#94a3b8;">Website: <a href="https://annaelisejohnson.com" style="color:#93c5fd; text-decoration:none;">AnnaEliseJohnson.com</a></p>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b1224; border:1px solid #1f2937; border-radius:12px;">
+            <tr>
+              <td style="padding:16px 18px;">
+                <p style="margin:0 0 6px 0; color:#94a3b8; font-size:12px; text-transform:uppercase; letter-spacing:0.06em;">Name</p>
+                <p style="margin:0 0 20px 0; padding-bottom:20px; border-bottom:1px solid #1f2937; color:#e2e8f0; font-size:15px;">${name}</p>
+                <p style="margin:0 0 6px 0; color:#94a3b8; font-size:12px; text-transform:uppercase; letter-spacing:0.06em;">Email</p>
+                <p style="margin:0 0 20px 0; padding-bottom:20px; border-bottom:1px solid #1f2937; color:#e2e8f0; font-size:15px;"><a href="mailto:${email}" style="color:#93c5fd; text-decoration:none;">${email}</a></p>
+                <p style="margin:0 0 6px 0; color:#94a3b8; font-size:12px; text-transform:uppercase; letter-spacing:0.06em;">Subject</p>
+                <p style="margin:0 0 20px 0; padding-bottom:20px; border-bottom:1px solid #1f2937; color:#e2e8f0; font-size:15px;">${subject}</p>
+                <p style="margin:0 0 6px 0; color:#94a3b8; font-size:12px; text-transform:uppercase; letter-spacing:0.06em;">Message</p>
+                <p style="margin:0 0 0px 0; color:#e2e8f0; line-height:1.7; font-size:15px;">${message}</p>
+              </td>
+            </tr>
+          </table>
+          <p style="margin:16px 0 0px 0;">
+            <a href="${replyMailto}" style="display:inline-block; color:#93c5fd; padding:8px 0; text-decoration:none; font-weight:500;">Reply to ${name}</a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:20px 24px; background:#0b1224; border-top:1px solid #1f2937; text-align:center;">
+          <a href="mailto:webequate@gmail.com" style="color:#93c5fd; text-decoration:none;">Reach out to WebEquate</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>`;
+}
+
+function buildPlainText(formData: ContactForm, receivedAt: string): string {
+  const lines = [
+    "Website Contact Submission",
+    "================================",
+    "",
+    `Website: https://annaelisejohnson.com`,
+    `Name: ${formData.name}`,
+    `Email: ${formData.email}`,
+    `Subject: ${formData.subject}`,
+    `Received: ${receivedAt}`,
+    "",
+    "Message:",
+    "--------",
+    formData.message.trim(),
+    "",
+    "================================",
+    "This email was generated automatically from the contact form.",
+    "Delivered by WebEquate",
+  ];
+  return lines.join("\n");
+}
 
 async function sendEmail(formData: ContactForm) {
   if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASS) {
@@ -45,71 +146,9 @@ async function sendEmail(formData: ContactForm) {
     throw new Error("EMAIL_FROM and EMAIL_TO must be set");
   }
 
-  const nodemailer = await import("nodemailer");
-
-  const safeName = escapeHtml(formData.name.trim());
-  const safeEmail = escapeHtml(formData.email.trim());
-  const safeSubject = escapeHtml(formData.subject.trim());
-  const safeMessage = escapeHtml(formData.message.trim()).replace(
-    /\n/g,
-    "<br/>"
-  );
-
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://annaelisejohnson.com";
-  const webEquateUrl = "https://webequate.com";
-  const reachOutMailto =
-    "mailto:webequate@gmail.com?subject=Contact%20Form%20Email%20Help%3A%20AnnaEliseJohnson.com";
-  const logoUrl = `${siteUrl}/assets/logo-webequate-light.png`;
-
-  const html = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Form Submission</title>
-  </head>
-  <body style="margin:0;padding:24px;background:#0b0b0b;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-      <tr>
-        <td align="center">
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background:#111;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden;">
-            <tr>
-              <td style="padding:24px;border-bottom:1px solid #1f1f1f;background:#0f0f0f;">
-                <a href="${webEquateUrl}" style="display:inline-block;text-decoration:none;">
-                  <img src="${logoUrl}" alt="WebEquate" width="200" style="display:block;border:0;outline:none;" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:24px 24px 8px 24px;font-size:20px;font-weight:700;letter-spacing:0.2px;">
-                New website contact form submission
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:0 24px 24px 24px;font-size:14px;color:#cfcfcf;">
-                <div style="margin-bottom:12px;">
-                  <strong style="color:#8bd3ff;">Website:</strong>
-                  <a href="${siteUrl}" style="color:#8bd3ff;text-decoration:none;">AnnaEliseJohnson.com</a>
-                </div>
-                <div style="margin-bottom:8px;"><strong style="color:#8bd3ff;">Name:</strong> ${safeName}</div>
-                <div style="margin-bottom:8px;"><strong style="color:#8bd3ff;">Email:</strong> <a href="mailto:${safeEmail}" style="color:#8bd3ff;text-decoration:none;">${safeEmail}</a></div>
-                <div style="margin-bottom:8px;"><strong style="color:#8bd3ff;">Subject:</strong> ${safeSubject}</div>
-                <div style="margin-top:16px;"><strong style="color:#8bd3ff;">Message:</strong></div>
-                <div style="margin-top:8px;line-height:1.6;">${safeMessage}</div>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:16px 24px 24px 24px;border-top:1px solid #1f1f1f;font-size:12px;color:#9b9b9b;">
-                Need help? <a href="${reachOutMailto}" style="color:#8bd3ff;text-decoration:none;">Reach out</a> anytime.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>`;
+  const receivedAt = new Date().toISOString();
+  const html = buildHtmlEmail(formData, receivedAt);
+  const text = buildPlainText(formData, receivedAt);
 
   // Create transport (on-demand to avoid build-time fs scans)
   const transporter = nodemailer.createTransport({
@@ -126,9 +165,9 @@ async function sendEmail(formData: ContactForm) {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,
     cc: process.env.EMAIL_CC,
-    subject: formData.subject,
+    subject: `Website Inquiry: ${formData.subject}`,
     html,
-    text: `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`,
+    text,
   });
 }
 

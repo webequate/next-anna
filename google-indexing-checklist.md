@@ -4,31 +4,31 @@ Track which pages have been indexed by Google or have had indexing requested.
 
 ## Main Pages
 
-- [x] https://annaelisejohnson.com
-- [x] https://annaelisejohnson.com/about
-- [x] https://annaelisejohnson.com/contact
-- [x] https://annaelisejohnson.com/press
+- [X] https://annaelisejohnson.com
+- [X] https://annaelisejohnson.com/about
+- [X] https://annaelisejohnson.com/contact
+- [X] https://annaelisejohnson.com/press
 
 ## Works Pages
 
-- [x] https://annaelisejohnson.com/works/a-neologism-on-the-tip-of-her-tongue
-- [x] https://annaelisejohnson.com/works/a-new-order-of-things-at-sunset-a-study
-- [x] https://annaelisejohnson.com/works/a-realization-as-the-sun-set
-- [x] https://annaelisejohnson.com/works/a-streak-of-light-shane
-- [x] https://annaelisejohnson.com/works/a-time-for-choosing
-- [x] https://annaelisejohnson.com/works/absence-and-presence-a-study-1
-- [x] https://annaelisejohnson.com/works/absence-and-presence-a-study-2
-- [x] https://annaelisejohnson.com/works/agreement-1
-- [x] https://annaelisejohnson.com/works/agreement-2
-- [x] https://annaelisejohnson.com/works/antinious
-- [x] https://annaelisejohnson.com/works/armchair-diplomacy-2-1
-- [x] https://annaelisejohnson.com/works/armchair-diplomacy-2-2
-- [x] https://annaelisejohnson.com/works/armchair-diplomacy-2-3
-- [ ] https://annaelisejohnson.com/works/as-a-geological-force-1-time-scale
-- [ ] https://annaelisejohnson.com/works/as-a-geological-force-2-remnants
+- [X] https://annaelisejohnson.com/works/a-neologism-on-the-tip-of-her-tongue
+- [X] https://annaelisejohnson.com/works/a-new-order-of-things-at-sunset-a-study
+- [X] https://annaelisejohnson.com/works/a-realization-as-the-sun-set
+- [X] https://annaelisejohnson.com/works/a-streak-of-light-shane
+- [X] https://annaelisejohnson.com/works/a-time-for-choosing
+- [X] https://annaelisejohnson.com/works/absence-and-presence-a-study-1
+- [X] https://annaelisejohnson.com/works/absence-and-presence-a-study-2
+- [X] https://annaelisejohnson.com/works/agreement-1
+- [X] https://annaelisejohnson.com/works/agreement-2
+- [X] https://annaelisejohnson.com/works/antinious
+- [X] https://annaelisejohnson.com/works/armchair-diplomacy-2-1
+- [ ] https://annaelisejohnson.com/works/armchair-diplomacy-2-2
+- [ ] https://annaelisejohnson.com/works/armchair-diplomacy-2-3
+- [X] https://annaelisejohnson.com/works/as-a-geological-force-1-time-scale
+- [X] https://annaelisejohnson.com/works/as-a-geological-force-2-remnants
 - [ ] https://annaelisejohnson.com/works/as-a-geological-force-3-terrain
-- [ ] https://annaelisejohnson.com/works/as-a-geological-force-4-flow
-- [ ] https://annaelisejohnson.com/works/as-a-geological-force-5-color-flow
+- [X] https://annaelisejohnson.com/works/as-a-geological-force-4-flow
+- [X] https://annaelisejohnson.com/works/as-a-geological-force-5-color-flow
 - [ ] https://annaelisejohnson.com/works/as-a-geological-force-6-blue-erosion
 - [ ] https://annaelisejohnson.com/works/as-a-geological-force-7-rococo-erosion
 - [ ] https://annaelisejohnson.com/works/as-a-geological-force-8-night-terrain
