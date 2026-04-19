@@ -44,7 +44,7 @@ function getPressLinks(): PressLink[] {
 
 export default function PressPage() {
   const name = basics.name;
-  const socialLinks: SocialLink[] = basics.socialLinks as any;
+  const socialLinks = basics.socialLinks as SocialLink[];
   const pressLinks = getPressLinks();
   return (
     <div className="mx-auto">

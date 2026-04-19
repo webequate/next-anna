@@ -39,8 +39,8 @@ export const revalidate = 60;
 
 export default function AboutPage() {
   const name: string = basics.name;
-  const socialLinks: SocialLink[] = basics.socialLinks as any;
-  const experienceList: Experience[] = experiences as any;
+  const socialLinks = basics.socialLinks as SocialLink[];
+  const experienceList = experiences as Experience[];
   return (
     <>
       <Header socialLink={socialLinks[0]} />

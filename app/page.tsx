@@ -45,7 +45,7 @@ function getFeaturedProjects(): Project[] {
 
 export default function HomePage() {
   const name: string = basics.name;
-  const socialLinks: SocialLink[] = basics.socialLinks as any;
+  const socialLinks = basics.socialLinks as SocialLink[];
   const projects = getFeaturedProjects();
   return (
     <div className="mx-auto">

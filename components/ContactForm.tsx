@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
         message: "",
         website: "",
       });
-    } catch (e: any) {
+    } catch {
       setStatus({
         type: "error",
         message: "Unexpected error sending message.",

@@ -18,8 +18,8 @@ interface ProjectViewerProps {
 }
 
 export default function ProjectViewer({
-  name, // currently unused but kept for parity
-  socialLinks, // currently unused but kept for parity
+  name: _name, // kept for parity
+  socialLinks: _socialLinks, // kept for parity
   project,
   prevProject,
   nextProject,
@@ -64,13 +64,14 @@ export default function ProjectViewer({
         width={600}
         height={600}
         priority
+        style={{ height: "auto" }}
         className="mx-auto ring-1 ring-dark-3 dark:ring-light-3 mb-2"
       />
       <ProjectFooter
         dimensions={project.dimensions}
         media={project.media}
-        {...(path === "history" && (project as any).year
-          ? { year: (project as any).year }
+        {...(path === "history" && project.year
+          ? { year: project.year }
           : {})}
       />
     </div>

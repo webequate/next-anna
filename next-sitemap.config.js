@@ -8,7 +8,7 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: null,
   priority: null,
-  async additionalPaths(config) {
+  async additionalPaths(_config) {
     // Return empty array, but use this hook to sort the sitemap after generation
     const sitemapPath = path.join(process.cwd(), "public", "sitemap-0.xml");
 

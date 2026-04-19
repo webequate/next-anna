@@ -24,7 +24,7 @@ function getHistoryProjects(): Project[] {
 
 export default function HistoryPage() {
   const name = basics.name;
-  const socialLinks: SocialLink[] = basics.socialLinks as any;
+  const socialLinks = basics.socialLinks as SocialLink[];
   const projects = getHistoryProjects();
   return (
     <div className="mx-auto">

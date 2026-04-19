@@ -38,7 +38,7 @@ export const revalidate = 60;
 
 export default function ContactPage() {
   const name = basics.name;
-  const socialLinks: SocialLink[] = basics.socialLinks as any;
+  const socialLinks = basics.socialLinks as SocialLink[];
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />

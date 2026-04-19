@@ -66,7 +66,7 @@ export default async function ProjectPage({ params }: WorksPageProps) {
   const project = projects[index];
   const prevProject = index > 0 ? projects[index - 1] : null;
   const nextProject = index < projects.length - 1 ? projects[index + 1] : null;
-  const socialLinks: SocialLink[] = basics.socialLinks as any;
+  const socialLinks = basics.socialLinks as SocialLink[];
   return (
     <div className="mx-auto">
       <Header socialLink={socialLinks[0]} />
