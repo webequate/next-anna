@@ -286,6 +286,6 @@ Track which pages have been indexed by Google or have had indexing requested.
 
 ## Summary
 
-**Total URLs:** 273 (4 main pages + 269 works pages)
+**Total URLs:** 274 (4 main pages + 270 works pages)
 
-*Last updated: February 9, 2026*
+*Last updated: April 19, 2026*
