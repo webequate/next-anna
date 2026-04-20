@@ -35,9 +35,9 @@ export default [
       "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
     },
   },
-  // API routes may use `any`
+  // API routes and test files may use `any`
   {
-    files: ["**/api/**/*.ts"],
+    files: ["**/api/**/*.ts", "**/*.test.{ts,tsx}"],
     rules: { "@typescript-eslint/no-explicit-any": "off" },
   },
   // JavaScript/JSX files
