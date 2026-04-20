@@ -450,6 +450,41 @@ The sitemap excludes `/history` and all `/history/[id]` routes. These are artist
 
 ---
 
+## Testing
+
+**Stack:** Vitest 4.x + React Testing Library + jsdom. Config in `vitest.config.ts`; setup file is `vitest.setup.ts` (imports `@testing-library/jest-dom` matchers). Globals are enabled — `describe`, `it`, `expect`, `vi` are available without explicit imports, though explicit imports also work.
+
+**Test location:** `__tests__/components/` and `__tests__/hooks/`. Mirror the source directory structure.
+
+**What is tested:** Components and hooks with meaningful logic, interactivity, or conditional rendering. Purely presentational components with no logic are skipped.
+
+Current test coverage:
+- `__tests__/hooks/useThemeSwitcher.test.ts` — theme default, localStorage read on mount, class application, no-loop invariant
+- `__tests__/components/ContactForm.test.tsx` — submit states, success/error responses, network failure, request body shape
+- `__tests__/components/Header.test.tsx` — active link logic (`isActive()`), mobile menu toggle
+- `__tests__/components/Hamburger.test.tsx` — toggle callback, icon rendering
+- `__tests__/components/ThemeSwitcher.test.tsx` — light↔dark toggle via `next-themes`
+- `__tests__/components/ProjectHeader.test.tsx` — prev/next link conditionals, path prop
+- `__tests__/components/ProjectFooter.test.tsx` — inch-mark regex, optional year/dimensions/media
+- `__tests__/components/ProjectGrid.test.tsx` — links, `priority` prop on first 3 images, empty state
+- `__tests__/components/SocialButton.test.tsx` — all 6 network icons, fallback, new-tab target
+- `__tests__/components/Copyright.test.tsx` — current year, name, copyright symbol
+- `__tests__/components/PageFade.test.tsx` — fade modes (`pathname`, `root`, `mount`), sessionStorage caching
+
+**Mocking conventions:**
+- `next/link` → passthrough `<a href={href}>` with forwarded props
+- `next/image` → `<img>` with `data-priority` attribute
+- `next/navigation` → `usePathname: vi.fn()` returning a controllable value
+- `next-themes` → `useTheme: vi.fn()` returning `{ theme, setTheme }`
+- Sub-components are mocked in `Header.test.tsx` to isolate `isActive()` logic
+- `FormInput` and `Heading` are mocked in `ContactForm.test.tsx` to isolate form behavior
+- `global.fetch` is assigned a `vi.fn()` mock per test for API call tests
+- `localStorage` / `sessionStorage` are replaced with in-memory mock objects via `vi.stubGlobal`
+
+**ESLint:** Test files are exempt from `@typescript-eslint/no-explicit-any` (needed for mock typing).
+
+**Note on `useThemeSwitcher`:** Tests spy on `document.documentElement.classList.add/remove` via `vi.spyOn` — do not use `vi.stubGlobal("document", ...)` as that breaks RTL's DOM rendering.
+
 ## Commands
 
 ```bash
@@ -458,6 +493,8 @@ npm run build          # production build
 npm run lint           # eslint . (ESLint v9 flat config)
 npm run format         # prettier --write on all source files
 npm run build:sitemap  # next-sitemap + sorts sitemap-0.xml alphabetically
+npm run test           # vitest watch mode
+npm run test:run       # vitest run (CI / single pass)
 ```
 
 ---
