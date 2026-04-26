@@ -13,14 +13,12 @@ interface ContactForm {
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
+function isHoneypotFilled(formData: ContactForm): boolean {
+  return !!formData.website;
+}
+
 function validate(formData: ContactForm) {
   const errors: string[] = [];
-
-  // Honeypot check - if filled, it's a bot
-  if (formData.website) {
-    errors.push("Bot submission detected");
-  }
-
   if (!formData.name?.trim()) errors.push("Name is required");
   if (!formData.email?.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/))
     errors.push("Valid email is required");
@@ -174,6 +172,9 @@ async function sendEmail(formData: ContactForm) {
 export async function POST(request: Request) {
   try {
     const formData: ContactForm = await request.json();
+    if (isHoneypotFilled(formData)) {
+      return NextResponse.json({ message: "Email sent successfully!" });
+    }
     const errors = validate(formData);
     if (errors.length) {
       return NextResponse.json(
