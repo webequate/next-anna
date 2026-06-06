@@ -1,5 +1,75 @@
 [
   {
+    "id": "waves-solaris-3-emergence-disappearance",
+    "title": "Waves - Solaris III (Emergence/ Disappearance)",
+    "dimensions": "48 x 48",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/waves-solaris-3-emergence-disappearance.jpg",
+    "featured": true,
+    "order": 278
+  },
+  {
+    "id": "formations-3-erode-fold-tumble",
+    "title": "Formations III (Erode/ Fold/ Tumble)",
+    "dimensions": "46 x 60",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/formations-3-erode-fold-tumble.jpg",
+    "featured": true,
+    "order": 277
+  },
+  {
+    "id": "formations-orange-blue-yellow",
+    "title": "Formations (Orange/ Blue/ Yellow)",
+    "dimensions": "22 x 22",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/formations-orange-blue-yellow.jpg",
+    "featured": true,
+    "order": 276
+  },
+  {
+    "id": "zabriskie-point-2-surface-depth",
+    "title": "Zabriskie Point II (Surface/ Depth)",
+    "dimensions": "32 x 42",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/zabriskie-point-2-surface-depth.jpg",
+    "featured": true,
+    "order": 275
+  },
+  {
+    "id": "zabriskie-point-1-magic-hour",
+    "title": "Zabriskie Point I (Magic Hour)",
+    "dimensions": "32 x 40",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/zabriskie-point-1-magic-hour.jpg",
+    "featured": true,
+    "order": 274
+  },
+  {
+    "id": "architectonic-waves",
+    "title": "Architectonic Waves",
+    "dimensions": "42 x 60",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/architectonic-waves.jpg",
+    "featured": true,
+    "order": 273
+  },
+  {
+    "id": "waves-solaris-2-rhythm-space",
+    "title": "Waves - Solaris II (Rhythm/ Space)",
+    "dimensions": "44 x 70",
+    "media": "oil on canvas",
+    "year": "2026",
+    "image": "2026/waves-solaris-2-rhythm-space.jpg",
+    "featured": true,
+    "order": 272
+  },
+{
     "id": "waves-chinatown-1-missing-waves",
     "title": "Waves - Chinatown I (Missing Waves)",
     "dimensions": "40 x 60",
