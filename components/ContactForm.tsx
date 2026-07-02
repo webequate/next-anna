@@ -1,6 +1,7 @@
 // components/ContactForm.tsx
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Turnstile, TurnstileInstance } from "@marsidev/react-turnstile";
 import { ContactForm as ContactFormData } from "@/interfaces/ContactForm";
 import Heading from "@/components/Heading";
 import FormInput from "@/components/FormInput";
@@ -19,6 +20,8 @@ const ContactForm: React.FC = () => {
     | { type: "success"; message: string }
     | { type: "error"; message: string; errors?: string[] }
   >({ type: "idle" });
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,7 +37,7 @@ const ContactForm: React.FC = () => {
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstileToken }),
       });
 
       const result = await response.json();
@@ -61,6 +64,9 @@ const ContactForm: React.FC = () => {
         type: "error",
         message: "Unexpected error sending message.",
       });
+    } finally {
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
     }
   };
 
@@ -139,10 +145,18 @@ const ContactForm: React.FC = () => {
         />
 
         <div className="mt-4 flex flex-col gap-4">
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""}
+            onSuccess={setTurnstileToken}
+            onExpire={() => setTurnstileToken(null)}
+            onError={() => setTurnstileToken(null)}
+            options={{ theme: "auto", appearance: "interaction-only" }}
+          />
           <button
             type="submit"
             aria-label="Send Message"
-            disabled={status.type === "submitting"}
+            disabled={status.type === "submitting" || !turnstileToken}
             className="text-light-1 dark:text-light-1 bg-accent-dark dark:bg-accent-dark hover:bg-accent-light dark:hover:bg-accent-light disabled:opacity-60 disabled:cursor-not-allowed font-general-medium flex justify-center items-center w-40 sm:w-40 mb-2 text-lg py-2.5 sm:py-3 rounded-lg transition duration-300"
           >
             <span className="text-sm sm:text-lg">

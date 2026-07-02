@@ -7,6 +7,7 @@ interface ContactForm {
   subject: string;
   message: string;
   website?: string; // honeypot field
+  turnstileToken?: string;
 }
 
 // Ensure this route is always dynamic (no prerender) and uses the Node.js runtime
@@ -15,6 +16,26 @@ export const runtime = "nodejs";
 
 function isHoneypotFilled(formData: ContactForm): boolean {
   return !!formData.website;
+}
+
+async function verifyTurnstile(
+  token: string,
+  remoteip?: string | null
+): Promise<boolean> {
+  const response = await fetch(
+    "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        secret: process.env.TURNSTILE_SECRET_KEY,
+        response: token,
+        ...(remoteip ? { remoteip } : {}),
+      }),
+    }
+  );
+  const data = await response.json();
+  return data.success === true;
 }
 
 function validate(formData: ContactForm) {
@@ -174,6 +195,25 @@ export async function POST(request: Request) {
     const formData: ContactForm = await request.json();
     if (isHoneypotFilled(formData)) {
       return NextResponse.json({ message: "Email sent successfully!" });
+    }
+    if (!formData.turnstileToken) {
+      return NextResponse.json(
+        { message: "Bot verification failed." },
+        { status: 400 }
+      );
+    }
+    const remoteip =
+      request.headers.get("CF-Connecting-IP") ??
+      request.headers.get("X-Forwarded-For");
+    const turnstileValid = await verifyTurnstile(
+      formData.turnstileToken,
+      remoteip
+    );
+    if (!turnstileValid) {
+      return NextResponse.json(
+        { message: "Bot verification failed." },
+        { status: 400 }
+      );
     }
     const errors = validate(formData);
     if (errors.length) {

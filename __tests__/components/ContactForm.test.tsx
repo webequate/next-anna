@@ -1,4 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
+import { forwardRef, useEffect, useImperativeHandle } from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ContactForm from "@/components/ContactForm";
@@ -29,11 +30,29 @@ vi.mock("@/components/FormInput", () => ({
   ),
 }));
 
+const turnstileReset = vi.fn();
+
+vi.mock("@marsidev/react-turnstile", () => ({
+  Turnstile: forwardRef(({ onSuccess }: any, ref: any) => {
+    useImperativeHandle(ref, () => ({ reset: turnstileReset }));
+    useEffect(() => {
+      onSuccess("test-turnstile-token");
+    }, [onSuccess]);
+    return <div data-testid="turnstile" />;
+  }),
+}));
+
 const fillForm = async (user: ReturnType<typeof userEvent.setup>) => {
   await user.type(screen.getByLabelText("Full Name"), "Jane Doe");
   await user.type(screen.getByLabelText("Email"), "jane@example.com");
   await user.type(screen.getByLabelText("Subject"), "Hello");
   await user.type(screen.getByLabelText("Message"), "Test message body");
+};
+
+const waitForVerified = async () => {
+  await waitFor(() =>
+    expect(screen.getByRole("button", { name: /send message/i })).not.toBeDisabled()
+  );
 };
 
 beforeEach(() => {
@@ -67,6 +86,7 @@ describe("ContactForm", () => {
 
     render(<ContactForm />);
     await fillForm(user);
+    await waitForVerified();
     await user.click(screen.getByRole("button", { name: /send message/i }));
 
     expect(screen.getByRole("button")).toHaveTextContent("Sending...");
@@ -83,6 +103,7 @@ describe("ContactForm", () => {
 
     render(<ContactForm />);
     await fillForm(user);
+    await waitForVerified();
     await user.click(screen.getByRole("button", { name: /send message/i }));
 
     await waitFor(() =>
@@ -102,6 +123,7 @@ describe("ContactForm", () => {
 
     render(<ContactForm />);
     await fillForm(user);
+    await waitForVerified();
     await user.click(screen.getByRole("button", { name: /send message/i }));
 
     await waitFor(() =>
@@ -116,6 +138,7 @@ describe("ContactForm", () => {
 
     render(<ContactForm />);
     await fillForm(user);
+    await waitForVerified();
     await user.click(screen.getByRole("button", { name: /send message/i }));
 
     await waitFor(() =>
@@ -133,6 +156,7 @@ describe("ContactForm", () => {
 
     render(<ContactForm />);
     await fillForm(user);
+    await waitForVerified();
     await user.click(screen.getByRole("button", { name: /send message/i }));
 
     await waitFor(() => expect(global.fetch).toHaveBeenCalled());
@@ -140,5 +164,45 @@ describe("ContactForm", () => {
     const body = JSON.parse(options.body);
     expect(body.name).toBe("Jane Doe");
     expect(body.email).toBe("jane@example.com");
+  });
+
+  it("disables the submit button until Turnstile verification completes", async () => {
+    render(<ContactForm />);
+    await waitForVerified();
+    expect(screen.getByRole("button", { name: /send message/i })).not.toBeDisabled();
+  });
+
+  it("includes the turnstileToken in the request body", async () => {
+    const user = userEvent.setup();
+    global.fetch = vi.fn().mockResolvedValue(
+      new Response(JSON.stringify({ message: "ok" }), { status: 200 })
+    ) as any;
+
+    render(<ContactForm />);
+    await fillForm(user);
+    await waitForVerified();
+    await user.click(screen.getByRole("button", { name: /send message/i }));
+
+    await waitFor(() => expect(global.fetch).toHaveBeenCalled());
+    const [, options] = (global.fetch as any).mock.calls[0];
+    const body = JSON.parse(options.body);
+    expect(body.turnstileToken).toBe("test-turnstile-token");
+  });
+
+  it("resets the Turnstile widget and disables the button after a submit attempt", async () => {
+    const user = userEvent.setup();
+    global.fetch = vi.fn().mockResolvedValue(
+      new Response(JSON.stringify({ message: "ok" }), { status: 200 })
+    ) as any;
+
+    render(<ContactForm />);
+    await fillForm(user);
+    await waitForVerified();
+    await user.click(screen.getByRole("button", { name: /send message/i }));
+
+    await waitFor(() => expect(turnstileReset).toHaveBeenCalled());
+    await waitFor(() =>
+      expect(screen.getByRole("button", { name: /send message/i })).toBeDisabled()
+    );
   });
 });

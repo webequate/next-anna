@@ -5,4 +5,5 @@ export interface ContactForm {
   subject: string;
   message: string;
   website?: string;
+  turnstileToken?: string;
 }
